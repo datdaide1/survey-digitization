@@ -1,0 +1,652 @@
+{
+  "schema_version": "v1",
+  "form_name": "Bảng hỏi bán cấu trúc/Khảo sát với phụ nữ",
+  "project": "Tìm hiểu thị trường, chuỗi giá trị, các rào cản sản xuất và môi trường chính sách đối với cây dược liệu tại Việt Nam",
+  "total_pages": 7,
+  "source_ref": "pretest_VN.docx; đối chiếu bản in với LCA-LP-001/page-1.jpg..LCA-LP-001/page-7.jpg",
+  "conventions": {
+    "option_value": "code",
+    "matrix_cell_marked_value": "column code",
+    "empty_value": null,
+    "flags_field": "flags (array, thêm khi có bất thường)"
+  },
+  "questions": [
+    {
+      "id": "META_DATE",
+      "page": 1,
+      "section": "header",
+      "text": "Ngày",
+      "type": "text"
+    },
+    {
+      "id": "META_LOCATION",
+      "page": 1,
+      "section": "header",
+      "text": "Địa điểm",
+      "type": "text",
+      "note": "Viết tay tự do (thôn/xã/huyện/tỉnh). Chuẩn hoá tỉnh/huyện/xã là P1 — đang chờ quyết định; v1 chỉ phiên âm nguyên văn."
+    },
+    {
+      "id": "CONSENT_1",
+      "page": 1,
+      "section": "consent",
+      "text": "Chị có đồng ý tham gia không?",
+      "type": "single_select",
+      "options": [
+        {"code": "yes", "label": "Đồng ý"}
+      ],
+      "note": "Ô tick đơn: có tick = đồng ý, trống = chưa xác nhận."
+    },
+    {
+      "id": "CONSENT_2",
+      "page": 1,
+      "section": "consent",
+      "text": "Chị có đồng ý cho ghi chép/ghi âm không?",
+      "type": "single_select",
+      "options": [
+        {"code": "yes", "label": "Đồng ý"}
+      ]
+    },
+    {
+      "id": "Q1",
+      "page": 1,
+      "section": "A",
+      "text": "Họ và tên",
+      "type": "text",
+      "pii": true,
+      "note": "PII. Thực tế người trả lời có thể ghi kèm số điện thoại ngay dòng này (xem LCA-LP-001/page-1.jpg) — bước tách PII phải quét cả SĐT ở đây."
+    },
+    {
+      "id": "Q2",
+      "page": 1,
+      "section": "A",
+      "text": "Năm sinh",
+      "type": "text",
+      "value_hint": "year",
+      "stats_bucketing": {
+        "added": "2026-07-22, phản hồi khách — xem docs/client-feedback-2026-07-22-extraction-rules.md §2.2",
+        "derived_field": "age_bracket",
+        "formula": "tuoi = 2026 - <giá trị Q2>; bucket: '<35' nếu tuoi<35, '35-45' nếu 35<=tuoi<=45, '>45' nếu tuoi>45",
+        "owner": "Task 6 (export/thống kê) — Task 3b/5 KHÔNG tự bucket, chỉ trích xuất năm sinh thô như cũ",
+        "note": "Nếu Q2 null/không đọc được → age_bracket cũng null, không suy đoán"
+      }
+    },
+    {
+      "id": "Q3",
+      "page": 1,
+      "section": "A",
+      "text": "Giới tính",
+      "type": "single_select",
+      "options": [
+        {"code": "nam", "label": "Nam"},
+        {"code": "nu", "label": "Nữ"}
+      ]
+    },
+    {
+      "id": "Q4",
+      "page": 1,
+      "section": "A",
+      "text": "Dân tộc",
+      "type": "single_select",
+      "options": [
+        {"code": "kinh", "label": "Kinh"},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true}
+      ],
+      "note": "NGOẠI LỆ (22/07, phản hồi khách — client-feedback-2026-07-22-extraction-rules.md §2.4): khác mọi câu 'Khác (ghi rõ)' khác trong schema này, Q4 KHÔNG được gộp chung bucket 'khác' ở bản thống kê — phải hiện tên dân tộc cụ thể (Mông, Dao, Tày...) lấy từ other_text. Task 6 xử lý riêng câu này khác các câu Q10/Q12/Q13/Q20/Q21b/Q22a/Q22b/Q27a/Q28."
+    },
+    {
+      "id": "Q5",
+      "page": 1,
+      "section": "A",
+      "text": "Trình độ học vấn cao nhất",
+      "type": "composite",
+      "components": [
+        {
+          "id": "Q5_khong_di_hoc",
+          "text": "Không đi học",
+          "type": "single_select",
+          "options": [{"code": "yes", "label": "Không đi học"}]
+        },
+        {
+          "id": "Q5_khong_tieng_pho_thong",
+          "text": "Không nói được tiếng phổ thông",
+          "type": "single_select",
+          "options": [{"code": "yes", "label": "Không nói được tiếng phổ thông"}]
+        },
+        {
+          "id": "Q5_lop_cao_nhat",
+          "text": "Lớp học cao nhất đã hoàn thành",
+          "type": "text"
+        },
+        {
+          "id": "Q5_trung_cap_dh",
+          "text": "Trung cấp/Cao đẳng/Đại học",
+          "type": "single_select",
+          "options": [{"code": "yes", "label": "Trung cấp/Cao đẳng/Đại học"}]
+        }
+      ],
+      "note": "Case cờ mâu thuẫn thực tế: LCA-LP-001/page-1.jpg ghi 'Hết lớp 9' đồng thời tick 'Trung cấp/CĐ/ĐH'. Tầng gắn cờ so sánh Q5_lop_cao_nhat với Q5_trung_cap_dh.",
+      "stats_bucketing": {
+        "added": "2026-07-22, phản hồi khách — docs/client-feedback-2026-07-22-extraction-rules.md §2.2",
+        "derived_field": "education_level_bracket",
+        "formula": "Đọc số lớp từ Q5_lop_cao_nhat (vd 'Hết lớp 9' -> 9): cấp 1 = lớp 1-5, cấp 2 = lớp 6-9, cấp 3 = lớp 10-12. Nếu Q5_khong_di_hoc=true -> bucket 'khong_di_hoc'. Nếu Q5_trung_cap_dh=true (kể cả khi mâu thuẫn với Q5_lop_cao_nhat, xem flag conflicting_answer) -> bucket 'trung_cap_tro_len'.",
+        "owner": "Task 6 — Task 3b/5 không tự bucket, chỉ trích xuất giá trị thô từng component như cũ",
+        "note": "Case mâu thuẫn (LCA-LP-001) vẫn giữ flag conflicting_answer; bucket ưu tiên theo trình độ cao nhất ghi nhận được (trung_cap_tro_len) nhưng phải giữ cờ để người review biết có mâu thuẫn"
+      }
+    },
+    {
+      "id": "Q6",
+      "page": 1,
+      "section": "A",
+      "text": "Tình trạng hôn nhân",
+      "type": "single_select",
+      "options": [
+        {"code": "doc_than", "label": "Độc thân"},
+        {"code": "da_ket_hon", "label": "Đã kết hôn", "subfield": {"id": "Q6_tuoi_ket_hon", "text": "kết hôn năm bao nhiêu tuổi?", "type": "text"}},
+        {"code": "goa", "label": "Góa"},
+        {"code": "ly_than_ly_hon", "label": "Ly thân/Ly hôn"}
+      ],
+      "stats_bucketing": {
+        "added": "2026-07-22, phản hồi khách — docs/client-feedback-2026-07-22-extraction-rules.md §2.2",
+        "derived_field": "marriage_age_bracket",
+        "formula": "Từ Q6_tuoi_ket_hon (số tuổi lúc kết hôn): '<18' = tảo hôn (bất thường, cần chú ý khi thống kê), '>=18' = bình thường",
+        "owner": "Task 6 — Task 5 (subfield là text, thuộc Task 5) vẫn chỉ trích xuất số tuổi thô như cũ, không tự gắn nhãn 'tảo hôn'",
+        "note": "Nếu Q6_tuoi_ket_hon null/không đọc được (case LCA-LP-001: chữ viết tắt không rõ nghĩa) -> bracket cũng null"
+      }
+    },
+    {
+      "id": "Q7",
+      "page": 1,
+      "section": "A",
+      "text": "Nguồn thu nhập chính là gì? (có thể chọn nhiều phương án)",
+      "type": "multi_select",
+      "options": [
+        {"code": "trong_trot", "label": "Trồng trọt"},
+        {"code": "chan_nuoi", "label": "Chăn nuôi"},
+        {"code": "cay_duoc_lieu", "label": "Cây dược liệu"},
+        {"code": "lam_nghiep", "label": "Lâm nghiệp"},
+        {"code": "phi_nong_nghiep", "label": "Phi nông nghiệp"}
+      ]
+    },
+    {
+      "id": "Q8",
+      "page": 1,
+      "section": "A",
+      "text": "Tỷ lệ thu nhập từ cây dược liệu trong tổng thu nhập của gia đình",
+      "type": "single_select",
+      "options": [
+        {"code": "duoi_25", "label": "Dưới 25%"},
+        {"code": "25_50", "label": "25–50%"},
+        {"code": "51_75", "label": "51–75%"},
+        {"code": "tren_75", "label": "Trên 75%"}
+      ]
+    },
+    {
+      "id": "Q9",
+      "page": 2,
+      "section": "A",
+      "text": "Chị bắt đầu trồng cây dược liệu từ khi nào và vì sao?",
+      "type": "free_text",
+      "note": "22/07, phản hồi khách (client-feedback-2026-07-22-extraction-rules.md §2.3): KHÁC các câu free_text khác — không chỉ phiên âm nguyên văn mà Task 5 còn phải cố rút ra năm bắt đầu trồng (hoặc số năm kinh nghiệm nếu ghi trực tiếp kiểu '10 năm nay') thành trường phụ, để Task 6 tính bucket kinh nghiệm. Đọc không rõ (vd 'từ lâu rồi') -> để null + needs_review, không suy đoán.",
+      "derived_subfield": {
+        "id": "Q9_derived_start_year_or_years_exp",
+        "text": "Năm bắt đầu trồng (hoặc số năm kinh nghiệm nếu câu trả lời ghi trực tiếp số năm) — rút ra từ nội dung Q9, không phải câu hỏi in trên phiếu",
+        "type": "text",
+        "owner_task": "Task 5 (đọc nội dung Q9 để rút số, không phải câu hỏi riêng cần hỏi VLM thêm 1 lần)"
+      },
+      "stats_bucketing": {
+        "added": "2026-07-22, phản hồi khách",
+        "derived_field": "experience_years_bracket",
+        "formula": "so_nam_kinh_nghiem = <năm bắt đầu ghi trong Q9_derived_start_year_or_years_exp là năm> ? (2026 - năm đó) : (giá trị đã là số năm thì dùng thẳng); bucket: '<1' nếu <1 năm, '>=1' nếu >=1 năm",
+        "owner": "Task 6",
+        "note": "Nếu Q9_derived_start_year_or_years_exp null -> bucket cũng null, không suy đoán"
+      }
+    },
+    {
+      "id": "Q10",
+      "page": 2,
+      "section": "A",
+      "text": "Nghề nghiệp chính của chị (chọn 1 nghề dành nhiều thời gian nhất)",
+      "type": "single_select",
+      "note": "Mã in trên phiếu nhảy số: 1,2,3,4,6,7 — KHÔNG có 5. Giữ nguyên print_no theo phiếu. Case multi_mark_on_single_select thực tế: LCA-LP-001 tick cả 'Nông dân' và 'Buôn bán, kinh doanh nhỏ' (phát hiện ở Task 3a, ngoài Q30 đã biết trước). 22/07 phản hồi khách: option 'Khác (ghi rõ)' dùng bucket 'khac' chung cho thống kê, không phân biệt nội dung ghi thêm (client-feedback-2026-07-22-extraction-rules.md §2.4).",
+      "options": [
+        {"code": "can_bo", "print_no": 1, "label": "Cán bộ, công chức, viên chức"},
+        {"code": "nong_dan", "print_no": 2, "label": "Nông dân"},
+        {"code": "cong_nhan", "print_no": 3, "label": "Công nhân (làm việc trong công ty/nhà máy/xí nghiệp)"},
+        {"code": "buon_ban", "print_no": 4, "label": "Buôn bán, kinh doanh nhỏ"},
+        {"code": "lao_dong_tu_do", "print_no": 6, "label": "Lao động tự do, làm thuê, làm mướn"},
+        {"code": "khac", "print_no": 7, "label": "Khác (ghi rõ)", "other_text": true}
+      ]
+    },
+    {
+      "id": "Q11",
+      "page": 2,
+      "section": "A",
+      "text": "Chị là hội viên của các tổ chức chính trị - xã hội nào sau đây?",
+      "type": "multi_select",
+      "options": [
+        {"code": "hoi_phu_nu", "print_no": 1, "label": "Hội Liên hiệp Phụ nữ Việt Nam"},
+        {"code": "doan_thanh_nien", "print_no": 2, "label": "Đoàn Thanh niên Cộng sản Hồ Chí Minh"},
+        {"code": "hoi_nong_dan", "print_no": 3, "label": "Hội Nông dân Việt Nam"},
+        {"code": "khong_hoi_vien", "print_no": 4, "label": "Không là hội viên của tổ chức nào", "exclusive": true}
+      ]
+    },
+    {
+      "id": "Q12",
+      "page": 2,
+      "section": "B1",
+      "text": "Trong gia đình chị, ai là người làm chính các công việc nhà? (nấu ăn, chăm sóc con cái/người già, giặt giũ…)",
+      "type": "single_select",
+      "options": [
+        {"code": "vo", "label": "Vợ"},
+        {"code": "chong", "label": "Chồng"},
+        {"code": "ca_hai", "label": "Cả hai"},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true}
+      ],
+      "note": "22/07 phản hồi khách: option 'Khác' dùng bucket chung cho thống kê, không phân biệt nội dung ghi thêm."
+    },
+    {
+      "id": "Q13",
+      "page": 2,
+      "section": "B1",
+      "text": "Trong gia đình chị, ai tham gia chính vào trồng và bán cây dược liệu?",
+      "type": "single_select",
+      "options": [
+        {"code": "vo", "label": "Vợ"},
+        {"code": "chong", "label": "Chồng"},
+        {"code": "ca_hai", "label": "Cả hai"},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true}
+      ],
+      "note": "22/07 phản hồi khách: option 'Khác' dùng bucket chung cho thống kê, không phân biệt nội dung ghi thêm."
+    },
+    {
+      "id": "Q14",
+      "page": 3,
+      "section": "B1",
+      "text": "Trong gia đình chị, ai làm chính các công việc sau:",
+      "type": "matrix",
+      "expected_data_rows": 18,
+      "note": "22/07 phản hồi khách (client-feedback-2026-07-22-extraction-rules.md §2.7): cột 'Người khác' — bất kỳ chữ viết tay nào ở cột này đều tính là ĐÃ CHỌN cột đó, kể cả khi dòng đã có tick ở cột khác (đổi khác quy tắc cũ, xem schema/SCHEMA-FORMAT.md mục 5). Case cần rà lại: dòng bao_duong_xe.",
+      "columns": [
+        {"code": "vo", "label": "1. Vợ"},
+        {"code": "chong", "label": "2. Chồng"},
+        {"code": "ca_hai", "label": "3. Cả hai như nhau"},
+        {"code": "con_cai_lon", "label": "4. Con cái lớn"},
+        {"code": "nguoi_khac", "label": "5. Người khác"}
+      ],
+      "rows": [
+        {"code": "lam_dat", "label": "Làm đất"},
+        {"code": "trong", "label": "Trồng"},
+        {"code": "cham_soc_cay", "label": "Chăm sóc cây (tưới, bón phân…)"},
+        {"code": "thuoc_bvtv", "label": "Sử dụng thuốc BVTV"},
+        {"code": "thu_hoach", "label": "Thu hoạch"},
+        {"code": "so_che", "label": "Sơ chế sản phẩm"},
+        {"code": "lien_he_tieu_thu", "label": "Liên hệ tiêu thụ sản phẩm"},
+        {"code": "khac_san_xuat", "label": "Khác (ghi rõ)", "other_text": true},
+        {"group_header": "Việc nhà", "note_22_07": "Khách xác nhận (client-feedback-2026-07-22-extraction-rules.md §2.7): dòng có gạch dưới này CHỈ là tiêu đề mô tả nhóm, KHÔNG phải 1 dòng lựa chọn — validator không đếm, VLM prompt không được coi đây là 1 câu cần đánh dấu."},
+        {"code": "noi_tro", "label": "Công việc nội trợ (nấu nướng, đi chợ, lau dọn nhà cửa…)"},
+        {"code": "giat_giu", "label": "Giặt giũ, phơi, gấp quần áo"},
+        {"code": "dua_don_con", "label": "Đưa đón con đi học"},
+        {"code": "dam_cuoi_gio", "label": "Đi đám cưới, đám giỗ"},
+        {"code": "cham_soc_con", "label": "Chăm sóc con cái"},
+        {"code": "gia_suc_nho", "label": "Chăm sóc gia súc/gia cầm nhỏ"},
+        {"code": "gia_suc_lon", "label": "Chăm sóc gia súc lớn (trâu bò)"},
+        {"code": "quan_ly_chi_tieu", "label": "Quản lý chi tiêu trong gia đình"},
+        {"code": "day_do_con", "label": "Dạy dỗ con cái"},
+        {"code": "bao_duong_xe", "label": "Bảo dưỡng, chăm sóc phương tiện xe cộ"}
+      ]
+    },
+    {
+      "id": "Q15",
+      "page": 3,
+      "section": "B1",
+      "text": "Kiến thức về cây dược liệu chị được học hoặc truyền lại như thế nào?",
+      "type": "free_text",
+      "note": "22/07 phản hồi khách: best-effort only — không bắt buộc đọc đúng 100%, không phải tiêu chí chặn DoD (client-feedback-2026-07-22-extraction-rules.md §2.5)."
+    },
+    {
+      "id": "Q16a",
+      "page": 3,
+      "section": "B1",
+      "text": "Gần đây phụ nữ có làm các công việc mà trước đây thường do nam giới làm không?",
+      "type": "single_select",
+      "options": [
+        {"code": "khong", "label": "Không"},
+        {"code": "co", "label": "Có", "subfield": {"id": "Q16a_chi_tiet", "text": "ghi cụ thể là công việc gì", "type": "text"}}
+      ],
+      "note": "22/07 phản hồi khách: chỉ cần lấy mã lựa chọn Q16a (khong/co) — Task 3b, đã đúng scope sẵn. Subfield Q16a_chi_tiet vẫn thuộc Task 5 như thiết kế cũ, không đổi."
+    },
+    {
+      "id": "Q16b",
+      "page": 4,
+      "section": "B1",
+      "text": "Vì sao có sự thay đổi này?",
+      "type": "free_text",
+      "depends_on": {"question": "Q16a", "equals": "co"},
+      "note": "22/07 phản hồi khách: best-effort only, giống Q15/Q21c/Q27b (client-feedback-2026-07-22-extraction-rules.md §2.5)."
+    },
+    {
+      "id": "Q17",
+      "page": 4,
+      "section": "B2",
+      "text": "Trong gia đình chị, ai sở hữu các thiết bị sau?",
+      "type": "device_grid",
+      "columns": [
+        {"code": "chong", "label": "Chồng"},
+        {"code": "vo", "label": "Vợ"}
+      ],
+      "rows": [
+        {"code": "dien_thoai", "label": "Điện thoại thông minh"},
+        {"code": "may_tinh", "label": "Máy tính"},
+        {"code": "may_tinh_bang", "label": "Máy tính bảng"}
+      ],
+      "extra_option": {"code": "khong_ai_co", "label": "Không ai có bất kỳ thiết bị nào", "exclusive": true},
+      "note": "Mỗi dòng có thể tick cả Chồng lẫn Vợ. 'Không ai có' exclusive với mọi ô đã tick."
+    },
+    {
+      "id": "Q18",
+      "page": 4,
+      "section": "B2",
+      "text": "Nếu chị có bất kỳ thiết bị nào kể trên, chị sử dụng để làm gì? (chọn nhiều phương án)",
+      "type": "multi_select",
+      "options": [
+        {"code": "goi_nhan_tin", "label": "Gọi điện, nhắn tin"},
+        {"code": "doc_tin_tuc", "label": "Đọc tin tức"},
+        {"code": "giai_tri", "label": "Giải trí"},
+        {"code": "tim_kiem_thong_tin", "label": "Tìm kiếm thông tin, nâng cao kiến thức"},
+        {"code": "giao_dich_ban_hang", "label": "Giao dịch, bán hàng"},
+        {"code": "lam_viec_hoc_online", "label": "Làm việc/học online"},
+        {"code": "mang_xa_hoi", "label": "Tham gia mạng xã hội"},
+        {"code": "khac", "label": "Khác", "other_text": true}
+      ]
+    },
+    {
+      "id": "Q19",
+      "page": 4,
+      "section": "B2",
+      "text": "Chị có ứng dụng công nghệ trong hoạt động sản xuất/kinh doanh không?",
+      "type": "multi_select",
+      "options": [
+        {"code": "quang_ba", "label": "Quảng bá sản phẩm"},
+        {"code": "quan_ly_sx_tc", "label": "Quản lý sản xuất, tài chính"},
+        {"code": "ban_hang_online", "label": "Bán hàng online"},
+        {"code": "khong", "label": "Không", "exclusive": true}
+      ]
+    },
+    {
+      "id": "Q20",
+      "page": 4,
+      "section": "B2",
+      "text": "Trong gia đình chị, ai thường xuyên tham gia các hoạt động hội họp, tập huấn?",
+      "type": "single_select",
+      "options": [
+        {"code": "vo", "label": "Vợ"},
+        {"code": "chong", "label": "Chồng"},
+        {"code": "ca_hai", "label": "Cả hai"},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true}
+      ],
+      "note": "22/07 phản hồi khách: option 'Khác' dùng bucket chung cho thống kê, không phân biệt nội dung ghi thêm."
+    },
+    {
+      "id": "Q21a",
+      "page": 4,
+      "section": "B2",
+      "text": "Trong 2 năm qua chị có tham gia hoạt động tập huấn nào không?",
+      "type": "single_select",
+      "options": [
+        {"code": "1_3_lan", "label": "1–3 lần"},
+        {"code": "tren_3_lan", "label": "Trên 3 lần"},
+        {"code": "chua_lan_nao", "label": "Chưa lần nào"}
+      ]
+    },
+    {
+      "id": "Q21b",
+      "page": 4,
+      "section": "B2",
+      "text": "Nếu có, nội dung tập huấn là gì?",
+      "type": "multi_select",
+      "depends_on": {"question": "Q21a", "not_equals": "chua_lan_nao"},
+      "options": [
+        {"code": "ky_thuat", "label": "Tập huấn kỹ thuật (chế biến, bảo quản, thị trường…)"},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true}
+      ],
+      "note": "22/07 phản hồi khách (nguyên văn): 'chỉ chia là có tick cái nào thôi (khác tính chung là khác kể cả có ghi thêm text hay không)'."
+    },
+    {
+      "id": "Q21c",
+      "page": 5,
+      "section": "B2",
+      "text": "Nếu không, vì sao?",
+      "type": "free_text",
+      "depends_on": {"question": "Q21a", "equals": "chua_lan_nao"},
+      "note": "22/07 phản hồi khách (nguyên văn): 'giống 15 và 16b, không cần detect' — best-effort only."
+    },
+    {
+      "id": "Q22a",
+      "page": 5,
+      "section": "B2",
+      "text": "Trong 5 năm qua chị có được vay vốn để sản xuất, kinh doanh không?",
+      "type": "multi_select",
+      "options": [
+        {"code": "ngan_hang_thuong_mai", "label": "Ngân hàng thương mại"},
+        {"code": "ngan_hang_chinh_sach", "label": "Ngân hàng chính sách"},
+        {"code": "hoi_doan_the", "label": "Hội đoàn thể (ghi rõ của tổ chức nào)", "other_text": true},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true},
+        {"code": "chua", "label": "Chưa", "exclusive": true}
+      ],
+      "note": "22/07 phản hồi khách (nguyên văn): 'chỗ khác cũng tính chung là khác' — áp dụng cho cả option 'hoi_doan_the' và 'khac'."
+    },
+    {
+      "id": "Q22b",
+      "page": 5,
+      "section": "B2",
+      "text": "Nếu chưa, vì sao?",
+      "type": "multi_select",
+      "depends_on": {"question": "Q22a", "contains": "chua"},
+      "options": [
+        {"code": "khong_co_nhu_cau", "label": "Không có nhu cầu"},
+        {"code": "thu_tuc_phuc_tap", "label": "Thủ tục phức tạp"},
+        {"code": "khong_tai_san_the_chap", "label": "Không có tài sản thế chấp"},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true}
+      ],
+      "note": "22/07 phản hồi khách: 'chỗ khác cũng tính chung là khác'."
+    },
+    {
+      "id": "Q23",
+      "page": 5,
+      "section": "B2",
+      "text": "Trong vòng 5 năm trở lại đây, chị có được nhận hỗ trợ vật chất từ bất kỳ cá nhân, tổ chức nào không?",
+      "type": "single_select",
+      "options": [
+        {"code": "co", "label": "Có"},
+        {"code": "khong", "label": "Không"}
+      ],
+      "subfield": {"id": "Q23_chi_tiet", "text": "Nếu có, cụ thể là gì, từ ai", "type": "text"}
+    },
+    {
+      "id": "Q24",
+      "page": 5,
+      "section": "B2",
+      "text": "Chị có biết đi xe máy không?",
+      "type": "single_select",
+      "options": [
+        {"code": "co", "label": "Có"},
+        {"code": "khong", "label": "Không"}
+      ]
+    },
+    {
+      "id": "Q25",
+      "page": 5,
+      "section": "B2",
+      "text": "Chị có xe máy riêng để tự đi lại mà không bị phụ thuộc vào người khác không?",
+      "type": "single_select",
+      "options": [
+        {"code": "co", "label": "Có"},
+        {"code": "khong", "label": "Không"}
+      ]
+    },
+    {
+      "id": "Q26",
+      "page": 5,
+      "section": "B2",
+      "text": "Chị có phải xin phép ai trong gia đình khi đi tham gia các hoạt động xã hội không?",
+      "type": "single_select",
+      "options": [
+        {"code": "co", "label": "Có"},
+        {"code": "khong", "label": "Không"}
+      ]
+    },
+    {
+      "id": "Q27a",
+      "page": 5,
+      "section": "B2",
+      "text": "Trong gia đình chị, ai đứng tên giấy chứng nhận quyền sử dụng đất?",
+      "type": "single_select",
+      "options": [
+        {"code": "vo", "label": "Vợ"},
+        {"code": "chong", "label": "Chồng"},
+        {"code": "ca_hai", "label": "Cả hai"},
+        {"code": "khac", "label": "Khác", "other_text": true},
+        {"code": "khong_biet", "label": "Không biết"}
+      ],
+      "note": "22/07 phản hồi khách (nguyên văn): 'nếu tick khác cũng tính chung là khác kể cả có ghi thêm mô tả khác là gì'."
+    },
+    {
+      "id": "Q27b",
+      "page": 6,
+      "section": "B2",
+      "text": "Nếu chị không đứng tên, vì sao?",
+      "type": "free_text",
+      "depends_on": {"question": "Q27a", "not_in": ["vo", "ca_hai"]},
+      "note": "22/07 phản hồi khách (nguyên văn): 'tương tự như mấy câu viết khác, bỏ qua' — best-effort only."
+    },
+    {
+      "id": "Q28",
+      "page": 6,
+      "section": "B2",
+      "text": "Chị có gặp khó khăn nào khi tham gia trồng, kinh doanh cây dược liệu không?",
+      "type": "multi_select",
+      "options": [
+        {"code": "thieu_nguon_luc", "label": "Thiếu nguồn lực (đất, vốn, nhân lực lao động, sức khoẻ yếu…)"},
+        {"code": "thieu_kien_thuc", "label": "Thiếu kiến thức kỹ thuật/thị trường"},
+        {"code": "ganh_nang_viec_nha", "label": "Thấy thêm gánh nặng công việc do đã phải làm nhiều việc nhà, chăm sóc con cái"},
+        {"code": "khong_thi_truong", "label": "Không có thị trường tiêu thụ"},
+        {"code": "tap_quan_dinh_kien", "label": "Tập quán dân tộc/định kiến giới (ghi cụ thể)", "other_text": true},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true},
+        {"code": "khong_kho_khan", "label": "Không gặp khó khăn gì", "exclusive": true}
+      ],
+      "note": "22/07 phản hồi khách: các option có other_text ('tap_quan_dinh_kien', 'khac') dùng bucket chung cho thống kê, không phân biệt nội dung ghi thêm (suy rộng từ quy tắc chung ở Q10/Q21b/Q22a/Q22b/Q27a)."
+    },
+    {
+      "id": "Q29a",
+      "page": 6,
+      "section": "B2",
+      "text": "Bản thân chị thấy, việc chị tham gia trồng, bán cây dược liệu có mang lại lợi ích gì cho bản thân chị không?",
+      "type": "single_select",
+      "options": [
+        {"code": "co", "label": "Có"},
+        {"code": "khong", "label": "Không"}
+      ]
+    },
+    {
+      "id": "Q29b",
+      "page": 6,
+      "section": "B2",
+      "text": "Nếu có, cụ thể là gì? (có thể chọn nhiều phương án)",
+      "type": "multi_select",
+      "depends_on": {"question": "Q29a", "equals": "co"},
+      "options": [
+        {"code": "them_thu_nhap", "label": "Có thêm thu nhập để tự chi tiêu cho nhu cầu của bản thân và gia đình"},
+        {"code": "nang_cao_kien_thuc", "label": "Được nâng cao kiến thức, hiểu biết nhiều hơn"},
+        {"code": "tham_gia_cong_dong", "label": "Được tham gia nhiều hơn các hoạt động cộng đồng"}
+      ]
+    },
+    {
+      "id": "Q29c",
+      "page": 6,
+      "section": "B2",
+      "text": "Nếu không, vì sao?",
+      "type": "free_text",
+      "depends_on": {"question": "Q29a", "equals": "khong"}
+    },
+    {
+      "id": "Q30",
+      "page": 6,
+      "section": "B3",
+      "text": "Trong chuỗi giá trị dược liệu, chị tham gia nhiều nhất ở khâu nào?",
+      "type": "single_select",
+      "options": [
+        {"code": "san_xuat", "label": "Sản xuất"},
+        {"code": "thu_hai", "label": "Thu hái"},
+        {"code": "che_bien", "label": "Chế biến"},
+        {"code": "thuong_mai", "label": "Thương mại"},
+        {"code": "tieu_thu", "label": "Tiêu thụ"}
+      ],
+      "note": "Case multi_mark_on_single_select thực tế: LCA-LP-001/page-6.jpg tick 3 ô (Sản xuất, Thu hái, Tiêu thụ) trên câu đơn lựa chọn."
+    },
+    {
+      "id": "Q31",
+      "page": 6,
+      "section": "B3",
+      "text": "Có hoạt động nào chị muốn tham gia nhưng không được tham gia không? Vì sao?",
+      "type": "free_text",
+      "note": "22/07 phản hồi khách: best-effort only, cùng nhóm Q15/Q16b/Q21c/Q27b/Q34 (client-feedback-2026-07-22-extraction-rules.md §2.5)."
+    },
+    {
+      "id": "Q32",
+      "page": 7,
+      "section": "B3",
+      "text": "Trong gia đình chị, ai quyết định các vấn đề sau:",
+      "type": "matrix",
+      "expected_data_rows": 8,
+      "row_content_column": {"code": "noi_dung", "label": "Nội dung", "note": "Cột text tự do đứng trước các cột lựa chọn. Gạch chéo xuyên suốt cả cột = trống, không phải ambiguous (xem strike_through_means_empty).", "skip_extraction": true, "skip_reason": "22/07 phản hồi khách (nguyên văn): 'cột nội dung bỏ qua (kể cả là có ghi text hay là các dấu gạch)'. Task 4 KHÔNG trích xuất trường này nữa — làm giảm số trường xuất ra của Q32 so với 108 gốc, xem schema/SCHEMA-FORMAT.md §Đếm trường xuất ra."},
+      "strike_through_means_empty": true,
+      "columns": [
+        {"code": "vo", "label": "1. Vợ"},
+        {"code": "chong", "label": "2. Chồng"},
+        {"code": "cung_quyet_dinh", "label": "3. Cùng quyết định"},
+        {"code": "con_cai", "label": "4. Con cái"}
+      ],
+      "rows": [
+        {"code": "chon_cay_trong", "label": "Lựa chọn loại cây trồng"},
+        {"code": "mua_vat_tu", "label": "Mua nguyên liệu, vật tư đầu vào"},
+        {"code": "chon_ban", "label": "Lựa chọn bán cho ai, bán như thế nào"},
+        {"code": "vay_von", "label": "Vay vốn"},
+        {"code": "gia_ban", "label": "Giá bán"},
+        {"code": "su_dung_thu_nhap", "label": "Sử dụng thu nhập từ cây dược liệu"},
+        {"code": "su_dung_dat", "label": "Làm gì trên đất (trồng cây gì, như thế nào..)"},
+        {"code": "khac", "label": "Khác (ghi rõ)", "other_text": true}
+      ]
+    },
+    {
+      "id": "Q33",
+      "page": 7,
+      "section": "B3",
+      "text": "Chị có tham gia bất kỳ vai trò lãnh đạo nào không?",
+      "type": "multi_select",
+      "options": [
+        {"code": "ban_chu_nhiem_htx", "label": "Ban chủ nhiệm hợp tác xã"},
+        {"code": "nhom_san_xuat", "label": "Nhóm sản xuất/kinh doanh"},
+        {"code": "quan_ly_rung", "label": "Quản lý rừng cộng đồng"},
+        {"code": "khong", "label": "Không", "exclusive": true}
+      ]
+    },
+    {
+      "id": "Q34",
+      "page": 7,
+      "section": "B3",
+      "text": "Chị mong muốn được hỗ trợ gì để nâng cao vai trò của mình trong gia đình và ngoài cộng đồng?",
+      "type": "free_text",
+      "note": "22/07 phản hồi khách (nguyên văn): 'bỏ qua vì là câu trả lời viết tay' — best-effort only, không bắt buộc chính xác."
+    },
+    {
+      "id": "PAGE_NOTES",
+      "page": null,
+      "section": "meta",
+      "text": "Ghi chú viết tay ngoài vùng câu hỏi (lề, cuối trang)",
+      "type": "free_text",
+      "per_page": true,
+      "note": "Mỗi trang có một trường ghi chú lề. LCA-LP-001/page-7.jpg có đoạn viết thêm dưới lời cảm ơn. Kèm cờ margin_note khi có nội dung."
+    }
+  ]
+}
