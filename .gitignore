@@ -24,3 +24,4 @@ output/
 
 # Large source archives (GitHub limits individual files to 100 MB)
 *.rar
+data/raw/_archive/
