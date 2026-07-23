@@ -20,7 +20,6 @@ Thumbs.db
 
 # Generated and temporary artifacts
 tmp/
-output/
 
 # Large source archives (GitHub limits individual files to 100 MB)
 *.rar

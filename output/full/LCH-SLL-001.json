@@ -1,0 +1,203 @@
+{
+  "record_id": "LCH-SLL-001",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-23",
+  "source_images": "output/assembly/_render/LCH-SLL-001/LCH-SLL-001__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-16"},
+    "META_LOCATION": {
+      "value": "Xã Sì Lở Lầu, Lai Châu, Bản Xéo Hồ Thầu",
+      "confidence": "trung_binh",
+      "note": "Tên bản viết tay, có thể không chính xác tuyệt đối ('Xéo Hồ Thầu')"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Tẩn Lù Mảy (ĐT: 0327 840 484)",
+      "pii": true,
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, dấu thanh điệu ghi rời rạc phía trên chữ. Họ 'Tẩn' suy đoán hợp lý theo dân tộc Dao (xem Q4) nhưng không chắc chắn tuyệt đối. SĐT viết kèm ngay trong ô họ tên."
+    },
+    "Q2": {"value": "1992"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Dao"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "5"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 16}
+      }
+    },
+    "Q7": {"value": ["chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "Bố mẹ dạy từ 30 năm, nay về chỉ dạy sâu, phát cỏ",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort. Cụm 'từ 30 năm' đọc khá rõ.",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 30,
+          "unit": "years_exp",
+          "confidence": "trung_binh",
+          "needs_review": true,
+          "note": "Rút từ cụm 'từ 30 năm' trong Q9 — hiểu là số năm kinh nghiệm (30 năm), không phải năm bắt đầu ghi trực tiếp. Không chắc chắn 100% do chữ viết."
+        }
+      }
+    },
+    "Q10": {
+      "value": ["nong_dan", "lao_dong_tu_do"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả '2. Nông dân' và '6. Lao động tự do, làm thuê, làm mướn' đều được tick trong khi câu chỉ cho chọn 1 nghề. Ghi chú thêm cạnh mục 6 (khó đọc): 'sang TQ trồng, hái đỗ 100 tệ/ngày = 350k' — không thuộc field cần trích xuất, ghi vào page_notes."
+    },
+    "Q11": {
+      "value": ["hoi_phu_nu", "khong_hoi_vien"],
+      "flags": ["exclusive_conflict", "conflicting_answer"],
+      "needs_review": true,
+      "note": "Cả '1. Hội Liên hiệp Phụ nữ Việt Nam' và '4. Không là hội viên của tổ chức nào' (option exclusive) đều được tick — mâu thuẫn. Ghi chú viết tay bên cạnh mục 1 (khó đọc, best-effort): 'từ khi sáp nhập xã thì không đi/gia' — có thể ý là danh nghĩa vẫn là hội viên nhưng từ khi sáp nhập xã không còn tham gia sinh hoạt."
+    },
+    "Q12": {
+      "value": "vo",
+      "note": "Chỉ ô 'Vợ' có tick. Dòng 'Khác (ghi rõ)' không có tick nhưng có chữ viết tay ở phần để trống: 'Chồng đi XK lao động - 300 triệu/năm, được 4 năm nay hết hợp đồng...' — theo quy tắc chỉ tick mới tính đã chọn, đây không tính là chọn 'Khác'; nội dung ghi vào page_notes."
+    },
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo"},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "vo"},
+        "bao_duong_xe": {"value": "vo"}
+      }
+    },
+    "Q15": {
+      "value": "Kinh nghiệm bố mẹ truyền lại",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Nhiều, do ở có đàn ông nói phụ nữ phải làm hết (mấy) cây, sửa nhà, đi rẫy lương thực nữa",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Đàn ông đi làm xa",
+      "confidence": "trung_binh"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Không ai mời",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {
+      "value": ["khac"],
+      "other_text": "Không biết làm gì, không biết kinh doanh gì",
+      "confidence": "trung_binh"
+    },
+    "Q23": {
+      "value": "co",
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả 'Có' và 'Không' đều có tick (mâu thuẫn) — chọn 'co' vì có nội dung điền cụ thể ở dòng 'Nếu có'.",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": "Hỗ trợ thảo quả để làm giống nhỏ, ở nhờ từ đâu đó",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay rất khó đọc, transcription best-effort/không chắc chắn"
+        }
+      }
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "chong"},
+    "Q27b": {
+      "value": "Do mình là phụ nữ nên chồng đứng tên",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q28": {"value": ["thieu_kien_thuc", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "thu_hai"},
+    "Q31": {
+      "value": "Muốn kinh doanh tạp hóa nhưng chồng không cho, chồng bảo không có vốn",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": null},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Muốn được hỗ trợ trồng cây sâm nhưng chưa có điều kiện nhiều",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": "Ghi chú thêm cạnh Q10 mục 6 (khó đọc, best-effort): 'sang TQ trồng, hái đỗ 100 tệ/ngày = 350k'. Ghi chú thêm cạnh Q12 (không gắn với tick nào, best-effort): 'Chồng đi XK lao động - 300 triệu/năm, được 4 năm nay hết hợp đồng qua hạn lại'.",
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": "Ghi chú viết tay dưới lời cảm ơn (khó đọc, best-effort): 'Thực tế lô quốc tâm đến sổ đỏ mang tên ai cũng ở, sổ nào ở mang tên mình vì tin chồng. (1/2 phiếu)'"
+  }
+}

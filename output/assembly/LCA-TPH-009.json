@@ -1,0 +1,51 @@
+{
+  "record_id": "LCA-TPH-009",
+  "expected_pages": 7,
+  "found_pages": 7,
+  "pages": [
+    {
+      "source_file": "LCA-TPH-009.pdf",
+      "kind": "pdf_page",
+      "image_path": "output/assembly/_render/LCA-TPH-009/LCA-TPH-009__p1.png",
+      "tentative_page": 1
+    },
+    {
+      "source_file": "LCA-TPH-009.pdf",
+      "kind": "pdf_page",
+      "image_path": "output/assembly/_render/LCA-TPH-009/LCA-TPH-009__p2.png",
+      "tentative_page": 2
+    },
+    {
+      "source_file": "LCA-TPH-009.pdf",
+      "kind": "pdf_page",
+      "image_path": "output/assembly/_render/LCA-TPH-009/LCA-TPH-009__p3.png",
+      "tentative_page": 3
+    },
+    {
+      "source_file": "LCA-TPH-009.pdf",
+      "kind": "pdf_page",
+      "image_path": "output/assembly/_render/LCA-TPH-009/LCA-TPH-009__p4.png",
+      "tentative_page": 4
+    },
+    {
+      "source_file": "LCA-TPH-009.pdf",
+      "kind": "pdf_page",
+      "image_path": "output/assembly/_render/LCA-TPH-009/LCA-TPH-009__p5.png",
+      "tentative_page": 5
+    },
+    {
+      "source_file": "LCA-TPH-009.pdf",
+      "kind": "pdf_page",
+      "image_path": "output/assembly/_render/LCA-TPH-009/LCA-TPH-009__p6.png",
+      "tentative_page": 6
+    },
+    {
+      "source_file": "LCA-TPH-009.pdf",
+      "kind": "pdf_page",
+      "image_path": "output/assembly/_render/LCA-TPH-009/LCA-TPH-009__p7.png",
+      "tentative_page": 7
+    }
+  ],
+  "flags": [],
+  "status": "ok"
+}

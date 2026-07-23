@@ -1,0 +1,176 @@
+{
+  "record_id": "LCH-SLL-003",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-23",
+  "source_images": "output/assembly/_render/LCH-SLL-003/LCH-SLL-003__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-16"},
+    "META_LOCATION": {"value": "Mỏ Sì Sán, Sì Lở Lầu, Lai Châu"},
+    "CONSENT_1": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Tẩn Lò Máy",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {"value": "1984"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Dao"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": null, "note": "Ô để trống, không ghi số tuổi"}
+      }
+    },
+    "Q7": {
+      "value": ["trong_trot", "phi_nong_nghiep"],
+      "note": "Ghi chú thêm cạnh 'Phi nông nghiệp': '(TQ)' — có thể ám chỉ thu nhập từ đi làm thuê ở Trung Quốc (khớp với Q10)."
+    },
+    "Q8": {"value": "duoi_25"},
+    "Q9": {
+      "value": "2002 → Theo bố mẹ trồng",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2002,
+          "unit": "start_year",
+          "confidence": "cao",
+          "note": "Ghi rõ năm '2002' ở đầu câu trả lời."
+        }
+      }
+    },
+    "Q10": {
+      "value": ["nong_dan", "lao_dong_tu_do"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả '2. Nông dân' và '6. Lao động tự do, làm thuê, làm mướn' đều được tick. Ghi chú thêm cạnh mục 6: 'đi Trung Quốc làm thuê'."
+    },
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo", "note": "Ghi chú thêm cạnh dòng này: 'không bón' (không dùng phân bón)"},
+        "thuoc_bvtv": {"value": null},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "vo"},
+        "bao_duong_xe": {"value": "vo"}
+      }
+    },
+    "Q15": {"value": "Bố mẹ trong nhà dạy lại, truyền lại", "confidence": "trung_binh"},
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {"value": "Cày ruộng", "confidence": "trung_binh"}
+      }
+    },
+    "Q16b": {
+      "value": "Chồng không làm nên phải làm. Chồng đi kiếm tiền ở xa.",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn, đặc biệt tên địa danh ở cuối câu, transcription best-effort"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Trồng cây nông nghiệp",
+      "confidence": "trung_binh"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {
+      "value": ["khac"],
+      "other_text": "Sợ không có tiền trả",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q23": {
+      "value": "co",
+      "subfield": {
+        "Q23_chi_tiet": {"value": "Trâu, từ Xã", "confidence": "trung_binh"}
+      }
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {"value": "khong_biet"},
+    "Q27b": {"value": "Không nhớ sổ mang tên ai", "confidence": "trung_binh"},
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": null,
+      "flags": ["ambiguous_mark"],
+      "needs_review": true,
+      "note": "Không ô nào trong 5 lựa chọn được tick — thay vào đó có ghi chú lề bên phải câu hỏi: '(Làm tất cả mọi thứ)', ý là tham gia tất cả các khâu. Không có mã option nào khớp 'tất cả' nên để value null và gắn cờ."
+    },
+    "Q31": {
+      "value": "Có muốn tham gia nhưng chồng không cho đi buôn bán vì chồng cũng đi theo",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": null, "note": "Cột 'Nội dung' (bỏ qua theo quy ước) có ghi 'không vay' — không có cột lựa chọn nào được tick"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "chong"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Muốn trồng cây thảo quả giá (Sa nhân đỏ)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

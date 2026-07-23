@@ -1,0 +1,176 @@
+{
+  "record_id": "LCA-LP-001",
+  "schema_version": "v1",
+  "authored_by": "human transcription (Task 3a), 2026-07-15",
+  "purpose": "Bản ghi tay đầy đủ (kèm PII) dùng làm baseline đối chiếu cho pipeline trích xuất tự động (Task 3b+). Xem docs/task-03a-report.md cho phương pháp và các phát hiện mới.",
+  "source_images": "data/raw/lao-cai/lung-phinh/LCA-LP-001/ (tên file đã xáo trộn — mapping nội dung↔tên file trong docs/task-02-report.md §4)",
+  "answers": {
+    "META_DATE": {"value": "2026-05-28"},
+    "META_LOCATION": {
+      "value": "Lả Dì Thàng, Lùng Phình, Lào Cai",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, tên thôn có thể không chính xác tuyệt đối"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Sùng Thị Số (ĐT: 0832 492 792)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "SĐT viết kèm ngay trong ô họ tên — case PII lẫn trong text đã ghi trong schema. Tên có thể là 'Sơ' hoặc 'Số', chữ viết không rõ."
+    },
+    "Q2": {"value": "1994"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Mông"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "Hết lớp 9"},
+        "Q5_trung_cap_dh": {"value": true}
+      },
+      "flags": ["conflicting_answer"],
+      "note": "Ghi 'Hết lớp 9' nhưng đồng thời tick 'Trung cấp/Cao đẳng/Đại học' — mâu thuẫn, case đã ghi trong schema (note của Q5)."
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": 17,
+          "confidence": "thap",
+          "note": "Chữ viết tay là 17t, xác định là 17 tuổi, thuộc nhóm < 18 - tảo hôn theo như quy tắc đã ghi"
+        }
+      }
+    },
+    "Q7": {"value": ["cay_duoc_lieu", "phi_nong_nghiep"]},
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "2020",
+      "confidence": "trung_binh",
+      "needs_review": true,
+      "note": "Năm bắt đầu '2020' đọc rõ, chắc chắn — đây là giá trị tin cậy nhất của câu này. Phần lý do phía sau khó đọc trọn vẹn, giữ nguyên văn best-effort nhưng không chắc chắn."
+    },
+    "Q10": {
+      "value": ["nong_dan", "buon_ban"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả '2. Nông dân' và '4. Buôn bán, kinh doanh nhỏ' đều được tick trong khi câu chỉ cho chọn 1 nghề. PHÁT HIỆN MỚI (chưa từng ghi trong schema trước Task 3a) — xem docs/task-03a-report.md."
+    },
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "ca_hai"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": null, "note": "Ký hiệu không phải X/tick chuẩn (dạng viết tắt 'ko') — coi như trống/không đánh dấu, không phải ambiguous"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "chong"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": null, "note": "Cùng dạng ký hiệu 'ko' viết tắt như dòng 'thuoc_bvtv' — coi như trống"},
+        "gia_suc_lon": {"value": null, "note": "Cùng dạng ký hiệu 'ko' viết tắt như dòng 'thuoc_bvtv' — coi như trống"},
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {
+          "value": ["chong", "nguoi_khac"],
+          "note": "SỬA 22/07/2026 theo quy tắc mới của khách (client-feedback-2026-07-22-extraction-rules.md §2.7, schema/SCHEMA-FORMAT.md mục 5): bất kỳ chữ viết tay nào ở cột 'Người khác' đều tính là đã chọn, kể cả khi dòng đã có tick ở cột khác. Đã render lại trang 3 (pdftoppm) và xác nhận: cột 'Chồng' có tick X rõ ràng, cột '5. Người khác' có chữ viết tay (khó đọc rõ nghĩa, dạng '[tên/chữ ký?]') — theo rule mới, giá trị đúng là đa lựa chọn ['chong','nguoi_khac'], không còn là 'chong' đơn lẻ như ground truth gốc 15/07. Giá trị cũ (trước sửa): 'chong' (bỏ qua Người khác theo rule cũ, xem lịch sử ở docs/task-03a-report.md)."
+        }
+      }
+    },
+    "Q15": {
+      "value": "Tập huấn - do H.T Xã hướng dẫn; cộng đồng; bố mẹ, người thân trong gia đình",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["quang_ba"]},
+    "Q20": {"value": "ca_hai"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Cách trồng, chăm sóc, thu hoạch, bảo quản...",
+      "confidence": "trung_binh"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "khong"},
+    "Q26": {"value": "khong"},
+    "Q27a": {
+      "value": "khac",
+      "other_text": "bố, mẹ chồng",
+      "note": "Chữ viết tay khó đọc, best-effort transcription. Schema đã khai other_text:true cho option này — không phải gap."
+    },
+    "Q27b": {
+      "value": "Chưa có nhà đất, nếu có thì tên cả hai vợ chồng nếu tiền của cả 2 vợ chồng → theo pháp luật",
+      "confidence": "trung_binh"
+    },
+    "Q28": {"value": ["khong_kho_khan"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Case đã biết trước — ghi trong schema note của Q30"
+    },
+    "Q31": {
+      "value": "Có - Bán hàng \"Thương mại\" - online - do chưa có kiến thức",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc"
+    },
+    "Q32": {
+      "note": "Cột 'Nội dung' bị gạch một đường zigzag xuyên nhiều dòng — coi là trống theo quy ước strike_through_means_empty của schema",
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "mua_vat_tu": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "chon_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "vay_von": {"value": null, "noi_dung": null, "note": "Cùng dạng ký hiệu 'ko' viết tắt như các ô tương tự ở Q14 — coi như trống, không phải ambiguous"},
+        "gia_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "su_dung_dat": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "khac": {"value": null, "noi_dung": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Có khoá học/được tập huấn, hướng dẫn, bán được nhiều hơn, bắt đầu online, đăng giá, thuê sản phẩm trên Zalo, Facebook, tương tác để giúp bán được nhiều hàng hơn, tăng thu nhập để có tiền tự trang trải cho con ăn học, mua nhà. Mong muốn tham gia các mô hình phát triển hơn. Hộ → hiện chưa được nghe tuyên truyền.",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Câu trả lời viết tràn xuống dưới cả dòng in 'Xin chân thành cảm ơn...' — đoạn sau footer vẫn là phần trả lời Q34, không phải ghi chú lề riêng"
+    }
+  },
+  "page_notes": {
+    "1": "Ký hiệu viết tay ở góc trên bên trái trang (dạng gạch ngang + chữ 'R') — có thể là mã nội bộ của điều tra viên trước khi scan, không thuộc nội dung khảo sát",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": "Q14 dòng 'Bảo dưỡng, chăm sóc phương tiện xe cộ', cột 'Người khác' có chữ viết tay không rõ nghĩa ngoài các lựa chọn chuẩn",
+    "7": null
+  }
+}

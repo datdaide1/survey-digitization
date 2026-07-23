@@ -1,15 +1,15 @@
 record_id,province,commune,status,done_by,done_date,note
 LCA-LP-001,lao-cai,lung-phinh-16phieu,done,Task 3a (ground truth thu cong),2026-07-15,"Da co san data/ground_truth/LCA-LP-001.json — chi can adapt sang output/full/, KHONG can doc lai tu dau"
-LCH-SLL-001,lai-chau,si-lo-lau-4phieu,pending,,,
-LCH-SLL-002,lai-chau,si-lo-lau-4phieu,pending,,,
-LCH-SLL-003,lai-chau,si-lo-lau-4phieu,pending,,,
-LCH-SLL-004,lai-chau,si-lo-lau-4phieu,pending,,,
-LCA-BH-001,lao-cai,bac-ha-6phieu,pending,,,
-LCA-BH-002,lao-cai,bac-ha-6phieu,pending,,,
-LCA-BH-003,lao-cai,bac-ha-6phieu,pending,,,
-LCA-BH-004,lao-cai,bac-ha-6phieu,pending,,,
-LCA-BH-005,lao-cai,bac-ha-6phieu,pending,,,
-LCA-BH-006,lao-cai,bac-ha-6phieu,pending,,,
+LCH-SLL-001,lai-chau,si-lo-lau-4phieu,done,Claude (manual extraction session),2026-07-23,"Nhieu cau needs_review (Q1 ten, Q9 nam kinh nghiem, Q11 xung dot hoi vien, Q23 xung dot co/khong) - xem chi tiet trong output/full/LCH-SLL-001.json"
+LCH-SLL-002,lai-chau,si-lo-lau-4phieu,done,Claude (manual extraction session),2026-07-23,"Q1 ten/SDT gach bo chon lai; Q6 tuoi ket hon kho doc; Q8 va Q16a multi-mark/mau thuan can review"
+LCH-SLL-003,lai-chau,si-lo-lau-4phieu,done,Claude (manual extraction session),2026-07-23,"Q10 multi-mark; Q30 khong o nao tick (ghi chu le 'lam tat ca'); vai cau tu luan kho doc"
+LCH-SLL-004,lai-chau,si-lo-lau-4phieu,done,Claude (manual extraction session),2026-07-23,"Ten Q1 doi chieu chu ky cuoi phieu (Tham, khong phai Than); Q14/Q30 multi-mark; Q32 vay_von ky hieu la"
+LCA-BH-001,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),2026-07-23,"Q14 thuoc_bvtv ky hieu X+O bat thuong; Q30 multi-mark; nhieu cau tu luan kho doc"
+LCA-BH-002,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),2026-07-23,"Q19 exclusive conflict (quang_ba+khong); Q26 multi-mark co/khong; Q14 bao_duong_xe ky hieu la; Q30 multi-mark"
+LCA-BH-003,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),2026-07-23,"Q14 giat_giu/bao_duong_xe co chu o cot Nguoi khac; Q27a chi co mui ten khong co tick truc tiep; Q30 multi-mark"
+LCA-BH-004,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),2026-07-23,"Q4 khong ro tick nhung co dien ten dan toc; Q14 nhieu dong co chu o cot Nguoi khac (5 dong); Q10/Q30 multi-mark; Q34 rat dai kho doc"
+LCA-BH-005,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),2026-07-23,"Q14 3 dong multi-mark Vo+Cahai (+2 dong co Nguoi khac); Q30 multi-mark; nhieu cau tu luan kho doc"
+LCA-BH-006,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),2026-07-23,"Q8 multi-mark; Q19 exclusive conflict; Q21a multi-mark 1-3lan+chua_lan_nao; Q30 multi-mark"
 LCA-TPH-001,lao-cai,ta-phin-10phieu,pending,,,
 LCA-TPH-002,lao-cai,ta-phin-10phieu,pending,,,
 LCA-TPH-003,lao-cai,ta-phin-10phieu,pending,,,

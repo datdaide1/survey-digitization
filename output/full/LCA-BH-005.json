@@ -1,0 +1,201 @@
+{
+  "record_id": "LCA-BH-005",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-23",
+  "source_images": "output/assembly/_render/LCA-BH-005/LCA-BH-005__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-27"},
+    "META_LOCATION": {"value": "Thôn Nậm Mòn, xã Bảo Hà, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Thền Thị Xa (ĐT: 033 836 9085)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {"value": "2000"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Tày"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "10"},
+        "Q5_trung_cap_dh": {"value": true}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 20, "confidence": "trung_binh"}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "duoi_25"},
+    "Q9": {
+      "value": "2021 (cây quế). Thấy bà con trong xã trồng -> cũng trồng thử. Năm 2024 (sa nhân) - theo cán bộ xã giới thiệu.",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2021,
+          "unit": "start_year",
+          "confidence": "cao",
+          "note": "Ghi rõ '2021' cho cây quế (loại trồng đầu tiên). Có thêm mốc '2024' cho cây sa nhân (trồng sau) — lấy năm sớm nhất làm năm bắt đầu trồng dược liệu."
+        }
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "ca_hai"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "ca_hai"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": "ca_hai"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "chong"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {"value": "ca_hai"},
+        "dua_don_con": {"value": "ca_hai"},
+        "dam_cuoi_gio": {
+          "value": ["vo", "ca_hai"],
+          "flags": ["multi_mark_on_single_select"],
+          "needs_review": true,
+          "note": "Cột 'Vợ' có ký hiệu dạng ô vuông gạch chéo (kiểu đánh dấu riêng của phiếu này), cột 'Cả hai' có tick — cả 2 đều có dấu."
+        },
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {
+          "value": ["ca_hai", "nguoi_khac"],
+          "note": "Cột 'Người khác' có chữ viết tay 'ông bà' — theo quy tắc mới tính là đã chọn."
+        },
+        "gia_suc_lon": {
+          "value": ["ca_hai", "nguoi_khac"],
+          "note": "Cột 'Người khác' có chữ viết tay 'ông bà' — theo quy tắc mới tính là đã chọn."
+        },
+        "quan_ly_chi_tieu": {
+          "value": ["vo", "ca_hai", "nguoi_khac"],
+          "flags": ["multi_mark_on_single_select"],
+          "needs_review": true,
+          "note": "Cột 'Vợ' và 'Cả hai' đều có ký hiệu đánh dấu (kiểu ô vuông gạch chéo); cột 'Người khác' có chữ viết tay 'vợ nhiều hơn' — theo quy tắc mới tính là đã chọn dù nội dung chỉ nhấn mạnh vợ."
+        },
+        "day_do_con": {
+          "value": ["vo", "ca_hai", "nguoi_khac"],
+          "flags": ["multi_mark_on_single_select"],
+          "needs_review": true,
+          "note": "Cột 'Vợ' và 'Cả hai' đều có ký hiệu đánh dấu; cột 'Người khác' có 1 dấu X (không kèm chữ) — theo quy tắc đa dạng kiểu đánh dấu, vẫn tính là đã chọn."
+        },
+        "bao_duong_xe": {"value": "chong"}
+      }
+    },
+    "Q15": {
+      "value": "Ông bà truyền lại; học hỏi các hộ xung quanh",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Làm đất, thu hoạch, phun thuốc BVTV, vận chuyển, giỗ chạp, cưới",
+          "confidence": "trung_binh"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Vì em đưa hoa nhiều hơn và từ không so với... có thể tham gia. Vận chuyển/thu hoạch -> có xe máy, đi lại thuận lợi hơn. Còn lại -> có thời gian hơn",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": ["chong", "vo"]},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {
+      "value": "vo",
+      "note": "Ghi chú thêm: 'bố, mẹ chị'"
+    },
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Vì đi làm công ty, 1 năm gần đây mới quay lại làm nương, con nhỏ, bố mẹ chủ",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {"value": "khong", "subfield": {"Q23_chi_tiet": {"value": null}}},
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {
+      "value": "khong",
+      "note": "Ghi chú thêm: '(Có hỏi ý kiến, trao đổi -> không cấm)'"
+    },
+    "Q27a": {
+      "value": "khac",
+      "other_text": "Tên bố/mẹ chồng, chị",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q27b": {
+      "value": "Nếu bố mẹ cho sẽ để tên 2 vợ chồng, chị",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc"],
+      "note": "Ghi chú thêm: 'thiếu vốn'"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu chỉ cho chọn 1 khâu."
+    },
+    "Q31": {
+      "value": "Có - Chưa có kiến thức để bán hàng online, quảng bá sản phẩm",
+      "confidence": "trung_binh"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": null, "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Mong muốn có vốn, được cấp vốn để mở rộng cây dược liệu nhiều hơn. Có kiến thức để quảng bá, giới thiệu, bán được nhiều hơn sản phẩm dược liệu sau này -> có thu nhập để nuôi con ăn học và mua sắm vật dụng gia đình. Mong muốn tham gia Hội phụ nữ, học hỏi kinh nghiệm, để có cơ hội tham gia các nhóm/hoạt động phát triển kinh tế và các hoạt động khác.",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn nhiều đoạn, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": "Góc trên bên trái trang có ký hiệu viết tay 'Vu' (mã nội bộ điều tra viên)",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}
