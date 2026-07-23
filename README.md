@@ -104,6 +104,7 @@ data/raw/                     Phiếu nguồn — dữ liệu hạn chế truy c
 data/manifest.csv             Danh mục và metadata chuẩn
 schema/questionnaire_v1.json  Schema câu hỏi + logic + quy tắc thống kê
 output/assembly/              Kết quả kiểm tra và render đầu vào
+output/extract_mc/            Mã lựa chọn Task 3b + cờ QC (hạn chế truy cập)
 output/full/                  Bản số hóa đầy đủ có PII
 output/stats/                 Bản ẩn danh phục vụ phân tích
 output/combined.csv           Bảng phẳng dùng cho thống kê
@@ -119,7 +120,7 @@ reports/                      Bảng, biểu đồ và báo cáo sinh từ dữ 
 | Schema chuẩn và validator | ✅ Hoàn thành |
 | Manifest, ingest, render và kiểm tra toàn vẹn | ✅ Hoàn thành |
 | Ground truth cho phiếu mẫu | ✅ Hoàn thành |
-| Trích xuất câu đơn/đa lựa chọn | 🚧 Đang xây dựng |
+| Trích xuất câu đơn/đa lựa chọn | 🟡 Code + mock test xong; chờ API key để nghiệm thu live 31/31 |
 | Trích xuất ma trận | ⏳ Kế tiếp |
 | Tự luận và trường số dẫn xuất | ⏳ Kế tiếp |
 | Cờ logic, tách PII và export | ⏳ Kế tiếp |
@@ -158,11 +159,25 @@ Kết quả hiện tại: schema hợp lệ, 46 mục và 108 trường đầu r
 
 Mỗi phiếu tạo một JSON assembly chứa danh sách trang, trạng thái toàn vẹn và các cờ lỗi. Pipeline tiếp tục xử lý từng phiếu ngay cả khi một bản ghi trong lô bị lỗi.
 
-### 3. Chạy test
+### 3. Trích xuất Task 3b cho một phiếu
 
 ```powershell
-& "E:\anaconda3\envs\survey-digitizer\python.exe" -m pip install pytest
-& "E:\anaconda3\envs\survey-digitizer\python.exe" -m pytest -q
+$env:ANTHROPIC_API_KEY = "..."
+& "E:\anaconda3\envs\survey-digitizer\python.exe" scripts/extract_mc.py `
+  --record-id LCA-LP-001
+& "E:\anaconda3\envs\survey-digitizer\python.exe" scripts/compare_ground_truth.py `
+  LCA-LP-001 --fields task3b
+```
+
+Mỗi trang được gửi hai lần độc lập để kiểm tra self-consistency. Chạy cả manifest
+là thao tác opt-in bằng `--all`; không truyền lựa chọn sẽ không upload dữ liệu.
+
+### 4. Chạy test
+
+```powershell
+& "E:\anaconda3\envs\survey-digitizer\python.exe" tests/test_validate_schema.py
+& "E:\anaconda3\envs\survey-digitizer\python.exe" tests/test_ingest.py
+& "E:\anaconda3\envs\survey-digitizer\python.exe" tests/test_mc_extraction.py
 ```
 
 ## Nguyên tắc kỹ thuật
@@ -184,6 +199,7 @@ Mỗi phiếu tạo một JSON assembly chứa danh sách trang, trạng thái t
 - [Task 1 report](docs/task-01-report.md) — schema và validator.
 - [Task 2 report](docs/task-02-report.md) — ingest và assembly.
 - [Task 3a report](docs/task-03a-report.md) — ground truth và bài học từ dữ liệu thực địa.
+- [Task 3b report](docs/task-03b-report.md) — trích xuất lựa chọn, self-consistency và trạng thái nghiệm thu live.
 
 ## Định nghĩa thành công
 
