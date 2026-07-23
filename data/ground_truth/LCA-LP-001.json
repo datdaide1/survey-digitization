@@ -7,7 +7,7 @@
   "answers": {
     "META_DATE": {"value": "2026-05-28"},
     "META_LOCATION": {
-      "value": "Tả Sì Thàng, Lùng Phình, Lào Cai",
+      "value": "Lả Dì Thàng, Lùng Phình, Lào Cai",
       "confidence": "thap",
       "note": "Chữ viết tay khó đọc, tên thôn có thể không chính xác tuyệt đối"
     },
@@ -15,7 +15,7 @@
     "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
 
     "Q1": {
-      "value": "Sùng Thị Sơ (ĐT: 0832 492 792)",
+      "value": "Sùng Thị Số (ĐT: 0832 492 792)",
       "pii": true,
       "confidence": "trung_binh",
       "note": "SĐT viết kèm ngay trong ô họ tên — case PII lẫn trong text đã ghi trong schema. Tên có thể là 'Sơ' hoặc 'Số', chữ viết không rõ."
@@ -37,16 +37,16 @@
       "value": "da_ket_hon",
       "subfield": {
         "Q6_tuoi_ket_hon": {
-          "value": null,
+          "value": 17,
           "confidence": "thap",
-          "note": "Chữ viết tắt không rõ nghĩa (đọc như 'Đ.t'), không xác định được số tuổi thật"
+          "note": "Chữ viết tay là 17t, xác định là 17 tuổi, thuộc nhóm < 18 - tảo hôn theo như quy tắc đã ghi"
         }
       }
     },
     "Q7": {"value": ["cay_duoc_lieu", "phi_nong_nghiep"]},
     "Q8": {"value": "51_75"},
     "Q9": {
-      "value": "Năm 2020 (Cát Cát - 2020), điều gì...",
+      "value": "2020",
       "confidence": "trung_binh",
       "needs_review": true,
       "note": "Năm bắt đầu '2020' đọc rõ, chắc chắn — đây là giá trị tin cậy nhất của câu này. Phần lý do phía sau khó đọc trọn vẹn, giữ nguyên văn best-effort nhưng không chắc chắn."
@@ -85,7 +85,7 @@
       }
     },
     "Q15": {
-      "value": "Tập huấn - do H.T Xã, chị em dân, cô đỡ, bố mẹ, người thân tự già đau",
+      "value": "Tập huấn - do H.T Xã hướng dẫn; cộng đồng; bố mẹ, người thân trong gia đình",
       "confidence": "thap",
       "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort"
@@ -121,11 +121,11 @@
     "Q26": {"value": "khong"},
     "Q27a": {
       "value": "khac",
-      "other_text": "bố mẹ chú",
+      "other_text": "bố, mẹ chồng",
       "note": "Chữ viết tay khó đọc, best-effort transcription. Schema đã khai other_text:true cho option này — không phải gap."
     },
     "Q27b": {
-      "value": "Chưa gả nhỏ đất, nên có thứ tên cả hai vợ chồng nếu tiền của cả 2 vợ chồng → theo pháp luật",
+      "value": "Chưa có nhà đất, nếu có thì tên cả hai vợ chồng nếu tiền của cả 2 vợ chồng → theo pháp luật",
       "confidence": "trung_binh"
     },
     "Q28": {"value": ["khong_kho_khan"]},
@@ -138,10 +138,10 @@
       "note": "Case đã biết trước — ghi trong schema note của Q30"
     },
     "Q31": {
-      "value": "Có - Bán hàng \"Thị mại\" - m tin ra - do chưa có kiến thức",
+      "value": "Có - Bán hàng \"Thương mại\" - online - do chưa có kiến thức",
       "confidence": "thap",
       "needs_review": true,
-      "note": "Chữ viết tay rất khó đọc, có thể 'Thị mại' = 'Thương mại', 'm tin ra' = 'marketing' — không chắc chắn"
+      "note": "Chữ viết tay rất khó đọc"
     },
     "Q32": {
       "note": "Cột 'Nội dung' bị gạch một đường zigzag xuyên nhiều dòng — coi là trống theo quy ước strike_through_means_empty của schema",
