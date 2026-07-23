@@ -1,0 +1,187 @@
+{
+  "record_id": "LCA-TPH-010",
+  "schema_version": "v1",
+  "authored_by": "Claude (manual extraction session), 2026-07-23",
+  "purpose": "Trích xuất thủ công đầy đủ (kèm PII) từ ảnh trang đã render sẵn, theo docs/implement-plan-manual-full-record-extraction.md.",
+  "source_images": "output/assembly/_render/LCA-TPH-010/LCA-TPH-010__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-25"},
+    "META_LOCATION": {"value": "Xã Tả Phìn, Sa Pa, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — không có tick. Có chữ 'v' viết ở góc trên cùng trang 1, không rõ liên quan gì"},
+
+    "Q1": {"value": "Tần Tả Máy", "pii": true, "note": "Kèm SĐT viết cạnh: 0398372969"},
+    "Q2": {"value": "1993"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao đỏ",
+      "flags": ["needs_review"],
+      "note": "Không có tick hình học rõ ở ô 'Khác' nhưng có điền chữ — suy luận là đã chọn, theo tiền lệ đã dùng cho các phiếu TPH khác"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "Hết lớp 7"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "flags": ["needs_review"],
+      "note": "Không có tick hình học rõ ở ô 'Đã kết hôn' nhưng có điền '19' (tuổi) — suy luận là đã chọn",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 19}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "Năm 2016. Tổ cây thuốc tắm; thu lời ngoài cứu",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q9_derived_start_year_or_years_exp": {"value": "2016"},
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "ca_hai"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "ca_hai"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": null, "note": "Ghi chú tay 'K° phun thuốc' (không phun) thay vì tick — trống"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {
+          "value": "ca_hai",
+          "note": "Có chữ viết tay tràn ra ngoài cột 'Người khác' vào lề phải: 'của chồng/vợ tự làm' — đọc như lời giải thích bổ sung cho tick 'Cả hai', không phải chọn thêm cột Người khác vì chữ tràn ra ngoài ranh giới cột"
+        },
+        "dua_don_con": {
+          "value": "chong",
+          "note": "Có chữ viết tay tràn ra ngoài cột 'Người khác' vào lề phải, khó đọc trọn vẹn — không tính là chọn thêm cột Người khác vì chữ tràn ra ngoài ranh giới cột"
+        },
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": "ca_hai"},
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {
+          "value": ["ca_hai", "nguoi_khac"],
+          "flags": ["multi_mark_on_single_select"],
+          "note": "Cột 'Người khác' ghi chữ 'Ra hàng sửa' (mang xe ra tiệm sửa) — không phải người trong gia đình nhưng theo quy tắc, có chữ viết tay trong cột Người khác vẫn tính là đã chọn"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Ông/bà; bố/mẹ; qua đài, tivi; Tập huấn",
+      "confidence": "trung_binh",
+      "note": "Best-effort, chữ viết tay"
+    },
+    "Q16a": {"value": "co", "subfield": {"Q16a_chi_tiet": {"value": "Giao dịch, buôn bán"}}},
+    "Q16b": {
+      "value": "Vợ hiểu biết về thuận lợi hơn, tự tin và giao tiếp giỏi; chị tham gia nhiều lần về sau khoẻ và tiêu thụ",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Best-effort, chữ viết tay dài và khó đọc"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["quang_ba", "ban_hang_online"]},
+    "Q20": {
+      "value": ["vo", "khac"],
+      "other_text": "bố, mẹ",
+      "flags": ["multi_mark_on_single_select", "needs_review"],
+      "note": "'Vợ' có tick rõ; đồng thời ô 'Khác' không có tick nhưng có điền chữ 'bố, mẹ' — suy luận cả 2 đều được coi là chọn"
+    },
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["ky_thuat", "khac"],
+      "other_text": "Cách đo, bảo quản cây dược liệu",
+      "flags": ["needs_review"],
+      "note": "'Tập huấn kỹ thuật' có tick rõ; đồng thời ô 'Khác' không có tick nhưng có điền chữ — suy luận cả 2 đều được coi là chọn"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["ngan_hang_chinh_sach"]},
+    "Q22b": {"value": []},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {
+      "value": ["co", "khong"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Có' và 'Không' đều có tick. Ghi chú tay cạnh: '(có theo dõi, hỏi thì, nếu phải xin phép)' — best-effort, giải thích thêm về sự mâu thuẫn"
+    },
+    "Q27a": {"value": "khac", "other_text": "Nhà cũ bố/mẹ đứng tên"},
+    "Q27b": {
+      "value": "Nếu bố mẹ cho con trai thì tên của mẹ. Từ vợ chồng đi mua thì tên cả vợ và chồng; thứ bố/mẹ cho con trai, thừa kế cho con gái",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Best-effort, chữ viết tay dài và khó đọc"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc", "thieu_kien_thuc", "khac"],
+      "other_text": "Phụ nữ ít, tuy có thiếu vốn, chưa tiêu thụ được, thuận lợi",
+      "flags": ["needs_review"],
+      "note": "Không có tick hình học rõ ở ô 'Khác' nhưng có điền chữ — suy luận là đã chọn, transcription best-effort do chữ khó đọc. Có ghi chú tay riêng ở lề phải câu 28: 'Thiếu vốn (95% cho vay)' — bổ sung ngữ cảnh cho 'Thiếu nguồn lực'"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "2 ô được tick cho câu chỉ cho chọn 1 khâu"
+    },
+    "Q31": {
+      "value": "Hoạt động tiêu thụ/thị trường còn nhiều hạn chế; chưa tham gia được nhiều thứ liên quan đến buôn bán, quảng bá sản phẩm",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Best-effort, chữ viết tay dài và khó đọc"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "mua_vat_tu": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "chon_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "vay_von": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "gia_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "su_dung_dat": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "khac": {"value": null, "noi_dung": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Mong muốn giúp bảo, tiêu thụ sản phẩm nhiều hơn, sản phẩm có uy tín để nhiều người biết đến sản phẩm của mình hơn và tăng thu nhập từ gia đình",
+      "confidence": "trung_binh",
+      "note": "Best-effort. Có thêm đoạn chữ viết tay dài bên dưới dòng 'Xin chân thành cảm ơn' — nội dung khó đọc, có nhắc đến mong muốn quyết định về cây dược liệu, giá cả ổn định, bố/mẹ/chị tham gia nhiều hơn, để lại thừa kế cho con cái đi học — best-effort, không transcribe đầy đủ do chữ quá khó đọc"
+    }
+  },
+  "page_notes": {
+    "1": "Có chữ 'v' viết ở góc trên cùng bên trái trang, không rõ nghĩa/liên quan gì đến nội dung phiếu",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": "Có đoạn chữ viết tay dài phía dưới dòng cảm ơn, xem note ở Q34"
+  }
+}

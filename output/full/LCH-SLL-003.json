@@ -10,7 +10,7 @@
     "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
 
     "Q1": {
-      "value": "Tẩn Lò Máy",
+      "value": "Tẩn Lở Mẩy",
       "pii": true,
       "confidence": "trung_binh"
     },
@@ -60,7 +60,7 @@
       "rows": {
         "lam_dat": {"value": "vo"},
         "trong": {"value": "vo"},
-        "cham_soc_cay": {"value": "vo", "note": "Ghi chú thêm cạnh dòng này: 'không bón' (không dùng phân bón)"},
+        "cham_soc_cay": {"value": "null", "note": "Ghi chú thêm cạnh dòng này: 'không bón' (không dùng phân bón) nên value là null"},
         "thuoc_bvtv": {"value": null},
         "thu_hoach": {"value": "vo"},
         "so_che": {"value": "vo"},
@@ -133,10 +133,10 @@
     "Q29b": {"value": ["them_thu_nhap"]},
     "Q29c": {"value": null},
     "Q30": {
-      "value": null,
+      "value": "san_xuat", "thu_hai", "che_bien", "thuong_mai", "tieu_thu",
       "flags": ["ambiguous_mark"],
       "needs_review": true,
-      "note": "Không ô nào trong 5 lựa chọn được tick — thay vào đó có ghi chú lề bên phải câu hỏi: '(Làm tất cả mọi thứ)', ý là tham gia tất cả các khâu. Không có mã option nào khớp 'tất cả' nên để value null và gắn cờ."
+      "note": "Không ô nào trong 5 lựa chọn được tick — thay vào đó có ghi chú lề bên phải câu hỏi: '(Làm tất cả mọi thứ)', ý là tham gia tất cả các khâu -> tính là tick tất cả các ô"
     },
     "Q31": {
       "value": "Có muốn tham gia nhưng chồng không cho đi buôn bán vì chồng cũng đi theo",

@@ -6,7 +6,7 @@
   "answers": {
     "META_DATE": {"value": "2026-05-27"},
     "META_LOCATION": {
-      "value": "Thôn Năm Mứn, xã Bản Hà, Lào Cai",
+      "value": "Thôn Nậm Môn, xã Bắc Hà, Lào Cai",
       "confidence": "thap",
       "needs_review": true,
       "note": "Chữ viết tay khó đọc, tên thôn/xã có thể không chính xác tuyệt đối (cùng địa điểm với LCA-BH-001)"
@@ -15,7 +15,7 @@
     "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
 
     "Q1": {
-      "value": "Lù Thị Thời (ĐT: 0353 580 094)",
+      "value": "Lù Thị Thởi (ĐT: 0353 580 094)",
       "pii": true,
       "confidence": "trung_binh"
     },
@@ -77,10 +77,10 @@
         "quan_ly_chi_tieu": {"value": "ca_hai"},
         "day_do_con": {"value": "ca_hai"},
         "bao_duong_xe": {
-          "value": ["chong", "ca_hai"],
+          "value": ["chong"],
           "flags": ["multi_mark_on_single_select"],
           "needs_review": true,
-          "note": "Cột 'Chồng' có dấu X rõ ràng, cột 'Cả hai như nhau' có 1 ký hiệu chồng chéo khó đọc (dạng gạch xóa hoặc X thứ 2) — không rõ là chọn thêm hay gạch huỷ, tạm ghi nhận cả 2 và gắn cờ."
+          "note": "Cột 'Chồng' có dấu X rõ ràng, cột 'Cả hai như nhau' có 1 ký hiệu chồng chéo khó đọc (dạng gạch xóa hoặc X thứ 2) — không rõ là chọn thêm hay gạch huỷ, tạm ghi nhận cả 2 và gắn cờ. REVIEW: cột 'Cả hai như nhau' là X bị gạch, tô gạch bỏ -> chỉ chọn 1 X đầu tiên ở cột 'Chồng'"
         }
       }
     },
@@ -112,10 +112,10 @@
     },
     "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
     "Q19": {
-      "value": ["quang_ba", "khong"],
+      "value": ["quang_ba"],
       "flags": ["exclusive_conflict", "conflicting_answer"],
       "needs_review": true,
-      "note": "Cả 'Quảng bá sản phẩm' và 'Không' (option exclusive) đều được tick — mâu thuẫn."
+      "note": "Cả 'Quảng bá sản phẩm' và 'Không' (option exclusive) đều được tick — mâu thuẫn. REVIEW: ô 'không' dã bị tô xóa -> chỉ chọn 'quảng bá sản phẩm'"
     },
     "Q20": {
       "value": "ca_hai",

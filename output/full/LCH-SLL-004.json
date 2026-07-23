@@ -64,9 +64,9 @@
         "thuoc_bvtv": {"value": "chong"},
         "thu_hoach": {"value": "chong"},
         "so_che": {
-          "value": ["chong", "ca_hai"],
+          "value": ["ca_hai"],
           "flags": ["multi_mark_on_single_select"],
-          "note": "Cả cột 'Chồng' và 'Cả hai như nhau' đều có tick ở dòng này."
+          "note": "Cả cột 'Chồng' và 'Cả hai như nhau' đều có tick ở dòng này. REVIEW: vì có tick cả 2 nên ưu tiên lấy cả 2."
         },
         "lien_he_tieu_thu": {"value": "chong"},
         "khac_san_xuat": {"value": null},
@@ -124,7 +124,7 @@
     "Q26": {"value": "khong"},
     "Q27a": {"value": "chong"},
     "Q27b": {
-      "value": "Vì chưa có đất làm sổ đỏ nên chồng em chưa thêm tên em vào GCNQSDĐ. Đất công ty cho thuê khi kết hôn",
+      "value": "Vì chưa có đất làm sổ đỏ nên chồng em chưa thêm tên em vào GCNQSHĐ. Đất công ty cho thuê khi kết hôn",
       "confidence": "trung_binh"
     },
     "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong"]},
@@ -134,7 +134,7 @@
     "Q30": {
       "value": ["thu_hai", "che_bien", "tieu_thu"],
       "flags": ["multi_mark_on_single_select"],
-      "note": "3 ô được tick trên câu chỉ cho chọn 1 khâu: Thu hái, Chế biến, Tiêu thụ."
+      "note": "3 ô được tick trên câu chỉ cho chọn 1 khâu: Thu hái, Chế biến, Tiêu thụ. REVIEW: chọn cả những cái họ tick - sẽ update trong rule"
     },
     "Q31": {"value": "Không", "confidence": "cao"},
     "Q32": {
@@ -146,7 +146,7 @@
           "value": null,
           "flags": ["ambiguous_mark"],
           "needs_review": true,
-          "note": "Cột 'Cùng quyết định' có 1 ký hiệu dạng chữ X/gạch chéo bất thường (khác các dấu tick 'V' ở các dòng khác) — không rõ là đánh dấu chọn hay gạch huỷ, để null và gắn cờ."
+          "note": "Cột 'Cùng quyết định' có 1 ký hiệu dạng chữ X/gạch chéo bất thường (khác các dấu tick 'V' ở các dòng khác) — không rõ là đánh dấu chọn hay gạch huỷ, để null và gắn cờ. REVIEW: chuẩn rồi, dấu tick bị gạch -> sẽ không nhận"
         },
         "gia_ban": {"value": "cung_quyet_dinh"},
         "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},

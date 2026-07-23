@@ -14,7 +14,7 @@
     "CONSENT_2": {"value": "yes"},
 
     "Q1": {
-      "value": "Tẩn Lù Mảy (ĐT: 0327 840 484)",
+      "value": "Tẩn Lụ Mẩy (ĐT: 0327 840 484)",
       "pii": true,
       "confidence": "thap",
       "needs_review": true,
@@ -40,17 +40,17 @@
     "Q7": {"value": ["chan_nuoi", "cay_duoc_lieu"]},
     "Q8": {"value": "25_50"},
     "Q9": {
-      "value": "Bố mẹ dạy từ 30 năm, nay về chỉ dạy sâu, phát cỏ",
+      "value": "Bố mẹ trồng từ 30 năm, nay về chỉ chăm sóc, phát cỏ",
       "confidence": "thap",
       "needs_review": true,
       "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort. Cụm 'từ 30 năm' đọc khá rõ.",
       "derived_subfield": {
         "Q9_derived_start_year_or_years_exp": {
-          "value": 30,
+          "value": 0,
           "unit": "years_exp",
-          "confidence": "trung_binh",
+          "confidence": "thap",
           "needs_review": true,
-          "note": "Rút từ cụm 'từ 30 năm' trong Q9 — hiểu là số năm kinh nghiệm (30 năm), không phải năm bắt đầu ghi trực tiếp. Không chắc chắn 100% do chữ viết."
+          "note": "Rút từ cụm 'từ 30 năm' trong Q9 — là số năm kinh nghiệm của bố mẹ - không phải của người được khảo sát."
         }
       }
     },
@@ -60,10 +60,10 @@
       "note": "Cả '2. Nông dân' và '6. Lao động tự do, làm thuê, làm mướn' đều được tick trong khi câu chỉ cho chọn 1 nghề. Ghi chú thêm cạnh mục 6 (khó đọc): 'sang TQ trồng, hái đỗ 100 tệ/ngày = 350k' — không thuộc field cần trích xuất, ghi vào page_notes."
     },
     "Q11": {
-      "value": ["hoi_phu_nu", "khong_hoi_vien"],
+      "value": ["hoi_phu_nu"],
       "flags": ["exclusive_conflict", "conflicting_answer"],
       "needs_review": true,
-      "note": "Cả '1. Hội Liên hiệp Phụ nữ Việt Nam' và '4. Không là hội viên của tổ chức nào' (option exclusive) đều được tick — mâu thuẫn. Ghi chú viết tay bên cạnh mục 1 (khó đọc, best-effort): 'từ khi sáp nhập xã thì không đi/gia' — có thể ý là danh nghĩa vẫn là hội viên nhưng từ khi sáp nhập xã không còn tham gia sinh hoạt."
+      "note": "Cả '1. Hội Liên hiệp Phụ nữ Việt Nam' và '4. Không là hội viên của tổ chức nào' (option exclusive) đều được tick — mâu thuẫn. Ghi chú viết tay bên cạnh mục 1 (khó đọc, best-effort): 'từ khi sáp nhập xã thì không đi/gia' — có thể ý là danh nghĩa vẫn là hội viên nhưng từ khi sáp nhập xã không còn tham gia sinh hoạt. USERT REVIEW: mục 4 chọn xóa gạch xóa - kết quả chỉ có mục 1 hội liên hiệp phụ nữ việt nam đuọc chọn"
     },
     "Q12": {
       "value": "vo",
@@ -140,7 +140,7 @@
       "value": "co",
       "flags": ["multi_mark_on_single_select"],
       "needs_review": true,
-      "note": "Cả 'Có' và 'Không' đều có tick (mâu thuẫn) — chọn 'co' vì có nội dung điền cụ thể ở dòng 'Nếu có'.",
+      "note": "Cả 'Có' và 'Không' đều có tick (mâu thuẫn) — chọn 'co' vì có nội dung điền cụ thể ở dòng 'Nếu có'. USER REVIEW: ô không được tick rồi gạch xóa",
       "subfield": {
         "Q23_chi_tiet": {
           "value": "Hỗ trợ thảo quả để làm giống nhỏ, ở nhờ từ đâu đó",

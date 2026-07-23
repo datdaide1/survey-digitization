@@ -6,7 +6,7 @@
   "answers": {
     "META_DATE": {"value": "2026-05-27"},
     "META_LOCATION": {
-      "value": "Thôn Năm Mứn, xã Bản Hà, Lào Cai",
+      "value": "Thôn Nậm Môn, xã Bắc Hà, Lào Cai",
       "confidence": "thap",
       "needs_review": true,
       "note": "Chữ viết tay khó đọc, tên thôn/xã có thể không chính xác tuyệt đối"
@@ -15,7 +15,7 @@
     "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
 
     "Q1": {
-      "value": "Vàng Thị Nhi (ĐT: 0356 141 592)",
+      "value": "Vàng Thị Nhì (ĐT: 0356 141 592)",
       "pii": true,
       "confidence": "cao"
     },
@@ -69,7 +69,7 @@
           "value": null,
           "flags": ["ambiguous_mark"],
           "needs_review": true,
-          "note": "Ký hiệu tại ô này là 'X' bị khoanh/gạch chồng bởi 1 vòng tròn — khác các dấu X đơn thuần ở các dòng khác - là ký hiệu ko, là dấu bị huỷ (không dùng thuốc BVTV) — để null và gắn cờ."
+          "note": "Ký hiệu tại ô này là 'X' bị khoanh/gạch chồng bởi 1 vòng tròn — khác các dấu X đơn thuần ở các dòng khác. REVIEW: là ký hiệu ko, là dấu bị huỷ (không dùng thuốc BVTV) — để null."
         },
         "thu_hoach": {"value": "ca_hai"},
         "so_che": {"value": "ca_hai"},

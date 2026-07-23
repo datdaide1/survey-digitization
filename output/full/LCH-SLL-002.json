@@ -10,14 +10,14 @@
     "CONSENT_2": {"value": "yes"},
 
     "Q1": {
-      "value": "Phàn A Lù (ĐT: 0356 472 078)",
+      "value": "Tẩn Lơ Mẩy (ĐT: 0356 472 078)",
       "pii": true,
       "confidence": "thap",
       "needs_review": true,
-      "note": "Ô họ tên có 1 dòng bị gạch bỏ ('Tấn Lồ Máy') và ghi lại tên mới bên dưới ('Phàn A Lù') — theo quy tắc gạch-bỏ-chọn-lại, chỉ lấy giá trị mới. Tương tự SĐT: 1 số bị gạch bỏ, số mới '0356472078' được ghi thêm bên cạnh — chỉ lấy số mới."
+      "note": "Ô họ tên có 1 dòng bị gạch bỏ ('Phàn A Ly') và ghi lại tên mới bên trên ('Tẩn Lơ Mẩy') — theo quy tắc gạch-bỏ-chọn-lại, chỉ lấy giá trị mới. Tương tự SĐT: 1 số bị gạch bỏ, số mới '0356472078' được ghi thêm bên cạnh — chỉ lấy số mới."
     },
     "Q2": {
-      "value": "1998",
+      "value": "1997",
       "confidence": "trung_binh",
       "note": "Chữ số cuối hơi khó đọc, có nét lạ"
     },
@@ -35,19 +35,19 @@
       "value": "da_ket_hon",
       "subfield": {
         "Q6_tuoi_ket_hon": {
-          "value": 18,
+          "value": 17,
           "confidence": "thap",
           "needs_review": true,
-          "note": "Chữ số viết tay khó đọc (ghi lặp lại 2 lần, cùng dạng), đọc là '18'"
+          "note": "Chữ số viết tay khó đọc (ghi lặp lại 2 lần, cùng dạng), đọc là '17'"
         }
       }
     },
     "Q7": {"value": ["chan_nuoi", "cay_duoc_lieu"]},
     "Q8": {
-      "value": ["duoi_25", "25_50"],
+      "value": ["duoi_25"],
       "flags": ["multi_mark_on_single_select"],
       "needs_review": true,
-      "note": "Cả 'Dưới 25%' và '25–50%' đều có tick trong khi câu chỉ cho chọn 1 mức."
+      "note": "Cả 'Dưới 25%' và '25–50%' đều có tick trong khi câu chỉ cho chọn 1 mức. REVIEW: ô 25-50 được chọn nhưng tô gạch xóa, nên chỉ chọn dưới 25%"
     },
     "Q9": {
       "value": "9 năm. Ông bà, bố mẹ trồng nên trồng theo.",
@@ -92,10 +92,10 @@
     },
     "Q15": {"value": "Từ ông bà truyền lại", "confidence": "cao"},
     "Q16a": {
-      "value": null,
+      "value": "khong",
       "flags": ["multi_mark_on_single_select"],
       "needs_review": true,
-      "note": "Cả 'Không' và 'Có' đều có tick, không có nội dung điền cho 'Có (ghi cụ thể)' — mâu thuẫn thật sự, không đủ căn cứ chọn 1 trong 2, để null và gắn cờ.",
+      "note": "Cả 'Không' và 'Có' đều có tick, không có nội dung điền cho 'Có (ghi cụ thể)' — mâu thuẫn thật sự, không đủ căn cứ chọn 1 trong 2, để null và gắn cờ. USER REVIEW: ô 'có' được chọn nhưng gạch xóa, nên ô được tick chọn là 'không'.",
       "subfield": {
         "Q16a_chi_tiet": {"value": null}
       }
@@ -139,7 +139,7 @@
     "Q29a": {"value": "khong"},
     "Q29b": {"value": null},
     "Q29c": {
-      "value": "Thu nhập không cao, cây ở ra quả ít",
+      "value": "Thu nhập không cao, cây không ra quả",
       "confidence": "thap",
       "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort. Ghi chú lề gần đó (khó đọc): 'năm nào cũng trồng mà thu nhập không được bao nhiêu' — ghi vào page_notes."

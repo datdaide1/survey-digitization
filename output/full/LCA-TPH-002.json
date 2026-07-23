@@ -1,0 +1,214 @@
+{
+  "record_id": "LCA-TPH-002",
+  "schema_version": "v1",
+  "authored_by": "Claude (manual extraction session), 2026-07-23",
+  "purpose": "Trích xuất thủ công đầy đủ (kèm PII) từ ảnh trang đã render sẵn, theo docs/implement-plan-manual-full-record-extraction.md.",
+  "source_images": "output/assembly/_render/LCA-TPH-002/LCA-TPH-002__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-25"},
+    "META_LOCATION": {"value": "Xã Tả Phìn, TX Sa Pa, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Chảo Mấy Cói - không có điện thoại",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay; phần sau tên ghi chú không có điện thoại"
+    },
+    "Q2": {"value": "1964"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "flags": ["needs_review"],
+      "note": "Không thấy ô tick hình học rõ ràng ở 'Kinh' hay 'Khác', nhưng có điền tên dân tộc 'Dao' — suy luận là chọn 'khac' theo tên dân tộc đã ghi (tương tự case LCA-TPH-001/LCA-BH-004)."
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 30}
+      }
+    },
+    "Q7": {
+      "value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"],
+      "confidence": "thap",
+      "note": "Ghi chú viết tay thêm bên dưới (khó đọc, best-effort): 'ngô, ngô, su su'"
+    },
+    "Q8": {
+      "value": "duoi_25",
+      "note": "Ghi chú viết tay thêm (khó đọc, best-effort): '200kg (gia đình?) x 15k/kg'"
+    },
+    "Q9": {
+      "value": "2024. Khó khăn, chị chỉ xin cho giống, trồng rồi bán cho chị/chú xưa",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Năm bắt đầu '2024' đọc rõ. Phần lý do phía sau rất khó đọc, giữ best-effort."
+    },
+    "Q9_derived_start_year_or_years_exp": {"value": "2024"},
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "khac", "other_text": "con dâu làm"},
+    "Q13": {"value": "khac", "other_text": "con dâu làm"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": ["nguoi_khac"],
+          "note": "Chữ viết tay 'con dâu' ở cột Người khác"
+        },
+        "trong": {
+          "value": ["nguoi_khac"],
+          "note": "Dấu nháy '' (ditto, cùng như dòng trên = con dâu) ở cột Người khác"
+        },
+        "cham_soc_cay": {
+          "value": ["nguoi_khac"],
+          "note": "Dấu nháy '' (ditto = con dâu) ở cột Người khác"
+        },
+        "thuoc_bvtv": {
+          "value": ["nguoi_khac"],
+          "flags": ["needs_review"],
+          "note": "Ký hiệu viết tay không rõ ràng (không hẳn dấu nháy chuẩn) ở cột Người khác — suy luận cùng nghĩa 'con dâu' như các dòng trên, cần review"
+        },
+        "thu_hoach": {"value": null},
+        "so_che": {
+          "value": ["nguoi_khac"],
+          "note": "Dấu nháy '' (ditto = con dâu) ở cột Người khác"
+        },
+        "lien_he_tieu_thu": {
+          "value": ["nguoi_khac"],
+          "note": "Dấu nháy '' (ditto = con dâu) ở cột Người khác"
+        },
+        "khac_san_xuat": {
+          "value": ["nguoi_khac"],
+          "flags": ["needs_review"],
+          "note": "Dấu tick 'v' ở cột Người khác cho dòng 'Khác (ghi rõ)' nhưng không ghi rõ nội dung công việc khác là gì"
+        },
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {
+          "value": ["vo", "nguoi_khac"],
+          "note": "Tick ở cột Vợ, đồng thời có chữ viết tay 'Thuê giặt' ở cột Người khác — theo quy tắc cột Người khác, tính là đa lựa chọn"
+        },
+        "dua_don_con": {"value": null},
+        "dam_cuoi_gio": {
+          "value": ["nguoi_khac"],
+          "note": "Chữ viết tay 'con trai, con dâu' ở cột Người khác"
+        },
+        "cham_soc_con": {"value": null},
+        "gia_suc_nho": {
+          "value": ["nguoi_khac"],
+          "note": "Chữ viết tay 'con dâu' ở cột Người khác"
+        },
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": null},
+        "bao_duong_xe": {
+          "value": ["nguoi_khac"],
+          "note": "Chữ viết tay 'con dâu, con trai' ở cột Người khác"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Từ ông bà dạy; mưa dài chỉ biết làm chè, rau gia vị; là loại thuốc uống để người đi, đỡ mỏi",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": "Trồng trọt, cây hà thủ ô, cây tía tô, su su... trồng đồi bãi", "confidence": "thap"}}
+    },
+    "Q16b": {
+      "value": "Ngày xưa không có khách du lịch mua",
+      "confidence": "trung_binh"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": []},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": true
+    },
+    "Q18": {"value": [], "note": "Không có thiết bị nào (xem Q17) nên không chọn mục nào"},
+    "Q19": {
+      "value": null,
+      "flags": ["needs_review"],
+      "note": "Không có ô nào được đánh dấu, kể cả 'Không' — câu bị bỏ trống hoàn toàn"
+    },
+    "Q20": {"value": "khac", "other_text": "con dâu"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Dạy làm cây hà thủ ô"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {
+      "value": ["khac"],
+      "other_text": "Vay ở ngân hàng, nhờ con dâu vay",
+      "flags": ["needs_review"],
+      "note": "Không thấy ô tick hình học ở 'Khác' nhưng có điền nội dung vào chỗ trống — suy luận đã chọn"
+    },
+    "Q22b": {"value": null},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {"value": "khac", "other_text": "con trai"},
+    "Q27b": {
+      "value": "Mình già rồi nên để cho con trai",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc", "thieu_kien_thuc"],
+      "note": "Ghi chú viết tay thêm bên cạnh: 'già sức khỏe yếu'"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": null,
+      "flags": ["needs_review"],
+      "note": "Không có ô nào trong 5 lựa chọn được tick; có ghi chú viết tay bên cạnh 'con dâu làm hết' — chị không tự tham gia trực tiếp khâu nào"
+    },
+    "Q31": {
+      "value": "Thích làm nhưng không có sức",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "con_cai", "noi_dung": null},
+        "mua_vat_tu": {"value": "con_cai", "noi_dung": null},
+        "chon_ban": {"value": "con_cai", "noi_dung": null},
+        "vay_von": {"value": "con_cai", "noi_dung": null},
+        "gia_ban": {"value": "con_cai", "noi_dung": null},
+        "su_dung_thu_nhap": {"value": "con_cai", "noi_dung": null},
+        "su_dung_dat": {"value": "con_cai", "noi_dung": null},
+        "khac": {"value": null, "noi_dung": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {"value": "Không"}
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": "Ghi chú viết tay bên dưới bảng Q14: 'mình già' — giải thích lý do hầu hết công việc do con dâu/con trai đảm nhiệm",
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}
