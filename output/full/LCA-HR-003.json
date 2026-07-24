@@ -1,0 +1,199 @@
+{
+  "record_id": "LCA-HR-003",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-003/LCA-HR-003__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-26"},
+    "META_LOCATION": {"value": "Hàm Rồng 3, Sa Pa, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Giáy Thị Gia",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Có ghi '(ĐT: )' nhưng để trống, không có số điện thoại"
+    },
+    "Q2": {"value": "1997"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có dấu tick hình học rõ ràng nhưng có điền tên dân tộc 'Mông' — suy là đã chọn theo thông lệ"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 17}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "2014, đi khi lấy chồng, do nhà chồng đã làm từ trước rồi",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2014, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "ca_hai"},
+    "Q13": {
+      "value": "ca_hai",
+      "note": "Có ghi chú thêm 'làm như nhau'"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "ca_hai"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {
+          "value": null,
+          "note": "Ghi chữ '0 sử dụng' trong ô Vợ — nghĩa là không sử dụng thuốc BVTV, không phải chọn Vợ"
+        },
+        "thu_hoach": {
+          "value": ["ca_hai", "nguoi_khac"],
+          "note": "Có tick 'Cả hai' rõ, đồng thời cột 'Người khác' có chữ 'bm ck' (bố mẹ chồng) — theo quy tắc cột Người khác, tính là đa lựa chọn"
+        },
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {
+          "value": "ca_hai",
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Ký hiệu ở cột 'Cả hai' không phải tick chuẩn (dạng chữ 'd' viết tay); cột 'Người khác' có ghi chú 'người mua đến tận nhà' — giải thích cách bán hàng, không phải chọn thêm người"
+        },
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "chong"},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {
+          "value": null,
+          "note": "Ghi số '0' ở cả 2 cột Vợ và Chồng — nghĩa là không có/không áp dụng (không nuôi gia súc/gia cầm nhỏ)"
+        },
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {"value": "chong"},
+        "day_do_con": {"value": "vo"},
+        "bao_duong_xe": {"value": "chong"}
+      }
+    },
+    "Q15": {
+      "value": "Bố mẹ hướng dẫn; gia đình hay xem tài liệu, tự học; công ty thu mua lá",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {
+      "value": "khong",
+      "note": "Có ghi chú thêm 'cả 2 vợ chồng cùng làm'"
+    },
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "giai_tri", "giao_dich_ban_hang", "mang_xa_hoi"],
+      "note": "Có ghi chú thêm '(chị dùng nhiều hơn)' cạnh mục Tham gia mạng xã hội"
+    },
+    "Q19": {
+      "value": ["quang_ba"],
+      "note": "Có ghi chú thêm bên dưới, chữ khó đọc dạng '(giáo dục bán hàng)'"
+    },
+    "Q20": {
+      "value": ["vo", "chong", "khac"],
+      "other_text": "bố chồng",
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả 'Vợ', 'Chồng' và 'Khác (bố chồng)' đều được tick trên câu đơn lựa chọn"
+    },
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": []},
+    "Q21c": {
+      "value": "Bố chồng đi họp, bố là người thường đi họp nên việc gì bố đi",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "khong"},
+    "Q26": {
+      "value": "khong",
+      "note": "Có ghi chú thêm 'chỉ trao đổi, thông báo cho chị, chị không cần (xin phép)' (chữ viết tay khó đọc, best-effort)"
+    },
+    "Q27a": {"value": "khac", "other_text": "Bố, mẹ chồng (đứng tên bố chồng)"},
+    "Q27b": {
+      "value": "Nhà của bố chồng, không biết vì sao không có tên mẹ chồng",
+      "confidence": "trung_binh"
+    },
+    "Q28": {"value": ["khong_kho_khan"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu đơn lựa chọn"
+    },
+    "Q31": {
+      "value": "Không - thương mại, bán hàng; có, nếu biết sử dụng công nghệ để giới thiệu thì bán được nhiều hàng hơn",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, nội dung có phần mâu thuẫn (Không/Có), best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {
+          "value": null,
+          "needs_review": true,
+          "note": "Ký hiệu lạ dạng 'k⁰' trong ô — có thể ý là 'không' (chưa vay vốn nên không áp dụng), không phải tick chuẩn"
+        },
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Mong muốn có người dạy chữ, biết chữ để giao tiếp, bán được nhiều dược liệu hơn, có tiền cho con cái học, con nhỏ đi học",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

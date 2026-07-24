@@ -1,0 +1,156 @@
+{
+  "record_id": "LCA-HR-022",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-022/LCA-HR-022__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-25"},
+    "META_LOCATION": {"value": "Xóm Séo, P. Sapa, Lào Cai, tổ Hàm Rồng 2"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Giàng Thị Nhu",
+      "pii": true,
+      "note": "Viết thêm 'ĐT (' ở cuối nhưng không điền số điện thoại — để trống, không tự đoán"
+    },
+    "Q2": {"value": "1990"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Mông"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {"Q6_tuoi_ket_hon": {"value": 17, "confidence": "thap", "note": "Chữ viết tay dạng '17t' không hoàn toàn rõ"}}
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "Năm 2016",
+      "confidence": "cao",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2016, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": ["vo", "nguoi_khac"],
+          "other_text": "(chữ viết tay không rõ nghĩa)",
+          "needs_review": true,
+          "note": "Cột 'Người khác' có chữ viết tay và 1 dấu X nhỏ, nội dung không đọc được rõ"
+        },
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo"},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "vo"},
+        "bao_duong_xe": {
+          "value": ["nguoi_khac"],
+          "other_text": "Ra hàng sửa",
+          "note": "Cột 'Vợ' ghi 'ko' (không) — theo quy tắc chữ phủ định = trống; cột 'Người khác' ghi 'Ra hàng sửa' — tính đã chọn"
+        }
+      },
+      "note": "Toàn bộ câu này hầu như chỉ tick cột 'Vợ' — người vợ tự làm gần như mọi việc"
+    },
+    "Q15": {
+      "value": "Gia đình hay xem đài tivi, thấy đi tập huấn",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false,
+      "note": "Có ghi chú thêm '(chị/vợ đều có; vợ đi làm xa)'"
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "tim_kiem_thong_tin", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo", "note": "Có ghi chú thêm '(đủ đi làm cả xa)'"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {"value": ["ky_thuat"]},
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "khac", "other_text": "Bố/mẹ đẻ"},
+    "Q27b": {"value": null},
+    "Q28": {
+      "value": ["khong_kho_khan"],
+      "note": "Có ghi chú thêm bên cạnh (chữ viết tay khó đọc trọn vẹn, đại ý liên quan đến thuế/người đi làm xa) — không ảnh hưởng lựa chọn chính"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "che_bien", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "4 trong 5 lựa chọn đều được tick (trừ Thương mại)"
+    },
+    "Q31": {
+      "value": "Hoạt động Thủy môi, chưa biết bán hàng online và quảng bá sản phẩm",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": null, "note": "Ô ghi 'ko' — theo quy tắc chữ phủ định = trống"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Mong muốn có thêm kiến thức giá cả sản phẩm Atiso để bán được nhiều hơn, tạo thêm thu nhập, tự giữ được nhiều hơn. Có kiến thức để hiểu được nhiều hơn muốn cho con đi học",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    }
+  },
+  "page_notes": {
+    "1": "2 ký hiệu viết tay ở góc trên bên trái trang (dạng 'ca'/'Ve') — có thể là mã nội bộ của điều tra viên trước khi scan, không thuộc nội dung khảo sát",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

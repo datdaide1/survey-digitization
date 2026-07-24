@@ -1,0 +1,157 @@
+{
+  "record_id": "LCH-MSP-012",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-012/LCH-MSP-012__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {"value": "Thôn Mao Sao Phìn, Sín Hồ, Lai Châu"},
+    "CONSENT_1": {"value": null, "needs_review": true, "note": "Không ô nào được tick, không rõ có đồng ý tham gia không"},
+    "CONSENT_2": {"value": null, "needs_review": true, "note": "Không ô nào được tick"},
+
+    "Q1": {
+      "value": "Chèo Mỹ Dao",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Không có số điện thoại ghi kèm ở dòng này"
+    },
+    "Q2": {"value": "1996"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Dao"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "6"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 18}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu", "phi_nong_nghiep"]},
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "Đầu năm 2018. Sản xuất 2023, mang lại thu nhập",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay có 2 dòng gạch đầu dòng, khó đọc chính xác, transcription best-effort",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2018, "unit": "start_year", "confidence": "trung_binh"}
+      }
+    },
+    "Q10": {
+      "value": ["nong_dan", "cong_nhan"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 2 ô 'Nông dân' và 'Công nhân' đều có dấu tick rõ"
+    },
+    "Q11": {"value": ["hoi_phu_nu", "hoi_nong_dan"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": ["vo", "chong"]},
+        "trong": {"value": ["vo", "chong"]},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo"},
+        "thu_hoach": {"value": ["vo", "chong"]},
+        "so_che": {"value": null, "needs_review": true, "note": "Ô cột 'Vợ' có chữ viết tay không rõ ('Cả'?) thay vì dấu tick hình học, không tính được là chọn cột nào chắc chắn"},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": "ca_hai", "note": "Có chữ 'ngựa' viết cạnh ô 'Vợ', có thể chỉ ghi loại gia súc thực tế nuôi, không tính là chọn thêm cột"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": "ca_hai"}
+      }
+    },
+    "Q15": {"value": "Người cao tuổi"},
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": "Làm đất, bán dược liệu", "confidence": "thap"}}
+    },
+    "Q16b": {
+      "value": "Chăm cái xây",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, transcription best-effort không chắc chắn"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["ban_hang_online"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["ky_thuat"],
+      "note": "Có mũi tên ghi thêm chi tiết: 'trồng cây dược liệu'"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["ngan_hang_chinh_sach"]},
+    "Q22b": {"value": null},
+    "Q23": {
+      "value": "co",
+      "subfield": {"Q23_chi_tiet": {"value": "Máy cày (từ xã)", "confidence": "trung_binh"}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {
+      "value": "khong_biet",
+      "note": "Ghi chú thêm: 'Chưa có sổ đỏ'"
+    },
+    "Q27b": {"value": "Chưa có sổ đỏ"},
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 3 ô 'Sản xuất', 'Thu hái', 'Tiêu thụ' đều được tick trên câu đơn lựa chọn"
+    },
+    "Q31": {"value": null},
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "vo"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Trong gia đình thì không khác gì. Ngoài xã hội thì không",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort không chắc chắn"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

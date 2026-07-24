@@ -1,0 +1,145 @@
+{
+  "record_id": "LCA-HR-015",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-015/LCA-HR-015__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-25"},
+    "META_LOCATION": {"value": "Xóm Séo (Hàm Rồng 2), P. Sa Pa, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {"value": "Giàng Thị Pay", "pii": true},
+    "Q2": {"value": "1984"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "H'mong"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {"Q6_tuoi_ket_hon": {"value": 16}}
+    },
+    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
+    "Q8": {"value": "tren_75"},
+    "Q9": {
+      "value": "750x800 m²",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Nội dung viết chỉ là diện tích đất (750x800 m²), không có năm bắt đầu hay số năm kinh nghiệm — không đọc được thông tin cần thiết để rút ra năm/số năm, không suy đoán liều",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": null, "unit": null, "confidence": null}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo"},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "vo"},
+        "bao_duong_xe": {"value": "vo"}
+      },
+      "note": "Toàn bộ 18 dòng đều tick cột 'Vợ' — không có dòng nào tick cột khác"
+    },
+    "Q15": {
+      "value": "Do công ty dạy",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": "Trồng dược liệu/atiso", "confidence": "trung_binh"}}
+    },
+    "Q16b": {
+      "value": "Do đàn ông không làm nữa",
+      "confidence": "trung_binh"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": ["chong"]},
+        "may_tinh_bang": {"value": ["chong"]}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {"value": ["ky_thuat"]},
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "co",
+      "subfield": {"Q23_chi_tiet": {"value": "Phân/thuốc từ công ty Traphaco", "confidence": "trung_binh"}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {"value": "ca_hai"},
+    "Q27b": {"value": null},
+    "Q28": {"value": ["thieu_nguon_luc", "ganh_nang_viec_nha"]},
+    "Q29a": {
+      "value": null,
+      "needs_review": true,
+      "note": "Cả 'Có' và 'Không' đều không có tick, nhưng Q29b lại được điền đầy đủ (cả 3 mục) — có khả năng 'Có' bị bỏ sót khi tick, giữ nguyên null theo đúng dấu quan sát được và gắn cờ để người review xác nhận"
+    },
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "che_bien", "thuong_mai", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả 5 lựa chọn đều được tick trên câu đơn lựa chọn"
+    },
+    "Q31": {
+      "value": "Được tham gia tất cả",
+      "confidence": "trung_binh"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": null},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {"value": null, "note": "Ghi chữ 'Không'"}
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

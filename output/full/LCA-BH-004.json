@@ -4,47 +4,73 @@
   "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-23",
   "source_images": "output/assembly/_render/LCA-BH-004/LCA-BH-004__p1.png .. p7.png",
   "answers": {
-    "META_DATE": {"value": "2026-05-27"},
-    "META_LOCATION": {
-      "value": "Thôn Na Hối Nùng, xã Bảo Hà, Lào Cai",
-      "confidence": "thap",
-      "needs_review": true,
-      "note": "Chữ viết tay khó đọc. Có ký hiệu 'XXX' viết thêm bên dưới địa điểm, không rõ ý nghĩa — ghi vào page_notes."
+    "META_DATE": {
+      "value": "2026-05-27"
     },
-    "CONSENT_1": {"value": "yes"},
-    "CONSENT_2": {"value": "yes"},
-
+    "META_LOCATION": {
+      "value": "Thôn Na Hối, xã Bảo Hà, Lào Cai",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc. Có ký hiệu 'XXX' viết thêm bên dưới địa điểm, không rõ ý nghĩa — ghi vào page_notes. REVIEW: chữ Nùng bị gạch và xxx ởi dưới tức là bỏ đi -> chỉ còn Na Hối"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": "yes"
+    },
     "Q1": {
       "value": "Nguyễn Thị Loan (ĐT: 0868 958 186)",
       "pii": true,
       "confidence": "trung_binh",
       "note": "Tên viết tắt 'Ng°' hiểu là 'Nguyễn'"
     },
-    "Q2": {"value": "1993"},
-    "Q3": {"value": "nu"},
+    "Q2": {
+      "value": "1993"
+    },
+    "Q3": {
+      "value": "nu"
+    },
     "Q4": {
       "value": "khac",
-      "other_text": "Nùng, Tày",
-      "flags": ["ambiguous_mark"],
-      "needs_review": true,
-      "note": "Không có ô nào trong 'Kinh'/'Khác' được tick trực tiếp, nhưng có điền tên dân tộc vào chỗ trống của 'Khác' — chữ viết khó đọc, có thể là 2 tên dân tộc ('Nùng, Tày') hoặc 1 tên duy nhất."
+      "other_text": "Tày",
+      "flags": [
+        "ambiguous_mark"
+      ],
+      "note": "Không có ô nào trong 'Kinh'/'Khác' được tick trực tiếp, nhưng có điền tên dân tộc vào chỗ trống của 'Khác' — chữ viết khó đọc, có thể là 2 tên dân tộc ('Nùng, Tày') hoặc 1 tên duy nhất. REVIEW: chữ Nùng bị gạch đi"
     },
     "Q5": {
       "components": {
-        "Q5_khong_di_hoc": {"value": false},
-        "Q5_khong_tieng_pho_thong": {"value": false},
-        "Q5_lop_cao_nhat": {"value": null},
-        "Q5_trung_cap_dh": {"value": true}
+        "Q5_khong_di_hoc": {
+          "value": false
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": null
+        },
+        "Q5_trung_cap_dh": {
+          "value": true
+        }
       },
       "note": "Ghi chú thêm cạnh lựa chọn: 'Cao đẳng'"
     },
     "Q6": {
       "value": "da_ket_hon",
       "subfield": {
-        "Q6_tuoi_ket_hon": {"value": 22}
+        "Q6_tuoi_ket_hon": {
+          "value": 22
+        }
       }
     },
-    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu", "lam_nghiep"]},
+    "Q7": {
+      "value": [
+        "trong_trot",
+        "chan_nuoi",
+        "cay_duoc_lieu",
+        "lam_nghiep"
+      ]
+    },
     "Q8": {
       "value": "duoi_25",
       "note": "Ghi chú thêm: 'Mới trồng từ đầu năm, chưa có thu hoạch nhiều'"
@@ -62,68 +88,103 @@
       }
     },
     "Q10": {
-      "value": ["nong_dan", "buon_ban"],
-      "flags": ["multi_mark_on_single_select"],
+      "value": [
+        "nong_dan",
+        "buon_ban"
+      ],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
       "note": "Cả '2. Nông dân' và '4. Buôn bán, kinh doanh nhỏ' đều được tick. Ghi chú thêm: 'dược liệu, nông sản'."
     },
-    "Q11": {"value": ["khong_hoi_vien"]},
-    "Q12": {"value": "chong"},
-    "Q13": {"value": "ca_hai"},
+    "Q11": {
+      "value": [
+        "khong_hoi_vien"
+      ]
+    },
+    "Q12": {
+      "value": "chong"
+    },
+    "Q13": {
+      "value": "ca_hai"
+    },
     "Q14": {
       "rows": {
-        "lam_dat": {"value": "chong"},
-        "trong": {"value": "ca_hai"},
-        "cham_soc_cay": {"value": "ca_hai"},
+        "lam_dat": {
+          "value": "chong"
+        },
+        "trong": {
+          "value": "ca_hai"
+        },
+        "cham_soc_cay": {
+          "value": "ca_hai"
+        },
         "thuoc_bvtv": {
           "value": null,
           "note": "Ký hiệu '0' viết cạnh nhãn dòng (ngoài các cột) — hiểu là không sử dụng, không phải đánh dấu chọn cột nào"
         },
-        "thu_hoach": {"value": "chong"},
-        "so_che": {"value": "ca_hai"},
+        "thu_hoach": {
+          "value": "chong"
+        },
+        "so_che": {
+          "value": "ca_hai"
+        },
         "lien_he_tieu_thu": {
-          "value": ["ca_hai", "nguoi_khac"],
+          "value": "ca_hai",
           "note": "Cột 'Người khác' có chữ viết tay: 'cả 2 đều có mối [quan hệ] khác nhau' — theo quy tắc mới, tính là đã chọn dù nội dung chỉ diễn giải thêm cho 'Cả hai', không nêu người thứ 3 cụ thể."
         },
-        "khac_san_xuat": {"value": null},
-        "noi_tro": {"value": "ca_hai"},
-        "giat_giu": {"value": "ca_hai"},
-        "dua_don_con": {"value": "ca_hai"},
-        "dam_cuoi_gio": {"value": "chong"},
-        "cham_soc_con": {"value": "ca_hai"},
-        "gia_suc_nho": {"value": "ca_hai"},
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "ca_hai"
+        },
+        "giat_giu": {
+          "value": "ca_hai"
+        },
+        "dua_don_con": {
+          "value": "ca_hai"
+        },
+        "dam_cuoi_gio": {
+          "value": "chong"
+        },
+        "cham_soc_con": {
+          "value": "ca_hai"
+        },
+        "gia_suc_nho": {
+          "value": "ca_hai"
+        },
         "gia_suc_lon": {
-          "value": ["nguoi_khac"],
+          "value": [
+            "nguoi_khac"
+          ],
           "note": "Không có cột nào khác được tick; cột 'Người khác' có tick + chữ 'b.mẹ' (bố mẹ chồng/vợ hỗ trợ chăm sóc gia súc lớn)."
         },
         "quan_ly_chi_tieu": {
-          "value": ["ca_hai", "nguoi_khac"],
-          "needs_review": true,
+          "value": "ca_hai",
           "note": "Cột 'Cả hai' có tick; cột 'Người khác' có chữ viết tay khó đọc (best-effort: 'ai mà biết được, không cố định lý') — theo quy tắc mới tính là đã chọn."
         },
         "day_do_con": {
-          "value": ["ca_hai", "nguoi_khac"],
-          "needs_review": true,
+          "value": "ca_hai",
           "note": "Cột 'Cả hai' có tick; cột 'Người khác' có chữ viết tay khó đọc (best-effort: 'có vẻ lớn hơn, [người lớn] góp vào') — theo quy tắc mới tính là đã chọn."
         },
         "bao_duong_xe": {
-          "value": ["chong", "nguoi_khac"],
+          "value": "chong",
           "note": "Cột 'Chồng' có tick; cột 'Người khác' có chữ viết tay: '(mua xe, các thứ lớn)' — theo quy tắc mới tính là đã chọn."
         }
       }
     },
     "Q15": {
-      "value": "Qua 1 trong làng chia sẻ lại",
+      "value": "Qua người trong làng chia sẻ lại",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort"
     },
     "Q16a": {
       "value": "co",
       "subfield": {
         "Q16a_chi_tiet": {
-          "value": "Buôn bán dược liệu, đi xa, đào tạo",
+          "value": "Buôn bán dược liệu, đặc sản, thảo dược",
           "confidence": "thap",
-          "needs_review": true,
           "note": "Chữ viết tay khó đọc, transcription best-effort"
         }
       }
@@ -131,36 +192,80 @@
     "Q16b": {
       "value": "Thời nay bình đẳng hơn nên PN cũng làm được việc gì nam giới làm. Thoáng hơn, suy nghĩ cởi mở hơn, được đi học, được tham gia các hoạt động xã hội. Có ăn nói mềm hơn, có tay nghề hơn. Do có tuyên truyền, cưới cấy toàn thể; chị quan tâm nhiều tin, đại chỉ, phong tục -> hay đón nhất, được tôn trọng hơn.",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort, không chắc chắn nhiều đoạn"
     },
     "Q17": {
       "rows": {
-        "dien_thoai": {"value": ["chong", "vo"]},
-        "may_tinh": {"value": []},
-        "may_tinh_bang": {"value": []}
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
       },
       "khong_ai_co": false
     },
-    "Q18": {"value": ["doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "lam_viec_hoc_online", "mang_xa_hoi"]},
-    "Q19": {"value": ["quang_ba"]},
+    "Q18": {
+      "value": [
+        "doc_tin_tuc",
+        "giai_tri",
+        "tim_kiem_thong_tin",
+        "giao_dich_ban_hang",
+        "lam_viec_hoc_online",
+        "mang_xa_hoi"
+      ]
+    },
+    "Q19": {
+      "value": [
+        "quang_ba"
+      ]
+    },
     "Q20": {
       "value": "ca_hai",
       "note": "Ghi chú thêm khó đọc bên cạnh (best-effort, không chắc chắn): 'ND'"
     },
-    "Q21a": {"value": "chua_lan_nao"},
-    "Q21b": {"value": null},
+    "Q21a": {
+      "value": "chua_lan_nao"
+    },
+    "Q21b": {
+      "value": []
+    },
     "Q21c": {
-      "value": "Bố mẹ chồng tham gia rồi về lý do - thời gian đó chưa có thời gian",
+      "value": "Bố mẹ chồng tham gia rồi về hướng dẫn - thời gian đó chưa có thời gian",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort"
     },
-    "Q22a": {"value": ["chua"]},
-    "Q22b": {"value": ["khong_co_nhu_cau", "khong_tai_san_the_chap"]},
-    "Q23": {"value": "khong", "subfield": {"Q23_chi_tiet": {"value": null}}},
-    "Q24": {"value": "co"},
-    "Q25": {"value": "co"},
+    "Q22a": {
+      "value": [
+        "chua"
+      ]
+    },
+    "Q22b": {
+      "value": [
+        "khong_co_nhu_cau",
+        "khong_tai_san_the_chap"
+      ]
+    },
+    "Q23": {
+      "value": "khong",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": null
+        }
+      }
+    },
+    "Q24": {
+      "value": "co"
+    },
+    "Q25": {
+      "value": "co"
+    },
     "Q26": {
       "value": "khong",
       "note": "Ghi chú thêm: '(Trao đổi, tự tin, không cấm)'"
@@ -175,40 +280,73 @@
       "confidence": "trung_binh"
     },
     "Q28": {
-      "value": ["thieu_nguon_luc"],
+      "value": [
+        "thieu_nguon_luc"
+      ],
       "note": "Ghi chú thêm: 'thiếu vốn'"
     },
-    "Q29a": {"value": "co"},
-    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
-    "Q29c": {"value": null},
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
     "Q30": {
-      "value": ["san_xuat", "thu_hai", "tieu_thu"],
-      "flags": ["multi_mark_on_single_select"],
+      "value": [
+        "san_xuat",
+        "tieu_thu"
+      ],
       "note": "3 ô được tick trên câu chỉ cho chọn 1 khâu: Sản xuất, Thu hái (có ghi chú thêm 'cả'), Tiêu thụ."
     },
     "Q31": {
       "value": "Có - Thương mại - chưa có nhiều lý do, khó khăn lý do sẵn có, quen biết, bán nhiều",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort"
     },
     "Q32": {
       "rows": {
-        "chon_cay_trong": {"value": "cung_quyet_dinh"},
-        "mua_vat_tu": {"value": "cung_quyet_dinh"},
-        "chon_ban": {"value": "cung_quyet_dinh"},
-        "vay_von": {"value": null, "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"},
-        "gia_ban": {"value": "cung_quyet_dinh"},
-        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
-        "su_dung_dat": {"value": "cung_quyet_dinh"},
-        "khac": {"value": null}
+        "chon_cay_trong": {
+          "value": "cung_quyet_dinh"
+        },
+        "mua_vat_tu": {
+          "value": "cung_quyet_dinh"
+        },
+        "chon_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "vay_von": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"
+        },
+        "gia_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_thu_nhap": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_dat": {
+          "value": "cung_quyet_dinh"
+        },
+        "khac": {
+          "value": null
+        }
       }
     },
-    "Q33": {"value": ["nhom_san_xuat"]},
+    "Q33": {
+      "value": [
+        "nhom_san_xuat"
+      ]
+    },
     "Q34": {
       "value": "- Mong muốn được học/vay huy động vốn nâng cao giá trị, kết nối uy tín công ty số để áp dụng bán hàng, quảng bá sản phẩm, bán được nhiều -> tăng thu nhập -> nữ có thu tự do, giúp bà con dễ dạy, thuận lợi tiêu thụ ổn định.\n- Được hỗ trợ, có nguồn vốn để mở rộng thu mua, tiêu thụ (do không có tài sản thế chấp nên không vay được vốn)\n- Có kiến thức để bảo quản dược liệu an toàn, không bị hỏng; kỹ thuật đóng gói...\n- Tìm được đơn vị vận chuyển uy tín, thường xuyên, có trách nhiệm.\n- Có kiến thức để hoàn thành thủ tục cấp giấy chứng nhận sản phẩm quy chuẩn, quy định về giấy chứng nhận sản phẩm\n- Tham gia nhiều hơn hội phụ nữ/nhóm...",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Câu trả lời rất dài, chữ viết tay khó đọc trọn vẹn nhiều đoạn, transcription best-effort. Đoạn cuối bị cắt do hết trang."
     }
   },

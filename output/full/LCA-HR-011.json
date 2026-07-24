@@ -1,0 +1,197 @@
+{
+  "record_id": "LCA-HR-011",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-011/LCA-HR-011__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-09-25"},
+    "META_LOCATION": {
+      "value": "Xóm Séo, Tổ Hàm Rồng 2, Sapa, LC",
+      "confidence": "trung_binh",
+      "note": "'LC' viết tắt cuối dòng, khả năng là 'Lào Cai'"
+    },
+    "CONSENT_1": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Chảo Thị Mế",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay, tên đệm/tên có thể đọc thành 'Mế' hoặc 'Mé'"
+    },
+    "Q2": {"value": "1986", "note": "Có ghi chú thêm '(40 tuổi?)' bên cạnh — khớp với 2026-1986=40, không mâu thuẫn"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Mông"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": 14,
+          "confidence": "trung_binh",
+          "note": "Ghi chú tay '26 năm rồi' + '14 tuổi' cạnh ô — khớp nội bộ (kết hôn 1986+14=2000, đến 2026 là 26 năm), đọc là kết hôn năm 14 tuổi, thuộc nhóm <18 - tảo hôn theo quy tắc bucket"
+        }
+      }
+    },
+    "Q7": {
+      "value": ["cay_duoc_lieu"],
+      "note": "Có chữ 'đào' viết dưới ô 'Trồng trọt' nhưng ô đó không có tick hình học — không tính là chọn, có thể là ghi chú loại cây khác (đào)"
+    },
+    "Q8": {"value": "tren_75"},
+    "Q9": {
+      "value": "2018, công ty liên hệ gọi trồng",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Năm '2018' đọc rõ. Phần sau chữ viết tay khó đọc, best-effort",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2018, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {
+      "value": ["vo", "ca_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Ô 'Vợ' có tick rõ trong ô; đồng thời có 1 dấu check lớn nằm phía trên ô 'Cả hai' (không nằm gọn trong ô nhưng rõ ràng là 1 dấu check) — ghi nhận cả 2"
+    },
+    "Q13": {"value": "chong"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "chong"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": "ca_hai"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {
+          "value": ["ca_hai", "nguoi_khac"],
+          "needs_review": true,
+          "note": "Cột 'Người khác' có chữ viết tay không rõ nghĩa (dạng 'L tạ trẻ đến mua' — có thể ý nói có người đến thu mua tận nơi) — theo quy tắc mới, tính là đã chọn thêm cột này"
+        },
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "ca_hai"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": null},
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {"value": "chong"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": "chong"}
+      }
+    },
+    "Q15": {
+      "value": "Công ty tập huấn, hộ dạy nhau",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "giai_tri", "mang_xa_hoi"],
+      "note": "Chữ 'nhắn tin' trong nhãn option 'Gọi điện, nhắn tin' bị gạch bỏ bằng tay — không rõ ý nghĩa, ô vẫn được tick nên vẫn tính chọn. Option 'Tham gia mạng xã hội' có ghi chú thêm 'FB'"
+    },
+    "Q19": {"value": ["khong"]},
+    "Q20": {
+      "value": ["chong", "ca_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả 'Chồng' và 'Cả hai' đều có tick. Có chữ viết tay thêm sau 'Khác (ghi rõ)' (không rõ nghĩa, dạng 'ch...a đi thi/hai vợ... mới đi') nhưng ô 'Khác' không có tick — không tính là chọn thêm, chỉ ghi chú lại"
+    },
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": [],
+      "note": "Ô 'Khác (ghi rõ)' không tick, chữ viết tay ghi 'không nhé' — theo quy tắc chữ 'không' = trống, không tính là chọn"
+    },
+    "Q21c": {
+      "value": "Nếu không đi do... (chữ viết tay khó đọc)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Có chữ viết dù Q21a trả lời '1-3 lần' (không phải 'chưa lần nào') — vẫn ghi lại best-effort theo đúng nội dung quan sát được, không tự suy diễn xoá bỏ"
+    },
+    "Q22a": {
+      "value": ["khac"],
+      "other_text": "họ hàng",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có tick hình học rõ nhưng có điền nội dung 'họ hàng' — suy là đã chọn theo thông lệ (không phải chữ phủ định 'ko/không')"
+    },
+    "Q22b": {"value": []},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {"value": "chong"},
+    "Q27b": {
+      "value": "Không biết, do bà mẹ để cho",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khac"],
+      "other_text": "bãi khó (không chắc, chữ viết tay khó đọc)",
+      "needs_review": true,
+      "note": "Option 'Thiếu nguồn lực' có khoanh tròn thêm chữ 'vốn' để nhấn mạnh. Ô 'Khác' không có tick hình học nhưng có điền nội dung — suy là đã chọn theo thông lệ, nội dung khó đọc"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "che_bien", "thuong_mai", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Không có ô nào được tick hình học, nhưng có ghi chú lề 'không rõ vì cái gì cũng làm' — theo quy tắc 8 (multi-mark suy ra từ ghi chú lề), coi như chọn tất cả các khâu"
+    },
+    "Q31": {
+      "value": null,
+      "note": "Chỉ có 1 ký hiệu tròn nhỏ dạng '0' viết trên dòng trả lời — hiểu là không có ý kiến/không có hoạt động nào"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "chong"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "chong"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": null,
+      "note": "Chỉ có ký hiệu '?' viết ở đầu dòng trả lời, không có nội dung chữ — hiểu là không có câu trả lời rõ ràng"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

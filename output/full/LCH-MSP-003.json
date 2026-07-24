@@ -1,0 +1,205 @@
+{
+  "record_id": "LCH-MSP-003",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-003/LCH-MSP-003__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {
+      "value": "Mao Sao Phìn, Sìn Hồ, Lai Châu",
+      "confidence": "cao"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "A Tấu Mí Sênh",
+      "pii": true,
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort, không chắc chắn"
+    },
+    "Q2": {
+      "value": "58 tuổi",
+      "confidence": "trung_binh",
+      "needs_review": true,
+      "note": "Ghi tuổi (58 tuổi) thay vì năm sinh, giống case LCA-LP-012 — không tự suy ra năm sinh cụ thể, giữ nguyên giá trị gốc"
+    },
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "needs_review": true,
+      "note": "Không có tick hình học rõ ràng ở ô 'Khác' nhưng có điền tên dân tộc 'Dao' vào chỗ trống — suy luận là đã chọn theo precedent các phiếu trước"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "goa",
+      "flags": ["conflicting_answer"],
+      "needs_review": true,
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 16, "confidence": "trung_binh"}
+      },
+      "note": "Cả 2 ô 'Đã kết hôn' (kèm tuổi kết hôn 16) và 'Góa' đều có tick, không có dấu gạch huỷ ở ô nào. Chọn 'goa' làm giá trị vì phản ánh tình trạng hôn nhân HIỆN TẠI — khớp với ghi chú Q27b 'Chồng mất lâu rồi'. Vẫn giữ Q6_tuoi_ket_hon=16 làm thông tin lịch sử."
+    },
+    "Q7": {"value": ["cay_duoc_lieu"]},
+    "Q8": {"value": "tren_75"},
+    "Q9": {
+      "value": "2021 đủ ăn, trồng thứ mới ạ",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Năm '2021' đọc rõ. Phần lý do phía sau chữ viết tay khó đọc trọn vẹn, best-effort",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2021,
+          "unit": "start_year",
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q10": {
+      "value": ["nong_dan", "lao_dong_tu_do"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả '2. Nông dân' và '6. Lao động tự do, làm thuê, làm mướn' đều được tick trong khi câu chỉ cho chọn 1 nghề"
+    },
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {
+      "value": ["vo", "khac"],
+      "other_text": "Con trai",
+      "needs_review": true,
+      "note": "Ô 'Vợ' có tick rõ. Ô 'Khác' không có tick hình học nhưng có chữ viết tay điền 'Con trai' vào chỗ trống — suy luận là đã chọn thêm theo precedent"
+    },
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": null},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {
+          "value": ["vo", "con_cai_lon"],
+          "flags": ["multi_mark_on_single_select"],
+          "note": "Cả cột 'Vợ' và cột 'Con cái lớn' đều có tick rõ ràng trên cùng 1 dòng"
+        },
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo", "note": "Ký hiệu tick có vòng lặp trang trí khác thường (kiểu viết riêng của phiếu này) — vẫn tính là tick cột Vợ, đa dạng kiểu đánh dấu"},
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {"value": "vo", "note": "Ký hiệu tick có vòng lặp trang trí khác thường — vẫn tính là tick cột Vợ"},
+        "gia_suc_nho": {"value": "vo", "note": "Ký hiệu tick có vòng lặp trang trí khác thường — vẫn tính là tick cột Vợ"},
+        "gia_suc_lon": {"value": "vo", "note": "Ký hiệu tick có vòng lặp trang trí khác thường — vẫn tính là tick cột Vợ"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": null},
+        "bao_duong_xe": {"value": "con_cai_lon"}
+      }
+    },
+    "Q15": {
+      "value": "Trước làm ở đây 1 năm, học từ hàng xóm",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {
+      "value": "khong",
+      "note": "Ghi chú tay thêm bên dưới: 'do có con trai lớn làm rồi' — giải thích lý do chọn Không (con trai lớn đã đảm nhiệm việc đó)"
+    },
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "giai_tri"],
+      "note": "Ghi chú tay thêm bên cạnh 'Giải trí': 'xem phim'"
+    },
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Ngô",
+      "needs_review": true,
+      "note": "Không có tick hình học ở ô nào, nhưng có chữ viết tay 'Ngô' điền vào chỗ trống 'Khác (ghi rõ)' — suy luận là đã chọn theo precedent"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {
+      "value": ["khac"],
+      "other_text": "Già rồi, người ta không cho vay",
+      "needs_review": true,
+      "note": "Không có tick hình học ở ô nào, nhưng có chữ viết tay điền vào chỗ trống 'Khác (ghi rõ)' — suy luận là đã chọn theo precedent"
+    },
+    "Q23": {
+      "value": "co",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": "3 năm trước, đang lũ, cho giống đỡ quỹ nợ ở đúng vụ, có khi trong rớ mới cho giống, chi hội cho...",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay rất khó đọc, transcription best-effort, không chắc chắn nhiều đoạn"
+        }
+      }
+    },
+    "Q24": {"value": "khong"},
+    "Q25": {"value": "khong"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "vo"},
+    "Q27b": {
+      "value": "Chồng mất lâu rồi",
+      "confidence": "cao",
+      "note": "Khớp với ghi chú 'chồng mất' và tình trạng hôn nhân goá ở Q6"
+    },
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "san_xuat"},
+    "Q31": {
+      "value": "Không, do bản ở có hoạt động gì hội họp, sinh hoạt, tổ chức do bận",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": null},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": null,
+      "needs_review": true,
+      "note": "Không có ô nào được tick (Ban chủ nhiệm HTX/Nhóm sản xuất/Quản lý rừng/Không) — có thể bị bỏ sót khi phỏng vấn"
+    },
+    "Q34": {"value": null}
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

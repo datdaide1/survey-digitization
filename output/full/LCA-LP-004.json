@@ -1,0 +1,335 @@
+{
+  "record_id": "LCA-LP-004",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-LP-004/LCA-LP-004__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {
+      "value": "2026-05-28"
+    },
+    "META_LOCATION": {
+      "value": "Thôn Xả Ván, xã Lùng Phình, Lào Cai",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, tên thôn có thể không chính xác tuyệt đối (đọc là 'Xả Vàn', có thể là tên khác)"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": null,
+      "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"
+    },
+    "Q1": {
+      "value": "Sùng Thị Xinh (ĐT: 0911579605)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {
+      "value": "1999"
+    },
+    "Q3": {
+      "value": "nu"
+    },
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "note": "Không có tick hình học rõ ràng ở ô 'Khác' nhưng có điền tên dân tộc 'Mông' — suy là đã chọn theo tinh thần chung của các phiếu tương tự (vd LCA-TPH-001/002/005/006/010)."
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {
+          "value": true
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": null
+        },
+        "Q5_trung_cap_dh": {
+          "value": false
+        }
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": 16,
+          "confidence": "cao",
+          "note": "Thuộc nhóm <18 - tảo hôn theo quy tắc bucket"
+        }
+      }
+    },
+    "Q7": {
+      "value": [
+        "trong_trot",
+        "cay_duoc_lieu"
+      ]
+    },
+    "Q8": {
+      "value": "25_50"
+    },
+    "Q9": {
+      "value": "Năm 2017 - 2026 (Năm 2017 cắt cành...; 2026 ... tự chủ quy - do cải cành k có giá)",
+      "confidence": "thap",
+      "note": "Năm bắt đầu '2017' đọc rõ, chắc chắn. Phần lý do phía sau (chữ viết tay trong ngoặc) rất khó đọc, transcription best-effort không chắc chắn.",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2017,
+          "unit": "start_year",
+          "confidence": "cao",
+          "note": "Ghi rõ 'Năm 2017' ở đầu câu trả lời."
+        }
+      }
+    },
+    "Q10": {
+      "value": "nong_dan"
+    },
+    "Q11": {
+      "value": [
+        "khong_hoi_vien"
+      ]
+    },
+    "Q12": {
+      "value": "ca_hai"
+    },
+    "Q13": {
+      "value": "ca_hai"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": "ca_hai"
+        },
+        "trong": {
+          "value": "ca_hai"
+        },
+        "cham_soc_cay": {
+          "value": "ca_hai"
+        },
+        "thuoc_bvtv": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'ko' thay vì tick — coi như trống, không phải ambiguous"
+        },
+        "thu_hoach": {
+          "value": "ca_hai"
+        },
+        "so_che": {
+          "value": "ca_hai"
+        },
+        "lien_he_tieu_thu": {
+          "value": "ca_hai"
+        },
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "vo"
+        },
+        "giat_giu": {
+          "value": "vo"
+        },
+        "dua_don_con": {
+          "value": "chong"
+        },
+        "dam_cuoi_gio": {
+          "value": "ca_hai"
+        },
+        "cham_soc_con": {
+          "value": "ca_hai",
+          "note": "Cả cột 'Vợ' (ký hiệu hơi lạ, giống nét khoanh + gạch) và cột 'Cả hai như nhau' (X) đều có dấu — không thấy dấu nào bị gạch huỷ rõ ràng nên tính là đa lựa chọn, cần review. REVIEW: dấu x ở 'vợ' bị tô gạch bỏ rõ ràng"
+        },
+        "gia_suc_nho": {
+          "value": "vo",
+          "note": "Cột 'Người khác' có chữ viết tay 'Vợ nhiều hơn' — đây là ghi chú giải thích thêm cho lựa chọn Vợ (không phải nêu tên người khác), tương tự case LCA-LP-003 dòng lam_dat — KHÔNG tính là chọn thêm 'nguoi_khac', vẫn flag review."
+        },
+        "gia_suc_lon": {
+          "value": "vo"
+        },
+        "quan_ly_chi_tieu": {
+          "value": "ca_hai"
+        },
+        "day_do_con": {
+          "value": "ca_hai"
+        },
+        "bao_duong_xe": {
+          "value": "chong"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Cộng đồng - già đầu hay xóm; Tập huấn - do khuyến (nông?)",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {
+      "value": "khong",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": null
+        }
+      }
+    },
+    "Q16b": {
+      "value": null
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": [
+        "goi_nhan_tin",
+        "giai_tri",
+        "mang_xa_hoi"
+      ],
+      "note": "Ghi chú thêm cạnh 'Gọi điện, nhắn tin': '(k biết nhắn tin)' — chỉ gọi điện, không nhắn tin được"
+    },
+    "Q19": {
+      "value": [
+        "khong"
+      ]
+    },
+    "Q20": {
+      "value": "chong"
+    },
+    "Q21a": {
+      "value": "chua_lan_nao"
+    },
+    "Q21b": {
+      "value": []
+    },
+    "Q21c": {
+      "value": "Do không biết tiếng Kinh nên chị đi",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc trọn vẹn, best-effort"
+    },
+    "Q22a": {
+      "value": [
+        "chua"
+      ]
+    },
+    "Q22b": {
+      "value": [
+        "khong_co_nhu_cau"
+      ]
+    },
+    "Q23": {
+      "value": "co",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": null
+        }
+      }
+    },
+    "Q24": {
+      "value": "co"
+    },
+    "Q25": {
+      "value": "khong"
+    },
+    "Q26": {
+      "value": "khong",
+      "note": "Ghi chú thêm: '(Chồng hay tin, chị k cấm)' — chữ viết tay khó đọc chắc chắn"
+    },
+    "Q27a": {
+      "value": "chong"
+    },
+    "Q27b": {
+      "value": "Chỉ biết chồng đứng tên, không biết vì sao nữa. Không có tên do cụ không biết chữ",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, best-effort transcription"
+    },
+    "Q28": {
+      "value": [
+        "khac"
+      ],
+      "note": "Mâu thuẫn: ô 'Khác (ghi rõ)' không có tick nhưng có chữ viết tay 'Do đất k tốt nên trồng nhiều, thu được ít'; ô 'Không gặp khó khăn gì' có tick rõ ràng. Theo quy tắc 1 (chỉ tick mới tính), giữ giá trị 'khong_kho_khan', không thêm 'khac' — cần review.",
+      "other_text": "Đất không tốt nên trồng nhiều nhưng thu được ít"
+    },
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
+    "Q30": {
+      "value": "san_xuat",
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick. Ô 'Thu hái' có thêm nét bút lạ (giống chữ nguệch ngoạc phía trên + gạch X phía dưới ô) — không rõ là gạch huỷ hay chỉ là nét thừa, cần review. REVIEW: ô 'thu hái' bị gạch bỏ rõ ràng"
+    },
+    "Q31": {
+      "value": "Có - muốn được tham gia bán nhiều hơn nhưng do không biết tiếng Kinh -> không giao tiếp được",
+      "confidence": "trung_binh"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {
+          "value": "cung_quyet_dinh"
+        },
+        "mua_vat_tu": {
+          "value": "cung_quyet_dinh"
+        },
+        "chon_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "vay_von": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'ko' — coi như trống, không phải ambiguous"
+        },
+        "gia_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_thu_nhap": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_dat": {
+          "value": "cung_quyet_dinh"
+        },
+        "khac": {
+          "value": null
+        }
+      },
+      "note": "Cột 'Nội dung' có 1 đường kẻ zigzag xuyên nhiều dòng — bỏ qua theo quy ước strike_through_means_empty/skip_extraction"
+    },
+    "Q33": {
+      "value": [
+        "khong"
+      ]
+    },
+    "Q34": {
+      "value": "Mong muốn biết tiếng Kinh, có người dạy để giao tiếp, tham gia các hoạt động về bán dược liệu, đoàn (thanh niên?), ra ngoài chợ đi nhiều hơn. Mẹ muốn là hội viên phụ nữ nhưng do không biết tiếng Kinh -> chưa nghe tuyên truyền vào hội",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

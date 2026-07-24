@@ -1,0 +1,183 @@
+{
+  "record_id": "LCH-MSP-021",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-021/LCH-MSP-021__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {"value": "Sao Mao Phìn, Sìn Hồ, Lai Châu"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Chèo Vải Mấy (ĐT: 0339356805)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay tên có dấu không hoàn toàn rõ; số điện thoại đọc khá rõ"
+    },
+    "Q2": {"value": "1988"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có dấu tick hình học rõ ràng nhưng có điền tên dân tộc 'Dao' — theo thông lệ các phiếu trước cùng lô (vd LCH-MSP-017/020), suy là đã chọn"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 18}
+      }
+    },
+    "Q7": {
+      "value": ["cay_duoc_lieu"],
+      "note": "Có ghi chú tay thêm dưới các ô: 'Đương quy' — nêu cụ thể loại cây dược liệu, không phải lựa chọn thêm, xem page_notes trang 1"
+    },
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "2024 (phần chữ phía sau khó đọc, có thể là 'để tăng thu nhập gia đình')",
+      "confidence": "thap",
+      "needs_review": true,
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2024, "unit": "start_year", "confidence": "trung_binh"}
+      },
+      "note": "Chỉ đọc chắc chắn được năm bắt đầu '2024' ở đầu dòng; phần chữ viết tay còn lại khó đọc để phiên âm chắc chắn"
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "ca_hai"},
+    "Q13": {
+      "value": "vo",
+      "needs_review": true,
+      "note": "Có vệt chữ mờ không rõ nghĩa gần ô 'Khác (ghi rõ)' nhưng ô 'Khác' không có tick, chữ quá ngắn/không đọc được — không tính là đã chọn thêm, chỉ giữ 'Vợ' theo tick rõ ràng"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo"},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {
+          "value": null,
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Ký hiệu lạ dạng vòng tròn gạch chéo (∅) ở cột 'Cả hai như nhau' — không phải tick chuẩn, có thể ý là 'không áp dụng' (không có con nhỏ đi học), không tính là đã chọn"
+        },
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": null},
+        "gia_suc_nho": {"value": null},
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": null},
+        "bao_duong_xe": {"value": "chong"}
+      },
+      "note": "Phần lớn việc do Vợ đảm nhiệm — khớp với Q13 (Vợ tham gia chính trồng/bán dược liệu)"
+    },
+    "Q15": {
+      "value": "Học từ hàng xóm",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "mang_xa_hoi"]},
+    "Q19": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không ô nào được tick (kể cả 'Không') — bỏ trống hoàn toàn"
+    },
+    "Q20": {"value": "ca_hai"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Trồng nghệ (chữ viết tay khó đọc, không chắc chắn)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có tick hình học rõ nhưng có điền nội dung — suy là đã chọn theo thông lệ; nội dung chữ viết tay rất khó đọc"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {
+      "value": ["ngan_hang_chinh_sach", "chua"],
+      "flags": ["exclusive_conflict"],
+      "needs_review": true,
+      "note": "Cả 'Ngân hàng chính sách' và 'Chưa' (exclusive) đều có dấu tick, không thấy nét gạch huỷ ở dấu nào — ghi nhận mâu thuẫn theo đúng dấu quan sát được, không tự chọn 1 trong 2"
+    },
+    "Q22b": {"value": []},
+    "Q23": {
+      "value": "co",
+      "subfield": {"Q23_chi_tiet": {"value": "Điện, trâu (chữ viết tay khó đọc, không chắc chắn)", "confidence": "thap"}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "chong"},
+    "Q27b": {
+      "value": "Đất của nhà chồng",
+      "confidence": "thap"
+    },
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "san_xuat"},
+    "Q31": {
+      "value": "0",
+      "confidence": "trung_binh",
+      "note": "Trả lời bằng số 0 (không có hoạt động nào muốn tham gia mà không được tham gia)"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": null},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không ô nào được tick (kể cả 'Không') — bỏ trống hoàn toàn"
+    },
+    "Q34": {
+      "value": "Không",
+      "confidence": "trung_binh",
+      "note": "Trả lời ngắn gọn 'Ko' (không có mong muốn hỗ trợ thêm)"
+    }
+  },
+  "page_notes": {
+    "1": "Có chữ viết tay thêm dưới ô Q7: 'Đương quy' — nêu cụ thể loại cây dược liệu tương ứng với lựa chọn 'Cây dược liệu'",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

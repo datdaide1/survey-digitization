@@ -1,0 +1,196 @@
+{
+  "record_id": "LCH-MSP-023",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-023/LCH-MSP-023__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {
+      "value": "Mao Sao Phìn, Sìn Hồ, Lai Châu",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, phần đầu có thể là 'Mao Sao Phìn' hoặc 'Bản Sao...' — suy theo tên xã đã biết của lô phiếu này (mao-sao-phin)"
+    },
+    "CONSENT_1": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Tấn Mỹ Diệu",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay có dấu không hoàn toàn rõ; không thấy số điện thoại đi kèm"
+    },
+    "Q2": {"value": "1992", "confidence": "trung_binh", "note": "Chữ số cuối viết tay không hoàn toàn rõ"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Dao"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 16}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "duoi_25"},
+    "Q9": {
+      "value": "202_ (chữ số cuối của năm không đọc được rõ), bắt đầu trồng cây dược liệu",
+      "confidence": "thap",
+      "needs_review": true,
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": null, "unit": "start_year", "confidence": "thap"}
+      },
+      "note": "Chỉ đọc chắc chắn được '202' ở đầu năm, chữ số cuối không rõ ràng (có thể 1/2/3/4) — không suy đoán liều, để null theo đúng quy tắc Q9"
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "ca_hai"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": "chong",
+          "note": "Đánh dấu bằng cách viết số '2' (mã cột 'Chồng') vào ô thay vì tick — phiếu này dùng kiểu đánh dấu ghi số cột"
+        },
+        "trong": {
+          "value": "ca_hai",
+          "note": "Đánh dấu bằng số '3' (mã cột 'Cả hai như nhau')"
+        },
+        "cham_soc_cay": {
+          "value": "ca_hai",
+          "note": "Đánh dấu bằng số '3'"
+        },
+        "thuoc_bvtv": {"value": "chong"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {
+          "value": "nguoi_khac",
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Cột 'Người khác' có chữ viết tay 'Tự đi' (con tự đi học một mình) — theo quy tắc bất kỳ chữ nào ở cột này đều tính đã chọn, nhưng nội dung không mô tả một người cụ thể, cần review lại cách diễn giải"
+        },
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "chong"},
+        "gia_suc_lon": {
+          "value": "nguoi_khac",
+          "note": "Cột 'Người khác' có chữ viết tay 'Ông bà' (ông bà nội/ngoại chăm sóc gia súc lớn)"
+        },
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {
+          "value": ["ca_hai", "nguoi_khac"],
+          "note": "Có tick 'Cả hai' đồng thời cột 'Người khác' có chữ 'Ông bà' — theo quy tắc cột Người khác, tính là đa lựa chọn"
+        },
+        "bao_duong_xe": {"value": null}
+      }
+    },
+    "Q15": {
+      "value": "Tự học theo dân bản",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {
+      "value": "0",
+      "confidence": "trung_binh",
+      "note": "Trả lời bằng số 0 dù Q16a='khong' (không áp dụng thực sự, nhưng vẫn ghi số 0 trên dòng trống)"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "giao_dich_ban_hang"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "ca_hai"},
+    "Q21a": {
+      "value": ["1_3_lan", "chua_lan_nao"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả '1-3 lần' và 'Chưa lần nào' đều có dấu tick, không thấy nét gạch huỷ ở dấu nào — ghi nhận đa lựa chọn theo đúng dấu quan sát được, dù có mâu thuẫn logic với Q21b có nội dung điền"
+    },
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Tập huấn trồng ngô (chữ viết tay khó đọc, không chắc chắn)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, best-effort"
+    },
+    "Q21c": {
+      "value": "Không biết chữ",
+      "confidence": "trung_binh"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {"value": "khac", "other_text": "Bố chồng"},
+    "Q27b": {
+      "value": "Vì ông bà chưa cho đứng tên sổ đỏ",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "thuong_mai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 3 ô 'Sản xuất', 'Thu hái', 'Thương mại' đều được tick trên câu đơn lựa chọn"
+    },
+    "Q31": {
+      "value": "Chồng (chữ viết tay khó đọc, không chắc nghĩa — có thể ý là chồng không cho tham gia)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "chong"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Tôi muốn được học vần, học vừa chưa đi học biết chữ để nâng cao kiến thức",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

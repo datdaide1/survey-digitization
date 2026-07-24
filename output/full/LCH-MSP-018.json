@@ -1,0 +1,155 @@
+{
+  "record_id": "LCH-MSP-018",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-018/LCH-MSP-018__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {"value": "Mao Sa Phìn"},
+    "CONSENT_1": {"value": null, "needs_review": true, "note": "Ô này không được tick"},
+    "CONSENT_2": {"value": null, "needs_review": true, "note": "Ô này không được tick"},
+
+    "Q1": {
+      "value": "Chèo Xoáng Máy (ĐT: 0389 611 577)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {"value": "1986"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có dấu tick hình học rõ ràng nhưng có điền tên dân tộc 'Dao'"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "8", "confidence": "thap", "note": "Ký tự viết tay dạng số kiểu chữ thảo, khó phân biệt 8/3/S"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 27, "confidence": "trung_binh"}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "2013, tăng thu nhập",
+      "confidence": "cao",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2013, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {
+      "value": "vo",
+      "note": "Có chữ viết tay thêm sau ô 'Khác' (không tick): 'Chồng làm xa, ở nhà thì vẫn còn (con)' — giải thích lý do vợ làm chính, không phải lựa chọn thêm vì ô 'Khác' không được tick"
+    },
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo"},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "vo"},
+        "bao_duong_xe": {"value": "vo"}
+      },
+      "note": "Toàn bộ 18 dòng đều chỉ tick cột Vợ — khớp với ghi chú ở Q12 (chồng đi làm xa)"
+    },
+    "Q15": {
+      "value": "Học từ và ít trồng thử",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay gần như không đọc được, transcription best-effort rất không chắc chắn"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Không được mời",
+      "confidence": "trung_binh"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "khac"},
+    "Q27b": {
+      "value": "Chưa có sổ đỏ, khu vực như em chưa ai làm",
+      "confidence": "trung_binh"
+    },
+    "Q28": {"value": ["thieu_nguon_luc", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "san_xuat"},
+    "Q31": {
+      "value": "Không",
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay viết tắt ngắn 'K°'"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "vo", "confidence": "trung_binh", "note": "Dấu tick mờ hơn các dòng khác nhưng vẫn ở cột Vợ"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Không",
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay viết tắt ngắn 'K°', giống cách trả lời ở Q31"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

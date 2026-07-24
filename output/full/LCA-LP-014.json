@@ -1,0 +1,211 @@
+{
+  "record_id": "LCA-LP-014",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-LP-014/LCA-LP-014__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-28"},
+    "META_LOCATION": {
+      "value": "Thôn Lả Dì Thàng, Lùng Phình, Lào Cai",
+      "confidence": "trung_binh"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Vàng Thị Gánh",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Ghi chú kèm theo: '(ĐT: Ko nhớ số)' — người trả lời không nhớ số điện thoại"
+    },
+    "Q2": {"value": "1978"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "needs_review": true,
+      "note": "Không thấy tick hình học rõ ràng ở ô nào, nhưng có điền tên dân tộc — suy là đã chọn 'Khác'"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": 15,
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ số viết tay khó đọc chắc chắn, đọc tạm là '15' — thuộc nhóm <18 tảo hôn nếu đúng"
+        }
+      }
+    },
+    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "Năm 2019 (cát cánh, đương quy)",
+      "confidence": "cao",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2019,
+          "unit": "start_year",
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "chong"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {
+          "value": null,
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Ký hiệu bất thường (dạng 'K°'/'R°', giống kiểu viết tắt 'ko') ở cột 'Cả hai' — theo quy tắc chữ viết tay không phải tick hình học thì coi như trống, nhưng cần review vì không chắc chắn"
+        },
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "chong"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "chong"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {
+          "value": null,
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Ký hiệu bất thường (dạng 'K°'/'R°', giống dòng 'thuoc_bvtv') ở cột 'Cả hai' — coi như trống, cần review"
+        },
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {
+          "value": ["chong", "nguoi_khac"],
+          "other_text": "Bà Nga (?)",
+          "needs_review": true,
+          "note": "Cột 'Chồng' có tick, đồng thời cột 'Người khác' có chữ viết tay khó đọc — theo quy tắc mới tính là đa lựa chọn, tên cụ thể không chắc chắn"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Con dâu - gia đình hợp xóm để tự học; Tập huấn do HTX xã; cụ, bố, mẹ",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q16a": {
+      "value": "co",
+      "needs_review": true,
+      "note": "Không thấy tick hình học rõ ràng ở ô 'Có' nhưng có điền nội dung chi tiết — suy là đã chọn",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Thu hoạch, vận chuyển; tham gia lớp thôn, ăn giỗ",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay khó đọc, best-effort"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Nhận thức của gia đình có sự thay đổi → phụ nữ tham gia nhiều loại hình lao động hơn; bố đi xe máy, giao kỹ thuật lại",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "giai_tri", "giao_dich_ban_hang", "mang_xa_hoi"],
+      "note": "Ghi chú tay thêm bên cạnh 'Gọi điện, nhắn tin': '(Ko nhiều tin)'"
+    },
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "chong"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Do bố mất từ đầu, nên chị lo cho con trai lớn",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q22a": {"value": ["ngan_hang_chinh_sach"]},
+    "Q22b": {"value": null},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "khong"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "khac", "other_text": "Nhà chưa có sổ / do chưa làm"},
+    "Q27b": {
+      "value": "Nếu làm thì tên cả 2 vợ chồng",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc"],
+      "note": "Ghi chú tay thêm: '(thiếu vốn)'"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu chỉ cho chọn 1 khâu"
+    },
+    "Q31": {
+      "value": "Có - Tiêu thụ + Thương mại, vì rào cản tiếng Kinh",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      },
+      "note": "Cột 'Nội dung' có 1 đường kẻ/ngoặc lớn vắt qua nhiều dòng — coi là trống theo strike_through_means_empty, không trích xuất (đã bỏ theo quy ước Q32)"
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Mong muốn có vốn để chăn nuôi lợn; được học tập, biết chữ để tham gia các hoạt động giao tiếp, bán hàng, đi chợ, quen biết nhiều hơn → có tiền để xây nhà → chủ động, tự nuôi mình, không phụ thuộc",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay dài, khó đọc trọn vẹn, best-effort"
+    }
+  },
+  "page_notes": {
+    "1": "Ký hiệu viết tay ở góc trên bên trái trang, không thuộc nội dung khảo sát",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

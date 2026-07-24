@@ -1,0 +1,161 @@
+{
+  "record_id": "LCA-HR-016",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-016/LCA-HR-016__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-25"},
+    "META_LOCATION": {"value": "Xóm Séo, TDP Hàm Rồng 2, Phường Sapa, Tỉnh Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {"value": "Hạng Thị La", "pii": true},
+    "Q2": {"value": "2004"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Mông"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "12/12"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {"Q6_tuoi_ket_hon": {"value": null, "note": "Ô trống, không ghi tuổi kết hôn"}}
+    },
+    "Q7": {"value": ["cay_duoc_lieu"]},
+    "Q8": {"value": "tren_75"},
+    "Q9": {
+      "value": "7-8 năm trở lại đây",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": "7-8", "unit": "years_exp", "confidence": "trung_binh", "note": "Ghi dạng khoảng, không phải số chính xác"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {
+      "value": ["doan_thanh_nien"],
+      "needs_review": true,
+      "note": "Có 1 nét khoanh/xoắn không rõ ràng gần ô '4. Không là hội viên của tổ chức nào' (không nằm gọn trong ô, giống nét gạch/scribble hơn là tick) — không tính là chọn vì mâu thuẫn với việc đã chọn rõ 'Đoàn Thanh niên'. Giữ 1 giá trị, gắn cờ vì dấu hiệu không chắc chắn"
+    },
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": ["chong", "nguoi_khac"],
+          "other_text": "bố mẹ",
+          "note": "Phiếu này dùng quy ước viết SỐ THỨ TỰ CỘT (1-5) vào ô thay vì tick — '2' ở cột Chồng, '5' ở cột Người khác kèm chú thích '(bố mẹ)' ở lề phải"
+        },
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": ["ca_hai", "nguoi_khac"], "note": "Số '3' và '5' viết trong ô, không có chú thích danh tính riêng cho '5' ở dòng này"},
+        "thuoc_bvtv": {"value": ["ca_hai", "nguoi_khac"]},
+        "thu_hoach": {"value": ["ca_hai", "nguoi_khac"]},
+        "so_che": {"value": ["ca_hai", "nguoi_khac"]},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": ["nguoi_khac"]},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {"value": ["ca_hai", "nguoi_khac"]},
+        "gia_suc_lon": {"value": ["ca_hai", "nguoi_khac"]},
+        "quan_ly_chi_tieu": {"value": "chong"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": "chong"}
+      },
+      "note": "Toàn câu dùng quy ước ghi số cột (1=Vợ,2=Chồng,3=Cả hai,4=Con cái lớn,5=Người khác) thay vì tick hình học — số '5' xuất hiện nhiều dòng, chỉ có dòng 'Làm đất' ghi rõ '(bố mẹ)' là ai, các dòng khác không ghi rõ lại (có thể cùng là bố mẹ nhưng không chắc)"
+    },
+    "Q15": {
+      "value": "Người thân trong gia đình, tập huấn công ty, học hỏi từ hàng xóm, cộng đồng",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {
+      "value": ["chong", "khac"],
+      "other_text": "bố mẹ",
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Chồng' và 'Khác (ghi rõ): bố mẹ' đều có tick"
+    },
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {"value": ["ky_thuat"]},
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {
+      "value": ["khac"],
+      "other_text": "22 tuổi, sức khoẻ chưa lớn, vẫn chưa phát sinh nhu cầu",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn, best-effort"
+    },
+    "Q23": {
+      "value": "co",
+      "subfield": {"Q23_chi_tiet": {"value": "Giống (Công ty Traphaco)", "confidence": "trung_binh"}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {"value": "khong_biet"},
+    "Q27b": {
+      "value": "Mới về ở nhà chồng",
+      "confidence": "trung_binh"
+    },
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["thu_hai", "che_bien"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Thu hái' và 'Chế biến' đều được tick trên câu đơn lựa chọn"
+    },
+    "Q31": {
+      "value": "Sản xuất, tiêu thụ. Do bận thời gian chăm sóc con cái",
+      "confidence": "trung_binh"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "chong"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {
+          "value": ["chong", "cung_quyet_dinh"],
+          "flags": ["multi_mark_on_single_select"],
+          "needs_review": true,
+          "note": "Số '2' rõ ở cột Chồng; có thêm 1 ký hiệu không rõ ràng (có thể là số 3 hoặc gạch) ở cột Cùng quyết định — giữ cả 2, gắn cờ do dấu thứ 2 không chắc chắn"
+        },
+        "su_dung_dat": {"value": "chong"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Cùng tham gia chăm sóc con cái để phụ nữ có nhiều thời gian hơn trong mở rộng sản xuất và tham gia các hoạt động xã hội",
+      "confidence": "trung_binh"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

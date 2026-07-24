@@ -1,0 +1,188 @@
+{
+  "record_id": "LCA-LP-010",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-LP-010/LCA-LP-010__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-28"},
+    "META_LOCATION": {
+      "value": "Thôn Lả Dì Thàng, Lùng Phình",
+      "confidence": "trung_binh"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Giàng Thị Súa (ĐT: không nhớ)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Người trả lời ghi 'không nhớ' thay vì số điện thoại"
+    },
+    "Q2": {"value": "1980"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "needs_review": true,
+      "note": "Ô 'Khác' không thấy tick hình học rõ ràng nhưng có điền tên dân tộc 'Mông' — suy là đã chọn"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 14, "confidence": "trung_binh"}
+      },
+      "needs_review": true,
+      "note": "Tuổi kết hôn 14 — thuộc diện tảo hôn (<18) theo bucket đã định nghĩa ở Q6.stats_bucketing"
+    },
+    "Q7": {
+      "value": ["trong_trot", "chan_nuoi"],
+      "note": "Có ghi chú tay không rõ nghĩa dưới hàng lựa chọn ('Tê' dưới Trồng trọt, 'Cát Cau' dưới Chăn nuôi) — không tính là chọn thêm mục nào"
+    },
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "2016, giá trị kinh tế cao nên thay đổi",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn, best-effort. Năm bắt đầu '2016' đọc tương đối rõ.",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2016,
+          "unit": "start_year",
+          "confidence": "trung_binh"
+        }
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "con_cai_lon"},
+        "trong": {"value": "chong"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {
+          "value": null,
+          "note": "Ghi chữ viết tay '0 dùng' (không dùng thuốc BVTV) thay vì tick — coi như trống theo quy tắc chữ viết = trống"
+        },
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": null},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "chong"},
+        "gia_suc_lon": {
+          "value": null,
+          "needs_review": true,
+          "note": "Cột 'Vợ' có chữ viết tay không rõ nghĩa ('ß, Go'?), cột 'Cả hai' có 1 chấm nhỏ — không rõ là đánh dấu thật, coi như trống, cần review"
+        },
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": "chong"}
+      }
+    },
+    "Q15": {
+      "value": "Hàng xóm, làng giềng, TT khuyến nông",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Cày lúa, cấy mùa",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay khó đọc, best-effort"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Trước ở với bố mẹ, do bố mẹ làm",
+      "confidence": "thap",
+      "needs_review": true
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giao_dich_ban_hang"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "tren_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Trồng cải, cây lê, ngô",
+      "needs_review": true,
+      "note": "Ô 'Khác' không thấy tick hình học rõ ràng nhưng có điền nội dung — suy là đã chọn. Chữ viết khó đọc, nội dung best-effort"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {
+      "value": ["ngan_hang_chinh_sach"],
+      "flags": ["exclusive_conflict"],
+      "needs_review": true,
+      "note": "Cả 'Ngân hàng chính sách' và 'Chưa' đều có tick, không dấu nào bị gạch huỷ rõ ràng. Ghi chú tay giải thích: '5 năm trc có vay, nay không vay nữa do lãi suất cao, vì không nằm trong diện c/s nữa' — cho thấy trong vòng 5 năm CÓ vay (ngân hàng chính sách), nay đã ngừng — chọn 'ngan_hang_chinh_sach' theo nội dung ghi chú, cần review"
+    },
+    "Q22b": {"value": null},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {
+      "value": null,
+      "needs_review": true,
+      "note": "Không có ô nào được tick. Ghi chú tay dài bên dưới: 'chưa có vì thôn mới có 40% có sổ đỏ, thôn chưa làm, đợi cấp ở các hộ' — ý là hộ gia đình chưa có giấy chứng nhận QSDĐ nào cả (thôn chưa cấp đủ), không khớp option nào trong schema (vo/chong/ca_hai/khac/khong_biet) — để trống, cần review"
+    },
+    "Q27b": {"value": null},
+    "Q28": {"value": ["thieu_nguon_luc", "ganh_nang_viec_nha", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "thu_hai"},
+    "Q31": {"value": "0", "confidence": "cao", "note": "Chỉ viết số '0', hiểu là không có hoạt động nào"},
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": null},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Hỗ trợ vay vốn để chăn nuôi",
+      "confidence": "trung_binh"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

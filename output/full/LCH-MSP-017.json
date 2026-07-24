@@ -1,0 +1,173 @@
+{
+  "record_id": "LCH-MSP-017",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-017/LCH-MSP-017__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {"value": "Sao Mao Phìn"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Tần Xà May (ĐT: 033 449 4446)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay có dấu không rõ ràng, tên có thể là 'Tẩn Sả Mẩy' hoặc tương tự; SĐT viết kèm ngay dòng họ tên"
+    },
+    "Q2": {"value": "1986"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có dấu tick hình học rõ ràng nhưng có điền tên dân tộc 'Dao' — theo thông lệ các phiếu trước, suy là đã chọn"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "5", "confidence": "thap", "note": "Ký tự viết tay dạng số 5 kiểu chữ thảo, có thể nhầm với chữ 'S'"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 18}
+      }
+    },
+    "Q7": {
+      "value": ["chan_nuoi", "cay_duoc_lieu"],
+      "note": "Có ghi chú thêm chi tiết vật nuôi/cây trồng cụ thể (vd 'chuối sim', 'đỗ quy, tam giác') dưới 2 ô này, không phải lựa chọn thêm"
+    },
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "2021, thấy mọi người trồng có nhiều thu nhập",
+      "confidence": "cao",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2021, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {
+      "value": ["nong_dan", "lao_dong_tu_do"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả '2. Nông dân' và '6. Lao động tự do, làm thuê, làm mướn' đều được tick trên câu đơn lựa chọn"
+    },
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "ca_hai", "confidence": "trung_binh", "note": "Dấu tick nằm ở vị trí giữa 'Chồng' và 'Cả hai', đọc là dành cho ô 'Cả hai' vì nằm sát ô này hơn"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "chong"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": "chong"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {"value": "ca_hai"},
+        "dua_don_con": {"value": null},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": "ca_hai"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": "chong"}
+      }
+    },
+    "Q15": {
+      "value": "Trước thấy trong bản, thầy lớn tuổi hồi trước nói lại làm theo",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, transcription best-effort"
+    },
+    "Q16a": {
+      "value": "khong",
+      "flags": ["conflicting_answer"],
+      "needs_review": true,
+      "note": "Ô 'Không' có tick rõ ràng, không có nét gạch huỷ. Tuy nhiên nhánh 'Có (ghi cụ thể là công việc gì)' vẫn có chữ viết tay 'Cấy, bừa, trồng trọt' và Q16b cũng có nội dung trả lời — mâu thuẫn với tick 'Không'. Giữ giá trị theo tick hình học (rule 1), ghi chú mâu thuẫn để review."
+    },
+    "Q16b": {
+      "value": "Phụ nữ buôn bán nhiều, được học hỏi nhiều nên tự làm được",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, best-effort. Có nội dung mặc dù Q16a chốt là 'khong' — xem ghi chú mâu thuẫn ở Q16a"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "lam_viec_hoc_online", "mang_xa_hoi"]},
+    "Q19": {"value": ["quang_ba", "ban_hang_online"]},
+    "Q20": {"value": "ca_hai"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {"value": ["khac"], "other_text": "Trồng ngô, đương quy", "confidence": "trung_binh"},
+    "Q21c": {"value": null},
+    "Q22a": {
+      "value": ["chua"],
+      "needs_review": true,
+      "note": "Chữ viết tay ở dòng 'Khác' ghi 'Có vay nhưng đã trả đủ rồi' nhưng ô 'Khác' không có tick hình học — theo rule 1 chỉ tính 'Chưa' (có tick), chữ viết tay giữ làm ghi chú ngữ cảnh"
+    },
+    "Q22b": {"value": null},
+    "Q23": {
+      "value": "co",
+      "subfield": {"Q23_chi_tiet": {"value": "Phân vi sinh - không nhớ chỗ nào", "confidence": "thap"}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {"value": "ca_hai"},
+    "Q27b": {"value": null},
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "tieu_thu"},
+    "Q31": {
+      "value": "Không",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay chỉ là ký hiệu viết tắt ngắn, đọc best-effort là 'Không'"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": null,
+      "needs_review": true,
+      "note": "Không ô nào trong 4 lựa chọn được tick, kể cả 'Không' — để trống hoàn toàn"
+    },
+    "Q34": {
+      "value": "Được đáp ứng trồng, chăm sóc dược liệu đúng quy cách",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, có chữ chèn thêm phía trên dòng ('chăm sóc'), transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

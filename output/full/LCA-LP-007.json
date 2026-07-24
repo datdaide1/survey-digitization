@@ -1,0 +1,347 @@
+{
+  "record_id": "LCA-LP-007",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-LP-007/LCA-LP-007__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {
+      "value": "2026-05-28"
+    },
+    "META_LOCATION": {
+      "value": "Thôn Xả Vàn, xã Lùng Phình, Lào Cai",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, tên thôn có thể không chính xác tuyệt đối"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": "yes"
+    },
+    "Q1": {
+      "value": "Tráng Thị Cá (ĐT: 0833608094)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {
+      "value": "1999"
+    },
+    "Q3": {
+      "value": "nu"
+    },
+    "Q4": {
+      "value": "khac",
+      "other_text": "H'mông"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {
+          "value": false
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": "Lớp 9",
+          "confidence": "thap",
+          "note": "Chữ viết tắt trước số 9 khó đọc, có thể là 'Lớp'"
+        },
+        "Q5_trung_cap_dh": {
+          "value": false
+        }
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": 17,
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q7": {
+      "value": [
+        "trong_trot",
+        "chan_nuoi"
+      ]
+    },
+    "Q8": {
+      "value": "duoi_25"
+    },
+    "Q9": {
+      "value": "Năm 2023, trồng (...) năm 2023 do thấy [không rõ] trồng. Năm [sau] trồng lại đương quy vì đi làm gì ở nhà từng đợt",
+      "confidence": "thap",
+      "note": "Chữ viết tay rất khó đọc trọn vẹn, transcription best-effort không chắc chắn. Năm bắt đầu '2023' ở đầu câu đọc tương đối rõ.",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2023,
+          "unit": "start_year",
+          "confidence": "trung_binh",
+          "note": "Ghi '2023' ở đầu câu trả lời."
+        }
+      }
+    },
+    "Q10": {
+      "value": "lao_dong_tu_do"
+    },
+    "Q11": {
+      "value": [
+        "khong_hoi_vien"
+      ]
+    },
+    "Q12": {
+      "value": "ca_hai"
+    },
+    "Q13": {
+      "value": "ca_hai",
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
+      "note": "Ô 'Vợ' có nét vẽ chồng lấp nhiều vòng (giống bị gạch/tô xoá), ô 'Cả hai' có dấu tick rõ ràng mới hơn — chọn theo dấu còn nguyên vẹn rõ ràng nhất (Cả hai), cần review vì không chắc chắn dấu nào bị huỷ."
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": "ca_hai"
+        },
+        "trong": {
+          "value": "ca_hai"
+        },
+        "cham_soc_cay": {
+          "value": "ca_hai"
+        },
+        "thuoc_bvtv": {
+          "value": "ca_hai"
+        },
+        "thu_hoach": {
+          "value": "ca_hai"
+        },
+        "so_che": {
+          "value": "ca_hai"
+        },
+        "lien_he_tieu_thu": {
+          "value": "chong"
+        },
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "vo"
+        },
+        "giat_giu": {
+          "value": "vo"
+        },
+        "dua_don_con": {
+          "value": "ca_hai"
+        },
+        "dam_cuoi_gio": {
+          "value": "chong"
+        },
+        "cham_soc_con": {
+          "value": "vo"
+        },
+        "gia_suc_nho": {
+          "value": "ca_hai"
+        },
+        "gia_suc_lon": {
+          "value": "ca_hai"
+        },
+        "quan_ly_chi_tieu": {
+          "value": "chong"
+        },
+        "day_do_con": {
+          "value": "ca_hai"
+        },
+        "bao_duong_xe": {
+          "value": "chong"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Thông qua HTX và khuyến nông. Người ta thông qua người dân khác đã từng dùng cho",
+      "confidence": "thap"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Cày, bừa, ươm",
+          "confidence": "thap",
+          "note": "Chữ viết tay khó đọc, best-effort"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Vì chồng dạy cách làm, chồng ốm thì bản thân làm",
+      "confidence": "trung_binh"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": [
+        "goi_nhan_tin",
+        "doc_tin_tuc",
+        "giai_tri",
+        "tim_kiem_thong_tin",
+        "mang_xa_hoi"
+      ]
+    },
+    "Q19": {
+      "value": [
+        "khong"
+      ]
+    },
+    "Q20": {
+      "value": "ca_hai"
+    },
+    "Q21a": {
+      "value": "1_3_lan"
+    },
+    "Q21b": {
+      "value": [
+        "khac"
+      ],
+      "other_text": "Tập huấn về mô hình kinh doanh"
+    },
+    "Q21c": {
+      "value": null
+    },
+    "Q22a": {
+      "value": [
+        "chua"
+      ]
+    },
+    "Q22b": {
+      "value": [
+        "khong_co_nhu_cau",
+        "khac"
+      ],
+      "other_text": "Không biết để làm gì"
+    },
+    "Q23": {
+      "value": "co",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": "H.t.xã, UBND xã Lùng Phình",
+          "confidence": "trung_binh"
+        }
+      }
+    },
+    "Q24": {
+      "value": "co"
+    },
+    "Q25": {
+      "value": "khong"
+    },
+    "Q26": {
+      "value": "khong",
+      "note": "Cả 'Có' và 'Không' đều có dấu — ô 'Có' nét vẽ nguệch ngoạc (có thể là bị gạch/sửa), ô 'Không' có tick rõ ràng hơn. Ghi chú thêm: '(Chỉ theo dõi thôi, tin, không cần)' — ủng hộ đáp án 'Không'. Chọn 'khong', cần review."
+    },
+    "Q27a": {
+      "value": "khac",
+      "other_text": "Bố mẹ chồng"
+    },
+    "Q27b": {
+      "value": "Mới tách hộ, không tách sổ đỏ",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": [
+        "thieu_nguon_luc",
+        "ganh_nang_viec_nha"
+      ]
+    },
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
+    "Q30": {
+      "value": [
+        "san_xuat",
+        "thu_hai"
+      ],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu chỉ cho chọn 1 khâu."
+    },
+    "Q31": {
+      "value": "Không",
+      "confidence": "cao"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {
+          "value": "cung_quyet_dinh"
+        },
+        "mua_vat_tu": {
+          "value": "cung_quyet_dinh"
+        },
+        "chon_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "vay_von": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'ko' — coi như trống"
+        },
+        "gia_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_thu_nhap": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_dat": {
+          "value": "cung_quyet_dinh"
+        },
+        "khac": {
+          "value": null
+        }
+      },
+      "note": "Cột 'Nội dung' có đường kẻ zigzag xuyên nhiều dòng — bỏ qua theo quy ước skip_extraction"
+    },
+    "Q33": {
+      "value": [
+        "khong"
+      ]
+    },
+    "Q34": {
+      "value": "Mong muốn có vốn để mở rộng cây dược liệu và tiếp cận kinh doanh thu mua, đảm bảo tiêu chuẩn nhiều hơn, tổ chức hơn. Được tuyên truyền/tập huấn liên hệ Hội Phụ nữ, Hội ý dân để được tham gia, giao lưu nhiều hoạt động, hiểu biết hơn. Hiện chưa rõ có chức năng Phụ nữ, Hội Nông dân",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": "Góc trên bên trái trang có ký hiệu viết tay 'V2' — có thể là mã nội bộ điều tra viên, không thuộc nội dung khảo sát",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

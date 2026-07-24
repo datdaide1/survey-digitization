@@ -1,0 +1,252 @@
+{
+  "record_id": "LCA-LP-013",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-LP-013/LCA-LP-013__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-28"},
+    "META_LOCATION": {
+      "value": "Lả Dì Thàng, Lùng Phình",
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay ghi thứ tự lạ ('Xã/Thôn Lả Dì Thàng, Xã Lùng Phình'), phiên âm best-effort"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Má Thị Dồng",
+      "pii": true,
+      "confidence": "thap",
+      "note": "Chữ viết tay rất khó đọc, tên có thể không chính xác tuyệt đối"
+    },
+    "Q2": {"value": "1948"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "needs_review": true,
+      "note": "Không thấy tick hình học rõ ràng ở ô nào, nhưng có điền tên dân tộc — suy là đã chọn 'Khác'"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "Lớp 2"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": null,
+          "note": "Ô tuổi kết hôn để trống. Có ghi chú tay thêm bên dưới, chữ rất khó đọc (dạng 'Trẻ không có kết hôn' hoặc tương tự) — không chắc nghĩa, cần review",
+          "needs_review": true
+        }
+      }
+    },
+    "Q7": {
+      "value": ["trong_trot", "cay_duoc_lieu"],
+      "note": "Có ghi chú tay thêm dưới câu (cây trồng cụ thể): 'Lê' dưới Trồng trọt, 'Cát cánh, đương quy'(?) dưới Cây dược liệu — chữ khó đọc"
+    },
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "2021, bán có giá, nhờ mẹ theo mua (thôn về trước) khai trồng cây...",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Năm '2021' đọc rõ, phần lý do phía sau chữ viết tay khó đọc trọn vẹn, best-effort",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2021,
+          "unit": "start_year",
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không tick ô nào trong 4 lựa chọn, nhưng có ghi chú tay 'Người cao tuổi' bên cạnh — có thể ám chỉ là hội viên Hội Người cao tuổi (tổ chức không có trong schema/lựa chọn của câu này) — cần review"
+    },
+    "Q12": {"value": "khac", "other_text": "Con dâu"},
+    "Q13": {"value": "khac", "other_text": "Con dâu, con trai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "nguoi_khac", "other_text": "Con dâu, con trai"},
+        "trong": {
+          "value": "nguoi_khac",
+          "other_text": "Con dâu, con trai",
+          "note": "Ký hiệu ditto (nháy) ở cột Người khác — hiểu là giống dòng trên"
+        },
+        "cham_soc_cay": {
+          "value": "nguoi_khac",
+          "other_text": "Con dâu, con trai",
+          "note": "Ký hiệu ditto ở cột Người khác — hiểu là giống dòng trên"
+        },
+        "thuoc_bvtv": {
+          "value": "nguoi_khac",
+          "other_text": "Con dâu",
+          "needs_review": true,
+          "note": "Có chữ viết tay bị gạch/xoá (dạng 'chưa nhiều lâu' + 'x x x') vắt ngang cột Vợ/Chồng — không phải dấu tick nên coi như trống ở đó; cột 'Người khác' có chữ 'Con dâu' rõ ràng nên tính đã chọn — cần review vì phần gạch xoá không rõ ý nghĩa"
+        },
+        "thu_hoach": {
+          "value": "nguoi_khac",
+          "other_text": "Con dâu, con trai",
+          "note": "Ký hiệu ditto ở cột Người khác — hiểu là giống dòng trên"
+        },
+        "so_che": {"value": "nguoi_khac", "other_text": "HTX"},
+        "lien_he_tieu_thu": {"value": "nguoi_khac", "other_text": "Con dâu"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "nguoi_khac", "other_text": "Con dâu"},
+        "giat_giu": {
+          "value": "nguoi_khac",
+          "other_text": "Con dâu",
+          "note": "Ký hiệu ditto ở cột Người khác — hiểu là giống dòng trên"
+        },
+        "dua_don_con": {
+          "value": null,
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Có ký hiệu nhỏ dạng 'o' ở cột Vợ, không rõ là dấu tick hay số 0 (không áp dụng vì không có con nhỏ đưa đón) — cần review"
+        },
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {
+          "value": null,
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Có ký hiệu nhỏ dạng 'o' ở cột Vợ, không rõ là dấu tick hay số 0 — cần review"
+        },
+        "gia_suc_nho": {
+          "value": ["vo", "nguoi_khac"],
+          "other_text": "Con dâu",
+          "note": "Cột Vợ có tick, đồng thời cột Người khác có chữ 'Con dâu' — theo quy tắc mới, tính là đa lựa chọn"
+        },
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {"value": "nguoi_khac", "other_text": "Con trai"},
+        "day_do_con": {"value": null},
+        "bao_duong_xe": {"value": "nguoi_khac", "other_text": "Con trai"}
+      },
+      "note": "Phiếu này người trả lời là cụ bà cao tuổi (sinh 1948, 78 tuổi) — hầu hết công việc sản xuất/việc nhà giao cho con dâu, con trai, giống case đã biết ở LCA-TPH-002"
+    },
+    "Q15": {
+      "value": "Học người trong thôn, cán bộ xã dạy, bởi thôn",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Cấy lúa..., giá tốt chờ TN thu hoạch",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay khó đọc, best-effort"
+        }
+      }
+    },
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin"]},
+    "Q19": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không tick ô nào trong toàn bộ câu (kể cả 'Không') — bỏ trống hoàn toàn"
+    },
+    "Q20": {
+      "value": "vo",
+      "note": "Ghi chú tay thêm: 'Họp thôn, thôn - 1 năm 2-3 lần'"
+    },
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Già rồi",
+      "confidence": "trung_binh"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "co",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": "Lấy từ xã, lương/nhỏ, do [không rõ] UBND huyện hỗ trợ giống vật tư, phân bón, sửa, giàn nhà bảo vệ",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay rất khó đọc, transcription best-effort không chắc chắn"
+        }
+      }
+    },
+    "Q24": {
+      "value": null,
+      "flags": ["conflicting_answer"],
+      "needs_review": true,
+      "note": "Cả 'Có' và 'Không' đều được tick, không thấy dấu gạch huỷ rõ ràng — không chốt được 1 giá trị, cần review"
+    },
+    "Q25": {"value": "khong"},
+    "Q26": {
+      "value": "co",
+      "note": "Ghi chú tay thêm: 'hỏi con trai'"
+    },
+    "Q27a": {"value": "khac", "other_text": "con trai"},
+    "Q27b": {
+      "value": "Con trai đứng tên",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khac"],
+      "other_text": "Nhiều cái khó",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Ô 'Khác' chữ viết tay rất khó đọc, best-effort; ghi chú tay thêm bên cạnh 'Thấy thêm gánh nặng công việc': 'Làm cả ngày, nhiều có'"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu chỉ cho chọn 1 khâu; có ghi chú tay thêm khó đọc bên cạnh"
+    },
+    "Q31": {
+      "value": null,
+      "note": "Trả lời bằng ký hiệu '0' — hiểu là không có hoạt động nào muốn tham gia thêm"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "con_cai"},
+        "mua_vat_tu": {"value": "con_cai"},
+        "chon_ban": {"value": "con_cai"},
+        "vay_von": {"value": "con_cai"},
+        "gia_ban": {"value": "con_cai"},
+        "su_dung_thu_nhap": {"value": "con_cai"},
+        "su_dung_dat": {"value": "con_cai"},
+        "khac": {"value": null}
+      },
+      "note": "Toàn bộ các dòng đều do 'Con cái' quyết định — phù hợp với việc người trả lời là cụ bà cao tuổi, giao quyền cho con cái"
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": null,
+      "note": "Trả lời bằng ký hiệu '0'"
+    }
+  },
+  "page_notes": {
+    "1": "Bên cạnh câu 1 có ghi chú tay: 'Giống Đá thị. Đàn CT PN xã. SĐT: 0393498475' — có thể là số điện thoại liên hệ của cán bộ Phụ nữ xã hỗ trợ phỏng vấn, không chắc chắn có phải của người trả lời hay không, không gộp vào Q1",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

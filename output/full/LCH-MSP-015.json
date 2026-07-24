@@ -1,0 +1,157 @@
+{
+  "record_id": "LCH-MSP-015",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-015/LCH-MSP-015__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {"value": "Mao Sao Phìn, Sín Hồ, LC"},
+    "CONSENT_1": {"value": null, "needs_review": true, "note": "Ô này không được tick"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Chảo Sa Máy",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Không có số điện thoại kèm theo"
+    },
+    "Q2": {"value": "1985"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Dao"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": null}
+      },
+      "needs_review": true,
+      "note": "Ô tuổi kết hôn để trống nhưng có ghi '(2003)' phía trên — có thể là năm kết hôn chứ không phải tuổi, không suy đoán tuổi"
+    },
+    "Q7": {"value": ["trong_trot"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "Từ khi kết hôn, tăng thu nhập, năm 2023",
+      "confidence": "trung_binh",
+      "needs_review": true,
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2003, "unit": "start_year", "confidence": "thap"}
+      },
+      "note": "Câu trả lời nói 'từ khi kết hôn' (có thể là năm 2003 theo ghi chú ở Q6) nhưng cũng nhắc riêng 'năm 2023' (có thể là mốc tăng thu nhập, không phải năm bắt đầu) — năm bắt đầu suy ra không chắc chắn, cần review"
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {
+      "value": ["hoi_phu_nu", "khong_hoi_vien"],
+      "flags": ["exclusive_conflict"],
+      "needs_review": true,
+      "note": "Cả 'Hội Liên hiệp Phụ nữ Việt Nam' và 'Không là hội viên của tổ chức nào' (exclusive) đều được tick, không có dấu gạch huỷ ở ô nào — giữ cả 2, gắn cờ review"
+    },
+    "Q12": {"value": "ca_hai"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": ["ca_hai"],
+          "needs_review": true,
+          "note": "Có chữ viết tay không rõ (trông giống 'vợ') trong cột Chồng, không tính là chọn thêm, chỉ tính dấu tick ở 'Cả hai'"
+        },
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": "ca_hai"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": null},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "ca_hai"},
+        "dua_don_con": {"value": "ca_hai"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": "ca_hai"},
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": "ca_hai"}
+      }
+    },
+    "Q15": {
+      "value": "Từ cộng đồng, người khác",
+      "confidence": "thap",
+      "needs_review": true
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "chong"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Không có thời gian",
+      "confidence": "cao"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {"value": "ca_hai"},
+    "Q27b": {"value": null},
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "che_bien", "thuong_mai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "4 trong 5 ô đều được tick trên câu đơn lựa chọn (chỉ 'Tiêu thụ' không tick)"
+    },
+    "Q31": {"value": null},
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Muốn học hỏi thêm kinh nghiệm",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}
