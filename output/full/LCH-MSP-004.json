@@ -1,0 +1,177 @@
+{
+  "record_id": "LCH-MSP-004",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-004/LCH-MSP-004__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {
+      "value": "Bản Mao Sao Phìn, Sìn Hồ, Lai Châu",
+      "confidence": "cao"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Chèo Mỹ Pháy",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Số điện thoại viết kèm: 0897907648"
+    },
+    "Q2": {"value": "1984"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "needs_review": true,
+      "note": "Không có tick hình học rõ ràng ở ô 'Khác' nhưng có điền tên dân tộc 'Dao' vào chỗ trống — suy luận là đã chọn theo precedent các phiếu trước"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "5"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 17}
+      }
+    },
+    "Q7": {"value": ["chan_nuoi", "cay_duoc_lieu", "phi_nong_nghiep"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "2019 Trồng lúa năng suất kém, trồng sâm thu nhập cao hơn, ổn định hơn",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2019,
+          "unit": "start_year",
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "vo"},
+    "Q13": {
+      "value": "vo",
+      "note": "Ghi chú tay thêm: 'chồng làm PCT HĐND xã' (Phó Chủ tịch Hội đồng nhân dân xã)"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo", "note": "Ghi chú tay thêm: 'có nhg ít' (có nhưng ít)"},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo", "note": "Nhãn dòng có chữ viết tay thêm 'cho bà con' — mở rộng mô tả công việc, không phải cột 'Người khác'"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": "chong"}
+      }
+    },
+    "Q15": {
+      "value": "Trẻ là công nhân công ty Đông Nam Dược, có bảo Long nói đã biết kiến thức (lớp học đất trồng cây độc quý của huyện)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort, không chắc chắn nhiều đoạn"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": "Cày, cấy, buôn bán", "confidence": "trung_binh"}}
+    },
+    "Q16b": {
+      "value": "Chồng đi làm nhà nè",
+      "confidence": "trung_binh",
+      "note": "Ý nói chồng đi làm ăn xa/nơi khác nên vợ đảm nhiệm thêm việc"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": ["chong"]},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "chong"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": []},
+    "Q21c": {
+      "value": "Bận, nếu có thì chồng đi, do người già nên ok tham gia được",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q22a": {"value": ["ngan_hang_chinh_sach"]},
+    "Q22b": {"value": []},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {
+      "value": "khong",
+      "note": "Ghi chú tay thêm: 'thông báo' (chỉ cần thông báo, không cần xin phép)"
+    },
+    "Q27a": {"value": "chong"},
+    "Q27b": {
+      "value": "Chồng là trụ cột trong gia đình",
+      "confidence": "cao"
+    },
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": "san_xuat",
+      "note": "Ghi chú tay thêm: '1 mình làm'"
+    },
+    "Q31": {
+      "value": "Có",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, không có nội dung giải thích thêm dù tick/ghi 'Có' — cần review"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "chong"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Không",
+      "confidence": "cao"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

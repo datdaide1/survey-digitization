@@ -5,26 +5,48 @@
   "purpose": "Trích xuất thủ công đầy đủ (kèm PII) từ ảnh trang đã render sẵn, theo docs/implement-plan-manual-full-record-extraction.md.",
   "source_images": "output/assembly/_render/LCA-TPH-003/LCA-TPH-003__p1.png .. p7.png",
   "answers": {
-    "META_DATE": {"value": "2026-05-25"},
-    "META_LOCATION": {"value": "Tả Phìn"},
-    "CONSENT_1": {"value": "yes"},
-    "CONSENT_2": {"value": "yes"},
-
+    "META_DATE": {
+      "value": "2026-05-25"
+    },
+    "META_LOCATION": {
+      "value": "Tả Phìn"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": "yes"
+    },
     "Q1": {
       "value": "Tấu Lở Máy (ĐT: 0943159962)",
       "pii": true,
       "confidence": "trung_binh",
       "note": "Chữ viết tay, dấu thanh điệu không hoàn toàn rõ; SĐT viết ngay cạnh tên"
     },
-    "Q2": {"value": "1980"},
-    "Q3": {"value": "nu"},
-    "Q4": {"value": "khac", "other_text": "Dao"},
+    "Q2": {
+      "value": "1980"
+    },
+    "Q3": {
+      "value": "nu"
+    },
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao"
+    },
     "Q5": {
       "components": {
-        "Q5_khong_di_hoc": {"value": true},
-        "Q5_khong_tieng_pho_thong": {"value": false},
-        "Q5_lop_cao_nhat": {"value": null},
-        "Q5_trung_cap_dh": {"value": false}
+        "Q5_khong_di_hoc": {
+          "value": true
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": null
+        },
+        "Q5_trung_cap_dh": {
+          "value": false
+        }
       }
     },
     "Q6": {
@@ -36,62 +58,119 @@
           "note": "Chữ viết tay dạng số nhỏ, có thể là 17 hoặc 19 — nếu 17 thì thuộc nhóm <18 (tảo hôn)"
         }
       },
-      "flags": ["needs_review"]
+      "flags": [
+        "needs_review"
+      ]
     },
     "Q7": {
-      "value": ["chan_nuoi", "cay_duoc_lieu"],
+      "value": [
+        "chan_nuoi",
+        "cay_duoc_lieu"
+      ],
       "note": "Ghi chú viết tay thêm bên dưới (khó đọc, best-effort): 'gà, thổ cẩm, đan, ngô...'"
     },
-    "Q8": {"value": "25_50"},
+    "Q8": {
+      "value": "25_50"
+    },
     "Q9": {
       "value": "2018. Tết X của chị Máy (tên Dao đỏ) khuyên trồng và thuê mua",
       "confidence": "thap",
-      "needs_review": true,
-      "note": "Năm bắt đầu '2018' đọc rõ. Phần lý do phía sau khó đọc, giữ best-effort."
+      "note": "Năm bắt đầu '2018' đọc rõ. Phần lý do phía sau khó đọc, giữ best-effort.",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": "2018"
+        }
+      }
     },
-    "Q9_derived_start_year_or_years_exp": {"value": "2018"},
+    "Q9_derived_start_year_or_years_exp": {
+      "value": "2018"
+    },
     "Q10": {
-      "value": ["nong_dan", "buon_ban"],
+      "value": [
+        "nong_dan",
+        "buon_ban"
+      ],
       "other_text": "Thổ cẩm",
-      "flags": ["multi_mark_on_single_select"],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
       "note": "Cả '2. Nông dân' và '4. Buôn bán, kinh doanh nhỏ' đều được tick trong khi câu chỉ cho chọn 1 nghề — case tương tự LCA-LP-001. Có ghi chú 'Thổ cẩm' (dệt/bán thổ cẩm) cạnh mục Buôn bán."
     },
-    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q11": {
+      "value": [
+        "khong_hoi_vien"
+      ]
+    },
     "Q12": {
       "value": "vo",
       "note": "Ghi chú viết tay thêm (khó đọc, best-effort): 'Chồng lười quá, chỉ uống rượu thôi. Chưa từng nhờ chú'"
     },
-    "Q13": {"value": "vo"},
+    "Q13": {
+      "value": "vo"
+    },
     "Q14": {
       "rows": {
-        "lam_dat": {"value": "vo"},
-        "trong": {"value": "vo"},
-        "cham_soc_cay": {"value": "vo"},
-        "thuoc_bvtv": {"value": "vo"},
-        "thu_hoach": {"value": "vo"},
-        "so_che": {"value": "vo"},
-        "lien_he_tieu_thu": {"value": "vo"},
-        "khac_san_xuat": {"value": null},
-        "noi_tro": {"value": "vo"},
-        "giat_giu": {"value": "vo"},
-        "dua_don_con": {"value": "vo"},
+        "lam_dat": {
+          "value": "vo"
+        },
+        "trong": {
+          "value": "vo"
+        },
+        "cham_soc_cay": {
+          "value": "vo"
+        },
+        "thuoc_bvtv": {
+          "value": "vo"
+        },
+        "thu_hoach": {
+          "value": "vo"
+        },
+        "so_che": {
+          "value": "vo"
+        },
+        "lien_he_tieu_thu": {
+          "value": "vo"
+        },
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "vo"
+        },
+        "giat_giu": {
+          "value": "vo"
+        },
+        "dua_don_con": {
+          "value": "vo"
+        },
         "dam_cuoi_gio": {
           "value": "ca_hai",
           "note": "Dấu ở cột Vợ có nét gạch huỷ (dạng X/xoáy), dấu tick mới rõ ràng ở cột Cả hai — theo quy tắc 'gạch bỏ rồi chọn lại', chỉ tính dấu mới"
         },
-        "cham_soc_con": {"value": null},
-        "gia_suc_nho": {"value": null},
-        "gia_suc_lon": {"value": null},
-        "quan_ly_chi_tieu": {"value": "vo"},
-        "day_do_con": {"value": "vo"},
-        "bao_duong_xe": {"value": "vo"}
+        "cham_soc_con": {
+          "value": null
+        },
+        "gia_suc_nho": {
+          "value": null
+        },
+        "gia_suc_lon": {
+          "value": null
+        },
+        "quan_ly_chi_tieu": {
+          "value": "vo"
+        },
+        "day_do_con": {
+          "value": "vo"
+        },
+        "bao_duong_xe": {
+          "value": "vo"
+        }
       },
       "note": "Hầu như toàn bộ công việc do Vợ đảm nhiệm — khớp với ghi chú ở Q12 rằng chồng lười, chỉ uống rượu"
     },
     "Q15": {
       "value": "Hợp tác xã dạy",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay ngắn, khó đọc chắc chắn"
     },
     "Q16a": {
@@ -103,81 +182,173 @@
         }
       }
     },
-    "Q16b": {"value": "Vì không có đàn ông", "confidence": "trung_binh"},
+    "Q16b": {
+      "value": "Vì không có đàn ông",
+      "confidence": "trung_binh"
+    },
     "Q17": {
       "rows": {
-        "dien_thoai": {"value": ["chong", "vo"]},
-        "may_tinh": {"value": []},
-        "may_tinh_bang": {"value": []}
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
       },
       "khong_ai_co": false
     },
     "Q18": {
-      "value": ["goi_nhan_tin", "giai_tri", "mang_xa_hoi"],
+      "value": [
+        "goi_nhan_tin",
+        "giai_tri",
+        "mang_xa_hoi"
+      ],
       "note": "Ghi chú viết tay thêm bên cạnh (khó đọc, best-effort): 'gọi điện, xem/nghe nhạc, thích, thường đọc được tin tức'"
     },
-    "Q19": {"value": ["khong"]},
+    "Q19": {
+      "value": [
+        "khong"
+      ]
+    },
     "Q20": {
-      "value": ["vo", "khac"],
+      "value": [
+        "vo",
+        "khac"
+      ],
       "other_text": "con dâu",
-      "flags": ["multi_mark_on_single_select", "needs_review"],
+      "flags": [
+        "multi_mark_on_single_select",
+        "needs_review"
+      ],
       "note": "'Vợ' được tick rõ ràng; đồng thời có chữ viết tay 'con dâu' điền vào chỗ trống của 'Khác' nhưng ô Khác không có tick hình học trực tiếp — câu vốn chỉ cho 1 đáp án, giữ cả hai vì đều có bằng chứng lựa chọn, cần review."
     },
-    "Q21a": {"value": "1_3_lan"},
-    "Q21b": {"value": ["khac"], "other_text": "Trồng dược liệu"},
-    "Q21c": {"value": null},
+    "Q21a": {
+      "value": "1_3_lan"
+    },
+    "Q21b": {
+      "value": [
+        "khac"
+      ],
+      "other_text": "Trồng dược liệu"
+    },
+    "Q21c": {
+      "value": null
+    },
     "Q22a": {
-      "value": ["ngan_hang_chinh_sach"],
+      "value": [
+        "ngan_hang_chinh_sach"
+      ],
       "note": "Ghi chú viết tay thêm ở dòng 'Khác' (không tick, chỉ là bình luận thêm, khó đọc): 'Có vay qua ngân hàng, biết bên xã nhưng không biết như nào'"
     },
-    "Q22b": {"value": null},
+    "Q22b": {
+      "value": null
+    },
     "Q23": {
       "value": "khong",
-      "subfield": {"Q23_chi_tiet": {"value": null}}
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": null
+        }
+      }
     },
-    "Q24": {"value": "khong"},
-    "Q25": {"value": "khong"},
-    "Q26": {"value": "khong"},
-    "Q27a": {"value": "chong"},
+    "Q24": {
+      "value": "khong"
+    },
+    "Q25": {
+      "value": "khong"
+    },
+    "Q26": {
+      "value": "khong"
+    },
+    "Q27a": {
+      "value": "chong"
+    },
     "Q27b": {
       "value": "Vì đã chịu hồ đứng tên, xã báo thế, ở đây toàn thế",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort"
     },
     "Q28": {
-      "value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong", "tap_quan_dinh_kien"],
+      "value": [
+        "thieu_nguon_luc",
+        "thieu_kien_thuc",
+        "ganh_nang_viec_nha",
+        "tap_quan_dinh_kien"
+      ],
       "other_text": "Chồng không làm gì",
-      "note": "5 ô được tick. Ghi chú viết tay thêm bên cạnh 'Thấy thêm gánh nặng': 'khó quá, chồng lười, yếu'"
+      "note": "5 ô được tick. Ghi chú viết tay thêm bên cạnh 'Thấy thêm gánh nặng': 'khó quá, chồng lười, yếu' REVIEW: ô 'không có thị trường' bị gạch tô bỏ -> không tính là tick chọn"
     },
-    "Q29a": {"value": "co"},
-    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
-    "Q29c": {"value": null},
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
     "Q30": {
-      "value": ["san_xuat"],
+      "value": [
+        "san_xuat"
+      ],
       "note": "Ghi chú viết tay thêm: 'Chị làm hết'"
     },
     "Q31": {
       "value": "Có nhưng muốn thường xuyên hơn; không đi được vì không được đi họp, ở nhà bế con",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay rất khó đọc, transcription best-effort"
     },
     "Q32": {
       "rows": {
-        "chon_cay_trong": {"value": "vo", "noi_dung": null},
-        "mua_vat_tu": {"value": "vo", "noi_dung": null},
-        "chon_ban": {"value": "vo", "noi_dung": null},
-        "vay_von": {"value": "vo", "noi_dung": null},
-        "gia_ban": {"value": "vo", "noi_dung": null},
-        "su_dung_thu_nhap": {"value": "vo", "noi_dung": null},
-        "su_dung_dat": {"value": "vo", "noi_dung": null},
-        "khac": {"value": null, "noi_dung": null}
+        "chon_cay_trong": {
+          "value": "vo",
+          "noi_dung": null
+        },
+        "mua_vat_tu": {
+          "value": "vo",
+          "noi_dung": null
+        },
+        "chon_ban": {
+          "value": "vo",
+          "noi_dung": null
+        },
+        "vay_von": {
+          "value": "vo",
+          "noi_dung": null
+        },
+        "gia_ban": {
+          "value": "vo",
+          "noi_dung": null
+        },
+        "su_dung_thu_nhap": {
+          "value": "vo",
+          "noi_dung": null
+        },
+        "su_dung_dat": {
+          "value": "vo",
+          "noi_dung": null
+        },
+        "khac": {
+          "value": null,
+          "noi_dung": null
+        }
       }
     },
     "Q33": {
       "value": null,
-      "flags": ["needs_review"],
+      "flags": [
+        "needs_review"
+      ],
       "note": "Không có ô nào trong 4 lựa chọn được tick (kể cả 'Không') — câu bị bỏ trống hoàn toàn"
     },
     "Q34": {

@@ -5,121 +5,245 @@
   "purpose": "Trích xuất thủ công đầy đủ (kèm PII) từ ảnh trang đã render sẵn, theo docs/implement-plan-manual-full-record-extraction.md.",
   "source_images": "output/assembly/_render/LCA-TPH-007/LCA-TPH-007__p1.png .. p7.png",
   "answers": {
-    "META_DATE": {"value": "2026-05-25"},
-    "META_LOCATION": {"value": "Xã Tả Phìn, Sa Pa, Lào Cai"},
-    "CONSENT_1": {"value": "yes"},
-    "CONSENT_2": {"value": null, "note": "Ô trống — không có tick, khác với CONSENT_1 (có tick). Có chữ 'vợ' viết ở góc trên cùng trang 1, không rõ liên quan gì, xem PAGE_NOTES"},
-
-    "Q1": {"value": "Chảo Cói Máy", "pii": true, "note": "Kèm SĐT viết ngay cạnh: 0349 55 0413"},
-    "Q2": {"value": "2005"},
-    "Q3": {"value": "nu"},
+    "META_DATE": {
+      "value": "2026-05-25"
+    },
+    "META_LOCATION": {
+      "value": "Xã Tả Phìn, Sa Pa, Lào Cai"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": null,
+      "note": "Ô trống — không có tick, khác với CONSENT_1 (có tick). Có chữ 'vợ' viết ở góc trên cùng trang 1, không rõ liên quan gì, xem PAGE_NOTES"
+    },
+    "Q1": {
+      "value": "Chảo Cói Máy",
+      "pii": true,
+      "note": "Kèm SĐT viết ngay cạnh: 0349 55 0413"
+    },
+    "Q2": {
+      "value": "2005"
+    },
+    "Q3": {
+      "value": "nu"
+    },
     "Q4": {
       "value": "khac",
       "other_text": "Dao",
-      "flags": ["needs_review"],
+      "flags": [
+        "needs_review"
+      ],
       "note": "Không có tick hình học rõ ở ô 'Khác' nhưng có điền chữ — suy luận là đã chọn, theo tiền lệ đã dùng cho các phiếu TPH khác"
     },
     "Q5": {
       "components": {
-        "Q5_khong_di_hoc": {"value": false},
-        "Q5_khong_tieng_pho_thong": {"value": false},
-        "Q5_lop_cao_nhat": {"value": "Hết lớp 9"},
-        "Q5_trung_cap_dh": {"value": true}
+        "Q5_khong_di_hoc": {
+          "value": false
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": "Hết lớp 9"
+        },
+        "Q5_trung_cap_dh": {
+          "value": true
+        }
       },
-      "flags": ["conflicting_answer"],
+      "flags": [
+        "conflicting_answer"
+      ],
       "note": "Mâu thuẫn giống case LCA-LP-001: ghi 'Hết lớp 9' đồng thời tick 'Trung cấp/CĐ/ĐH'"
     },
     "Q6": {
       "value": "da_ket_hon",
-      "flags": ["needs_review"],
+      "flags": [
+        "needs_review"
+      ],
       "note": "Không có tick hình học rõ ở ô 'Đã kết hôn' nhưng có điền '19' (tuổi) vào chỗ trống — suy luận là đã chọn",
       "subfield": {
-        "Q6_tuoi_ket_hon": {"value": 19}
+        "Q6_tuoi_ket_hon": {
+          "value": 19
+        }
       }
     },
     "Q7": {
-      "value": ["trong_trot", "cay_duoc_lieu", "phi_nong_nghiep"],
+      "value": [
+        "trong_trot",
+        "cay_duoc_lieu",
+        "phi_nong_nghiep"
+      ],
       "note": "Ghi chú tay dưới 'Phi nông nghiệp': 'làm thuê'"
     },
-    "Q8": {"value": "25_50"},
+    "Q8": {
+      "value": "25_50"
+    },
     "Q9": {
       "value": "Năm 2024 (tuổi 19, mẹ chồng dạy?), mới cuối năm 2024 mẹ/bố mẹ bắt đầu tự trồng từ mùa nào",
       "confidence": "thap",
-      "needs_review": true,
-      "note": "Chữ viết tay khó đọc, transcription best-effort, không chắc chắn nội dung chính xác"
+      "note": "Chữ viết tay khó đọc, transcription best-effort, không chắc chắn nội dung chính xác",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": "2024"
+        }
+      }
     },
-    "Q9_derived_start_year_or_years_exp": {"value": "2024"},
-    "Q10": {"value": "nong_dan"},
+    "Q9_derived_start_year_or_years_exp": {
+      "value": "2024"
+    },
+    "Q10": {
+      "value": "nong_dan"
+    },
     "Q11": {
-      "value": ["khong_hoi_vien"],
+      "value": [
+        "khong_hoi_vien"
+      ],
       "note": "Có vệt bút lạ gần ô '3. Hội Nông dân Việt Nam' nhưng không phải dấu tick rõ trong ô vuông — không tính là đã chọn"
     },
     "Q12": {
-      "value": ["ca_hai", "khac"],
+      "value": [
+        "ca_hai",
+        "khac"
+      ],
       "other_text": "Ông/bà",
-      "flags": ["multi_mark_on_single_select", "needs_review"],
+      "flags": [
+        "needs_review",
+        "multi_mark_on_single_select"
+      ],
       "note": "'Cả hai' có tick rõ; đồng thời ô 'Khác' không có tick nhưng có điền chữ 'Ông/bà' — suy luận cả 2 đều được coi là chọn"
     },
     "Q13": {
-      "value": ["ca_hai", "khac"],
+      "value": [
+        "ca_hai",
+        "khac"
+      ],
       "other_text": "bố chồng",
-      "flags": ["multi_mark_on_single_select", "needs_review"],
+      "flags": [
+        "needs_review",
+        "multi_mark_on_single_select"
+      ],
       "note": "'Cả hai' có tick rõ; đồng thời ô 'Khác' không có tick nhưng có điền chữ 'bố chồng' — suy luận cả 2 đều được coi là chọn"
     },
     "Q14": {
       "rows": {
         "lam_dat": {
-          "value": ["ca_hai", "nguoi_khac"],
-          "flags": ["multi_mark_on_single_select"],
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
           "note": "Cột 'Người khác' ghi chữ 'bố chồng'"
         },
         "trong": {
-          "value": ["ca_hai", "nguoi_khac"],
-          "flags": ["multi_mark_on_single_select"],
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
           "note": "Cột 'Người khác' có dấu X, không ghi rõ là ai"
         },
         "cham_soc_cay": {
-          "value": ["ca_hai", "nguoi_khac"],
-          "flags": ["multi_mark_on_single_select"],
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
           "note": "Cột 'Người khác' có dấu tick, không ghi rõ là ai"
         },
         "thuoc_bvtv": {
-          "value": ["chong", "nguoi_khac"],
-          "flags": ["multi_mark_on_single_select"],
+          "value": [
+            "chong",
+            "nguoi_khac"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
           "note": "Cột 'Người khác' có dấu X, không ghi rõ là ai"
         },
-        "thu_hoach": {"value": "ca_hai"},
-        "so_che": {"value": "ca_hai"},
+        "thu_hoach": {
+          "value": "ca_hai"
+        },
+        "so_che": {
+          "value": "ca_hai"
+        },
         "lien_he_tieu_thu": {
-          "value": ["ca_hai", "nguoi_khac"],
-          "flags": ["multi_mark_on_single_select"],
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
           "note": "Cột 'Người khác' có dấu X, không ghi rõ là ai"
         },
-        "khac_san_xuat": {"value": null},
-        "noi_tro": {"value": "vo", "note": "Ghi chú tay '(chỉ ít làm)' cạnh cột 'Người khác' — là ghi chú bổ sung về mức độ, không phải chọn thêm cột 'Người khác'"},
-        "giat_giu": {"value": "vo"},
-        "dua_don_con": {"value": "vo", "note": "Ghi chú tay 'con nhỏ' bên dưới — bổ sung ngữ cảnh, không phải lựa chọn khác"},
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "vo",
+          "note": "Ghi chú tay '(chỉ ít làm)' cạnh cột 'Người khác' — là ghi chú bổ sung về mức độ, không phải chọn thêm cột 'Người khác'"
+        },
+        "giat_giu": {
+          "value": "vo"
+        },
+        "dua_don_con": {
+          "value": "vo",
+          "note": "Ghi chú tay 'con nhỏ' bên dưới — bổ sung ngữ cảnh, không phải lựa chọn khác"
+        },
         "dam_cuoi_gio": {
-          "value": ["ca_hai", "nguoi_khac"],
-          "flags": ["multi_mark_on_single_select"],
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
           "note": "Cột 'Người khác' ghi chữ 'bố chồng'"
         },
-        "cham_soc_con": {"value": "ca_hai"},
+        "cham_soc_con": {
+          "value": "ca_hai"
+        },
         "gia_suc_nho": {
-          "value": ["ca_hai", "nguoi_khac"],
-          "flags": ["multi_mark_on_single_select"],
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
           "note": "Cột 'Người khác' ghi chữ 'mẹ chồng'"
         },
         "gia_suc_lon": {
-          "value": ["nguoi_khac"],
-          "flags": ["needs_review"],
+          "value": [
+            "nguoi_khac"
+          ],
+          "flags": [
+            "needs_review"
+          ],
           "note": "Chữ 'bố có' viết ngay trong ô cột 'Cả hai như nhau' thay vì tick hình học và thay vì ghi ở cột 'Người khác' — vị trí ghi bất thường, suy luận là 'bố (chồng)' đảm nhiệm nên tính là nguoi_khac, cần review"
         },
-        "quan_ly_chi_tieu": {"value": null},
-        "day_do_con": {"value": "ca_hai"},
+        "quan_ly_chi_tieu": {
+          "value": null
+        },
+        "day_do_con": {
+          "value": "ca_hai"
+        },
         "bao_duong_xe": {
-          "value": ["chong", "nguoi_khac"],
-          "flags": ["needs_review"],
+          "value": [
+            "chong",
+            "nguoi_khac"
+          ],
+          "flags": [
+            "needs_review"
+          ],
           "note": "Cột 'Người khác' có chữ viết tay khó đọc (có thể 'đen sạm' hoặc tên khác) — best-effort"
         }
       }
@@ -127,47 +251,96 @@
     "Q15": {
       "value": "Bố/mẹ chồng, già làng trong xóm dạy tự cây; bố tập huấn hội đàn",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort"
     },
-    "Q16a": {"value": "co", "subfield": {"Q16a_chi_tiet": {"value": "Bấu hái, sao cấy, tưa tơ (đi tiếp ăn nhiều hơn)", "confidence": "thap", "note": "Chữ viết tay khó đọc, best-effort"}}},
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Bấu hái, sao cấy, tưa tơ (đi tiếp ăn nhiều hơn)",
+          "confidence": "thap",
+          "note": "Chữ viết tay khó đọc, best-effort"
+        }
+      }
+    },
     "Q16b": {
       "value": "Chồng ít nói hơn, cho vợ tên thị đưa đón lớn, nay giao",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Best-effort, chữ viết tay rất khó đọc, transcription không chắc chắn"
     },
     "Q17": {
       "rows": {
-        "dien_thoai": {"value": ["chong", "vo"]},
-        "may_tinh": {"value": []},
-        "may_tinh_bang": {"value": []}
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
       },
       "khong_ai_co": false
     },
-    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "lam_viec_hoc_online"]},
-    "Q19": {"value": ["quang_ba", "ban_hang_online"]},
+    "Q18": {
+      "value": [
+        "goi_nhan_tin",
+        "doc_tin_tuc",
+        "giai_tri",
+        "tim_kiem_thong_tin",
+        "giao_dich_ban_hang",
+        "lam_viec_hoc_online"
+      ]
+    },
+    "Q19": {
+      "value": [
+        "quang_ba",
+        "ban_hang_online"
+      ]
+    },
     "Q20": {
       "value": "khac",
       "other_text": "bố chồng",
-      "flags": ["needs_review"],
+      "flags": [
+        "needs_review"
+      ],
       "note": "Không có tick hình học rõ ở ô nào (kể cả 'Khác') nhưng có điền chữ 'bố chồng' — suy luận là đã chọn"
     },
-    "Q21a": {"value": "chua_lan_nao"},
-    "Q21b": {"value": null},
+    "Q21a": {
+      "value": "chua_lan_nao"
+    },
+    "Q21b": {
+      "value": []
+    },
     "Q21c": {
       "value": "Do chị/em đông về bận thân chăm con nhỏ, bố hết lớn nên thêm bố đi tập huấn",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Best-effort, chữ viết tay khó đọc"
     },
-    "Q22a": {"value": ["chua"]},
-    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q22a": {
+      "value": [
+        "chua"
+      ]
+    },
+    "Q22b": {
+      "value": [
+        "khong_co_nhu_cau"
+      ]
+    },
     "Q23": {
       "value": "khong",
-      "subfield": {"Q23_chi_tiet": {"value": null}}
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": null
+        }
+      }
     },
-    "Q24": {"value": "co"},
+    "Q24": {
+      "value": "co"
+    },
     "Q25": {
       "value": "khong",
       "note": "Ghi chú tay: 'xe của chồng, thỉnh thoảng mượn' (best-effort, chữ khó đọc)"
@@ -176,49 +349,98 @@
       "value": "co",
       "note": "Ghi chú tay: nội dung khó đọc, liên quan đến 'thông tin' và 'giữ kỹ càng' (best-effort)"
     },
-    "Q27a": {"value": "khac", "other_text": "bố chồng"},
+    "Q27a": {
+      "value": "khac",
+      "other_text": "bố chồng"
+    },
     "Q27b": {
       "value": "Nhà của bố/mẹ chồng, bố chồng đứng tên sổ đỏ",
       "confidence": "trung_binh"
     },
     "Q28": {
-      "value": ["thieu_nguon_luc", "khac"],
+      "value": [
+        "thieu_nguon_luc",
+        "khac"
+      ],
       "other_text": "Thời tiết khắc nghiệt, có cây bị chết, phải trồng lại",
-      "flags": ["needs_review"],
+      "flags": [
+        "needs_review"
+      ],
       "note": "Không có tick hình học rõ ở ô 'Khác' nhưng có điền chữ — suy luận là đã chọn; transcription best-effort do chữ khó đọc"
     },
-    "Q29a": {"value": "co"},
-    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
-    "Q29c": {"value": null},
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
     "Q30": {
-      "value": ["san_xuat", "thuong_mai", "tieu_thu"],
-      "flags": ["multi_mark_on_single_select"],
+      "value": [
+        "san_xuat",
+        "thuong_mai",
+        "tieu_thu"
+      ],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
       "note": "3 ô được tick cho câu chỉ cho chọn 1 khâu"
     },
-    "Q31": {"value": "Không", "confidence": "cao"},
+    "Q31": {
+      "value": "Không",
+      "confidence": "cao"
+    },
     "Q32": {
       "rows": {
-        "chon_cay_trong": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "mua_vat_tu": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "chon_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "chon_cay_trong": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "mua_vat_tu": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "chon_ban": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
         "vay_von": {
           "value": null,
           "noi_dung": null,
           "note": "Ô cột 'Cùng quyết định' ghi chữ 'Ko' thay vì tick — theo quy tắc chữ viết thay tick = trống. Khớp với Q22a (chưa từng vay vốn)"
         },
-        "gia_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "su_dung_thu_nhap": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "su_dung_dat": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "gia_ban": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "su_dung_thu_nhap": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "su_dung_dat": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
         "khac": {
           "value": null,
           "noi_dung": null,
-          "flags": ["needs_review"],
+          "flags": [
+            "needs_review"
+          ],
           "note": "Dòng 'Khác (ghi rõ)' được điền chữ 'Bố chồng cũng tham gia' nhưng không có ô cột (vợ/chồng/cùng quyết định/con cái) nào được tick — giữ value null, ghi lại nội dung ở đây vì không rõ nên gán cột nào"
         }
       }
     },
     "Q33": {
-      "value": ["khong"],
+      "value": [
+        "khong"
+      ],
       "note": "Có vệt bút chéo nhỏ gần 'Quản lý rừng cộng đồng' nhưng dấu tick rõ ràng nằm ở ô 'Không'"
     },
     "Q34": {

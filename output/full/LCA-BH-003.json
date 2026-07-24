@@ -4,44 +4,75 @@
   "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-23",
   "source_images": "output/assembly/_render/LCA-BH-003/LCA-BH-003__p1.png .. p7.png",
   "answers": {
-    "META_DATE": {"value": "2026-05-27"},
+    "META_DATE": {
+      "value": "2026-05-27"
+    },
     "META_LOCATION": {
       "value": "Thôn Nậm Mòn, xã Bảo Nhai, Lào Cai",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc, tên thôn/xã có thể không chính xác tuyệt đối. Có thêm chữ '(xã)' viết chèn thêm — địa bàn 'Nậm Mòn' còn đang chờ xác nhận theo docs/README."
     },
-    "CONSENT_1": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
-    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
-
+    "CONSENT_1": {
+      "value": null,
+      "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"
+    },
+    "CONSENT_2": {
+      "value": null,
+      "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"
+    },
     "Q1": {
-      "value": "Thền Thị Xíp (ĐT: 0343 446 663)",
+      "value": "Thèn Thị Xíp (ĐT: 0343 446 663)",
       "pii": true,
       "confidence": "trung_binh"
     },
-    "Q2": {"value": "1999"},
-    "Q3": {"value": "nu"},
-    "Q4": {"value": "khac", "other_text": "Nùng"},
+    "Q2": {
+      "value": "1999"
+    },
+    "Q3": {
+      "value": "nu"
+    },
+    "Q4": {
+      "value": "khac",
+      "other_text": "Nùng"
+    },
     "Q5": {
       "components": {
-        "Q5_khong_di_hoc": {"value": false},
-        "Q5_khong_tieng_pho_thong": {"value": false},
-        "Q5_lop_cao_nhat": {"value": "12"},
-        "Q5_trung_cap_dh": {"value": true}
+        "Q5_khong_di_hoc": {
+          "value": false
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": "12"
+        },
+        "Q5_trung_cap_dh": {
+          "value": true
+        }
       }
     },
     "Q6": {
       "value": "da_ket_hon",
       "subfield": {
-        "Q6_tuoi_ket_hon": {"value": 18, "confidence": "trung_binh", "note": "Có nét thừa phía sau chữ số"}
+        "Q6_tuoi_ket_hon": {
+          "value": 18,
+          "confidence": "trung_binh",
+          "note": "Có nét thừa phía sau chữ số"
+        }
       }
     },
-    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
-    "Q8": {"value": "duoi_25"},
+    "Q7": {
+      "value": [
+        "trong_trot",
+        "cay_duoc_lieu"
+      ]
+    },
+    "Q8": {
+      "value": "duoi_25"
+    },
     "Q9": {
       "value": "Năm 2023 (tuổi trẻ, bố mẹ có tuổi, do tách ở Nậm Mòn mới từ năm 2023)",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay trong ngoặc khó đọc, transcription best-effort không chắc chắn",
       "derived_subfield": {
         "Q9_derived_start_year_or_years_exp": {
@@ -52,120 +83,260 @@
         }
       }
     },
-    "Q10": {"value": "nong_dan"},
+    "Q10": {
+      "value": "nong_dan"
+    },
     "Q11": {
-      "value": ["khong_hoi_vien"],
+      "value": [
+        "khong_hoi_vien"
+      ],
       "note": "Ghi chú thêm cạnh lựa chọn: '(có tham gia hoạt động PN, ND nhưng không là hội viên)'"
     },
-    "Q12": {"value": "ca_hai"},
-    "Q13": {"value": "ca_hai"},
+    "Q12": {
+      "value": "ca_hai"
+    },
+    "Q13": {
+      "value": "ca_hai"
+    },
     "Q14": {
       "rows": {
-        "lam_dat": {"value": "ca_hai"},
-        "trong": {"value": "ca_hai"},
-        "cham_soc_cay": {"value": "ca_hai"},
-        "thuoc_bvtv": {"value": null, "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"},
-        "thu_hoach": {"value": "ca_hai"},
-        "so_che": {"value": "ca_hai"},
-        "lien_he_tieu_thu": {"value": "ca_hai"},
-        "khac_san_xuat": {"value": null},
-        "noi_tro": {"value": "ca_hai"},
+        "lam_dat": {
+          "value": "ca_hai"
+        },
+        "trong": {
+          "value": "ca_hai"
+        },
+        "cham_soc_cay": {
+          "value": "ca_hai"
+        },
+        "thuoc_bvtv": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"
+        },
+        "thu_hoach": {
+          "value": "ca_hai"
+        },
+        "so_che": {
+          "value": "ca_hai"
+        },
+        "lien_he_tieu_thu": {
+          "value": "ca_hai"
+        },
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "ca_hai"
+        },
         "giat_giu": {
-          "value": ["ca_hai", "nguoi_khac"],
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
           "note": "Cột 'Người khác' có chữ viết tay 'Vợ nhiều hơn' — theo quy tắc mới (22/07), bất kỳ chữ viết tay nào ở cột này đều tính là đã chọn, dù nội dung chỉ nhấn mạnh vợ làm nhiều hơn chứ không nêu một người khác cụ thể."
         },
-        "dua_don_con": {"value": "ca_hai"},
-        "dam_cuoi_gio": {"value": "ca_hai"},
-        "cham_soc_con": {"value": "ca_hai"},
-        "gia_suc_nho": {"value": "ca_hai"},
-        "gia_suc_lon": {"value": null, "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"},
-        "quan_ly_chi_tieu": {"value": "ca_hai"},
-        "day_do_con": {"value": "ca_hai"},
+        "dua_don_con": {
+          "value": "ca_hai"
+        },
+        "dam_cuoi_gio": {
+          "value": "ca_hai"
+        },
+        "cham_soc_con": {
+          "value": "ca_hai"
+        },
+        "gia_suc_nho": {
+          "value": "ca_hai"
+        },
+        "gia_suc_lon": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"
+        },
+        "quan_ly_chi_tieu": {
+          "value": "ca_hai"
+        },
+        "day_do_con": {
+          "value": "ca_hai"
+        },
         "bao_duong_xe": {
-          "value": ["chong", "nguoi_khac"],
+          "value": [
+            "chong",
+            "nguoi_khac"
+          ],
           "note": "Cột 'Chồng' có X rõ ràng, cột 'Người khác' có chữ viết tay 'Ra hàng' (mang xe đi tiệm/hàng sửa xe bên ngoài) — theo quy tắc mới tính là đã chọn."
         }
       }
     },
     "Q15": {
-      "value": "Bố mẹ, người thân trong gia đình; gia đình hàng xóm, cô độ; tập huấn do xã tổ chức",
+      "value": "Bố mẹ, người thân trong gia đình; gia đình hàng xóm, cộng đồng; tập huấn do xã tổ chức",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort"
     },
-    "Q16a": {"value": "khong", "subfield": {"Q16a_chi_tiet": {"value": null}}},
-    "Q16b": {"value": null},
+    "Q16a": {
+      "value": "khong",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": null
+        }
+      }
+    },
+    "Q16b": {
+      "value": null
+    },
     "Q17": {
       "rows": {
-        "dien_thoai": {"value": ["chong", "vo"]},
-        "may_tinh": {"value": []},
-        "may_tinh_bang": {"value": []}
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
       },
       "khong_ai_co": false
     },
-    "Q18": {"value": ["doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
-    "Q19": {"value": ["quang_ba"]},
-    "Q20": {"value": "vo"},
-    "Q21a": {"value": "chua_lan_nao"},
-    "Q21b": {"value": null},
-    "Q21c": {"value": "Chưa được mời", "confidence": "trung_binh"},
-    "Q22a": {"value": ["chua"]},
-    "Q22b": {"value": ["khong_co_nhu_cau"]},
-    "Q23": {"value": "khong", "subfield": {"Q23_chi_tiet": {"value": null}}},
-    "Q24": {"value": "co"},
-    "Q25": {"value": "khong"},
+    "Q18": {
+      "value": [
+        "doc_tin_tuc",
+        "giai_tri",
+        "tim_kiem_thong_tin",
+        "giao_dich_ban_hang",
+        "mang_xa_hoi"
+      ]
+    },
+    "Q19": {
+      "value": [
+        "quang_ba"
+      ]
+    },
+    "Q20": {
+      "value": "vo"
+    },
+    "Q21a": {
+      "value": "chua_lan_nao"
+    },
+    "Q21b": {
+      "value": []
+    },
+    "Q21c": {
+      "value": "Chưa được mời",
+      "confidence": "trung_binh"
+    },
+    "Q22a": {
+      "value": [
+        "chua"
+      ]
+    },
+    "Q22b": {
+      "value": [
+        "khong_co_nhu_cau"
+      ]
+    },
+    "Q23": {
+      "value": "khong",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": null
+        }
+      }
+    },
+    "Q24": {
+      "value": "co"
+    },
+    "Q25": {
+      "value": "khong"
+    },
     "Q26": {
       "value": "khong",
       "note": "Ghi chú thêm: 'Chị thẳng thắn, tự tin - chỉ bố cấm'"
     },
     "Q27a": {
-      "value": "khac",
+      "value": null,
       "other_text": "Chưa có sổ đỏ; đang có đất nhưng chưa làm sổ đỏ (nếu làm thì cả 2 vợ chồng đứng tên)",
-      "flags": ["ambiguous_mark"],
-      "needs_review": true,
-      "note": "Không có ô nào trong 5 lựa chọn được tick trực tiếp, nhưng có 1 mũi tên vẽ từ ô 'Khác' chỉ xuống đoạn giải thích phía dưới — coi mũi tên này là cách đánh dấu thay cho tick, chọn 'khac'."
+      "flags": [
+        "ambiguous_mark"
+      ],
+      "note": "Không có ô nào trong 5 lựa chọn được tick trực tiếp, nhưng có 1 mũi tên vẽ từ ô 'Khác' chỉ xuống đoạn giải thích phía dưới — coi mũi tên này là cách đánh dấu thay cho tick, chọn 'khac'. REVIEW: nội dung viết tay bảo chưa có đất -> không tick chọn"
     },
     "Q27b": {
       "value": "Ko",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay chỉ có 1 từ viết tắt 'Ko', không rõ nghĩa đầy đủ — best-effort"
     },
     "Q28": {
-      "value": ["thieu_nguon_luc"],
+      "value": [
+        "thieu_nguon_luc"
+      ],
       "note": "Ghi chú thêm: 'Thiếu đất'"
     },
-    "Q29a": {"value": "co"},
-    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc"]},
-    "Q29c": {"value": null},
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
     "Q30": {
-      "value": ["san_xuat", "thu_hai"],
-      "flags": ["multi_mark_on_single_select"],
+      "value": [
+        "san_xuat",
+        "thu_hai"
+      ],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
       "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu chỉ cho chọn 1 khâu."
     },
     "Q31": {
-      "value": "Có - Bán hàng, ủy quyền nghề số, quảng bá, giới thiệu tiến bộ điện thoại",
+      "value": "Có - Bán hàng ứng dụng công nghệ số, quảng bá, giới thiệu trên điện thoại",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc, transcription best-effort"
     },
     "Q32": {
       "rows": {
-        "chon_cay_trong": {"value": "cung_quyet_dinh"},
-        "mua_vat_tu": {"value": "cung_quyet_dinh"},
-        "chon_ban": {"value": "cung_quyet_dinh"},
-        "vay_von": {"value": null, "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"},
-        "gia_ban": {"value": "cung_quyet_dinh"},
-        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
-        "su_dung_dat": {"value": "cung_quyet_dinh"},
-        "khac": {"value": null}
+        "chon_cay_trong": {
+          "value": "cung_quyet_dinh"
+        },
+        "mua_vat_tu": {
+          "value": "cung_quyet_dinh"
+        },
+        "chon_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "vay_von": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'Ko' — coi như trống theo quy tắc"
+        },
+        "gia_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_thu_nhap": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_dat": {
+          "value": "cung_quyet_dinh"
+        },
+        "khac": {
+          "value": null
+        }
       }
     },
-    "Q33": {"value": ["khong"]},
+    "Q33": {
+      "value": [
+        "khong"
+      ]
+    },
     "Q34": {
       "value": "Mong muốn được tham gia nhiều hoạt động để có kiến thức và trồng cây gì có năng suất cao, thu nhập được nhiều hơn dù đất ít. Tham gia làm lượng vườn có điều kiện/thời gian để tham gia hội phụ nữ/nông dân -> có cơ hội tham gia nhiều hoạt động, hiểu biết hơn để ứng dụng vào cuộc sống. Tiếp tục duy trì để chia sẻ buôn bán tự gia đình; bố mẹ, chị em chia sẻ, ủy hộ.",
       "confidence": "thap",
-      "needs_review": true,
       "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort"
     }
   },

@@ -1,0 +1,173 @@
+{
+  "record_id": "LCA-HR-018",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-018/LCA-HR-018__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-25"},
+    "META_LOCATION": {"value": "Xóm Séo, P. Sa Pa, Lào Cai (tổ Hàm Rồng 2)"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Vàng Thị Sáy (ĐT: 0812308116)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Số điện thoại viết kèm, có 1 lần viết nháp bị gạch/sửa trước khi ra số cuối cùng"
+    },
+    "Q2": {"value": "1994"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "H'Mông"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "Lớp 9"},
+        "Q5_trung_cap_dh": {"value": true}
+      },
+      "flags": ["conflicting_answer"],
+      "note": "Ghi 'Lớp 9' đồng thời tick 'Trung cấp/Cao đẳng/Đại học', kèm chú thích '(Trung học phổ thông)' cạnh ô Trung cấp — không rõ ý nghĩa chú thích này (có thể nhầm giữa 'trung cấp' và 'trung học phổ thông'), cùng dạng case mâu thuẫn học vấn đã biết ở LCA-LP-001"
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {"Q6_tuoi_ket_hon": {"value": 20, "confidence": "trung_binh", "note": "Chữ viết tay dạng '20t', đọc là 20 tuổi"}}
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "Năm 2017",
+      "confidence": "cao",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2017, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {
+      "value": ["hoi_phu_nu", "khong_hoi_vien"],
+      "flags": ["exclusive_conflict"],
+      "needs_review": true,
+      "note": "Cả '1. Hội Liên hiệp Phụ nữ' và '4. Không là hội viên của tổ chức nào' (lựa chọn loại trừ) đều có tick cùng kiểu chữ ký, không thấy nét gạch huỷ ở dấu nào — giữ nguyên cả 2, gắn cờ mâu thuẫn theo quy tắc 6 mở rộng"
+    },
+    "Q12": {
+      "value": null,
+      "needs_review": true,
+      "note": "Không có ô nào trong 4 lựa chọn được tick — có thể bị bỏ sót khi phỏng vấn"
+    },
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "ca_hai"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {
+          "value": ["chong", "nguoi_khac"],
+          "other_text": "chồng là chính",
+          "needs_review": true,
+          "note": "Cột 'Người khác' ghi chữ 'chồng là chính' — nội dung chỉ nhắc lại 'chồng' chứ không nêu người khác cụ thể, nhưng theo đúng quy tắc (bất kỳ chữ viết tay nào ở cột Người khác đều tính là đã chọn) vẫn ghi nhận đa lựa chọn"
+        },
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": null},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {"value": "ca_hai"},
+        "dua_don_con": {
+          "value": ["chong", "nguoi_khac"],
+          "other_text": "chồng nhiều hơn",
+          "needs_review": true,
+          "note": "Cột 'Người khác' ghi 'chồng nhiều hơn' — tương tự dòng BVTV, nội dung nhắc lại 'chồng' nhưng vẫn tính đã chọn cột này theo quy tắc"
+        },
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": null, "note": "Cột 'Người khác' ghi 'ko nuôi' — theo quy tắc chữ phủ định = trống"},
+        "quan_ly_chi_tieu": {"value": null},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": "chong"}
+      }
+    },
+    "Q15": {
+      "value": "Hàng xóm, tập huấn, anh/chị trong gia đình, đặc biệt là học hỏi từ các hộ gia đình đi trồng cây",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": "Bán thuốc, làm đất", "confidence": "trung_binh"}}
+    },
+    "Q16b": {
+      "value": "Vợ chồng san sẻ công việc, lúc vợ sinh thì chồng làm",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "mang_xa_hoi"]},
+    "Q19": {"value": ["quan_ly_sx_tc"]},
+    "Q20": {"value": "ca_hai"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["ky_thuat"],
+      "note": "Có chữ viết thêm 'bảo quản, cách chăm sóc' nối liền sau ô Tập huấn kỹ thuật (không phải ô 'Khác' riêng) — hiểu là mô tả bổ sung nội dung tập huấn kỹ thuật, không chọn thêm option khác"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "khac", "other_text": "Đang ở nhà bố mẹ, bố mẹ chưa sang tên sổ đỏ"},
+    "Q27b": {"value": null},
+    "Q28": {
+      "value": ["thieu_nguon_luc"],
+      "note": "Có ghi chú thêm 'Đất ít' cạnh ô. Ô 'Không gặp khó khăn gì' có dấu tick nhưng bị gạch huỷ rõ ràng (X đè lên) — theo quy tắc gạch-bỏ-chọn-lại, không tính là chọn"
+    },
+    "Q29a": {"value": "co", "note": "Có ghi chú thêm '(giúp có thu nhập)'"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": ["thu_hai"]},
+    "Q31": {
+      "value": "Có (về thương mại, chưa có/hot để giao dịch, tiêu thụ rộng)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": null, "note": "Cột 'Con cái' ghi 'Ko vay' — theo quy tắc chữ phủ định = trống"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Có, được hỗ trợ nâng cao hiểu biết về cây dược liệu phù hợp với mọi độ tuổi, kiến thức về nuôi dạy con, kiến thức về văn hoá => muốn làm được nhiều tiền, nâng cao hiểu biết tham gia cộng đồng. Muốn có thêm đất để trồng nhiều cây dược liệu hoặc cây khoẻ khi được hướng dẫn, thuyết phục",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, best-effort transcription, độ tin cậy thấp"
+    }
+  },
+  "page_notes": {
+    "1": "Ký hiệu viết tay ở góc trên bên trái trang (dạng 'Vợ', 'Rợ' và 1 nét gạch) — có thể là mã nội bộ của điều tra viên trước khi scan, không thuộc nội dung khảo sát",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

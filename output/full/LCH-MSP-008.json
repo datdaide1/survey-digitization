@@ -1,0 +1,188 @@
+{
+  "record_id": "LCH-MSP-008",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-008/LCH-MSP-008__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {
+      "value": "Thôn 5, Sín Hồ, Lai Châu (Mao Sao Phìn)",
+      "confidence": "trung_binh",
+      "note": "Có 1 đoạn đầu bị gạch bỏ ('Xã Bàu Xã') trước khi viết lại — chỉ lấy phần còn hiệu lực"
+    },
+    "CONSENT_1": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Đỗ Thu Chiến (ĐT: 0973954998)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay khó đọc, tên phiên âm best-effort"
+    },
+    "Q2": {"value": "1979"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "kinh"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "12/12"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 22}
+      }
+    },
+    "Q7": {
+      "value": ["phi_nong_nghiep"],
+      "note": "Ghi chú tay thêm cạnh 'Phi nông nghiệp': 'buôn bán dược liệu'"
+    },
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "Năm 2021, đơn mở kiếm thêm thu nhập, biết đến cây dược liệu qua chú nói có lãi hơn",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort. Năm '2021' đọc rõ nhất",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2021, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {
+      "value": ["can_bo", "buon_ban"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả '1. Cán bộ, công chức, viên chức' (ghi chú: giáo viên cấp 1 vẫn đang làm) và '4. Buôn bán, kinh doanh nhỏ' đều được tick. Dòng '7. Khác' có chữ viết tay 'Bán dược liệu qua mạng, tiktok, livestream' nhưng KHÔNG có tick ở ô — hiểu là giải thích thêm cho hoạt động buôn bán (mục 4), không tính là chọn thêm mục 7"
+    },
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": null},
+        "trong": {"value": null},
+        "cham_soc_cay": {"value": null},
+        "thuoc_bvtv": {"value": null},
+        "thu_hoach": {"value": null},
+        "so_che": {"value": null},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "ca_hai"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": null},
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {
+          "value": "ca_hai",
+          "needs_review": true,
+          "note": "Cột 'Vợ' có 1 dấu phẩy/chấm nhỏ không rõ là tick hay vết mực ngẫu nhiên — coi như trống, chỉ tính 'Cả hai' có tick rõ ràng"
+        },
+        "day_do_con": {"value": "con_cai_lon"},
+        "bao_duong_xe": {"value": "ca_hai"}
+      }
+    },
+    "Q15": {
+      "value": "Tự tìm hiểu qua gia đình",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "đứng ra giao dịch, ở nhà khoá cửa, hội họp thay",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay rất khó đọc, transcription best-effort không chắc chắn"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Nhiều gia đình cho rằng phụ nữ ở HG để biết đọc, có việc gì thì đảm bảo biết đúng của mình",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": ["chong", "vo"]},
+        "may_tinh_bang": {"value": ["chong", "vo"]}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "lam_viec_hoc_online", "mang_xa_hoi"],
+      "needs_review": true,
+      "note": "Kiểu đánh dấu ở 'Làm việc/học online' và 'Tham gia mạng xã hội' hơi khác thường (có nét chéo lạ) — tính là đã chọn nhưng cần review lại"
+    },
+    "Q19": {"value": ["quang_ba", "quan_ly_sx_tc", "ban_hang_online"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Hội thảo về điều trị/liên kết với chăn nuôi, hỗ trợ kỹ thuật của NN, hỗ trợ xe/máy",
+      "needs_review": true,
+      "note": "Không có tick hình học ở ô 'Khác' nhưng có chữ viết tay dài điền vào — suy luận là đã chọn theo precedent. Nội dung chữ viết rất khó đọc, best-effort"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {
+      "value": "co",
+      "note": "Có ghi chú tay thêm nhưng rất khó đọc, best-effort không chắc chắn nội dung"
+    },
+    "Q27a": {"value": "ca_hai"},
+    "Q27b": {"value": null},
+    "Q28": {
+      "value": ["thieu_kien_thuc"],
+      "note": "Ghi chú tay thêm cạnh 'Thiếu kiến thức kỹ thuật/thị trường': 'các loại lớn nhiều' (best-effort). Có đoạn chữ viết tay dài cạnh 'Không có thị trường tiêu thụ' ('cứ ôm hàng vào mà bán được, để lâu lỗ, lỗ hàng đắt ở đâu ôm nhiều') nhưng ô này KHÔNG có tick nên không tính là đã chọn, chỉ ghi chú tham khảo"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "thuong_mai"},
+    "Q31": {
+      "value": null,
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay chỉ là 1 nét ngắn không rõ nghĩa, không đọc được nội dung"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": null},
+        "mua_vat_tu": {"value": null},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "vo"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": null},
+        "su_dung_dat": {"value": null},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": ["quan_ly_rung"],
+      "note": "Ghi chú tay thêm: 'bảo hộ rừng'"
+    },
+    "Q34": {
+      "value": "Mong được đi ra ngoài, trải nghiệm, tham gia hội thảo để nâng cao hiểu biết cho bà con khác",
+      "confidence": "trung_binh"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "record_id": "LCA-HR-014",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-014/LCA-HR-014__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-25"},
+    "META_LOCATION": {"value": "Xóm Séo, xã/tổ Hàm Rồng 2, phường Sapa, Lào Cai"},
+    "CONSENT_1": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Phò Phi La (ĐT: 0911826830, 0915984612 - của chồng)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "2 số điện thoại viết kèm phía trên tên, 1 số ghi chú 'ck' (chồng)"
+    },
+    "Q2": {"value": "1982"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Mông"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": 18,
+          "note": "Ghi chú thêm 'đc 26 năm' — khớp nội bộ (sinh 1982+18=2000, đến 2026 là 26 năm)"
+        }
+      }
+    },
+    "Q7": {
+      "value": ["trong_trot", "cay_duoc_lieu"],
+      "note": "Có ghi chú thêm 'Cây đào, sau vụ atiso trồng rau đi chợ' — bổ sung, không ảnh hưởng lựa chọn chính"
+    },
+    "Q8": {
+      "value": ["51_75", "tren_75"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả '51-75%' và 'Trên 75%' đều có tick trên câu đơn lựa chọn"
+    },
+    "Q9": {
+      "value": "Trồng được 6 năm (a cháu làm), vì không có đất trồng lúa, chị bảo trồng atiso (giống cây), kiếm để tiêu",
+      "confidence": "trung_binh",
+      "note": "Ghi trực tiếp số năm ('trồng được 6 năm'), không ghi năm bắt đầu cụ thể",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 6, "unit": "years_exp", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {
+      "value": ["vo", "khac"],
+      "other_text": "con dâu",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có tick hình học nhưng có điền nội dung 'con dâu' — suy là đã chọn theo thông lệ"
+    },
+    "Q13": {
+      "value": "ca_hai",
+      "note": "Có ghi chú thêm 'cả 2 trồng cây nhưng bán chỉ chồng'"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "chong"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "chong"},
+        "thuoc_bvtv": {"value": "chong"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {
+          "value": ["vo", "chong", "ca_hai"],
+          "flags": ["multi_mark_on_single_select"],
+          "needs_review": true,
+          "note": "Cả 3 cột Vợ/Chồng/Cả hai đều được tick"
+        },
+        "lien_he_tieu_thu": {"value": "chong"},
+        "khac_san_xuat": {
+          "value": null,
+          "other_text": "Vợ chủ bán thuốc cây (chữ viết tay khó đọc trọn vẹn)",
+          "needs_review": true,
+          "note": "Không có cột nào được tick, chỉ có chữ viết mô tả không rõ nghĩa hoàn toàn"
+        },
+        "noi_tro": {"value": "con_cai_lon"},
+        "giat_giu": {"value": ["vo", "con_cai_lon"]},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": null, "note": "Cột 'Người khác' ghi '0 nuôi' — theo quy tắc chữ phủ định = trống"},
+        "gia_suc_lon": {"value": "chong", "note": "Ký hiệu đánh dấu hơi khác thường ở cột Chồng, vẫn tính là đã chọn"},
+        "quan_ly_chi_tieu": {"value": "chong"},
+        "day_do_con": {"value": "chong"},
+        "bao_duong_xe": {"value": "chong"}
+      }
+    },
+    "Q15": {
+      "value": "Chị truyền lại, họ ở phường, anh chị (cb) hay dạy",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Bây giờ tự chở rau đi bán, lấy máy cày, thay chồng ươm",
+          "confidence": "thap",
+          "note": "Chữ viết tay khó đọc trọn vẹn, best-effort"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Từ hồi trồng atiso, giờ mình làm được",
+      "confidence": "thap",
+      "note": "Best-effort transcription"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "lam_viec_hoc_online", "mang_xa_hoi"],
+      "note": "Ghi chú thêm 'không nhắn tin' cạnh Gọi điện, và 'có FB do con lập cho' cạnh Tham gia mạng xã hội"
+    },
+    "Q19": {"value": ["khong"]},
+    "Q20": {
+      "value": "vo",
+      "note": "Có ghi chú lề dài (chữ viết tay khó đọc trọn vẹn, đại ý chồng đi nếu chị bận)"
+    },
+    "Q21a": {
+      "value": ["1_3_lan", "tren_3_lan"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả '1-3 lần' và 'Trên 3 lần' đều có tick"
+    },
+    "Q21b": {
+      "value": ["ky_thuat", "khac"],
+      "other_text": "cách trồng, chăm sóc cây dược liệu",
+      "note": "Ô 'Khác' không có tick hình học nhưng có điền nội dung — suy là đã chọn theo thông lệ"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {
+      "value": ["khac"],
+      "other_text": "Năm đầu đi làm thuê, sau đó tự trồng, tích luỹ kinh nghiệm dần, không vay",
+      "needs_review": true,
+      "note": "Ô 'Khác' không tick hình học nhưng có điền nội dung dài — suy là đã chọn theo thông lệ, chữ viết tay khó đọc trọn vẹn"
+    },
+    "Q23": {
+      "value": "co",
+      "needs_review": true,
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": "Hỗ trợ giống từ trại/trạm giống",
+          "confidence": "thap",
+          "note": "Chữ viết tay khó đọc, best-effort"
+        }
+      },
+      "note": "Ô 'Có' có dấu check nhưng nằm lửng phía trên ô (không gọn trong ô), ô 'Không' có 1 vòng khoanh trong ô — dấu hiệu không rõ ràng ở cả 2 ô. Vì phần chi tiết 'nếu có, cụ thể là gì' được điền đầy đủ, chọn 'Có' là hợp lý hơn — gắn cờ needs_review vì dấu tick mập mờ"
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "khong", "note": "Có ghi chú thêm '2 vợ chồng dùng chung'"},
+    "Q26": {"value": "co", "note": "Có ghi chú thêm 'xin phép chồng, chồng cho mới đi được'"},
+    "Q27a": {"value": "chong", "note": "Có ghi chú thêm 'nhà ở phải mua, bố mẹ để lại cho 2 vợ chồng'"},
+    "Q27b": {
+      "value": "Đất bố mẹ để lại",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc", "thieu_kien_thuc"],
+      "note": "Có ghi chú lề dài cạnh 'Không gặp khó khăn gì' (đại ý xa cây, mất mùa, phải tự đi bán) nhưng ô đó không có tick hình học — không tính chọn thêm, chỉ ghi chú bổ sung"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {
+      "value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"],
+      "note": "Có ghi chú thêm 'được học hỏi, được đi lại nhiều hơn' cạnh mục cuối"
+    },
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["thu_hai"],
+      "note": "Có ghi chú thêm 'chăm sóc cây' bên dưới"
+    },
+    "Q31": {
+      "value": "Có nhiều, nhưng do bận nhiều nên chưa nói, chưa có kinh nghiệm",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "chong"},
+        "mua_vat_tu": {"value": "chong"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": null},
+        "gia_ban": {"value": "cung_quyet_dinh", "note": "Có ghi chú thêm 'báo theo thị trường'"},
+        "su_dung_thu_nhap": {"value": "chong"},
+        "su_dung_dat": {"value": "chong"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {"value": null, "note": "Ghi chữ 'Không'"}
+  },
+  "page_notes": {
+    "1": "Ký hiệu viết tay ở góc trên bên phải trang (chữ ký/mã nội bộ dạng 'Jo') — có thể là mã của điều tra viên trước khi scan, không thuộc nội dung khảo sát",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

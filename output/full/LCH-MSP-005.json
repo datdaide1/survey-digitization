@@ -1,0 +1,225 @@
+{
+  "record_id": "LCH-MSP-005",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-005/LCH-MSP-005__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {
+      "value": "Sìn Hồ, Lai Châu (Bản Mao Sao Phìn)",
+      "confidence": "cao"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Tần Mỹ Lai",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {"value": "1973"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "needs_review": true,
+      "note": "Không có tick hình học rõ ràng ở ô nào (kể cả 'Kinh' và 'Khác') nhưng chữ 'Dao' được khoanh tròn cạnh 'Kinh' và ghi lại lần nữa trong ô 'Khác' — suy luận rõ ràng là chọn 'Khác: Dao'"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {
+          "value": "12/12",
+          "confidence": "trung_binh",
+          "note": "Có thêm chữ viết tay không chắc chắn phía trước '12/12', đọc dạng 'T.C.L.L...' (có thể liên quan Trung cấp lý luận chính trị) — không chắc chắn, giữ '12/12' làm giá trị chính"
+        },
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "ly_than_ly_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 18, "confidence": "trung_binh"}
+      },
+      "note": "Chỉ ô 'Ly thân/Ly hôn' có tick hình học (không có tick ở 'Đã kết hôn'), kèm năm '2007' viết bên dưới (có thể là năm ly thân/ly hôn, schema không có field riêng cho năm này). Tuổi kết hôn '18' vẫn được điền vào chỗ trống dù ô 'Đã kết hôn' không tick — giữ làm thông tin lịch sử."
+    },
+    "Q7": {
+      "value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"],
+      "note": "Ghi chú tay thêm: 'Sâm, đỗ quyên' (tên loại cây trồng cụ thể)"
+    },
+    "Q8": {"value": "tren_75"},
+    "Q9": {
+      "value": "Đã trồng dược liệu từ năm 2005: tham gia làm việc với công ty TNHH dược liệu Bảo Long, chủ yếu là cây đương quy. Đến năm 2025 tôi đã tham gia công tác tại công ty Sao Đỏ và được học hỏi kỹ thuật trồng sâm Lai Châu nên hiện nay tôi đã chuyển đổi trồng sâm Lai Châu để đem lại lợi ích kinh tế, phục vụ cho gia đình",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2005,
+          "unit": "start_year",
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q10": {"value": "cong_nhan"},
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {
+      "value": "vo",
+      "note": "Ghi chú tay ở ô 'Khác': 'Đã ly thân' — đây là giải thích bối cảnh hôn nhân, không phải tên người khác làm việc nhà, không tính là lựa chọn 'khac'"
+    },
+    "Q13": {
+      "value": ["vo", "khac"],
+      "other_text": "con trai",
+      "needs_review": true,
+      "note": "Ô 'Vợ' có tick rõ. Ô 'Khác' không có tick hình học nhưng có chữ viết tay 'con trai' điền vào chỗ trống — suy luận là đã chọn thêm theo precedent"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": ["vo", "con_cai_lon"],
+          "flags": ["multi_mark_on_single_select"],
+          "note": "Ghi chú tay thêm: '2 mẹ con' — khớp với cả 2 cột được tick"
+        },
+        "trong": {"value": ["vo", "con_cai_lon"], "flags": ["multi_mark_on_single_select"]},
+        "cham_soc_cay": {"value": ["vo", "con_cai_lon"], "flags": ["multi_mark_on_single_select"]},
+        "thuoc_bvtv": {"value": ["vo", "con_cai_lon"], "flags": ["multi_mark_on_single_select"]},
+        "thu_hoach": {"value": ["vo", "con_cai_lon"], "flags": ["multi_mark_on_single_select"]},
+        "so_che": {"value": ["vo", "con_cai_lon"], "flags": ["multi_mark_on_single_select"]},
+        "lien_he_tieu_thu": {"value": ["vo", "con_cai_lon"], "flags": ["multi_mark_on_single_select"]},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {
+          "value": ["nguoi_khac"],
+          "other_text": "con dâu",
+          "note": "Chữ viết tay 'con dâu' ở cột 'Người khác', không có tick ở cột nào khác"
+        },
+        "giat_giu": {
+          "value": ["nguoi_khac"],
+          "other_text": "con dâu",
+          "needs_review": true,
+          "note": "Ký hiệu '//' (giống dấu nháy lặp lại 'như trên') ở cột 'Người khác' — suy luận là lặp lại 'con dâu' của dòng trên, cần review"
+        },
+        "dua_don_con": {
+          "value": ["nguoi_khac"],
+          "other_text": "con dâu",
+          "needs_review": true,
+          "note": "Ký hiệu '//' ở cột 'Người khác' — suy luận là lặp lại 'con dâu', cần review"
+        },
+        "dam_cuoi_gio": {"value": ["vo", "con_cai_lon"], "flags": ["multi_mark_on_single_select"]},
+        "cham_soc_con": {"value": null},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {
+          "value": ["vo", "nguoi_khac"],
+          "flags": ["multi_mark_on_single_select"],
+          "needs_review": true,
+          "note": "Cột 'Người khác' có tick nhưng không ghi tên cụ thể — để other_text null, cần review"
+        },
+        "day_do_con": {
+          "value": ["nguoi_khac"],
+          "needs_review": true,
+          "note": "Chỉ có tick ở cột 'Người khác', không ghi tên cụ thể — cần review"
+        },
+        "bao_duong_xe": {
+          "value": ["nguoi_khac"],
+          "other_text": "xe hỏng thì đi sửa",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay ở cột 'Người khác' rất khó đọc, transcription best-effort"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Từ thuở bố mẹ đẻ ra, sau đó vào chỗ được công ty đào tạo có kỹ thuật, chuyển công ty Sao Đỏ có kỹ thuật",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Một mình làm hết do chồng hay xuống chợ, đau đáp ở giữa gì",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ viết tay khó đọc, transcription best-effort, không chắc chắn"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Ly hôn nên phải làm hết",
+      "confidence": "cao"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"],
+      "note": "Có nét gạch chéo nhỏ trước ô 'Làm việc/học online' nhưng không nằm trong ô — không tính là đã chọn"
+    },
+    "Q19": {"value": ["quang_ba"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": []},
+    "Q21c": {
+      "value": "Không có lớp. Nếu có chỉ dành cho hộ nghèo, cận nghèo nên mình ở đi theo được",
+      "confidence": "trung_binh"
+    },
+    "Q22a": {"value": ["ngan_hang_chinh_sach"]},
+    "Q22b": {"value": []},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co"},
+    "Q27a": {
+      "value": "vo",
+      "note": "Ghi chú tay thêm: 'sau ly hôn chia tài sản' — khớp với tình trạng ly thân/ly hôn ở Q6"
+    },
+    "Q27b": {"value": null},
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu đơn lựa chọn"
+    },
+    "Q31": {
+      "value": "Tham gia lớn nhóm nhưng xa trung tâm thu hoạch quá nên ít có [cơ hội]",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "con_cai"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "vo"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Tổ chức/NN/nhà tài trợ hỗ trợ vốn, đầu ra cho sản phẩm. Được học tập nâng cao hiểu biết kinh doanh online. Hoàn thiện đường giao thông để giao thương hàng hóa",
+      "confidence": "cao"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

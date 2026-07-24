@@ -1,0 +1,187 @@
+{
+  "record_id": "LCA-HR-008",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-008/LCA-HR-008__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-26"},
+    "META_LOCATION": {"value": "Tổ Hàm Rồng 3, Phường Sa Pa, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Hầu Thị Bay (ĐT: 0785753906)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {"value": "1987"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có dấu tick hình học rõ ràng nhưng có điền tên dân tộc 'Mông' — suy là đã chọn theo thông lệ"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 16}
+      },
+      "needs_review": true,
+      "note": "Không ô nào trong 4 lựa chọn được tick rõ ràng, nhưng số tuổi kết hôn '16t' được ghi vào đúng dòng của 'Đã kết hôn' — suy là đã chọn"
+    },
+    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "Năm 2011 (trồng Atiso, người sau có, tự sau quen)",
+      "confidence": "thap",
+      "needs_review": true,
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2011, "unit": "start_year", "confidence": "cao"}
+      },
+      "note": "Năm '2011' đọc rõ; phần lý do phía sau chữ viết tay khó đọc, best-effort"
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {
+      "value": "ca_hai",
+      "note": "Có ghi chú thêm 'Vợ làm nhiều hơn'"
+    },
+    "Q13": {
+      "value": "ca_hai",
+      "note": "Có ghi chú thêm 'chị làm nhiều hơn về sản xuất, thu hái'"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "ca_hai", "note": "Đánh dấu bằng ký hiệu 'X' thay vì tick"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": null, "note": "Ghi 'không phun thuốc' trong ô Cả hai — nghĩa là không sử dụng"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "con_cai_lon", "note": "Ghi chữ 'Con lớn' thay vì tick"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "con_cai_lon", "note": "Ghi chữ 'Con lớn' thay vì tick"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": null, "note": "Ghi 'không có' trong ô Cả hai — nghĩa là không nuôi"},
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {
+          "value": "chong",
+          "note": "Cột 'Người khác' có ghi chú thêm 'đem ra thợ sửa' — mô tả mang xe đi tiệm sửa, không phải chọn thêm người"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Tập huấn; công ty thu mua hướng dẫn; cụ già - hàng xóm dạy từ cây",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": "Thu hoạch -> đi cây, trước bố mẹ hay hơn, giờ mẹ nhiều hơn", "confidence": "thap"}}
+    },
+    "Q16b": {
+      "value": "Mẹ có nhiều thời gian hơn vì mua thu hái; mẹ thạo đi xe máy hơn trước kia",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["quang_ba"]},
+    "Q20": {"value": "ca_hai"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Hướng dẫn thu hoạch (cắt lá), bảo quản",
+      "note": "Ô 'Khác' không có tick hình học rõ nhưng có điền nội dung — suy là đã chọn theo thông lệ"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "khong"},
+    "Q26": {
+      "value": "khong",
+      "note": "Có ghi chú thêm '(có trao đổi thông tin đó với vợ/chị cũng biết, chị không cần xin phép)' (chữ viết tay khó đọc, best-effort)"
+    },
+    "Q27a": {
+      "value": "chong",
+      "note": "Có ghi chú mũi tên bổ sung 'bố mẹ để đứng tên con trai'"
+    },
+    "Q27b": {
+      "value": "Bố mẹ chỉ cho đứng tên con trai",
+      "confidence": "trung_binh"
+    },
+    "Q28": {"value": ["khong_kho_khan"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Sản xuất', 'Thu hái' và 'Tiêu thụ' đều được tick trên câu đơn lựa chọn"
+    },
+    "Q31": {
+      "value": "Không",
+      "confidence": "trung_binh"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {
+          "value": null,
+          "needs_review": true,
+          "note": "Ký hiệu 'k°' trong ô — có thể ý là 'không' (chưa vay vốn nên không áp dụng)"
+        },
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Bây giờ muốn có kiến thức, biết chữ (tiếng Kinh) để giao tiếp, bán hàng chủ động",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

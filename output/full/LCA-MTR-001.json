@@ -1,0 +1,175 @@
+{
+  "record_id": "LCA-MTR-001",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-MTR-001/LCA-MTR-001__p1.png .. p8.png (8 trang, khác 7 trang chuẩn — xem note_record_level)",
+  "note_record_level": "Phiếu này có 8 trang thay vì 7 (đã xác nhận trong data/manifest.csv là 1 phiếu chuẩn, không phải bản trùng). Lý do: điều tra viên viết nhầm/dở câu Q14 ở trang 2 (chỉ điền xong dòng 'Làm đất' rồi gạch X huỷ cả bảng), sau đó làm lại TOÀN BỘ bảng Q14 trên 1 trang chèn thêm (trang 3 trong thứ tự file render) — phần bảng bị huỷ tiếp tục kéo dài sang đầu trang 4 (các dòng Trồng..Khác đều gạch X, không có dữ liệu). Bản trích xuất này dùng dữ liệu Q14 ở trang 3 (bảng làm lại, đầy đủ, không bị gạch) làm chuẩn, KHÔNG dùng dữ liệu (rỗng) ở trang 2/4. record_id 'MTR' (Mã Tra) là mã tạm theo data/README.md — xã chính xác chưa xác nhận với khách.",
+  "answers": {
+    "META_DATE": {"value": "2026-04-16"},
+    "META_LOCATION": {"value": "Thôn Mã Tra, Sapa, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {"value": "Lồ Thị Số", "pii": true},
+    "Q2": {"value": "1991"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Mông"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {"Q6_tuoi_ket_hon": {"value": 16}}
+    },
+    "Q7": {"value": ["chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "Năm 2012, không có việc gì làm, học từ chú chuyển sang trồng cây Atiso",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2012, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "vo"},
+    "Q13": {
+      "value": null,
+      "needs_review": true,
+      "note": "Không có ô nào trong 4 lựa chọn được tick — có thể bị bỏ sót khi phỏng vấn (trang này cũng là trang có Q14 bị viết dở rồi gạch huỷ, xem note_record_level)"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": ["vo", "nguoi_khac"], "other_text": "thuê"},
+        "trong": {"value": ["vo", "nguoi_khac"], "other_text": "đổi công"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo", "note": "Ký hiệu đánh dấu dạng 'v' kèm nét gạch nhỏ, vẫn tính là đã chọn"},
+        "thu_hoach": {"value": ["vo", "nguoi_khac"], "other_text": "đổi công"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {"value": ["ca_hai", "nguoi_khac"], "other_text": "mang đi sửa"}
+      },
+      "note": "Dữ liệu lấy từ bảng làm lại (trang 3 trong thứ tự render) — bảng gốc ở trang 2/4 bị điều tra viên gạch huỷ giữa chừng, không dùng. Xem note_record_level."
+    },
+    "Q15": {
+      "value": "Từ công ty, nguồn...",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay bị cắt cụt/khó đọc phần cuối, best-effort"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": null, "note": "Dòng 'ghi cụ thể là công việc gì' bỏ trống, nội dung có thể đã được viết luôn vào Q16b"}}
+    },
+    "Q16b": {
+      "value": "Chồng làm Bí thư, không có ai giúp làm, lo trợ đồng. Chồng lo trợ nhà, chăm con",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn, best-effort"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": ["chong"]},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "tim_kiem_thong_tin", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {
+      "value": ["vo", "chong", "ca_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả 3 lựa chọn Vợ/Chồng/Cả hai đều được tick trên câu đơn lựa chọn"
+    },
+    "Q21a": {
+      "value": ["tren_3_lan", "chua_lan_nao"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả 'Trên 3 lần' và 'Chưa lần nào' đều có tick — mâu thuẫn rõ, không thấy nét gạch huỷ ở dấu nào"
+    },
+    "Q21b": {"value": ["ky_thuat"]},
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "co", "note": "Có ghi chú thêm 'Bố chồng & chồng' — người cần xin phép"},
+    "Q27a": {"value": "khac"},
+    "Q27b": {
+      "value": "Tên bố chồng",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc", "ganh_nang_viec_nha"],
+      "note": "Có ghi chú lề dài (chữ viết tay khó đọc trọn vẹn, đại ý liên quan đến công việc/thời gian) cạnh 'Thấy thêm gánh nặng công việc'"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": ["thu_hai"]},
+    "Q31": {
+      "value": "Có",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chỉ ghi vỏn vẹn 1 chữ 'Có', không có nội dung giải thích thêm — có thể bị bỏ dở"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {
+          "value": "cung_quyet_dinh",
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Ký hiệu đánh dấu có hình dạng hơi khác thường (giống số 0 lồng trong dấu tick) — vẫn tạm tính là đã chọn theo vị trí trong ô, cần người review xác nhận lại"
+        },
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không có ô nào trong 4 lựa chọn (kể cả 'Không') được tick — có thể bị bỏ sót khi phỏng vấn"
+    },
+    "Q34": {
+      "value": "Có nhưng không đi (làm) nên không tham gia",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    }
+  },
+  "page_notes": {
+    "1": "Ghi chú viết tay lớn ở đầu trang (khác màu mực khác nét, có vẻ do người review sau thêm vào): 'Lấy thêm TT từ Ny? để b/s vào các câu còn thiếu' — đây là ghi chú nghiệp vụ nội bộ của dự án, không phải nội dung khảo sát của người trả lời, không trích xuất là answer",
+    "2": "Trang này có bảng Q14 bị viết dở (chỉ 1 dòng 'Làm đất') rồi gạch X huỷ toàn bộ — xem note_record_level. Dữ liệu Q14 thật nằm ở trang 3",
+    "3": "Trang chèn thêm (không thuộc 7 trang chuẩn) — chứa bảng Q14 làm lại đầy đủ, xem note_record_level",
+    "4": "Đầu trang là phần tiếp theo của bảng Q14 bị gạch huỷ từ trang 2 (không có dữ liệu)",
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

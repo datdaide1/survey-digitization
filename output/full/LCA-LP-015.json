@@ -1,0 +1,368 @@
+{
+  "record_id": "LCA-LP-015",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-LP-015/LCA-LP-015__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {
+      "value": "2026-05-28"
+    },
+    "META_LOCATION": {
+      "value": "Lả Dì Thàng, Lùng Phình, Lào Cai",
+      "confidence": "cao"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": "yes"
+    },
+    "Q1": {
+      "value": "Trang Thị Ngọc Linh (ĐT: 0386824613)",
+      "pii": true,
+      "confidence": "cao"
+    },
+    "Q2": {
+      "value": "1990"
+    },
+    "Q3": {
+      "value": "nu"
+    },
+    "Q4": {
+      "value": "khac",
+      "other_text": "H'mong"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {
+          "value": false
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": "12"
+        },
+        "Q5_trung_cap_dh": {
+          "value": false
+        }
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": 16,
+          "confidence": "trung_binh",
+          "note": "Thuộc nhóm <18 - tảo hôn"
+        }
+      }
+    },
+    "Q7": {
+      "value": [
+        "cay_duoc_lieu"
+      ]
+    },
+    "Q8": {
+      "value": "51_75"
+    },
+    "Q9": {
+      "value": "Năm 2017. Được cán bộ khuyến nông tuyên truyền, tiếp cây cho hiệu quả kinh tế, phát triển kinh tế cho gia đình.",
+      "confidence": "cao",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2017,
+          "unit": "start_year",
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q10": {
+      "value": [
+        "lao_dong_tu_do",
+        "khac"
+      ],
+      "other_text": "BCH hội phụ nữ thôn Lả Dì Thàng được 13 năm",
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
+      "note": "Cả '6. Lao động tự do' và '7. Khác' đều được tick trên câu chỉ cho chọn 1 nghề"
+    },
+    "Q11": {
+      "value": [
+        "hoi_phu_nu"
+      ]
+    },
+    "Q12": {
+      "value": "vo"
+    },
+    "Q13": {
+      "value": "vo"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "other_text": "Bố mẹ chồng",
+          "note": "Ghi chú 'Bố mẹ chồng' viết ở góc bảng, áp dụng chung cho các dòng có tick cột Người khác"
+        },
+        "trong": {
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "other_text": "Bố mẹ chồng",
+          "note": "Cột Người khác chỉ có tick, không ghi lại tên — suy theo ghi chú chung 'Bố mẹ chồng' ở đầu bảng"
+        },
+        "cham_soc_cay": {
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "other_text": "Bố mẹ chồng",
+          "note": "Cột Người khác chỉ có tick — suy theo ghi chú chung 'Bố mẹ chồng'"
+        },
+        "thuoc_bvtv": {
+          "value": "vo"
+        },
+        "thu_hoach": {
+          "value": [
+            "ca_hai",
+            "nguoi_khac"
+          ],
+          "other_text": "Bố mẹ chồng",
+          "note": "Cột Người khác chỉ có tick — suy theo ghi chú chung 'Bố mẹ chồng'"
+        },
+        "so_che": {
+          "value": "vo"
+        },
+        "lien_he_tieu_thu": {
+          "value": "vo"
+        },
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "vo"
+        },
+        "giat_giu": {
+          "value": "vo"
+        },
+        "dua_don_con": {
+          "value": "vo"
+        },
+        "dam_cuoi_gio": {
+          "value": "ca_hai"
+        },
+        "cham_soc_con": {
+          "value": "vo"
+        },
+        "gia_suc_nho": {
+          "value": "chong"
+        },
+        "gia_suc_lon": {
+          "value": "chong"
+        },
+        "quan_ly_chi_tieu": {
+          "value": "vo"
+        },
+        "day_do_con": {
+          "value": "vo"
+        },
+        "bao_duong_xe": {
+          "value": "vo"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Kiến thức cây dược liệu do khuyến nông tập huấn, hướng dẫn. Chồng qua các lớp tập huấn. Ngoài ra cán bộ thôn tuyên truyền mở rộng.",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": "Xe gạo, làm nhà sàn, cày bừa ruộng",
+          "confidence": "trung_binh"
+        }
+      }
+    },
+    "Q16b": {
+      "value": "Vì do chồng dạy làm và học được cách làm; làm thay chồng khi chồng mệt, vắng nhà.",
+      "confidence": "trung_binh"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": [
+        "goi_nhan_tin",
+        "doc_tin_tuc",
+        "giai_tri",
+        "giao_dich_ban_hang",
+        "mang_xa_hoi",
+        "khac"
+      ],
+      "other_text": "Làm Tiktok",
+      "confidence": "trung_binh"
+    },
+    "Q19": {
+      "value": [
+        "quang_ba",
+        "ban_hang_online"
+      ]
+    },
+    "Q20": {
+      "value": "ca_hai"
+    },
+    "Q21a": {
+      "value": "1_3_lan"
+    },
+    "Q21b": {
+      "value": [
+        "khac"
+      ],
+      "other_text": "Chăm sóc mạ, làm phân hữu cơ",
+      "confidence": "trung_binh"
+    },
+    "Q21c": {
+      "value": null
+    },
+    "Q22a": {
+      "value": [
+        "chua"
+      ]
+    },
+    "Q22b": {
+      "value": [
+        "khong_co_nhu_cau"
+      ]
+    },
+    "Q23": {
+      "value": "co",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": "Phân bón, đi Trung tâm khuyến nông. Trồng hoa xen đường (làm cảnh quan)",
+          "confidence": "trung_binh"
+        }
+      }
+    },
+    "Q24": {
+      "value": "co"
+    },
+    "Q25": {
+      "value": "co"
+    },
+    "Q26": {
+      "value": "khong"
+    },
+    "Q27a": {
+      "value": "khac",
+      "other_text": "Bố chồng"
+    },
+    "Q27b": {
+      "value": "Vì là con dâu, chưa tách khẩu riêng",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": [
+        "thieu_nguon_luc",
+        "ganh_nang_viec_nha",
+        "khong_thi_truong"
+      ]
+    },
+    "Q29a": {
+      "value": "co",
+      "note": "Ghi chú tay thêm: '→ làm cho kinh tế gia đình trở nên khá giả hơn'"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
+    "Q30": {
+      "value": [
+        "san_xuat",
+        "thu_hai"
+      ],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu chỉ cho chọn 1 khâu"
+    },
+    "Q31": {
+      "value": "Không, vì phần nào cũng đều tham gia",
+      "confidence": "trung_binh"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {
+          "value": "cung_quyet_dinh",
+          "note": "Cả cột 'Vợ' và 'Cùng quyết định' đều được tick trên dòng này REVIEW: nếu có tick 'cùng quyết định' cùng với tick 'vợ' hoặc chồng' thì chọn 'cùng quyết định'"
+        },
+        "mua_vat_tu": {
+          "value": "cung_quyet_dinh"
+        },
+        "chon_ban": {
+          "value": "vo"
+        },
+        "vay_von": {
+          "value": null
+        },
+        "gia_ban": {
+          "value": "vo"
+        },
+        "su_dung_thu_nhap": {
+          "value": "vo"
+        },
+        "su_dung_dat": {
+          "value": "cung_quyet_dinh"
+        },
+        "khac": {
+          "value": null
+        }
+      },
+      "note": "Có ghi chú tay ở đầu bảng chỉ vào cột 'Vợ' ('P.hối liệu') và cột 'Cùng quyết định' ('mùn, lá') — không rõ ý nghĩa chính xác, không ảnh hưởng tới giá trị các ô đã tick"
+    },
+    "Q33": {
+      "value": [
+        "khong"
+      ]
+    },
+    "Q34": {
+      "value": "Không cần hỗ trợ do bản thân có thể làm chủ trong gia đình",
+      "confidence": "trung_binh"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "record_id": "LCH-MSP-009",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-009/LCH-MSP-009__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17", "confidence": "trung_binh", "note": "Số năm bị cắt ở lề ('17/6/20...'), suy ra 2026 theo các phiếu cùng đợt khảo sát"},
+    "META_LOCATION": {"value": "Thôn Bản Mao Sao Phìn, Sín Hồ, Lai Châu"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Đỗ Thị Mai (ĐT: 0972515369, ghi chú: 'Bác Phương - chồng')",
+      "pii": true,
+      "confidence": "cao",
+      "note": "Tên xác nhận lại qua chữ ký cuối phiếu (trang 7): 'Đỗ Thị Mai'. Ghi chú '(Bác Phương - chồng)' viết kèm SĐT, có thể SĐT là của chồng"
+    },
+    "Q2": {"value": "1953"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "kinh"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": true}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 19}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "tren_75"},
+    "Q9": {
+      "value": "1968. Trẻ là cả nhà giờ nghỉ hưu nên theo đuổi, chồng yêu nghề nên tiếp tục",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Năm '1968' đọc rõ nhất. Phần lý do phía sau chữ viết tay rất khó đọc, best-effort",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 1968, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "can_bo"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "vo"},
+    "Q13": {
+      "value": "chong",
+      "note": "Ghi chú tay thêm, best-effort: 'Thuê người làm, trước làm nhưng giờ già'"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": ["nguoi_khac"], "other_text": "Huế"},
+        "trong": {"value": ["chong", "nguoi_khac"], "flags": ["multi_mark_on_single_select"], "note": "Cột 'Người khác' chỉ có tick, không ghi tên"},
+        "cham_soc_cay": {"value": ["chong", "nguoi_khac"], "flags": ["multi_mark_on_single_select"], "note": "Cột 'Người khác' chỉ có tick, không ghi tên"},
+        "thuoc_bvtv": {"value": null},
+        "thu_hoach": {"value": ["chong", "nguoi_khac"], "flags": ["multi_mark_on_single_select"], "note": "Cột 'Người khác' chỉ có tick, không ghi tên"},
+        "so_che": {"value": ["chong", "nguoi_khac"], "flags": ["multi_mark_on_single_select"], "note": "Cột 'Người khác' chỉ có tick, không ghi tên"},
+        "lien_he_tieu_thu": {"value": "chong"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": null},
+        "dam_cuoi_gio": {"value": null},
+        "cham_soc_con": {"value": null},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": null},
+        "day_do_con": {"value": null},
+        "bao_duong_xe": {"value": ["chong", "nguoi_khac"], "flags": ["multi_mark_on_single_select"], "note": "Cột 'Người khác' chỉ có tick, không ghi tên"}
+      }
+    },
+    "Q15": {
+      "value": "Từ kinh nghiệm",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {
+      "value": "Chia sẻ công việc nhà với chồng",
+      "needs_review": true,
+      "note": "Q16a đã tick 'Không' nhưng Q16b (chỉ áp dụng khi 'Có') vẫn có nội dung viết — mâu thuẫn, giữ nguyên cả hai giá trị để người review quyết định"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong"]},
+        "may_tinh": {"value": ["chong"]},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": true,
+      "flags": ["exclusive_conflict"],
+      "note": "Ô 'Không ai có bất kỳ thiết bị nào' được tick NHƯNG đồng thời cột 'Chồng' cũng được tick ở điện thoại và máy tính — mâu thuẫn rõ. Ghi chú tay bên cạnh: 'già rồi dùng chung với chồng' — có thể ý là bản thân chị không có thiết bị riêng, chỉ dùng chung của chồng. Giữ cả 2 giá trị, gắn cờ để người review quyết định"
+    },
+    "Q18": {
+      "value": [],
+      "note": "Không ô nào được tick; có 1 đường gạch chéo dài kèm chữ 'Không dùng' viết bên cạnh nhóm câu trả lời — hiểu là không sử dụng thiết bị cho các mục đích này (khớp với Q17: không có thiết bị riêng)"
+    },
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "chong"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Già rồi không đi",
+      "confidence": "trung_binh"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "khong"},
+    "Q25": {
+      "value": "co",
+      "needs_review": true,
+      "note": "Mâu thuẫn logic: Q24 trả lời 'Không biết đi xe máy' nhưng Q25 lại trả lời 'Có xe máy riêng' — giữ nguyên theo tick trên phiếu, gắn cờ review"
+    },
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "chong"},
+    "Q27b": {
+      "value": "Bác gái không muốn nhận",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc"],
+      "note": "Ghi chú tay thêm: 'muốn vay để làm lớn hơn nữa' (best-effort)"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "san_xuat"},
+    "Q31": {"value": "Không"},
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "chong"},
+        "mua_vat_tu": {"value": "chong"},
+        "chon_ban": {"value": "chong"},
+        "vay_von": {"value": "chong"},
+        "gia_ban": {"value": "chong"},
+        "su_dung_thu_nhap": {"value": "chong"},
+        "su_dung_dat": {"value": "chong"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không ô nào được tick, kể cả 'Không' — có thể bị bỏ sót khi trả lời"
+    },
+    "Q34": {
+      "value": "Đầu ra bấp bênh, thu hoạch. Có nguồn xuất khẩu và người ngoài muốn xin đất trồng dược liệu và lấp đất. Đầu tư giao thông đi lại",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

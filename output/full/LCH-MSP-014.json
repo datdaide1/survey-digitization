@@ -1,0 +1,159 @@
+{
+  "record_id": "LCH-MSP-014",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-014/LCH-MSP-014__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {"value": "Mao Sao Phìn"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Phùng Vải Máy (ĐT: 0356836398)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {"value": "1989"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Dao"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 20}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "2023. Thu nhập cao hơn, bố phải làm ăn xa",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2023, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {
+      "value": ["nong_dan", "lao_dong_tu_do"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 2 ô 'Nông dân' và 'Lao động tự do, làm thuê, làm mướn' đều tick rõ"
+    },
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "chong"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": "vo"},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": null},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {"value": "vo", "needs_review": true, "note": "Ký hiệu ở ô Vợ trông giống dấu gạch/x lạ thay vì tick chuẩn, tạm tính là đã chọn"},
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "vo"},
+        "bao_duong_xe": {"value": "chong"}
+      },
+      "note": "Ghi chú cuối bảng: 'Chồng đi làm xa nên ít ở nhà'"
+    },
+    "Q15": {"value": "Học từ hàng xóm"},
+    "Q16a": {
+      "value": "khong",
+      "note": "Có chữ viết tay thêm dù đã tick 'Không': 'Có việc các thứ gọn, chồng về để chồng làm' — best-effort, có thể ý nói có phân công 1 số việc chờ chồng làm khi về nhà"
+    },
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Không có mở lớp",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất ngắn và khó đọc, transcription best-effort"
+    },
+    "Q22a": {"value": ["ngan_hang_chinh_sach"]},
+    "Q22b": {"value": null},
+    "Q23": {
+      "value": "co",
+      "needs_review": true,
+      "subfield": {"Q23_chi_tiet": {"value": "Phun thuốc (từ xã)", "confidence": "thap"}},
+      "note": "Không ô 'Có'/'Không' nào được tick hình học, nhưng có nội dung viết ở dòng 'Nếu có, cụ thể là gì' — suy là 'Có' theo nội dung đã ghi, cần review"
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "ca_hai"},
+    "Q27b": {"value": null},
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {
+      "value": [],
+      "needs_review": true,
+      "note": "Q29a chọn 'Có' nhưng không ô nào ở 29b được tick — có thể bị bỏ sót khi trả lời"
+    },
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": "san_xuat",
+      "note": "Ghi chú thêm: 'phải làm hết'"
+    },
+    "Q31": {
+      "value": "Có muốn đi tập huấn nhưng ở bản chưa có",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Mong được học chữ",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay ngắn, khó đọc, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

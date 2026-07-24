@@ -1,0 +1,186 @@
+{
+  "record_id": "LCH-MSP-006",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-006/LCH-MSP-006__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {
+      "value": "Mao Sao Phìn",
+      "confidence": "cao"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Tần Lù Mấy",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Số điện thoại viết kèm, chữ số không hoàn toàn rõ: '0383201345' (best-effort)"
+    },
+    "Q2": {"value": "1975"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "needs_review": true,
+      "note": "Không có tick hình học rõ ràng ở ô 'Khác' nhưng có điền tên dân tộc 'Dao' vào chỗ trống — suy luận là đã chọn theo precedent"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 18}
+      }
+    },
+    "Q7": {
+      "value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu", "phi_nong_nghiep"],
+      "note": "Ghi chú tay thêm cạnh 'Phi nông nghiệp': 'lấy hàng bán ở các bản'"
+    },
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "2019 Thấy nhà [người khác] trồng có thu nhập cao nên trồng theo",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2019,
+          "unit": "start_year",
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q10": {
+      "value": ["nong_dan", "buon_ban"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả '2. Nông dân' và '4. Buôn bán, kinh doanh nhỏ' đều được tick trong khi câu chỉ cho chọn 1 nghề"
+    },
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "chong"},
+        "trong": {
+          "value": ["ca_hai", "nguoi_khac"],
+          "other_text": "Thuê",
+          "flags": ["multi_mark_on_single_select"],
+          "note": "Cột 'Người khác' ghi 'Thuê x' — thuê lao động ngoài"
+        },
+        "cham_soc_cay": {
+          "value": "ca_hai",
+          "note": "Có ký hiệu dạng gạch huỷ (X nhỏ) ở cột 'Chồng' trước khi tick 'Cả hai' — áp dụng quy tắc gạch bỏ rồi chọn lại, chỉ tính 'Cả hai'"
+        },
+        "thuoc_bvtv": {"value": null, "note": "Ghi chú tay thêm: '0 lần'"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": null},
+        "lien_he_tieu_thu": {"value": null, "note": "Ghi chú tay thêm: '0 cả, vì tự tìm mua' — ý nói người mua tự tìm đến, không ai trong nhà chủ động liên hệ"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": null},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": null},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": "ca_hai"},
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": null},
+        "bao_duong_xe": {"value": "chong"}
+      },
+      "note": "Ghi chú tay đầu trang (ngoài bảng): 'S trồng 8000 m² đất trồng D2'"
+    },
+    "Q15": {
+      "value": "Cứ theo người ta, hỏi bà con về giống",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "chong"},
+    "Q21a": {
+      "value": ["1_3_lan", "chua_lan_nao"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả '1-3 lần' và 'Chưa lần nào' đều có tick, không có dấu gạch huỷ ở ô nào. Nội dung Q21b có điền chữ ('Tập huấn') gợi ý có tham gia tập huấn thật — nghiêng về '1_3_lan' nhưng giữ cả 2 giá trị, cần review"
+    },
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Tập huấn",
+      "needs_review": true,
+      "note": "Không có tick hình học ở ô nào, nhưng có chữ viết tay 'Tập huấn' điền vào chỗ trống 'Khác (ghi rõ)' — suy luận là đã chọn theo precedent"
+    },
+    "Q21c": {
+      "value": "Ko được mời, nếu được mời thì đi để biết cách làm",
+      "confidence": "trung_binh"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "co",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": "Hỗ trợ 1 bình thuốc khử trùng chuồng lợn",
+          "confidence": "trung_binh"
+        }
+      }
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "ca_hai"},
+    "Q27b": {"value": null},
+    "Q28": {
+      "value": ["thieu_nguon_luc", "thieu_kien_thuc", "khong_thi_truong", "khac"],
+      "other_text": "Phải mang ra chợ bán, bị ép giá"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "thuong_mai"},
+    "Q31": {
+      "value": "Muốn đi tập huấn nhưng không ai mời",
+      "confidence": "trung_binh"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": null},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Có doanh nghiệp thu mua sản phẩm; hỗ trợ bán phân bón giá rẻ",
+      "confidence": "trung_binh"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

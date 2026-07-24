@@ -1,0 +1,179 @@
+{
+  "record_id": "LCH-MSP-010",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-010/LCH-MSP-010__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {"value": "Mao Sao Phìn"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes", "confidence": "trung_binh", "needs_review": true, "note": "Dấu đánh dấu ở ô này khác kiểu (nét gạch/X nhạt) so với dấu tick rõ ràng ở CONSENT_1 — có thể chỉ là tick vội, đọc là đồng ý nhưng không chắc 100%"},
+
+    "Q1": {
+      "value": "Hoàng Thị Kim Thúy (ĐT: 0327103585)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Tên và số điện thoại chữ viết tay hơi khó đọc, best-effort"
+    },
+    "Q2": {"value": "1960", "confidence": "trung_binh", "needs_review": true, "note": "Chữ số cuối năm sinh có nét lạ, đọc là 1960 nhưng không chắc 100%"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": null,
+      "needs_review": true,
+      "note": "Ô 'Khác' được tick rõ nhưng phần 'ghi rõ' để trống, không có tên dân tộc cụ thể — vi phạm yêu cầu Q4 phải ghi rõ tên dân tộc. Ô 'Kinh' có 1 nét mực nhỏ không rõ có phải tick không, không tính là đã chọn"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "Đại học mầm non (7/10)", "confidence": "trung_binh", "needs_review": true, "note": "Chữ '(7/10)' viết kèm không rõ nghĩa (có thể ký hiệu khác), giữ nguyên văn"},
+        "Q5_trung_cap_dh": {"value": true}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 24, "confidence": "trung_binh"}
+      }
+    },
+    "Q7": {
+      "value": ["chan_nuoi", "phi_nong_nghiep"],
+      "note": "Mũi tên nối từ ô 'Phi nông nghiệp' xuống ghi chú lề 'Buôn bán cây dược liệu' bên dưới — hiểu là nguồn thu phi nông nghiệp cụ thể là buôn bán dược liệu"
+    },
+    "Q8": {
+      "value": "25_50",
+      "note": "Ghi chú lề bên dưới: 'Hộ thu mua dược liệu' — mô tả thêm vai trò thu mua dược liệu của gia đình"
+    },
+    "Q9": {
+      "value": "2016. Ở chỗ bà con bán nhiều nên thu mua hiện thêm để bán sỉ cho người quanh chợ và bán lẻ trên mạng tiktok, FB. Trẻ bán tk, này dân có j thì mua lại bán cho đủ. Trẻ chỉ bán tại địa phương, nay gồm hàng x bán lẻ luôn trên tiktok",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc sau phần năm '2016', transcription best-effort",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2016, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {
+      "value": ["can_bo", "buon_ban"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 2 ô 'Cán bộ, công chức, viên chức' và 'Buôn bán, kinh doanh nhỏ' đều được tick rõ. Ghi chú lề 'Trẻ là giáo viên mầm non' giải thích cho lựa chọn 'Cán bộ'; buôn bán có thể là buôn bán dược liệu (khớp Q7/Q9)"
+    },
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": null},
+        "trong": {"value": null},
+        "cham_soc_cay": {"value": null},
+        "thuoc_bvtv": {"value": null},
+        "thu_hoach": {"value": null},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": null},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": null},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {"value": null},
+        "day_do_con": {"value": null},
+        "bao_duong_xe": {"value": null}
+      }
+    },
+    "Q15": {
+      "value": "Tìm hiểu trên mạng, người dân, tự tìm hiểu nghiên cứu, bà thầy lang",
+      "confidence": "thap"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": "Bơm nước, sửa chữa cửa, khóa", "confidence": "thap"}}
+    },
+    "Q16b": {
+      "value": "Vì phụ nữ cũng làm được, ở nhà cũng ổn hết",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, transcription best-effort không chắc chắn"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {"value": ["quang_ba", "quan_ly_sx_tc", "ban_hang_online"]},
+    "Q20": {"value": "ca_hai"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {
+      "value": null,
+      "needs_review": true,
+      "note": "Có chữ viết tay ở dòng 'Khác (ghi rõ)' dù không tick ô nào: '2 năm gần đây không tham gia. Chồng tớ làm UBND cấp xã, bí thư, trưởng thôn ở khu' — nội dung nói về việc KHÔNG tham gia (khớp Q21a='chưa lần nào'), không phải nội dung tập huấn đã tham gia, nên không tính là chọn 'Khác'. Có thể ghi nhầm vị trí trên phiếu"
+    },
+    "Q21c": {
+      "value": "Không có liên quan đến mình. Họ đi. Nếu nội dung liên quan mới đi",
+      "confidence": "trung_binh"
+    },
+    "Q22a": {"value": ["ngan_hang_thuong_mai", "ngan_hang_chinh_sach"]},
+    "Q22b": {"value": null},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {
+      "value": "ca_hai",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Ghi chú lề bên dưới rất khó đọc, best-effort: 'Có sổ tên mình, sổ tên anh, sổ tên cả hai' — có thể mỗi người có 1 sổ đỏ riêng, khớp với lựa chọn 'Cả hai'"
+    },
+    "Q27b": {"value": null},
+    "Q28": {
+      "value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong"],
+      "note": "Có chữ viết tay dưới dòng 'Khác (ghi rõ)' dù không tick ô: 'Năm 2026 sáp nhập, thuê cao, ế hàng' — giữ làm ghi chú, không tính chọn thêm 'khac' vì không có dấu tick hình học"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {"value": "tieu_thu"},
+    "Q31": {"value": "Không"},
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": null},
+        "mua_vat_tu": {"value": null},
+        "chon_ban": {"value": null},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "vo", "note": "Có 1 nét mực rất nhỏ ở cột 'Cùng quyết định' cùng dòng, không rõ có phải tick không — không tính là multi-mark"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": null},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không ô nào được tick, kể cả 'Không' — có thể bị bỏ sót khi trả lời"
+    },
+    "Q34": {
+      "value": "Gia đình bình đẳng, nếu có nhu cầu gì",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": "Ghi chú lề: 'Buôn bán cây dược liệu' (cạnh Q7, bổ sung cho 'Phi nông nghiệp'); 'Hộ thu mua dược liệu' (dưới Q8)",
+    "2": "Ghi chú lề cạnh Q10: 'Trẻ là giáo viên mầm non' — giải thích lựa chọn 'Cán bộ, công chức, viên chức'",
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

@@ -22,65 +22,65 @@ LCA-TPH-009,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23
 LCA-TPH-010,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,"Q4/Q20/Q21b/Q28 khong tick ro nhung co dien chu; Q26 tick ca Co va Khong; nhieu cau tu luan rat dai va kho doc (Q16b/Q27b/Q28/Q31/Q34) - best-effort, can review ky"
 LCA-LP-002,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/23/2026,"Q4 khong tick nhung co dien chu; Q6 tao hon 17 tuoi; Q8 tick ca 2 o (Duoi 25%+25-50%, 25-50% khoanh tron); Q27a tick ca Chong va Khac; META_LOCATION co doan chu bi sua/gach"
 LCA-LP-003,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/23/2026,"Q4 khong tick nhung co dien chu; Q14 lam_dat co ghi chu 'Chi di lam xa' o cot Nguoi khac + duong ke dai xuong nhieu dong (doi chieu Q16b/Q28 cung noi dung -> hieu la giai thich thieu nhan luc, KHONG tinh chon them Nguoi khac, van flag review); Q14 bao_duong_xe multi-mark; Q30 4 o tick; nhieu cau tu luan kho doc (Q15/Q16a_chi_tiet/Q21c/Q34)"
-LCA-LP-004,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-005,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-006,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-007,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-008,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-009,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-010,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-011,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-012,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-013,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-014,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-015,lao-cai,lung-phinh-16phieu,pending,,,
-LCA-LP-016,lao-cai,lung-phinh-16phieu,pending,,,
-LCH-MSP-001,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-002,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-003,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-004,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-005,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-006,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-007,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-008,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-009,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-010,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-011,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-012,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-013,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-014,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-015,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-016,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-017,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-018,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-019,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-020,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-021,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-022,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCH-MSP-023,lai-chau,mao-sao-phin-23phieu,pending,,,
-LCA-HR-001,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-002,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-003,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-004,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-005,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-006,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-007,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-008,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-009,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-010,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-011,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-012,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-013,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-014,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-015,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-016,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-017,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-018,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-019,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-020,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-021,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-022,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-023,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-024,lao-cai,ham-rong-25phieu,pending,,,
-LCA-HR-025,lao-cai,ham-rong-25phieu,pending,,,
-LCA-MTR-001,lao-cai,ma-tra-1phieu,pending,,,
+LCA-LP-004,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien ten dan toc; Q14 cham_soc_con multi-mark Vo+Ca hai; Q14 gia_suc_nho co chu 'Vo nhieu hon' o cot Nguoi khac (khong tinh chon them); Q28 mau thuan (chu 'Khac' khong tick nhung co noi dung, 'Khong kho khan' duoc tick); Q30 multi-mark San xuat+Thu hai; nhieu cau tu luan kho doc (Q15/Q21c/Q27b/Q31/Q34) - can review ky"
+LCA-LP-005,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q5 mau thuan hoc van (giong LCA-LP-001); Q6 tuoi ket hon khong doc duoc; Q11 ghi chu le mau thuan voi tick 'khong hoi vien'; Q14 nhieu dong multi-mark Chong+Ca hai va Vo+Ca hai (lam_dat/cham_soc_cay/thu_hoach/noi_tro/giat_giu); Q32 mua_vat_tu multi-mark Chong+Con cai, chon_cay_trong/su_dung_dat co chu 'bo chi' o cot Con cai (khong tinh chon); Q30 multi-mark; nhieu cau tu luan kho doc - can review ky ca phieu"
+LCA-LP-006,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q14 gia_suc_lon co chu le '0,Co' ngoai bang khong ro nghia; Q21b/Q28 co chu o o 'Khac' khong tick ro; nhieu cau tu luan kho doc (Q16b/Q27b/Q31/Q34) - can review"
+LCA-LP-007,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q13 Vo bi gach/sua, chon Ca hai; Q21b Khac co tick; Q22b 2 lua chon (khong co nhu cau + khac); Q26 Co/Khong xung dot (chon Khong theo ghi chu); Q30 multi-mark; nhieu cau tu luan rat kho doc (Q9/Q15/Q34) - can review ky"
+LCA-LP-008,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q2 nam sinh kho doc (1884 vs 1984 - chon 1984); Q13 multi-mark Vo+Ca hai (chong lam xa); Q14 dam_cuoi_gio multi-mark Vo+Ca hai+Nguoi khac; Q22a dau tick la; Q23 mau thuan Khong nhung van dien chi tiet; Q28 khong_thi_truong co ghi chu them"
+LCA-LP-009,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q2 nam sinh 2006 (rat tre); Q6 ghi chu tay nghi van 'chong 2006 chua du tuoi ket hon' - can review ky co lien quan taohon; Q18 mark bat thuong o 'lam viec online'; Q29b thieu 1 tick; Q30 multi-mark San xuat+Thu hai"
+LCA-LP-010,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q6 tuoi ket hon 14 - tao hon; Q14 gia_suc_lon dau khong ro; Q22a exclusive conflict Ngan hang chinh sach+Chua (ghi chu tay giai thich); Q27a khong o nao tick, ghi chu tay giai thich thon chua co so do"
+LCA-LP-011,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q10 multi-mark Nong dan+Buon ban; Q14 lien_he_tieu_thu ky hieu bat thuong o cot Chong, noi_tro dau la; Q28 5 lua chon (Khac khong tick ro nhung co chu); Q30 multi-mark San xuat+Thu hai; Q34 rat dai kho doc"
+LCA-LP-012,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q2 ghi tuoi (50 tuoi) thay vi nam sinh; Q13 multi-mark Ca hai+Khac(Cac con); Q27a multi-mark Chong+Ca hai; Q28 co ghi chu tay 'Thinh thoang'; Q30 multi-mark ca 5 o (San xuat/Thu hai/Che bien/Thuong mai/Tieu thu)"
+LCA-LP-013,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Cu ba 78 tuoi, hau het cong viec giao cho con dau/con trai (giong LCA-TPH-002); Q4/Q6 khong ro/kho doc; Q11 bo trong nhung co ghi chu 'Nguoi cao tuoi' (khong khop schema); Q19 bo trong hoan toan; Q24 xung dot Co+Khong khong gach huy - can review ky; Q30 multi-mark; Q31/Q34 tra loi bang so 0; Q32 toan bo Con cai quyet dinh"
+LCA-LP-014,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Phieu dung ky hieu X thay vi tick; Q4 khong tick ro nhung co dien chu; Q6 tuoi ket hon kho doc (15?); Q14 thuoc_bvtv/gia_suc_lon co ky hieu la (K/R do) o cot Ca hai - coi nhu trong; Q14 bao_duong_xe multi-mark Chong+Nguoi khac ten kho doc; Q16a khong tick ro nhung co dien chu tiet; Q30 multi-mark; nhieu cau tu luan rat kho doc (Q15/Q16b/Q21c/Q31/Q34)"
+LCA-LP-015,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q6 tuoi ket hon 16 - tao hon; Q10 multi-mark Lao dong tu do+Khac(BCH hoi PN 13 nam); Q14 nhieu dong Ca hai+Nguoi khac (Bo me chong, ghi chu chung dau bang); Q30 multi-mark; Q32 chon_cay_trong multi-mark Vo+Cung quyet dinh - can review"
+LCA-LP-016,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien chu; Q14 cham_soc_cay multi-mark Vo+Ca hai (ky hieu la); Q14 dua_don_con gach bo chon lai (Vo gach, chon Ca hai); Q14 lien_he_tieu_thu = Xa thu mua (khop Q32 chon_ban); Q14 quan_ly_chi_tieu multi-mark Ca hai+Nguoi khac; Q30 multi-mark; nhieu cau tu luan kho doc (Q9/Q16b/Q21b/Q23/Q27b/Q28) - HOAN THANH BATCH Lung Phinh 16/16 phieu"
+LCH-MSP-001,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Ten Q1 mau thuan giua dau phieu (Chao Tuyet Tai My Loi) va chu ky cuoi phieu (Chao My Lai) - dung theo chu ky; Q14 dung 1 duong ke doc (brace) thay vi tick tung dong cho nhom Viec nha - can review cach dien giai; Q14 dua_don_con co ghi chu override (chi + con dau lam nhu nhau); Q28 o Khac co tick nhung khong ghi noi dung; Q30 multi-mark; Q32 su_dung_dat suy tu ghi chu 'vk va cac con cung quyet dinh'"
+LCH-MSP-002,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q6 mau thuan da_ket_hon(17t)+ly_than_ly_hon deu tick, ghi chu 'chong nghien' - chon ly_than_ly_hon; Q16a tick Khong nhung co chu dien nhanh Co - mau thuan; Q21b/Q22b/Q4 khong tick ro nhung co dien chu; Q27a co ghi chu 'do ly hon'; trang 7 co ghi chu muc do vien mau do ve ty le ly hon trong ban"
+LCH-MSP-003,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q6 mau thuan da_ket_hon(16t)+goa deu tick - chon goa (khop Q27b 'chong mat lau roi'); Q2 ghi tuoi (58 tuoi) thay vi nam sinh; Q10 multi-mark nong_dan+lao_dong_tu_do; Q14 lien_he_tieu_thu multi-mark vo+con_cai_lon; Q12/Q21b/Q22b/Q4 khong tick ro nhung co dien chu; Q33/Q34 bo trong hoan toan"
+LCH-MSP-004,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien chu; Q14 deu vo/ca_hai ro rang; Q31 chu viet rat kho doc chi doc duoc 'Co' khong co giai thich them - can review; nhieu cau tu luan kho doc (Q15/Q21c)"
+LCH-MSP-005,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q6 chi tick Ly than/Ly hon (khong tick Da ket hon) nhung van dien tuoi ket hon 18 + nam 2007 rieng; Q14 nhieu dong multi-mark vo+con_cai_lon (san xuat), cot Nguoi khac co chu 'con dau' va ky hieu '//' lap lai; Q30 multi-mark san_xuat+thu_hai; Q4 khong tick nhung khoanh/dien chu Dao 2 lan; Q13 khong tick ro nhung co dien chu"
+LCH-MSP-006,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q10 multi-mark nong_dan+buon_ban; Q14 cham_soc_cay gach bo Chong chon lai Ca hai, trong multi-mark ca_hai+nguoi_khac(Thue); Q21a multi-mark 1_3_lan+chua_lan_nao (khong gach huy) - can review; Q4/Q21b khong tick ro nhung co dien chu"
+LCH-MSP-007,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien chu Dao; Q6 tuoi ket hon kho doc (18?); Q14 dua_don_con gach bo Vo chon lai Chong; Q14 gia_suc_nho/gia_suc_lon chu 'con' o cot Nguoi khac, dau cham nho o Vo khong ro; Q28 o Khac khong tick ro nhung co dien chu; Q31 chi 1 net khong doc duoc - can review ky"
+LCH-MSP-008,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Dia diem co doan bi gach bo; Consent 1/2 deu de trong; Q10 multi-mark can_bo+buon_ban; Q17 ca 3 thiet bi deu Chong+Vo; Q18 kieu danh dau la o 2 muc; Q21b khong tick ro nhung co dien chu dai; nhieu cau tu luan rat kho doc (Q9/Q16a/Q16b/Q26) - can review ky ca phieu"
+LCH-MSP-009,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q14 nhieu dong Chong+Nguoi khac (tick khong ten); Q17 exclusive_conflict (Khong ai co dong thoi Chong co dien thoai/may tinh); Q24/Q25 mau thuan logic (khong biet di xe may nhung co xe rieng); Q16a=khong nhung Q16b van co noi dung; Q33 khong o nao tick - can review ky"
+LCH-MSP-010,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q4 tick Khac nhung khong ghi ten dan toc; Q10 multi-mark can_bo+buon_ban (ghi chu 'giao vien mam non'); Q21b co chu viet tay khong tick (noi dung thuc ra thuoc Q21a/21c); Q27a/Q34 chu rat kho doc; Q33 khong o nao tick"
+LCH-MSP-011,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Ten dau phieu vs chu ky khac nhau (Tham vs Thin), dung theo chu ky; Q16a exclusive_conflict Khong+Co deu tick; Q14 hau het Vo (chong di lam xa); Q21b/Q27b co chu khong khop dieu kien depends_on; Q31 chi 1 ky tu kho doc"
+LCH-MSP-012,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Consent 1/2 deu de trong; Q10 multi-mark nong_dan+cong_nhan; Q14 so_che chu la khong ro cot; Q30 multi-mark ca 3 o (san_xuat/thu_hai/tieu_thu); Q27a khong_biet + Q27b 'chua co so do'"
+LCH-MSP-013,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q8 multi-mark 25_50+51_75; Q10 multi-mark nong_dan+lao_dong_tu_do; Q14 nhieu dong dung chu 'con dau'/'chinh' thay vi tick hinh hoc, can review; Q30 multi-mark ca 3 o; Consent2 de trong"
+LCH-MSP-014,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q10 multi-mark nong_dan+lao_dong_tu_do; Q23 co noi dung nhung khong tick o nao; Q29b Q29a=co nhung khong tick gi; Q14 gia_suc_nho ky hieu la"
+LCH-MSP-015,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Consent1 de trong; Q11 exclusive_conflict hoi_phu_nu+khong_hoi_vien; Q6 tuoi ket hon trong nhung co nam (2003); Q30 multi-mark 4/5 o; Q14 hau het Ca hai"
+LCH-MSP-016,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Consent 1/2 deu de trong; Q9 2 moc nam khac nhau (Khoai sam 2023/Duong Quy 2025) - lay 2023 lam start_year, can review; Q14 cham_soc_con/quan_ly_chi_tieu/day_do_con ca 3 cot Vo+Chong+Ca hai deu tick (bat thuong); Q30 multi-mark San xuat+Thu hai+Tieu thu"
+LCH-MSP-017,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien ten dan toc; Q10 multi-mark nong_dan+lao_dong_tu_do; Q16a tick Khong nhung Q16a nhanh Co + Q16b deu co chu dien - mau thuan giu theo tick; Q22a Khac co chu 'co vay da tra' nhung khong tick, chi tinh Chua; Q33 khong o nao tick kha ca 'Khong'"
+LCH-MSP-018,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Consent 1/2 deu de trong; Q4 khong tick ro nhung co dien ten dan toc; Q12 chu giai thich chong lam xa; Q14/Q32 toan bo Vo (chong di lam xa); Q15/Q31/Q34 chu kho doc/viet tat, best-effort"
+LCH-MSP-019,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q1 ten bi gach bo phan dau, dung ten sau; Q6 Goa tick nhung tuoi ket hon 16 van ghi (khong tick Da ket hon); Q11 ghi chu 'Hoi nguoi cao tuoi' khong khop schema; Q14/Q32 toan bo Vo (goa chong); Q21b mau thuan voi Q21a; Q30 khong o nao tick, ghi chu le '(tham gia tat)' - ap dung tat ca 5 lua chon"
+LCH-MSP-020,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien ten dan toc; Q9 chi doc chac chan nam 2023, phan sau kho doc (co the 've duong quy'); Q10 multi-mark nong_dan+lao_dong_tu_do; Q14 hau het Chong (Q16a ghi chu 'Chong lam het'); Q21a multi-mark 1_3_lan+chua_lan_nao mau thuan voi Q21b co noi dung; Q21b/Q28 khong tick ro nhung co dien chu; Q31/Q34 tra loi ngan/bang so 0"
+LCH-MSP-021,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien ten dan toc; Q9 chi doc chac chan nam 2024; Q13 vet chu mo gan Khac khong tinh; Q14 dua_don_con ky hieu la (vong tron gach cheo); Q19/Q33 bo trong hoan toan; Q21b khong tick ro nhung co dien chu; Q22a exclusive conflict ngan_hang_chinh_sach+chua; Q31/Q34 tra loi ngan/bang so 0"
+LCH-MSP-022,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien ten dan toc; Q10 multi-mark nong_dan+khac(Chan nuoi); Q16a tick Khong nhung co chu dien Q16b/note mau thuan; Q19/Q33 bo trong hoan toan; Q28 khong tick ro nhung co dien chu; Q32 mua_vat_tu ky hieu la o cot Chong (co the gach huy) + Cung quyet dinh"
+LCH-MSP-023,lai-chau,mao-sao-phin-23phieu,done,Claude (manual extraction session),7/24/2026,"HOAN THANH BATCH Mao Sao Phin 23/23 phieu. Phieu nay dung ky hieu SO (2,3) thay vi tick trong Q14; CONSENT_1/2 de trong; Q9 chi doc duoc '202_' nam khong ro chu so cuoi -> null; Q14 dua_don_con/gia_suc_lon/day_do_con co chu o cot Nguoi khac ('Tu di','Ong ba'); Q21a multi-mark 1_3_lan+chua_lan_nao; Q27a=khac(Bo chong); Q30 multi-mark 3 o"
+LCA-HR-001,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"Bat dau lo Ham Rong. Q4 khong tick ro nhung co dien ten dan toc; Q8/Q30 multi-mark; Q14 thuoc_bvtv chu o cot Nguoi khac qua kho doc; Q19 co ghi chu le kho hieu; Q21b multi-mark ky_thuat+khac; Q27a=khac(me chong, bo da mat); nhieu cau tu luan kho doc"
+LCA-HR-002,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"Q2 ghi tuoi (60 tuoi) thay vi nam sinh; Q4 khong tick ro nhung co dien ten dan toc; Q13 co ghi chu giai thich (chong om, con trai lam thue); Q14 bao_duong_xe ghi chu 'khong co xe' thay vi chon nguoi; Q18/Q21b/Q28 khong tick ro nhung co dien chu; Q30 vet mo gan Thu hai; Q33 bo trong khong tra loi dung cau hoi"
+LCA-HR-003,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"Q4 khong tick ro nhung co dien ten dan toc; Q14 nhieu o ghi so '0' hoac chu thay vi tick (thuoc_bvtv, gia_suc_nho); Q14 thu_hoach multi-mark voi Nguoi khac; Q20 multi-mark 3 o (Vo+Chong+Khac); Q27a=khac (bo me chong); Q30 multi-mark; Q32 vay_von ky hieu la 'k0'; nhieu cau tu luan kho doc"
+LCA-HR-004,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"CONSENT_2 de trong; Q4 khong tick ro nhung co dien ten dan toc; Q6 khong tick nhung co dien tuoi ket hon; Q14 dung ky hieu X, nhieu o ghi chu la thay tick; Q14 lien_he_tieu_thu multi-mark; Q16a khong tick nhung co dien chi tiet; Q20 multi-mark Vo+Khac; Q22a khong o chuan nao tick, chi co Khac; Q30 multi-mark; nhieu cau tu luan rat kho doc"
+LCA-HR-005,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"CONSENT_2 de trong; Q4 khong tick ro nhung co dien ten dan toc; Q5 mau thuan hoc van (giong LCA-LP-001); Q14 dung ky hieu X, vai o ghi 'khong' thay tick; Q16a multi-mark Khong+Co (co chi tiet); Q30 multi-mark 3 o; Q32 vay_von ky hieu la; nhieu cau tu luan kho doc"
+LCA-HR-006,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"CONSENT_2 de trong; Q4 khong tick ro nhung co dien ten dan toc; Q9 2 moc nam khac nhau (2008/2014); Q14 dung ky hieu X, giat_giu multi-mark Ca hai+Con cai lon; Q25 khong tick nhung co ghi chu khop Q24; Q30 multi-mark; nhieu cau tu luan kho doc"
+LCA-HR-007,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"Q16a multi-mark Khong+Co (co chi tiet); Q18/Q19/Q33 bo trong hoan toan; Q27a=khac (bo chong); Q28 khong tick ro nhung co dien chu; Q30 multi-mark Thu hai+Che bien; nhieu cau tu luan kho doc"
+LCA-HR-008,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"CONSENT_2 de trong; Q4 khong tick ro nhung co dien ten dan toc; Q6 khong tick nhung co dien tuoi ket hon; Q14 dung ky hieu X, vai o ghi chu la thay tick; Q27a co ghi chu bo sung; Q30 multi-mark 3 o; nhieu cau tu luan kho doc"
+LCA-HR-009,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"CONSENT_2 de trong; Q4 khong tick ro nhung co dien ten dan toc; Q14 nhieu dong multi-mark Ca hai+Con cai lon (lam_dat/trong/cham_soc_cay/giat_giu), rieng noi_tro co ca 3 cot; Q27a=khac (dat chua co so do); Q30 multi-mark 3 o; nhieu cau tu luan kho doc"
+LCA-HR-010,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"Nguoi tra loi tre (sinh 2004), tao hon 17t nam 2021; Q9 khong ro nam bat dau -> null; Q21a multi-mark 1_3_lan+chua_lan_nao; Q28 chu kho doc; Q30 multi-mark ca 5 o ('1 minh lam tat'); Q32 cot Con cai ghi 'me ck' (me chong) khong khop schema o 3 dong - giu null + ghi chu, KHONG tu che field; Q33 bo trong hoan toan"
+LCA-HR-011,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review nhieu: Q6 tuoi ket hon 14 (tao hon, suy tu ghi chu le '26 nam roi'+'14 tuoi'), Q12/Q20/Q30 multi_mark (Q30 suy tu ghi chu le kieu 8), Q14 dong lien_he_tieu_thu + nguoi_khac chu kho doc, Q22a/Q28 Khac khong tick nhung co dien noi dung"
+LCA-HR-012,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review nhieu: Q14 nhieu dong nguoi_khac chu kho doc (thuoc_bvtv/thu_hoach/quan_ly_chi_tieu), Q28 exclusive_conflict (thieu_kien_thuc + khong_kho_khan ca 2 co tick khong gach huy), Q30 multi_mark (thu_hai+che_bien), Q33 khong co o nao duoc tick"
+LCA-HR-013,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review: Q14 nhieu dong multi-mark ca 4 cot (lam_dat/thu_hoach/so_che), Q25 khong o nao duoc tick, Q27a gach-bo-chon-lai (Chong bi X huy, chon Ca hai), Q30 multi_mark (san_xuat+thu_hai)"
+LCA-HR-014,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review: Q8 multi_mark (51-75+tren75), Q14 so_che multi_mark 3 cot, Q21a multi_mark (1-3+tren3), Q23 dau tick mo ho giua Co/Khong (chon Co vi co dien chi tiet)"
+LCA-HR-015,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review: Q9 chi ghi dien tich dat, khong doc duoc nam/so nam kinh nghiem; Q29a khong tick nhung Q29b duoc dien day du; Q30 multi_mark ca 5 lua chon"
+LCA-HR-016,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"Phieu dung quy uoc ghi SO CO/1-5 thay vi tick o Q14/Q32 - da doc theo dung quy uoc. needs_review: Q11 net khoanh mo ho gan 'khong hoi vien', Q32 su_dung_thu_nhap multi_mark dau khong ro"
+LCA-HR-017,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review: Q14 3 dong multi_mark 3 cot (cham_soc_cay/thu_hoach/so_che) khong ro nguoi_khac la ai, Q22a ca Khac+Chua deu tick nhung Khac khong co noi dung"
+LCA-HR-018,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review: Q5 conflicting (lop9+trung cap), Q11 exclusive_conflict (hoi_phu_nu+khong_hoi_vien khong gach huy), Q12 khong o nao tick, Q14 2 dong nguoi_khac chu chi nhac lai 'chong', Q34 chu rat kho doc"
+LCA-HR-019,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"Phieu tuong doi sach, it needs_review. Q31/Q34 chu viet tay kho doc best-effort"
+LCA-HR-020,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review: Q6 khong tick nhung co dien tuoi ket hon, Q14 quan_ly_chi_tieu nguoi_khac chu kho doc, Q30 multi_mark, nhieu cau tu luan chu rat kho doc (Q21c/26/27b/31/34)"
+LCA-HR-021,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"QUAN TRONG: META_LOCATION viet 'Ta Phin' KHONG khop xa Ham Rong cua batch nay (xem note_record_level trong JSON) - can xac nhan lai voi khach. Dan toc Dao cung khac cac phieu HR khac (thuong Mong). Ngoai ra phieu rat nhieu multi_mark/needs_review o Q12/13/14/28"
+LCA-HR-022,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"Phieu tuong doi sach (Vo lam gan het viec Q14). needs_review: Q14 lam_dat nguoi_khac chu khong doc duoc, Q30 multi_mark 4/5, Q31/34 chu kho doc"
+LCA-HR-023,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review: Q6 khong tick nhung co dien tuoi ket hon, Q12 Khac khong tick nhung co dien 'con dau', Q30 multi_mark"
+LCA-HR-024,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"QUAN TRONG: Q32 nhieu dong ghi 'bme ch/bm chong' (bo me chong quyet dinh) - KHONG khop voi 4 option schema (Vo/Chong/Cung quyet dinh/Con cai), da de null + ghi chu, can bao khach co the can them option cho Q32. Nguoi tra loi con rat tre (2005, moi cuoi, o voi bo me chong)"
+LCA-HR-025,lao-cai,ham-rong-25phieu,done,Claude (manual extraction session),7/24/2026,"needs_review: Q5 conflicting (lop6+trungcap), Q8/Q30 multi_mark, Q9 nam 2018 nhung Q2=2008 (moi 10 tuoi luc do) - co the tinh tu khi gia dinh bat dau. Case tao hon nghiem trong: ket hon 14 tuoi (2022)"
+LCA-MTR-001,lao-cai,ma-tra-1phieu,done,Claude (manual extraction session),7/24/2026,"8 trang (khac 7 chuan) - da xac dinh nguyen nhan: Q14 vet dau bi go bo giua chung, lam lai tren 1 trang chen them - da dung dung ban lam lai, xem note_record_level trong JSON. needs_review: Q13/Q33 khong o nao tick, Q20/Q21a multi_mark, Q32 vay_von dau la"

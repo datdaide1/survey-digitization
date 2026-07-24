@@ -1,0 +1,194 @@
+{
+  "record_id": "LCA-HR-002",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-002/LCA-HR-002__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-26"},
+    "META_LOCATION": {"value": "Tổ dân phố Hàm Rồng 3, Phường Sa Pa, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Giàng Thị Súa (ĐT: 0817920797)",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Có ghi chú thêm 'hỏi anh Chu' cạnh tên — không rõ ý nghĩa, có thể là người liên hệ thay hoặc người thân, giữ nguyên văn"
+    },
+    "Q2": {
+      "value": "60 tuổi",
+      "confidence": "trung_binh",
+      "note": "Ghi tuổi (60 tuổi) thay vì năm sinh — giữ nguyên văn theo phiếu, không tự quy đổi ra năm sinh"
+    },
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có dấu tick hình học rõ ràng nhưng có điền tên dân tộc 'Mông' — suy là đã chọn theo thông lệ"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 28}
+      }
+    },
+    "Q7": {
+      "value": ["chan_nuoi", "cay_duoc_lieu"],
+      "note": "Có ghi chú tay thêm 'trâu lợn gà' dưới ô Chăn nuôi — nêu cụ thể loại vật nuôi"
+    },
+    "Q8": {"value": "51_75"},
+    "Q9": {
+      "value": "2018, vì hàng xóm trồng được, đã nghe rồi trồng theo, công ty hỗ trợ hạt giống",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": 2018, "unit": "start_year", "confidence": "cao"}
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "vo"},
+    "Q13": {
+      "value": "vo",
+      "note": "Có ghi chú tay thêm giải thích: 'chồng ốm, con trai đi làm thuê -> không ai làm' — lý do chỉ có Vợ đảm nhiệm"
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": null},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "chong"},
+        "lien_he_tieu_thu": {"value": null},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "chong"},
+        "dam_cuoi_gio": {"value": "chong"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {
+          "value": "con_cai_lon",
+          "flags": ["ambiguous_mark"],
+          "needs_review": true,
+          "note": "Cột 'Con cái lớn' ghi chữ 'Con cái' thay vì tick; cột 'Người khác' ghi chú thêm 'không có xe' — giải thích gia đình không có xe cộ, không phải chọn thêm một người, không tính là multi-mark"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Đi họp, tư vấn, hàng xóm",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {"value": "khong"},
+    "Q16b": {"value": null},
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "khac"],
+      "other_text": "Xem thời tiết",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có tick hình học rõ nhưng có điền nội dung 'Xem thời tiết' — suy là đã chọn theo thông lệ"
+    },
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "chong"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["ky_thuat"],
+      "note": "Ô 'Tập huấn kỹ thuật' không có tick hình học rõ nhưng có ghi chú chi tiết bên cạnh 'kỹ thuật trồng atiso' — suy là đã chọn"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {
+      "value": ["khong_co_nhu_cau"],
+      "note": "Có ghi chú thêm 'kiếm được thì thôi' giải thích lý do không có nhu cầu"
+    },
+    "Q23": {
+      "value": "co",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {
+      "value": "khong",
+      "note": "Có ghi chú thêm 'thích thì đi, không phải xin phép nhưng không thích (đi)' (chữ viết tay khó đọc, best-effort)"
+    },
+    "Q27a": {"value": "chong"},
+    "Q27b": {
+      "value": "Vì là chồng nên chỉ chồng đứng tên",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": ["khac"],
+      "other_text": "Thiếu hạt giống nhưng được công ty hỗ trợ 3-4 lạng theo nhu cầu",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Ô 'Khác' không có tick hình học rõ nhưng có điền nội dung — suy là đã chọn theo thông lệ; có thêm ghi chú 'không thiếu kiến thức do có kinh nghiệm trồng lâu năm' giải thích thêm"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {
+      "value": ["them_thu_nhap"],
+      "note": "Có ghi chú thêm 'đỡ vất vả hơn trước nhiều'"
+    },
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": "san_xuat",
+      "needs_review": true,
+      "note": "Có vết mờ gần 'Thu hái' không chắc là tick cố ý; có ghi chú bên cạnh 'Tiêu thụ' dạng 'người mua đến tận nơi' (chữ viết tay khó đọc)"
+    },
+    "Q31": {
+      "value": "Giờ không có sổ (sách), cũng không muốn tham gia nhiều",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": null},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": null},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không ô nào được tick; có ghi chú bên cạnh 'nhiều đất rừng, tự trồng cây' không trả lời trực tiếp câu hỏi vai trò lãnh đạo"
+    },
+    "Q34": {
+      "value": "0",
+      "confidence": "trung_binh",
+      "note": "Trả lời bằng số 0"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

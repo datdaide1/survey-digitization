@@ -1,0 +1,361 @@
+{
+  "record_id": "LCA-LP-005",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-LP-005/LCA-LP-005__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {
+      "value": "2026-05-28"
+    },
+    "META_LOCATION": {
+      "value": "Thôn Lả Dì Thàng, Lùng Phình, Lào Cai",
+      "confidence": "trung_binh"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": null,
+      "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"
+    },
+    "Q1": {
+      "value": "Sùng Thị Dua (ĐT: 0812 864 859)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {
+      "value": "2003"
+    },
+    "Q3": {
+      "value": "nu"
+    },
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "note": "Không có tick hình học rõ ràng ở ô 'Khác' nhưng có điền tên dân tộc 'Mông' — suy là đã chọn theo tinh thần chung các phiếu tương tự."
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {
+          "value": false
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": "Hết lớp 9"
+        },
+        "Q5_trung_cap_dh": {
+          "value": true
+        }
+      },
+      "flags": [
+        "conflicting_answer"
+      ],
+      "note": "Ghi 'Hết lớp 9' nhưng đồng thời tick 'Trung cấp/Cao đẳng/Đại học' — mâu thuẫn, cùng dạng case đã biết ở LCA-LP-001."
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {
+          "value": "18",
+          "confidence": "thap",
+          "note": "Chữ số viết tay không đọc được rõ ràng (có thể là '18', '19', hoặc bị gạch) — để null, không suy đoán liều REVIEW: 18"
+        }
+      }
+    },
+    "Q7": {
+      "value": [
+        "trong_trot",
+        "cay_duoc_lieu"
+      ]
+    },
+    "Q8": {
+      "value": "25_50"
+    },
+    "Q9": {
+      "value": "Năm 2018 - 2022 (khi lấy chồng về ở nhà bố mẹ chưa từng ra riêng) (dời/ra nhà riêng năm 2022)",
+      "confidence": "thap",
+      "note": "Năm bắt đầu '2018' đọc rõ, chắc chắn. Phần giải thích trong ngoặc khó đọc trọn vẹn, best-effort.",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2018,
+          "unit": "start_year",
+          "confidence": "cao",
+          "note": "Ghi rõ 'Năm 2018' ở đầu câu trả lời."
+        }
+      }
+    },
+    "Q10": {
+      "value": "nong_dan"
+    },
+    "Q11": {
+      "value": [
+        "khong_hoi_vien"
+      ],
+      "note": "Ghi chú thêm ở lề: '(Có bắt Hội PN, Nông dân)' — nội dung này có vẻ MÂU THUẪN với tick 'Không là hội viên của tổ chức nào' (ngụ ý có/từng bị yêu cầu tham gia Hội Phụ nữ, Hội Nông dân). Giữ theo tick hình học rõ ràng, nhưng cần người review đối chiếu ý nghĩa ghi chú."
+    },
+    "Q12": {
+      "value": "ca_hai",
+      "note": "Ô 'Khác' không tick nhưng có chữ viết tay 'Vợ nhiều hơn' — ghi chú giải thích thêm cho lựa chọn đã có, không tính là chọn thêm 'khac'."
+    },
+    "Q13": {
+      "value": "ca_hai",
+      "note": "Ô 'Khác' không tick nhưng có chữ viết tay (khó đọc, đại ý 'Chị nhiều hơn vì con nhỏ') — ghi chú giải thích thêm, không tính là chọn thêm 'khac'."
+    },
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": "chong",
+          "note": "Cả cột 'Chồng' (X) và cột 'Cả hai như nhau' (dấu X cách điệu) đều có dấu, không thấy gạch huỷ — tính đa lựa chọn, cần review."
+        },
+        "trong": {
+          "value": "ca_hai"
+        },
+        "cham_soc_cay": {
+          "value": "chong",
+          "note": "Cùng dạng đa lựa chọn Chồng+Cả hai như dòng lam_dat."
+        },
+        "thuoc_bvtv": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'ko' thay vì tick — coi như trống"
+        },
+        "thu_hoach": {
+          "value": "chong",
+          "note": "Cùng dạng đa lựa chọn Chồng+Cả hai như dòng lam_dat."
+        },
+        "so_che": {
+          "value": "ca_hai"
+        },
+        "lien_he_tieu_thu": {
+          "value": "ca_hai"
+        },
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "vo",
+          "note": "Cả cột 'Vợ' và cột 'Cả hai như nhau' đều có dấu."
+        },
+        "giat_giu": {
+          "value": "ca_hai",
+          "note": "Cả cột 'Vợ' và 'Cả hai' đều có dấu. Cột 'Người khác' có ghi chú '(Vợ nhiều hơn)' — đây là giải thích thêm cho Vợ, không tính là chọn thêm 'nguoi_khac'."
+        },
+        "dua_don_con": {
+          "value": "ca_hai"
+        },
+        "dam_cuoi_gio": {
+          "value": "ca_hai"
+        },
+        "cham_soc_con": {
+          "value": "ca_hai"
+        },
+        "gia_suc_nho": {
+          "value": "ca_hai"
+        },
+        "gia_suc_lon": {
+          "value": "chong"
+        },
+        "quan_ly_chi_tieu": {
+          "value": "ca_hai"
+        },
+        "day_do_con": {
+          "value": "ca_hai"
+        },
+        "bao_duong_xe": {
+          "value": [
+            "chong",
+            "nguoi_khac"
+          ],
+          "note": "Cột 'Người khác' có chữ viết tay 'Ra hàng sửa chữa' (mang xe ra tiệm sửa) — nêu tên 1 dịch vụ/địa điểm bên ngoài, không phải 1 người, tương tự case LCA-BH-001 — không tính là chọn thêm 'nguoi_khac'.",
+          "flags": [
+            "multi_mark_on_single_select"
+          ]
+        }
+      }
+    },
+    "Q15": {
+      "value": "Bố, mẹ hướng dẫn; cộng đồng - già đầu hay xóm",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "khong",
+      "subfield": {
+        "Q16a_chi_tiet": {
+          "value": null
+        }
+      }
+    },
+    "Q16b": {
+      "value": null
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": [
+        "goi_nhan_tin",
+        "doc_tin_tuc",
+        "giai_tri",
+        "tim_kiem_thong_tin",
+        "giao_dich_ban_hang",
+        "mang_xa_hoi"
+      ]
+    },
+    "Q19": {
+      "value": [
+        "quang_ba"
+      ]
+    },
+    "Q20": {
+      "value": "chong",
+      "note": "Ô 'Khác (ghi rõ)' không tick nhưng có chữ viết tay 'Bố chồng' — có thể bố chồng cũng tham gia, cần review vì không có tick rõ ràng.",
+      "other_text": "bố chồng"
+    },
+    "Q21a": {
+      "value": "chua_lan_nao"
+    },
+    "Q21b": {
+      "value": []
+    },
+    "Q21c": {
+      "value": "Con nhỏ - nếu có đứa nuôi thì bố/mẹ chị lo, chị đi",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q22a": {
+      "value": [
+        "chua"
+      ]
+    },
+    "Q22b": {
+      "value": [
+        "khong_co_nhu_cau"
+      ]
+    },
+    "Q23": {
+      "value": "khong",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": null
+        }
+      }
+    },
+    "Q24": {
+      "value": "co"
+    },
+    "Q25": {
+      "value": "khong"
+    },
+    "Q26": {
+      "value": "khong"
+    },
+    "Q27a": {
+      "value": "khac",
+      "other_text": "Bố chồng, mẹ"
+    },
+    "Q27b": {
+      "value": "Nhà của bố mẹ chồng",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": [
+        "khong_kho_khan"
+      ]
+    },
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
+    "Q30": {
+      "value": "thu_hai",
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu chỉ cho chọn 1 khâu. REVIEW: 'sản xuất' bị tô gạch bỏ"
+    },
+    "Q31": {
+      "value": "Có - Tiêu thụ -> con nhỏ nên chưa có điều kiện để chợ, tìm chỗ, bán hàng tại chợ",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc trọn vẹn, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {
+          "value": "chong",
+          "note": "Cột 'Con cái' có chữ viết tay '(bố chị' (không phải tick) — không rõ ý nghĩa, không tính là chọn thêm 'con_cai', cần review."
+        },
+        "mua_vat_tu": {
+          "value": [
+            "chong",
+            "con_cai"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
+          "note": "Cả cột 'Chồng' và cột 'Con cái' đều có dấu X rõ ràng."
+        },
+        "chon_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "vay_von": {
+          "value": null,
+          "note": "Ký hiệu viết tắt 'ko' — coi như trống"
+        },
+        "gia_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_thu_nhap": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_dat": {
+          "value": "chong",
+          "note": "Cột 'Con cái' có chữ viết tay 'bố chị' (không phải tick) — không tính là chọn thêm 'con_cai', cần review."
+        },
+        "khac": {
+          "value": null
+        }
+      },
+      "note": "Cột 'Nội dung' có đường kẻ zigzag xuyên nhiều dòng — bỏ qua theo quy ước skip_extraction"
+    },
+    "Q33": {
+      "value": [
+        "khong"
+      ]
+    },
+    "Q34": {
+      "value": "Mong muốn có thời gian để học, có kiến thức, hiểu biết chăm sóc, bảo quản, sử dụng cây dược liệu (đúng quy cách); được có thời gian để tham gia tiêu thụ, quảng bá bán dược liệu -> được giao tiếp, bán được nhiều, có tiền để nuôi con và sắm các vật dụng gia đình. [Đoạn viết thêm dưới dòng cảm ơn]: Có thời gian tham gia các hoạt động, mở rộng phát triển kinh tế của phụ nữ, nông dân; kiêm thời nuôi dạy con -> Hiện con nhỏ, ít thời gian tham gia",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort. Có 1 đoạn viết thêm dưới dòng in 'Xin chân thành cảm ơn...' tương tự case LCA-LP-001/LCA-BH-001."
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

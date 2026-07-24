@@ -1,0 +1,191 @@
+{
+  "record_id": "LCH-MSP-002",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCH-MSP-002/LCH-MSP-002__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-06-17"},
+    "META_LOCATION": {
+      "value": "Mao Sao Phìn, Sìn Hồ, Lai Châu",
+      "confidence": "cao"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes", "confidence": "trung_binh", "note": "Ký hiệu đánh dấu dạng nét xoắn khác kiểu tick chuẩn ở CONSENT_1, nhưng vẫn tính là đã đánh dấu (đa dạng kiểu đánh dấu)"},
+
+    "Q1": {
+      "value": "Tấu Mí San",
+      "pii": true,
+      "confidence": "trung_binh",
+      "note": "Số điện thoại viết kèm: 0969330745. Chữ ký cuối phiếu (trang 7) viết hơi khác: 'Tấn Mỹ San'/'San' — chênh lệch nhỏ trong chính tả phiên âm tên, dùng theo chữ viết đầu phiếu vì rõ nét hơn"
+    },
+    "Q2": {"value": "1975"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Dao",
+      "needs_review": true,
+      "note": "Không có tick hình học rõ ràng ở ô 'Khác' nhưng có điền tên dân tộc 'Dao' vào chỗ trống — suy luận là đã chọn theo precedent các phiếu trước (LCA-BH-004, LCA-TPH-001...)"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {
+          "value": "8",
+          "confidence": "thap",
+          "needs_review": true,
+          "note": "Chữ số viết tay dạng cong khó đọc, có thể là '8' hoặc ký hiệu khác"
+        },
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "ly_than_ly_hon",
+      "flags": ["conflicting_answer"],
+      "needs_review": true,
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 17, "confidence": "trung_binh"}
+      },
+      "note": "Cả 2 ô 'Đã kết hôn' (kèm tuổi kết hôn 17) và 'Ly thân/Ly hôn' đều có tick, không có dấu gạch huỷ ở ô nào. Ghi chú tay bên cạnh: 'chồng nghiện' — giải thích lý do ly thân/ly hôn. Chọn 'ly_than_ly_hon' làm giá trị vì phản ánh tình trạng hôn nhân HIỆN TẠI, vẫn giữ Q6_tuoi_ket_hon=17 làm thông tin lịch sử. Cần review."
+    },
+    "Q7": {"value": ["chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "duoi_25"},
+    "Q9": {
+      "value": "2023 Thu nhập cao hơn cây khác, lại ở gần đi đâu xa",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Năm '2023' đọc rõ. Phần lý do phía sau chữ viết tay khó đọc trọn vẹn, best-effort",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2023,
+          "unit": "start_year",
+          "confidence": "cao"
+        }
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {
+      "value": ["hoi_phu_nu"],
+      "note": "Ghi chú tay bên cạnh rất khó đọc, đại ý liên quan tới việc mới sáp nhập xã ảnh hưởng thời điểm tham gia hội — best-effort, không chắc chắn nội dung chính xác"
+    },
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": null},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": null},
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {"value": null},
+        "gia_suc_nho": {"value": "vo"},
+        "gia_suc_lon": {"value": "vo"},
+        "quan_ly_chi_tieu": {"value": "vo"},
+        "day_do_con": {"value": null},
+        "bao_duong_xe": {"value": "vo"}
+      }
+    },
+    "Q15": {
+      "value": "Từ cô chú Bảo Long mình làm đấy, nói đá áo chuất kiểu thêu. Dệt trợ tự già đây nói ép trợ thêu",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, transcription best-effort, không chắc chắn nhiều đoạn"
+    },
+    "Q16a": {
+      "value": "khong",
+      "flags": ["conflicting_answer"],
+      "needs_review": true,
+      "note": "Ô 'Không' có tick rõ ràng, không có dấu gạch huỷ. Tuy nhiên có chữ viết tay điền vào chỗ trống của nhánh 'Có (ghi cụ thể là công việc gì)': 'Cuốc nương, cày cấy, tập trợ sửa điện xe' (đọc không chắc chắn) — mâu thuẫn với tick 'Không'. Giữ giá trị theo tick hình học (rule 1), ghi chú mâu thuẫn để review."
+    },
+    "Q16b": {
+      "value": "Phải tự vươn lên, tự mày mò",
+      "confidence": "trung_binh",
+      "note": "Có nội dung viết dù Q16a tick 'Không' (xem ghi chú Q16a) — vẫn ghi lại đầy đủ theo yêu cầu dữ liệu đầy đủ"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Trồng ngô, trồng quế",
+      "needs_review": true,
+      "note": "Không có tick hình học ở ô nào, nhưng có chữ viết tay điền vào chỗ trống 'Khác (ghi rõ)' — suy luận là đã chọn theo precedent (Q4, tương tự các phiếu trước)"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {
+      "value": ["khong_co_nhu_cau", "khac"],
+      "other_text": "Sợ vay không trả được, không dám vay",
+      "needs_review": true,
+      "note": "'Không có nhu cầu' có tick rõ. Ô 'Khác' không có tick hình học nhưng có chữ viết tay điền vào chỗ trống — suy luận là đã chọn thêm, cần review"
+    },
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {
+      "value": "vo",
+      "note": "Ghi chú tay thêm: 'do ly hôn' — khớp với tình trạng hôn nhân ly thân/ly hôn ghi ở Q6"
+    },
+    "Q27b": {"value": null},
+    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong"]},
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": "san_xuat",
+      "note": "Ghi chú tay thêm: '1 mình làm & thuê'"
+    },
+    "Q31": {
+      "value": "Tập huấn ở xã thì ở đi được, cho ở 1 mình",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "vo"},
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": "vo"},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {"value": "vo"},
+        "su_dung_dat": {"value": "vo"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Hỗ trợ vốn, đất SX",
+      "confidence": "trung_binh"
+    }
+  },
+  "page_notes": {
+    "1": "Ghi chú tay khó đọc phía trên Q8 (dạng 'Đg quí'?) — không rõ nghĩa, có thể liên quan nguồn thu nhập khác (dệt?)",
+    "2": "Ghi chú tay bên cạnh Q11 rất khó đọc, đại ý về việc mới sáp nhập xã — best-effort, không chắc chắn",
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": "Ghi chú tay mực đỏ ở đầu trang (có vẻ do cán bộ điều tra viên ghi thêm, không phải câu trả lời người được phỏng vấn): 'Tỷ lệ ly hôn ở bản [tên không rõ] cao, 2-3 trường hợp/...' — liên quan bối cảnh Q6/Q27a. Chữ ký cuối phiếu: 'San' / 'Tấn Mỹ San' (hơi khác chính tả so với tên đầu phiếu 'Tấu Mí San')"
+  }
+}

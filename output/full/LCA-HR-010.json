@@ -1,0 +1,209 @@
+{
+  "record_id": "LCA-HR-010",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-24",
+  "source_images": "output/assembly/_render/LCA-HR-010/LCA-HR-010__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-25"},
+    "META_LOCATION": {"value": "Xóm Séo, Hàm Rồng 2, Phường Sa Pa, Lào Cai"},
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": "yes"},
+
+    "Q1": {
+      "value": "Thào Thị Cung (ĐT: 0364229514)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {"value": "2004"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Mông"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "Lớp 12", "note": "Có ghi chú thêm 'nghỉ do nhà ép lấy chồng'"},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 17, "note": "Có ghi kèm năm '2021' bên cạnh số tuổi 17"}
+      }
+    },
+    "Q7": {"value": ["cay_duoc_lieu"]},
+    "Q8": {
+      "value": "tren_75",
+      "note": "Có ghi chú thêm '1 vụ được thu 6 tạ'"
+    },
+    "Q9": {
+      "value": "Không rõ, do nhà chồng đã trồng từ trước, thế thôi",
+      "confidence": "thap",
+      "needs_review": true,
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {"value": null, "unit": "start_year", "confidence": "thap"}
+      },
+      "note": "Người trả lời không biết rõ năm bắt đầu (do nhà chồng đã trồng từ trước khi chị về làm dâu) — không suy đoán năm"
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {
+      "value": ["doan_thanh_nien"],
+      "note": "Có ghi chú thêm 'ngày còn đi học' — là hội viên từ thời còn đi học, không chắc còn hiệu lực hiện tại"
+    },
+    "Q12": {"value": "vo"},
+    "Q13": {"value": "vo"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "vo"},
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": null},
+        "thu_hoach": {"value": "vo"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "vo"},
+        "cham_soc_con": {"value": "vo"},
+        "gia_suc_nho": {"value": null},
+        "gia_suc_lon": {"value": null},
+        "quan_ly_chi_tieu": {
+          "value": "ca_hai",
+          "needs_review": true,
+          "note": "Cột 'Con cái lớn' có ghi chú thêm 'mình làm được cùng của các cụ' — nội dung không khớp rõ với ý 'con cái lớn', không tính thêm vào lựa chọn"
+        },
+        "day_do_con": {"value": "vo"},
+        "bao_duong_xe": {
+          "value": "nguoi_khac",
+          "note": "Có ghi chú thêm dưới bảng 'tự mang ra tiệm sửa' — mô tả cách xử lý, không phải tên người cụ thể"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Bố chồng chỉ cho",
+      "confidence": "trung_binh"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {"Q16a_chi_tiet": {"value": "Thay lốp xe, sửa đồ lặt vặt trong nhà từ khi bố mẹ ốm; có người làm shipper đi giao hàng", "confidence": "thap"}},
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q16b": {
+      "value": "Bà chị mách bảo",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "mang_xa_hoi"],
+      "note": "Có ghi chú thêm '26, FB' cạnh mục Tham gia mạng xã hội (có thể ý là Zalo/Facebook)"
+    },
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {
+      "value": ["1_3_lan", "chua_lan_nao"],
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả '1-3 lần' và 'Chưa lần nào' đều có dấu tick, không thấy nét gạch huỷ ở dấu nào"
+    },
+    "Q21b": {
+      "value": ["ky_thuat", "khac"],
+      "other_text": "Chăm sóc cây, không rõ giá thuốc (chữ viết tay khó đọc, không chắc chắn)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q21c": {
+      "value": "Do bố chồng ốm/lo lắng, ông luôn ở đó (bận rộn)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc; có nội dung dù Q21a bao gồm '1_3_lan' — mâu thuẫn logic nhẹ, giữ nguyên theo phiếu"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "co"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "chong"},
+    "Q27b": {
+      "value": "Vì là đất của nhà chồng, được sang tên chồng",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, best-effort"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc", "ganh_nang_viec_nha", "khong_thi_truong"],
+      "note": "Ghi chú thêm: 'ít lao động, con nhỏ' (Thiếu nguồn lực); 'có năm được giá, phù hợp; làm vất vả, mưa nhiều' (Không có thị trường tiêu thụ) — chữ viết tay khó đọc, best-effort",
+      "confidence": "thap",
+      "needs_review": true
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "che_bien", "thuong_mai", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 5 lựa chọn đều được tick, có ghi chú thêm '1 mình làm tất'"
+    },
+    "Q31": {
+      "value": "Muốn vào Hội Phụ nữ nhưng không ai mời, không ai tiếp cận",
+      "confidence": "trung_binh"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {
+          "value": null,
+          "needs_review": true,
+          "note": "Cột 'Con cái' ghi chữ 'mẹ ck' (mẹ chồng) — không khớp ý nghĩa cột này (Con cái), Q32 không có cột 'Người khác' để gán, giữ null và ghi chú lại thay vì tự chế thêm giá trị"
+        },
+        "mua_vat_tu": {"value": "vo"},
+        "chon_ban": {"value": "vo"},
+        "vay_von": {"value": null},
+        "gia_ban": {"value": "vo"},
+        "su_dung_thu_nhap": {
+          "value": "chong",
+          "needs_review": true,
+          "note": "Cột 'Con cái' cũng ghi chữ 'mẹ ck' (mẹ chồng) bên cạnh tick 'Chồng' — không khớp cột 'Con cái', không tính thêm"
+        },
+        "su_dung_dat": {
+          "value": null,
+          "needs_review": true,
+          "note": "Cột 'Con cái' ghi chữ 'mẹ ck' (mẹ chồng), không có tick nào khác — không khớp cột 'Con cái', giữ null và ghi chú"
+        },
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {
+      "value": [],
+      "needs_review": true,
+      "note": "Không ô nào được tick (kể cả 'Không') — bỏ trống hoàn toàn"
+    },
+    "Q34": {
+      "value": "Mong được vào Hội Phụ nữ để được nâng cao kiến thức",
+      "confidence": "trung_binh"
+    }
+  },
+  "page_notes": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}
