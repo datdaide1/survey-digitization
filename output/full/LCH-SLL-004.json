@@ -4,36 +4,66 @@
   "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-23",
   "source_images": "output/assembly/_render/LCH-SLL-004/LCH-SLL-004__p1.png .. p7.png",
   "answers": {
-    "META_DATE": {"value": "2026-06-13"},
-    "META_LOCATION": {"value": "Là Nhì Thàng, Sì Lở Lầu"},
-    "CONSENT_1": {"value": "yes"},
-    "CONSENT_2": {"value": "yes"},
-
+    "META_DATE": {
+      "value": "2026-06-13"
+    },
+    "META_LOCATION": {
+      "value": "Là Nhì Thàng, Sì Lở Lầu"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": "yes"
+    },
     "Q1": {
       "value": "Kiều Thị Thắm (ĐT: 0363.879.916)",
       "pii": true,
       "confidence": "cao",
       "note": "Tên đối chiếu được với chữ ký cuối phiếu (trang 7: 'Kiều Thị Thắm'), rõ hơn chữ viết ở ô họ tên (dễ đọc nhầm thành 'Thân')."
     },
-    "Q2": {"value": "1996"},
-    "Q3": {"value": "nu"},
-    "Q4": {"value": "kinh"},
+    "Q2": {
+      "value": "1996"
+    },
+    "Q3": {
+      "value": "nu"
+    },
+    "Q4": {
+      "value": "kinh"
+    },
     "Q5": {
       "components": {
-        "Q5_khong_di_hoc": {"value": false},
-        "Q5_khong_tieng_pho_thong": {"value": false},
-        "Q5_lop_cao_nhat": {"value": null},
-        "Q5_trung_cap_dh": {"value": true}
+        "Q5_khong_di_hoc": {
+          "value": false
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": null
+        },
+        "Q5_trung_cap_dh": {
+          "value": true
+        }
       }
     },
     "Q6": {
       "value": "da_ket_hon",
       "subfield": {
-        "Q6_tuoi_ket_hon": {"value": 23}
+        "Q6_tuoi_ket_hon": {
+          "value": 23
+        }
       }
     },
-    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
-    "Q8": {"value": "25_50"},
+    "Q7": {
+      "value": [
+        "trong_trot",
+        "cay_duoc_lieu"
+      ]
+    },
+    "Q8": {
+      "value": "25_50"
+    },
     "Q9": {
       "value": "Em bắt đầu trồng cây dược liệu năm 2018 vì nhận thức được đây là loại cây quý hiếm có tác dụng chữa bệnh, cải thiện sức khoẻ. Nhà em có diện tích đất và đất rừng phù hợp để trồng sâm Lai Châu, khí hậu thổ nhưỡng phù hợp; cây sâm thì có giá cao, người dân tìm hiểu sử dụng nhiều chưa có người thu mua nên em muốn bảo tồn và nhân giống, phát triển loài cây này",
       "confidence": "cao",
@@ -51,35 +81,79 @@
       "note": "Ghi chú thêm cạnh lựa chọn: 'giáo viên mầm non' — chi tiết nghề nghiệp cụ thể."
     },
     "Q11": {
-      "value": ["doan_thanh_nien"],
+      "value": [
+        "doan_thanh_nien"
+      ],
       "note": "Ghi chú viết tay gần Q11 (khó đọc, best-effort, có thể lạc chỗ — nội dung liên quan vay vốn chứ không phải hội viên): 'Ko biết kênh vay vốn quỹ TYM' — ghi vào page_notes."
     },
-    "Q12": {"value": "ca_hai"},
-    "Q13": {"value": "chong"},
+    "Q12": {
+      "value": "ca_hai"
+    },
+    "Q13": {
+      "value": "chong"
+    },
     "Q14": {
       "rows": {
-        "lam_dat": {"value": "chong"},
-        "trong": {"value": "ca_hai"},
-        "cham_soc_cay": {"value": "ca_hai"},
-        "thuoc_bvtv": {"value": "chong"},
-        "thu_hoach": {"value": "chong"},
+        "lam_dat": {
+          "value": "chong"
+        },
+        "trong": {
+          "value": "ca_hai"
+        },
+        "cham_soc_cay": {
+          "value": "ca_hai"
+        },
+        "thuoc_bvtv": {
+          "value": "chong"
+        },
+        "thu_hoach": {
+          "value": "chong"
+        },
         "so_che": {
-          "value": ["ca_hai"],
-          "flags": ["multi_mark_on_single_select"],
+          "value": [
+            "ca_hai"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ],
           "note": "Cả cột 'Chồng' và 'Cả hai như nhau' đều có tick ở dòng này. REVIEW: vì có tick cả 2 nên ưu tiên lấy cả 2."
         },
-        "lien_he_tieu_thu": {"value": "chong"},
-        "khac_san_xuat": {"value": null},
-        "noi_tro": {"value": "ca_hai"},
-        "giat_giu": {"value": "ca_hai"},
-        "dua_don_con": {"value": "ca_hai"},
-        "dam_cuoi_gio": {"value": "ca_hai"},
-        "cham_soc_con": {"value": "ca_hai"},
-        "gia_suc_nho": {"value": "ca_hai"},
-        "gia_suc_lon": {"value": "ca_hai"},
-        "quan_ly_chi_tieu": {"value": "ca_hai"},
-        "day_do_con": {"value": "ca_hai"},
-        "bao_duong_xe": {"value": "chong"}
+        "lien_he_tieu_thu": {
+          "value": "chong"
+        },
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "ca_hai"
+        },
+        "giat_giu": {
+          "value": "ca_hai"
+        },
+        "dua_don_con": {
+          "value": "ca_hai"
+        },
+        "dam_cuoi_gio": {
+          "value": "ca_hai"
+        },
+        "cham_soc_con": {
+          "value": "ca_hai"
+        },
+        "gia_suc_nho": {
+          "value": "ca_hai"
+        },
+        "gia_suc_lon": {
+          "value": "ca_hai"
+        },
+        "quan_ly_chi_tieu": {
+          "value": "ca_hai"
+        },
+        "day_do_con": {
+          "value": "ca_hai"
+        },
+        "bao_duong_xe": {
+          "value": "chong"
+        }
       }
     },
     "Q15": {
@@ -101,61 +175,163 @@
     },
     "Q17": {
       "rows": {
-        "dien_thoai": {"value": ["chong", "vo"]},
-        "may_tinh": {"value": ["chong", "vo"]},
-        "may_tinh_bang": {"value": []}
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
       },
       "khong_ai_co": false
     },
-    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "lam_viec_hoc_online", "mang_xa_hoi"]},
-    "Q19": {"value": ["quang_ba", "quan_ly_sx_tc", "ban_hang_online"]},
-    "Q20": {"value": "ca_hai"},
-    "Q21a": {"value": "1_3_lan"},
+    "Q18": {
+      "value": [
+        "goi_nhan_tin",
+        "doc_tin_tuc",
+        "giai_tri",
+        "tim_kiem_thong_tin",
+        "giao_dich_ban_hang",
+        "lam_viec_hoc_online",
+        "mang_xa_hoi"
+      ]
+    },
+    "Q19": {
+      "value": [
+        "quang_ba",
+        "quan_ly_sx_tc",
+        "ban_hang_online"
+      ]
+    },
+    "Q20": {
+      "value": "ca_hai"
+    },
+    "Q21a": {
+      "value": "1_3_lan"
+    },
     "Q21b": {
-      "value": ["ky_thuat"],
+      "value": [
+        "ky_thuat"
+      ],
       "note": "Ghi chú thêm: 'đi cùng chồng, do hiệp hội sâm t/c (tổ chức)'"
     },
-    "Q21c": {"value": null},
-    "Q22a": {"value": ["chua"]},
-    "Q22b": {"value": ["thu_tuc_phuc_tap"]},
-    "Q23": {"value": "khong", "subfield": {"Q23_chi_tiet": {"value": null}}},
-    "Q24": {"value": "co"},
-    "Q25": {"value": "co"},
-    "Q26": {"value": "khong"},
-    "Q27a": {"value": "chong"},
+    "Q21c": {
+      "value": null
+    },
+    "Q22a": {
+      "value": [
+        "chua"
+      ]
+    },
+    "Q22b": {
+      "value": [
+        "thu_tuc_phuc_tap"
+      ]
+    },
+    "Q23": {
+      "value": "khong",
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": null
+        }
+      }
+    },
+    "Q24": {
+      "value": "co"
+    },
+    "Q25": {
+      "value": "co"
+    },
+    "Q26": {
+      "value": "khong"
+    },
+    "Q27a": {
+      "value": "chong"
+    },
     "Q27b": {
       "value": "Vì chưa có đất làm sổ đỏ nên chồng em chưa thêm tên em vào GCNQSHĐ. Đất công ty cho thuê khi kết hôn",
       "confidence": "trung_binh"
     },
-    "Q28": {"value": ["thieu_nguon_luc", "thieu_kien_thuc", "ganh_nang_viec_nha", "khong_thi_truong"]},
-    "Q29a": {"value": "co"},
-    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
-    "Q29c": {"value": null},
+    "Q28": {
+      "value": [
+        "thieu_nguon_luc",
+        "thieu_kien_thuc",
+        "ganh_nang_viec_nha",
+        "khong_thi_truong"
+      ]
+    },
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
     "Q30": {
-      "value": ["thu_hai", "che_bien", "tieu_thu"],
-      "flags": ["multi_mark_on_single_select"],
+      "value": [
+        "thu_hai",
+        "che_bien",
+        "tieu_thu"
+      ],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
       "note": "3 ô được tick trên câu chỉ cho chọn 1 khâu: Thu hái, Chế biến, Tiêu thụ. REVIEW: chọn cả những cái họ tick - sẽ update trong rule"
     },
-    "Q31": {"value": "Không", "confidence": "cao"},
+    "Q31": {
+      "value": "Không",
+      "confidence": "cao"
+    },
     "Q32": {
       "rows": {
-        "chon_cay_trong": {"value": "cung_quyet_dinh"},
-        "mua_vat_tu": {"value": "chong"},
-        "chon_ban": {"value": "cung_quyet_dinh"},
+        "chon_cay_trong": {
+          "value": "cung_quyet_dinh"
+        },
+        "mua_vat_tu": {
+          "value": "chong"
+        },
+        "chon_ban": {
+          "value": "cung_quyet_dinh"
+        },
         "vay_von": {
           "value": null,
-          "flags": ["ambiguous_mark"],
-          "needs_review": true,
+          "flags": [
+            "ambiguous_mark"
+          ],
           "note": "Cột 'Cùng quyết định' có 1 ký hiệu dạng chữ X/gạch chéo bất thường (khác các dấu tick 'V' ở các dòng khác) — không rõ là đánh dấu chọn hay gạch huỷ, để null và gắn cờ. REVIEW: chuẩn rồi, dấu tick bị gạch -> sẽ không nhận"
         },
-        "gia_ban": {"value": "cung_quyet_dinh"},
-        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
-        "su_dung_dat": {"value": "cung_quyet_dinh"},
-        "khac": {"value": null}
+        "gia_ban": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_thu_nhap": {
+          "value": "cung_quyet_dinh"
+        },
+        "su_dung_dat": {
+          "value": "cung_quyet_dinh"
+        },
+        "khac": {
+          "value": null
+        }
       }
     },
     "Q33": {
-      "value": ["ban_chu_nhiem_htx"],
+      "value": [
+        "ban_chu_nhiem_htx"
+      ],
       "note": "Ghi chú thêm: '(kế toán HTX)' — vai trò cụ thể trong ban chủ nhiệm hợp tác xã."
     },
     "Q34": {

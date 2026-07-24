@@ -5,85 +5,182 @@
   "purpose": "Trích xuất thủ công đầy đủ (kèm PII) từ ảnh trang đã render sẵn, theo docs/implement-plan-manual-full-record-extraction.md.",
   "source_images": "output/assembly/_render/LCA-TPH-008/LCA-TPH-008__p1.png .. p7.png",
   "answers": {
-    "META_DATE": {"value": "2026-05-25"},
-    "META_LOCATION": {"value": "Tả Phìn, Sa Pa, Lào Cai"},
-    "CONSENT_1": {"value": "yes"},
-    "CONSENT_2": {"value": null, "note": "Ô trống — không có tick. Có chữ 'vơ' viết ở góc trên cùng trang 1, không rõ liên quan gì"},
-
-    "Q1": {"value": "Lý Mần Máy", "pii": true, "note": "Có ghi '(ĐT: )' nhưng để trống, không có số điện thoại"},
-    "Q2": {"value": "1984"},
-    "Q3": {"value": "nu"},
+    "META_DATE": {
+      "value": "2026-05-25"
+    },
+    "META_LOCATION": {
+      "value": "Tả Phìn, Sa Pa, Lào Cai"
+    },
+    "CONSENT_1": {
+      "value": "yes"
+    },
+    "CONSENT_2": {
+      "value": null,
+      "note": "Ô trống — không có tick. Có chữ 'vơ' viết ở góc trên cùng trang 1, không rõ liên quan gì"
+    },
+    "Q1": {
+      "value": "Lý Mần Máy",
+      "pii": true,
+      "note": "Có ghi '(ĐT: )' nhưng để trống, không có số điện thoại"
+    },
+    "Q2": {
+      "value": "1984"
+    },
+    "Q3": {
+      "value": "nu"
+    },
     "Q4": {
       "value": "khac",
       "other_text": "Dao đỏ",
-      "flags": ["needs_review"],
+      "flags": [
+        "needs_review"
+      ],
       "note": "Không có tick hình học rõ ở ô 'Khác' nhưng có điền chữ — suy luận là đã chọn, theo tiền lệ đã dùng cho các phiếu TPH khác"
     },
     "Q5": {
       "components": {
-        "Q5_khong_di_hoc": {"value": true},
-        "Q5_khong_tieng_pho_thong": {"value": false},
-        "Q5_lop_cao_nhat": {"value": null},
-        "Q5_trung_cap_dh": {"value": false}
+        "Q5_khong_di_hoc": {
+          "value": true
+        },
+        "Q5_khong_tieng_pho_thong": {
+          "value": false
+        },
+        "Q5_lop_cao_nhat": {
+          "value": null
+        },
+        "Q5_trung_cap_dh": {
+          "value": false
+        }
       }
     },
     "Q6": {
       "value": "da_ket_hon",
       "subfield": {
-        "Q6_tuoi_ket_hon": {"value": 18}
+        "Q6_tuoi_ket_hon": {
+          "value": 18
+        }
       }
     },
-    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
-    "Q8": {"value": "25_50"},
+    "Q7": {
+      "value": [
+        "trong_trot",
+        "chan_nuoi",
+        "cay_duoc_lieu"
+      ]
+    },
+    "Q8": {
+      "value": "25_50"
+    },
     "Q9": {
       "value": "2020 → HTX mua",
       "confidence": "trung_binh",
       "note": "Chữ ngắn, best-effort"
     },
-    "Q9_derived_start_year_or_years_exp": {"value": "2020"},
-    "Q10": {"value": "nong_dan"},
-    "Q11": {"value": ["hoi_nong_dan"]},
+    "Q9_derived_start_year_or_years_exp": {
+      "value": "2020"
+    },
+    "Q10": {
+      "value": "nong_dan"
+    },
+    "Q11": {
+      "value": [
+        "hoi_nong_dan"
+      ]
+    },
     "Q12": {
-      "value": ["vo", "khac"],
+      "value": [
+        "vo",
+        "khac"
+      ],
       "other_text": "bàn đồ, quan niệm",
-      "flags": ["needs_review"],
+      "flags": [
+        "needs_review"
+      ],
       "note": "'Vợ' có tick rõ; đồng thời ô 'Khác' không có tick nhưng có điền chữ khó đọc — suy luận là đã chọn thêm, transcription other_text best-effort do chữ khó đọc"
     },
     "Q13": {
-      "value": ["vo", "chong", "ca_hai"],
-      "flags": ["multi_mark_on_single_select"],
+      "value": [
+        "vo",
+        "chong",
+        "ca_hai"
+      ],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
       "note": "Cả 3 ô Vợ/Chồng/Cả hai đều có tick rõ"
     },
     "Q14": {
       "rows": {
         "lam_dat": {
-          "value": ["ca_hai", "con_cai_lon"],
-          "flags": ["needs_review"],
+          "value": [
+            "ca_hai",
+            "con_cai_lon"
+          ],
+          "flags": [
+            "needs_review"
+          ],
           "note": "Cột Vợ và Chồng có dấu viết kiểu khác hẳn (như bị gạch/huỷ chồng lên dấu tick) so với dấu tick sạch ở cột Cả hai/Con cái lớn — suy luận 2 dấu đầu đã bị huỷ, chỉ tính 2 dấu mới rõ ràng (Cả hai, Con cái lớn), nhưng không chắc chắn 100% nên cần review"
         },
-        "trong": {"value": "ca_hai"},
+        "trong": {
+          "value": "ca_hai"
+        },
         "cham_soc_cay": {
-          "value": ["vo", "chong"],
-          "flags": ["multi_mark_on_single_select"]
+          "value": [
+            "vo",
+            "chong"
+          ],
+          "flags": [
+            "multi_mark_on_single_select"
+          ]
         },
         "thuoc_bvtv": {
           "value": null,
           "note": "Ô cột Vợ ghi chữ 'K°' (không sử dụng) thay vì tick — trống. Cột Cả hai như nhau có vệt bút rối trông như tick bị gạch/huỷ chồng lên — không tính là chọn"
         },
-        "thu_hoach": {"value": "ca_hai"},
-        "so_che": {"value": null, "note": "Ô ghi chữ 'K°' (không) thay vì tick — trống"},
-        "lien_he_tieu_thu": {"value": "ca_hai"},
-        "khac_san_xuat": {"value": null},
-        "noi_tro": {"value": "vo"},
-        "giat_giu": {"value": "vo"},
-        "dua_don_con": {"value": "vo"},
-        "dam_cuoi_gio": {"value": "ca_hai"},
-        "cham_soc_con": {"value": "vo"},
-        "gia_suc_nho": {"value": "ca_hai"},
-        "gia_suc_lon": {"value": null, "note": "Cả 2 cột Vợ và Chồng đều ghi chữ 'K°' (không) thay vì tick — trống"},
-        "quan_ly_chi_tieu": {"value": "ca_hai"},
-        "day_do_con": {"value": "ca_hai"},
-        "bao_duong_xe": {"value": "ca_hai"}
+        "thu_hoach": {
+          "value": "ca_hai"
+        },
+        "so_che": {
+          "value": null,
+          "note": "Ô ghi chữ 'K°' (không) thay vì tick — trống"
+        },
+        "lien_he_tieu_thu": {
+          "value": "ca_hai"
+        },
+        "khac_san_xuat": {
+          "value": null
+        },
+        "noi_tro": {
+          "value": "vo"
+        },
+        "giat_giu": {
+          "value": "vo"
+        },
+        "dua_don_con": {
+          "value": "vo"
+        },
+        "dam_cuoi_gio": {
+          "value": "ca_hai"
+        },
+        "cham_soc_con": {
+          "value": "vo"
+        },
+        "gia_suc_nho": {
+          "value": "ca_hai"
+        },
+        "gia_suc_lon": {
+          "value": null,
+          "note": "Cả 2 cột Vợ và Chồng đều ghi chữ 'K°' (không) thay vì tick — trống"
+        },
+        "quan_ly_chi_tieu": {
+          "value": "ca_hai"
+        },
+        "day_do_con": {
+          "value": "ca_hai"
+        },
+        "bao_duong_xe": {
+          "value": "ca_hai"
+        }
       }
     },
     "Q15": {
@@ -95,78 +192,170 @@
       "value": "khong",
       "note": "Có ghi chú tay bên dưới: 'Cả 2 vợ chồng cùng làm' — có vẻ mâu thuẫn nhẹ với tick 'Không', giữ nguyên tick trên phiếu, ghi chú làm ngữ cảnh"
     },
-    "Q16b": {"value": null},
+    "Q16b": {
+      "value": null
+    },
     "Q17": {
       "rows": {
-        "dien_thoai": {"value": ["chong", "vo"]},
-        "may_tinh": {"value": []},
-        "may_tinh_bang": {"value": []}
+        "dien_thoai": {
+          "value": [
+            "chong",
+            "vo"
+          ]
+        },
+        "may_tinh": {
+          "value": []
+        },
+        "may_tinh_bang": {
+          "value": []
+        }
       },
       "khong_ai_co": false
     },
     "Q18": {
-      "value": ["goi_nhan_tin", "giai_tri", "tim_kiem_thong_tin", "mang_xa_hoi"],
+      "value": [
+        "goi_nhan_tin",
+        "giai_tri",
+        "tim_kiem_thong_tin",
+        "mang_xa_hoi"
+      ],
       "note": "Ghi chú tay cạnh 'Tham gia mạng xã hội': 'Facebook'"
     },
-    "Q19": {"value": ["khong"]},
-    "Q20": {"value": "vo"},
-    "Q21a": {"value": "chua_lan_nao"},
-    "Q21b": {"value": null},
+    "Q19": {
+      "value": [
+        "khong"
+      ]
+    },
+    "Q20": {
+      "value": "vo"
+    },
+    "Q21a": {
+      "value": "chua_lan_nao"
+    },
+    "Q21b": {
+      "value": null
+    },
     "Q21c": {
       "value": "Thiếu thời gian. Do không được ưu tiên",
       "confidence": "thap",
-      "needs_review": true,
-      "note": "Best-effort, chữ viết tay khó đọc đoạn sau"
+      "note": "Best-effort, chữ viết tay khó đọc đoạn sau REVIEW: không cần quan tâm câu này"
     },
     "Q22a": {
-      "value": ["ngan_hang_chinh_sach", "khac"],
+      "value": [
+        "ngan_hang_chinh_sach",
+        "khac"
+      ],
       "other_text": "HTX. Từ năm 2021 có vay, giờ đã trả vay",
       "note": "Câu multi_select, cả 2 ô đều có tick hợp lệ — không phải multi-mark bất thường"
     },
     "Q22b": {
-      "value": ["khong_co_nhu_cau"],
-      "flags": ["needs_review"],
+      "value": [
+        "khong_co_nhu_cau"
+      ],
+      "flags": [
+        "needs_review"
+      ],
       "note": "Câu này phụ thuộc Q22a chứa 'chua' nhưng Q22a không có 'chua' (đã từng vay) — vẫn có tick 'Không có nhu cầu', giữ nguyên theo đúng ảnh, khả năng người phỏng vấn đánh nhầm dòng"
     },
     "Q23": {
       "value": "khong",
-      "subfield": {"Q23_chi_tiet": {"value": null}}
+      "subfield": {
+        "Q23_chi_tiet": {
+          "value": null
+        }
+      }
     },
-    "Q24": {"value": "co"},
-    "Q25": {"value": "co"},
-    "Q26": {"value": "khong"},
-    "Q27a": {"value": "chong"},
-    "Q27b": {"value": "Bố mẹ cho chồng", "confidence": "cao"},
+    "Q24": {
+      "value": "co"
+    },
+    "Q25": {
+      "value": "co"
+    },
+    "Q26": {
+      "value": "khong"
+    },
+    "Q27a": {
+      "value": "chong"
+    },
+    "Q27b": {
+      "value": "Bố mẹ cho chồng",
+      "confidence": "cao"
+    },
     "Q28": {
-      "value": ["thieu_nguon_luc"],
+      "value": [
+        "thieu_nguon_luc"
+      ],
       "note": "Ghi chú tay cạnh câu hỏi (không nằm trong ô nào cụ thể): 'Thiếu đất, bố mẹ có nhiều đất do...' — bổ sung ngữ cảnh cho 'Thiếu nguồn lực', không tính là chọn thêm option khác"
     },
-    "Q29a": {"value": "co"},
-    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
-    "Q29c": {"value": null},
+    "Q29a": {
+      "value": "co"
+    },
+    "Q29b": {
+      "value": [
+        "them_thu_nhap",
+        "nang_cao_kien_thuc",
+        "tham_gia_cong_dong"
+      ]
+    },
+    "Q29c": {
+      "value": null
+    },
     "Q30": {
-      "value": ["san_xuat", "tieu_thu"],
-      "flags": ["multi_mark_on_single_select"],
+      "value": [
+        "san_xuat",
+        "tieu_thu"
+      ],
+      "flags": [
+        "multi_mark_on_single_select"
+      ],
       "note": "2 ô được tick cho câu chỉ cho chọn 1 khâu"
     },
-    "Q31": {"value": "Không", "confidence": "cao"},
+    "Q31": {
+      "value": "Không",
+      "confidence": "cao"
+    },
     "Q32": {
       "rows": {
-        "chon_cay_trong": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "mua_vat_tu": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "chon_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "chon_cay_trong": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "mua_vat_tu": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "chon_ban": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
         "vay_von": {
           "value": null,
           "noi_dung": null,
           "note": "Ô ghi chữ 'Ko' thay vì tick — trống. Có thể do khoản vay HTX (Q22a) đã trả xong nên hiện không còn ai cần quyết định việc vay vốn"
         },
-        "gia_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "su_dung_thu_nhap": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "su_dung_dat": {"value": "cung_quyet_dinh", "noi_dung": null},
-        "khac": {"value": null, "noi_dung": null}
+        "gia_ban": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "su_dung_thu_nhap": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "su_dung_dat": {
+          "value": "cung_quyet_dinh",
+          "noi_dung": null
+        },
+        "khac": {
+          "value": null,
+          "noi_dung": null
+        }
       }
     },
-    "Q33": {"value": ["khong"]},
+    "Q33": {
+      "value": [
+        "khong"
+      ]
+    },
     "Q34": {
       "value": "Mong muốn có tiền để kinh doanh, mở nhà nghỉ, mua điện thoại mới để quảng bá dược liệu tự nhiên hơn",
       "confidence": "trung_binh",
