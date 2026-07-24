@@ -119,6 +119,8 @@ button, input, textarea, select {
 
 .app { height: 100%; }
 
+.main { height: 100%; }
+
 /* ---------- Gate (folder picker) ---------- */
 
 .gate {
