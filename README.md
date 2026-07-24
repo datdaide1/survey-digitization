@@ -172,7 +172,15 @@ $env:ANTHROPIC_API_KEY = "..."
 Mỗi trang được gửi hai lần độc lập để kiểm tra self-consistency. Chạy cả manifest
 là thao tác opt-in bằng `--all`; không truyền lựa chọn sẽ không upload dữ liệu.
 
-### 4. Chạy test
+### 4. Review/sửa bản ghi cạnh ảnh phiếu scan
+
+```powershell
+& "E:\anaconda3\envs\survey-digitizer\python.exe" -m http.server 8765 --directory scripts/review_ui
+```
+
+Mở `http://localhost:8765` bằng Chrome/Edge, chọn thư mục gốc `E:\STARTUP`. Xem chi tiết ở [docs/review-ui-guide.md](docs/review-ui-guide.md).
+
+### 5. Chạy test
 
 ```powershell
 & "E:\anaconda3\envs\survey-digitizer\python.exe" tests/test_validate_schema.py
@@ -196,6 +204,7 @@ là thao tác opt-in bằng `--all`; không truyền lựa chọn sẽ không up
 - [Phương pháp trích xuất](docs/extraction-method.md) — kiến trúc OCR/VLM, confidence, review và PII.
 - [Quy tắc trích xuất & thống kê](docs/client-feedback-2026-07-22-extraction-rules.md) — diễn giải nghiệp vụ đã chốt.
 - [Schema format](schema/SCHEMA-FORMAT.md) — hợp đồng dữ liệu và logic kiểm tra.
+- [Review UI guide](docs/review-ui-guide.md) — công cụ sửa/duyệt `output/full/*.json` cạnh ảnh phiếu scan ngay trên trình duyệt.
 - [Task 1 report](docs/task-01-report.md) — schema và validator.
 - [Task 2 report](docs/task-02-report.md) — ingest và assembly.
 - [Task 3a report](docs/task-03a-report.md) — ground truth và bài học từ dữ liệu thực địa.

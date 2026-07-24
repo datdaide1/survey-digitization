@@ -34,7 +34,7 @@ output/assembly/_render/<record_id>/<record_id>__p1.png ... p7.png
 Đọc theo đúng thứ tự này (đừng bỏ qua, các quy tắc đánh dấu rất dễ làm sai nếu không đọc kỹ):
 
 1. `schema/questionnaire_v1.json` — cấu trúc 46 mục câu hỏi (nguồn chuẩn duy nhất, không phải con số "108" — số đó đang chờ tính lại, xem `schema/SCHEMA-FORMAT.md` mục "Đếm trường xuất ra").
-2. `schema/SCHEMA-FORMAT.md` — đặc biệt mục "Quy tắc diễn giải đánh dấu" (7 quy tắc) và mục "Page mapping thật" (trang nào chứa câu nào).
+2. `schema/SCHEMA-FORMAT.md` — đặc biệt mục "Quy tắc diễn giải đánh dấu" (8 quy tắc, cập nhật 24/07: mục 6 mở rộng cho xung đột dạng exclusive, thêm mục 8 cho multi-mark suy ra từ ghi chú lề) và mục "Page mapping thật" (trang nào chứa câu nào).
 3. `docs/client-feedback-2026-07-22-extraction-rules.md` — quy tắc nghiệp vụ khách gửi 22/07, đặc biệt §2.3 (Q9 phải rút ra năm), §2.4 (câu "Khác" không cần nội dung trừ Q4), §2.5 (6 câu tự luận chỉ cần best-effort), §2.7–2.8 (Q14/Q32).
 4. `data/ground_truth/LCA-LP-001.json` — **ví dụ mẫu format output chính xác**, copy cấu trúc y hệt, đổi giá trị theo phiếu đang đọc. Đây là "đáp án" duy nhất từng được nhân công đối chiếu — dùng làm chuẩn hình dạng JSON.
 
@@ -44,9 +44,10 @@ output/assembly/_render/<record_id>/<record_id>__p1.png ... p7.png
 2. `ambiguous_mark` chỉ dùng khi rõ ràng có 1 dấu nhưng không biết đánh vào ô nào (vd vắt ngang 2 cột). Chữ "ko" không thuộc diện này.
 3. Nhiều kiểu đánh dấu khác nhau tuỳ phiếu (tick, x, /, khoanh tròn...) — đều tính là đã chọn, đừng chỉ nhận 1 kiểu.
 4. Cột "Người khác"/"Khác" trong ma trận (Q14, Q17...): **bất kỳ chữ viết tay nào** ở cột này = đã chọn cột đó, kể cả khi dòng đã có tick ở cột khác (→ thành đa lựa chọn, vd `["chong","nguoi_khac"]`).
-5. Gạch bỏ rồi chọn lại: nếu thấy 1 dấu bị gạch huỷ rõ ràng + 1 dấu mới ở lựa chọn khác → chỉ tính dấu **mới**, không phải multi-mark.
+5. Gạch bỏ rồi chọn lại: nếu thấy 1 dấu bị gạch huỷ rõ ràng + 1 dấu mới ở lựa chọn khác → chỉ tính dấu **mới**, không phải multi-mark. **Áp dụng cả khi 2 dấu xung đột là 1 lựa chọn thường + 1 lựa chọn exclusive** (vd "Không"/"Không là hội viên của tổ chức nào" bị tick cùng lựa chọn khác — case thật: `LCA-BH-002` Q19, `LCH-SLL-001` Q11/Q23, `LCH-SLL-002` Q8/Q16a): nếu 1 trong 2 dấu bị gạch/tô xoá rõ ràng → chỉ lấy dấu còn nguyên, chốt 1 giá trị cụ thể, **đừng** giữ cả hai hay để trống chỉ vì hai lựa chọn "loại trừ nhau" (`exclusive_conflict`). Nếu không chắc dấu nào bị gạch, vẫn gắn `needs_review` nhưng ghi rõ trong `note` dấu hiệu nghi ngờ để người review quyết định nhanh.
 6. Q32: cột "Nội dung" (text tự do đầu mỗi dòng) **bỏ qua hoàn toàn**, không trích xuất (khách xác nhận 22/07). Gạch chéo xuyên dòng ở Q32 = trống.
 7. Khi nghi ngờ bất kỳ điều gì (kiểu đánh dấu lạ, chữ không chắc, đã gạch hay chưa) → gắn cờ `needs_review` thừa còn hơn bỏ sót. Áp dụng toàn bộ câu, không riêng câu nào.
+8. **Multi-mark suy ra từ ghi chú lề, không có tick hình học** (mới 24/07, phát hiện khi review `output/full/*.json`): nếu 1 câu `single_select` KHÔNG có ô nào được tick hình học rõ ràng, nhưng có ghi chú viết tay ở lề/dưới nhiều ô cùng chỉ ra rằng nhiều lựa chọn đều áp dụng (vd "như nhau", "2 vợ chồng như nhau", "làm tất cả mọi thứ") → coi **TẤT CẢ** các lựa chọn được ghi chú đó là đã chọn, trả về mảng đầy đủ + gắn `multi_mark_on_single_select`, xử lý giống hệt khi có tick hình học thật (mục 4 dưới). Đây là ngoại lệ có chủ đích của mục 1 (chỉ tick hình học mới tính) — chỉ áp dụng khi ghi chú thể hiện rõ ý định chọn nhiều ô, không suy diễn thêm. Case thật đã biết: Q30 phiếu `LCA-TPH-006`, `LCH-SLL-004` (và `LCH-SLL-004` Q14 dòng `so_che`).
 
 **Câu chỉ cần best-effort** (đọc được là tốt, không phải tiêu chí chặn): `Q15, Q16b, Q21c, Q27b, Q31, Q34`, và `page_notes`.
 

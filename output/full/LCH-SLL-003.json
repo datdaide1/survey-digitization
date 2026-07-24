@@ -133,7 +133,7 @@
     "Q29b": {"value": ["them_thu_nhap"]},
     "Q29c": {"value": null},
     "Q30": {
-      "value": "san_xuat", "thu_hai", "che_bien", "thuong_mai", "tieu_thu",
+      "value": ["san_xuat", "thu_hai", "che_bien", "thuong_mai", "tieu_thu"],
       "flags": ["ambiguous_mark"],
       "needs_review": true,
       "note": "Không ô nào trong 5 lựa chọn được tick — thay vào đó có ghi chú lề bên phải câu hỏi: '(Làm tất cả mọi thứ)', ý là tham gia tất cả các khâu -> tính là tick tất cả các ô"

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Review phiếu khảo sát — STARTUP</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app">
+
+    <!-- ===== Màn hình chọn thư mục (hiện khi chưa có quyền truy cập) ===== -->
+    <div id="gate" class="gate">
+      <div class="gate-card">
+        <h1>Review trích xuất phiếu khảo sát</h1>
+        <p class="muted">Mở trực tiếp ảnh phiếu scan cạnh JSON đã trích xuất, sửa tại chỗ, lưu thẳng vào <code>output/full/&lt;record_id&gt;.json</code> — không cần mở file JSON/PDF gốc để so tay.</p>
+        <button id="btn-pick-root" class="btn btn-primary btn-lg">Chọn thư mục dự án (STARTUP)</button>
+        <p id="gate-error" class="gate-error" hidden></p>
+        <p class="muted small">Yêu cầu Chrome hoặc Edge bản mới (File System Access API). Chọn đúng thư mục gốc <code>STARTUP</code> — nơi có sẵn <code>schema/</code>, <code>docs/</code>, <code>output/</code>.</p>
+      </div>
+    </div>
+
+    <!-- ===== Giao diện chính ===== -->
+    <div id="main" class="main" hidden>
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <strong class="brand">Review phiếu</strong>
+          <span id="root-name" class="root-name"></span>
+        </div>
+        <div class="topbar-center">
+          <span id="current-record" class="current-record">Chưa chọn phiếu</span>
+          <span id="validate-badge" class="badge badge-neutral" hidden></span>
+        </div>
+        <div class="topbar-right">
+          <span id="save-status" class="save-status">—</span>
+          <button id="btn-toggle-theme" class="btn btn-ghost btn-icon" title="Đổi giao diện sáng/tối" aria-label="Đổi giao diện sáng/tối">◐</button>
+          <button id="btn-save" class="btn btn-primary" title="Lưu (Ctrl+S)">Lưu</button>
+        </div>
+      </header>
+
+      <div class="body">
+        <!-- ===== Sidebar: danh sách phiếu ===== -->
+        <aside class="sidebar">
+          <div class="sidebar-tools">
+            <input id="search-record" class="input" type="search" placeholder="Tìm mã phiếu…" aria-label="Tìm mã phiếu" />
+            <div class="filter-row">
+              <label class="chip-toggle"><input type="checkbox" id="filter-done" checked /> done</label>
+              <label class="chip-toggle"><input type="checkbox" id="filter-pending" /> pending</label>
+              <label class="chip-toggle"><input type="checkbox" id="filter-flagged" /> có needs_review</label>
+            </div>
+          </div>
+          <div id="record-list" class="record-list" role="listbox" aria-label="Danh sách phiếu"></div>
+          <div class="sidebar-footer">
+            <span id="record-count" class="muted small"></span>
+          </div>
+        </aside>
+
+        <!-- ===== Nội dung: ảnh + form ===== -->
+        <main id="record-view" class="record-view">
+          <div class="empty-state">
+            <p>Chọn 1 phiếu ở cột bên trái để bắt đầu review.</p>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -65,7 +65,11 @@ MARK_RULES = """QUY TẮC BẮT BUỘC:
 2. Chỉ gắn ambiguous_mark khi rõ ràng có một dấu chọn nhưng không xác định được
    dấu đó thuộc ô/cột nào. Khi còn nghi ngờ khác, gắn needs_review.
 3. Nếu dấu cũ đã bị gạch huỷ rõ ràng rồi có dấu mới ở lựa chọn khác, chỉ lấy dấu
-   mới; không coi đây là multi_mark_on_single_select.
+   mới; không coi đây là multi_mark_on_single_select. Áp dụng quy tắc này CẢ KHI
+   hai dấu xung đột là một lựa chọn thường và một lựa chọn exclusive (vd "Không"/
+   "Không là hội viên của tổ chức nào" bị tick cùng lựa chọn khác): nếu một trong
+   hai dấu bị gạch/tô xoá rõ ràng, chỉ lấy dấu còn nguyên làm giá trị dứt khoát
+   (không trả về cả hai, không để null chỉ vì hai lựa chọn "loại trừ nhau").
 4. Với single_select có từ hai dấu hợp lệ còn nguyên trở lên, giữ TẤT CẢ code
    trong một mảng và gắn multi_mark_on_single_select. Ví dụ thật: Q10 có
    [nong_dan, buon_ban], Q30 có [san_xuat, thu_hai, tieu_thu].
@@ -74,6 +78,12 @@ MARK_RULES = """QUY TẮC BẮT BUỘC:
 6. multi_select không có dấu chọn rõ ràng trả []; null chỉ dùng khi không thể xác
    định giá trị. single_select bỏ trống trả null.
 7. Chỉ đọc mã lựa chọn. Không đưa nội dung chữ viết tay other_text/subfield vào value.
+8. Nếu single_select KHÔNG có ô nào được tick hình học nhưng có ghi chú viết tay ở
+   lề/dưới nhiều ô cùng chỉ ra rằng nhiều lựa chọn đều áp dụng (vd "như nhau",
+   "2 vợ chồng như nhau", "làm tất cả mọi thứ") — coi TẤT CẢ các lựa chọn được ghi
+   chú đó là đã chọn: trả về mảng đầy đủ và gắn multi_mark_on_single_select, xử lý
+   như khi có tick hình học thật (mục 4), không giới hạn ở "chỉ tick mới tính"
+   (mục 1) cho case này. Case thật đã biết: Q30 phiếu LCA-TPH-006/LCH-SLL-004.
 """
 
 
