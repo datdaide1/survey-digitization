@@ -1,0 +1,1 @@
+output/assembly/_render/**/*.png filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,165 @@
+{
+  "record_id": "LCA-LP-003",
+  "schema_version": "v1",
+  "authored_by": "Claude (manual extraction session), 2026-07-23",
+  "purpose": "Trích xuất thủ công đầy đủ (kèm PII) từ ảnh trang đã render sẵn, theo docs/implement-plan-manual-full-record-extraction.md.",
+  "source_images": "output/assembly/_render/LCA-LP-003/LCA-LP-003__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-28"},
+    "META_LOCATION": {
+      "value": "Thôn Lả Dì Thàng",
+      "confidence": "trung_binh",
+      "note": "Chữ viết tay, chỉ ghi tên thôn (không kèm xã/tỉnh trên dòng này)"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — không có tick"},
+
+    "Q1": {"value": "Sùng Thị Chở (ĐT: 0812475735)", "pii": true, "confidence": "trung_binh", "note": "SĐT viết kèm ngay trong ô họ tên"},
+    "Q2": {"value": "1984"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "flags": ["needs_review"],
+      "note": "Không có tick hình học rõ ở ô 'Khác' nhưng có điền chữ 'Mông' trên dòng — suy luận là đã chọn"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 16, "note": "Chữ viết tay '16t' — 16 tuổi, thuộc nhóm <18 (tảo hôn theo quy tắc bucket đã ghi trong schema)"}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {"value": "Năm 2021 (cắt cành)", "confidence": "cao"},
+    "Q9_derived_start_year_or_years_exp": {"value": "2021"},
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["khong_hoi_vien"]},
+    "Q12": {"value": "ca_hai"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {
+          "value": "vo",
+          "flags": ["needs_review"],
+          "note": "Cột 'Người khác' có chữ 'Chị đi làm xa' + 1 đường kẻ dọc kéo dài xuống nhiều dòng phía dưới (tới hết dòng 'Công việc nội trợ'). Đối chiếu với ghi chú tương tự lặp lại ở Q16b ('đi làm xa nhà') và Q28 ('thiếu người/nhân lực do vợ/chị đi làm xa') trên cùng phiếu — đọc là lời giải thích chung về việc thiếu nhân lực do đi làm xa, KHÔNG phải chỉ định 'Người khác' làm thay các việc này. Tạm không tính chọn thêm cột 'Người khác' cho dòng này (và các dòng khác trong đường kẻ), nhưng gắn cờ để rà lại vì chữ viết tay vẫn nằm trong cột 'Người khác' theo đúng nghĩa đen của quy tắc."
+        },
+        "trong": {"value": "vo"},
+        "cham_soc_cay": {"value": "vo"},
+        "thuoc_bvtv": {"value": null, "note": "Ghi chữ 'K°' (không) ở cột 'Cả hai' thay vì tick — trống"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "vo"},
+        "lien_he_tieu_thu": {"value": "vo"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "vo"},
+        "giat_giu": {"value": "vo"},
+        "dua_don_con": {"value": "vo"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {
+          "value": "vo",
+          "note": "Cột 'Cả hai' có 1 dấu phẩy/chấm nhỏ không rõ ràng, không tính là tick"
+        },
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": null, "note": "Ghi chữ 'K°' (không) ở cột 'Cả hai' thay vì tick — trống"},
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {
+          "value": ["chong", "nguoi_khac"],
+          "flags": ["multi_mark_on_single_select"],
+          "note": "Cột 'Chồng' có tick X; cột 'Con cái lớn'/'Người khác' có chữ viết tay 'Ra hàng sửa' (mang xe ra tiệm sửa) — theo quy tắc chữ viết tay ở cột Người khác vẫn tính là đã chọn, giống case tương tự ở LCA-LP-002"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Cụ dạy - gia đình, hàng xóm; Tập huấn - hội tự lực/cộng đồng dân...",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {"value": "co", "subfield": {"Q16a_chi_tiet": {"value": "Trừ sâu, thu hoạch", "confidence": "thap", "needs_review": true, "note": "Chữ viết tay khó đọc"}}},
+    "Q16b": {
+      "value": "Gần đây do chị có công việc ổn định đi làm xa nhà - Thời gian ở nhà sẽ tham gia cũng ít",
+      "confidence": "trung_binh"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "giai_tri", "mang_xa_hoi"]},
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "vo"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Do say xe ô tô nên không có giờ được tập huấn, tiến tới",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, best-effort"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "khong"},
+    "Q26": {"value": "khong"},
+    "Q27a": {"value": "chong"},
+    "Q27b": {"value": null},
+    "Q28": {
+      "value": ["khong_thi_truong"],
+      "note": "Ghi chú tay cạnh câu (không thuộc ô nào có tick): 'Thiếu người/nhân lực do vợ/chị đi làm xa' — bổ sung giải thích, không tick thêm ô 'Thiếu nguồn lực'"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai", "che_bien", "tieu_thu"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "4 ô được tick cho câu chỉ cho chọn 1 khâu"
+    },
+    "Q31": {"value": "Không", "confidence": "cao", "note": "Ghi chữ 'K°'"},
+    "Q32": {
+      "note": "Cột 'Nội dung' bị gạch một đường zigzag xuyên nhiều dòng — coi là trống theo quy ước strike_through_means_empty của schema",
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "mua_vat_tu": {"value": "vo", "noi_dung": null},
+        "chon_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "vay_von": {"value": null, "noi_dung": null, "note": "Ghi chữ 'K°' (không) thay vì tick — trống"},
+        "gia_ban": {"value": "vo", "noi_dung": null},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "su_dung_dat": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "khac": {"value": null, "noi_dung": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Có kiến thức, biết tiếp cận dễ giao tiếp, tham gia các hoạt động, mở rộng bán dược liệu, mong sau này được nhiều hơn. Có muốn tham gia thêm nhưng do kể bối rối/chưa được chọn (chữ khó đọc)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay rất khó đọc, best-effort"
+    }
+  },
+  "page_notes": {
+    "1": "Ký hiệu viết tay ở góc trên bên trái trang (dạng chữ 'M' + gạch chéo dài) — có thể là mã nội bộ điều tra viên trước khi scan, không thuộc nội dung khảo sát",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

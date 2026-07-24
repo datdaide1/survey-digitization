@@ -1,0 +1,86 @@
+record_id,province,commune,status,done_by,done_date,note
+LCA-LP-001,lao-cai,lung-phinh-16phieu,done,Task 3a (ground truth thu cong),7/15/2026,"Da co san data/ground_truth/LCA-LP-001.json — chi can adapt sang output/full/, KHONG can doc lai tu dau"
+LCH-SLL-001,lai-chau,si-lo-lau-4phieu,done,Claude (manual extraction session),7/23/2026,"Nhieu cau needs_review (Q1 ten, Q9 nam kinh nghiem, Q11 xung dot hoi vien, Q23 xung dot co/khong) - xem chi tiet trong output/full/LCH-SLL-001.json"
+LCH-SLL-002,lai-chau,si-lo-lau-4phieu,done,Claude (manual extraction session),7/23/2026,Q1 ten/SDT gach bo chon lai; Q6 tuoi ket hon kho doc; Q8 va Q16a multi-mark/mau thuan can review
+LCH-SLL-003,lai-chau,si-lo-lau-4phieu,done,Claude (manual extraction session),7/23/2026,Q10 multi-mark; Q30 khong o nao tick (ghi chu le 'lam tat ca'); vai cau tu luan kho doc
+LCH-SLL-004,lai-chau,si-lo-lau-4phieu,done,Claude (manual extraction session),7/23/2026,"Ten Q1 doi chieu chu ky cuoi phieu (Tham, khong phai Than); Q14/Q30 multi-mark; Q32 vay_von ky hieu la"
+LCA-BH-001,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),7/23/2026,Q14 thuoc_bvtv ky hieu X+O bat thuong; Q30 multi-mark; nhieu cau tu luan kho doc
+LCA-BH-002,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),7/23/2026,Q19 exclusive conflict (quang_ba+khong); Q26 multi-mark co/khong; Q14 bao_duong_xe ky hieu la; Q30 multi-mark
+LCA-BH-003,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),7/23/2026,Q14 giat_giu/bao_duong_xe co chu o cot Nguoi khac; Q27a chi co mui ten khong co tick truc tiep; Q30 multi-mark
+LCA-BH-004,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),7/23/2026,Q4 khong ro tick nhung co dien ten dan toc; Q14 nhieu dong co chu o cot Nguoi khac (5 dong); Q10/Q30 multi-mark; Q34 rat dai kho doc
+LCA-BH-005,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),7/23/2026,Q14 3 dong multi-mark Vo+Cahai (+2 dong co Nguoi khac); Q30 multi-mark; nhieu cau tu luan kho doc
+LCA-BH-006,lao-cai,bac-ha-6phieu,done,Claude (manual extraction session),7/23/2026,Q8 multi-mark; Q19 exclusive conflict; Q21a multi-mark 1-3lan+chua_lan_nao; Q30 multi-mark
+LCA-TPH-001,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,"Q4/Q6/Q11/Q28 khong co tick hinh hoc ro rang, suy luan tu chu viet tay - can review; Q14 bao_duong_xe chu tran 2 cot; Q21a/21b mau thuan phu thuoc (bo di tap huan thay); Q30 multi-mark"
+LCA-TPH-002,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,"Cu ba 62 tuoi, hau het cong viec giao cho con dau/con trai (cot Nguoi khac Q14 nhieu dong, Q30/Q32 con_cai); Q4/Q22a khong tick ro nhung co dien chu; Q19 bo trong hoan toan"
+LCA-TPH-003,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,"Q10 multi-mark (nong_dan+buon_ban, co ghi Tho cam); Q14 dam_cuoi_gio gach bo chon lai; Q20 vo+khac(con dau) xung dot; Q24/Q25 khong biet di xe may; Q28 5 o tick; Q33 bo trong hoan toan"
+LCA-TPH-004,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,Q14 nhieu dong multi-mark (con cai lon tham gia); Q30 3 o tick; Q4 dan toc viet la 'Giao' suy la Dao; Q31/Q34 tra loi bang so 0
+LCA-TPH-005,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,Q1 ten/SDT kho doc; Q4/Q21b/Q22b/Q28 khong tick ro nhung co dien chu (suy la da chon); Q12/Q14 lien_he_tieu_thu/Q30 multi-mark; Q22a khong tick 'Chua' nhung Q22b van tra loi - mau thuan can review
+LCA-TPH-006,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,"Q4/Q21b/Q22b khong tick ro nhung co dien chu; Q14 thuoc_bvtv/so_che ghi chu chu 'ko' = trong; Q27a tick dam nhung ghi chu 'bo me ck' mau thuan voi Q27b; Q30 khong tick o nao, chi co ghi chu tay duoi moi o - can review ky"
+LCA-TPH-007,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,"Q5 mau thuan hoc van (giong LCA-LP-001); Q6/Q20 khong tick nhung co dien chu; Q12/Q13 vua tick Ca hai vua dien Khac; Q14 nhieu dong co Nguoi khac (bo/me chong), rieng gia_suc_lon ghi 'bo co' sai vi tri; nhieu cau tu luan chu rat kho doc (Q9/Q15/Q16b/Q21c) - can review ky ca phieu"
+LCA-TPH-008,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,Q13 ca 3 o Vo/Chong/Ca hai deu tick; Q14 lam_dat co dau nhu bi gach huy o 2 cot; nhieu dong Q14 ghi chu 'Ko' thay tick = trong; Q22a/Q22b hoi mau thuan (co vay nhung Q22b van tra loi nhu chua vay) - can review
+LCA-TPH-009,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,"Q4/Q9/Q12 bo trong hoan toan tren phieu (khong tick, khong chu); Q13 vua tick Ca hai vua dien 'Con dau'; Q14 nhieu dong multi-mark Ca hai+Con cai lon, rieng dua_don_con/cham_soc_con ghi chu 'Con lon' sai vi tri; Q27a tick ca Chong va Ca hai"
+LCA-TPH-010,lao-cai,ta-phin-10phieu,done,Claude (manual extraction session),7/23/2026,"Q4/Q20/Q21b/Q28 khong tick ro nhung co dien chu; Q26 tick ca Co va Khong; nhieu cau tu luan rat dai va kho doc (Q16b/Q27b/Q28/Q31/Q34) - best-effort, can review ky"
+LCA-LP-002,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/23/2026,"Q4 khong tick nhung co dien chu; Q6 tao hon 17 tuoi; Q8 tick ca 2 o (Duoi 25%+25-50%, 25-50% khoanh tron); Q27a tick ca Chong va Khac; META_LOCATION co doan chu bi sua/gach"
+LCA-LP-003,lao-cai,lung-phinh-16phieu,done,Claude (manual extraction session),7/23/2026,"Q4 khong tick nhung co dien chu; Q14 lam_dat co ghi chu 'Chi di lam xa' o cot Nguoi khac + duong ke dai xuong nhieu dong (doi chieu Q16b/Q28 cung noi dung -> hieu la giai thich thieu nhan luc, KHONG tinh chon them Nguoi khac, van flag review); Q14 bao_duong_xe multi-mark; Q30 4 o tick; nhieu cau tu luan kho doc (Q15/Q16a_chi_tiet/Q21c/Q34)"
+LCA-LP-004,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-005,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-006,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-007,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-008,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-009,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-010,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-011,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-012,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-013,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-014,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-015,lao-cai,lung-phinh-16phieu,pending,,,
+LCA-LP-016,lao-cai,lung-phinh-16phieu,pending,,,
+LCH-MSP-001,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-002,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-003,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-004,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-005,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-006,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-007,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-008,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-009,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-010,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-011,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-012,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-013,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-014,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-015,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-016,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-017,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-018,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-019,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-020,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-021,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-022,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCH-MSP-023,lai-chau,mao-sao-phin-23phieu,pending,,,
+LCA-HR-001,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-002,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-003,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-004,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-005,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-006,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-007,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-008,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-009,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-010,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-011,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-012,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-013,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-014,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-015,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-016,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-017,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-018,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-019,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-020,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-021,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-022,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-023,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-024,lao-cai,ham-rong-25phieu,pending,,,
+LCA-HR-025,lao-cai,ham-rong-25phieu,pending,,,
+LCA-MTR-001,lao-cai,ma-tra-1phieu,pending,,,

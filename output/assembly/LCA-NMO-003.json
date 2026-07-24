@@ -1,0 +1,1 @@
+{"_stale": true, "_note": "record_id đổi thành LCA-BH-* sau khi xác nhận xã Bắc Hà (22/07) — file này lỗi thời, chạy lại scripts/ingest.py để sinh output/assembly/LCA-BH-*.json thay thế"}

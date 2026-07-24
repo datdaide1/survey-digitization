@@ -1,0 +1,183 @@
+{
+  "record_id": "LCA-LP-002",
+  "schema_version": "v1",
+  "authored_by": "Claude (manual extraction session), 2026-07-23",
+  "purpose": "Trích xuất thủ công đầy đủ (kèm PII) từ ảnh trang đã render sẵn, theo docs/implement-plan-manual-full-record-extraction.md.",
+  "source_images": "output/assembly/_render/LCA-LP-002/LCA-LP-002__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-28"},
+    "META_LOCATION": {
+      "value": "Thôn Lả Dì Thàng, Lùng Phình, Lào Cai; Xã Vàng / Sín Mần Khảng",
+      "confidence": "thap",
+      "note": "Chữ viết tay khó đọc, dòng thứ 2 có vẻ có 1 cụm bị gạch bỏ rồi viết lại tên khác cạnh — không chắc chắn 100% tên thôn/xã chính xác"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — không có tick"},
+
+    "Q1": {"value": "Giàng Thị Mế", "pii": true, "note": "Kèm SĐT viết cạnh: 0827824514"},
+    "Q2": {"value": "1988"},
+    "Q3": {"value": "nu"},
+    "Q4": {
+      "value": "khac",
+      "other_text": "Mông",
+      "flags": ["needs_review"],
+      "note": "Không có tick hình học rõ ở ô 'Khác' nhưng có điền chữ — suy luận là đã chọn"
+    },
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": true},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": null},
+        "Q5_trung_cap_dh": {"value": false}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 17, "note": "17 tuổi — thuộc nhóm <18 (tảo hôn theo quy tắc bucket đã ghi trong schema)"}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "cay_duoc_lieu"]},
+    "Q8": {
+      "value": ["duoi_25", "25_50"],
+      "flags": ["multi_mark_on_single_select", "needs_review"],
+      "note": "Cả 'Dưới 25%' và '25-50%' đều có tick; '25-50%' còn được khoanh tròn nhấn mạnh thêm — có thể là sửa lại đáp án cuối cùng nhưng không có gạch huỷ rõ ràng ở 'Dưới 25%' nên giữ cả 2, cần review"
+    },
+    "Q9": {
+      "value": "Năm 2016-2017 (được quy hoạch, cải cách...)",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc sau năm, transcription best-effort"
+    },
+    "Q9_derived_start_year_or_years_exp": {"value": "2016"},
+    "Q10": {"value": "nong_dan"},
+    "Q11": {"value": ["hoi_phu_nu"]},
+    "Q12": {"value": "ca_hai"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "ca_hai"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": null, "note": "Ghi chữ 'K°' (không) thay vì tick — trống"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {
+          "value": "vo",
+          "flags": ["needs_review"],
+          "note": "Cột 'Vợ' có tick rõ; cột 'Cả hai' có vệt bút rối trông như bị gạch/huỷ — không tính là chọn thêm. Cột 'Người khác' ghi chữ 'Vợ nhiều hơn' — đọc là giải thích thêm cho lựa chọn 'Vợ' đã tick, không phải chỉ định thêm 1 người khác nên không tính chọn thêm cột này"
+        },
+        "dua_don_con": {"value": "ca_hai"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": "ca_hai"},
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {
+          "value": ["chong", "nguoi_khac"],
+          "flags": ["multi_mark_on_single_select"],
+          "note": "Cột 'Người khác' ghi chữ 'Ra hàng' (mang xe ra tiệm sửa) — theo quy tắc chữ viết tay ở cột Người khác vẫn tính là đã chọn"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Tập huấn - do khuyến nông xã; cộng đồng - già dì hàng xóm; bố mẹ",
+      "confidence": "trung_binh",
+      "note": "Best-effort, chữ viết tay"
+    },
+    "Q16a": {"value": "co", "subfield": {"Q16a_chi_tiet": {"value": "Ăn giỗ, họp thay chồng, vận chuyển/thu hoạch", "confidence": "trung_binh"}}},
+    "Q16b": {
+      "value": "Vì chồng bận, vợ có thể gánh thì đi thay luôn giờ. Vợ cũng có thể đi xe máy, dễ đi, thuận lợi hơn",
+      "confidence": "trung_binh"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {
+      "value": ["goi_nhan_tin", "giai_tri", "giao_dich_ban_hang", "mang_xa_hoi"],
+      "note": "Ghi chú tay cạnh 'Gọi điện, nhắn tin': '(Ko nhắn tin, chỉ gọi điện thoại)' — bổ sung chi tiết, không đổi lựa chọn chính"
+    },
+    "Q19": {"value": ["khong"]},
+    "Q20": {"value": "ca_hai"},
+    "Q21a": {"value": "chua_lan_nao"},
+    "Q21b": {"value": null},
+    "Q21c": {
+      "value": "Thời gian tổ chức bận, hầu chồng đi",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Best-effort, chữ viết tay khó đọc"
+    },
+    "Q22a": {"value": ["chua"]},
+    "Q22b": {"value": ["khong_co_nhu_cau"]},
+    "Q23": {
+      "value": "khong",
+      "subfield": {"Q23_chi_tiet": {"value": null}}
+    },
+    "Q24": {"value": "co"},
+    "Q25": {"value": "khong"},
+    "Q26": {
+      "value": "khong",
+      "note": "Ghi chú tay cạnh: '(Trao đổi, thư từ, chị k cần)' — best-effort"
+    },
+    "Q27a": {
+      "value": ["chong", "khac"],
+      "other_text": "Nhà của bố",
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Chồng' và 'Khác' đều có tick rõ"
+    },
+    "Q27b": {
+      "value": "Bố mẹ chưa cho chồng, nếu có thì có tên vợ",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": ["khong_thi_truong"],
+      "note": "Ghi chú tay dài cạnh câu (best-effort, chữ khó đọc): liên quan đến việc không có nơi tiêu thụ ổn định, phải chở đi bán xa, không có ai đến thu mua tận nơi"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["them_thu_nhap", "nang_cao_kien_thuc", "tham_gia_cong_dong"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "2 ô được tick cho câu chỉ cho chọn 1 khâu"
+    },
+    "Q31": {"value": "Không", "confidence": "cao", "note": "Ghi chữ 'Ko'"},
+    "Q32": {
+      "note": "Cột 'Nội dung' bị gạch một đường zigzag xuyên nhiều dòng — coi là trống theo quy ước strike_through_means_empty của schema",
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "mua_vat_tu": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "chon_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "vay_von": {"value": null, "noi_dung": null, "note": "Ghi chữ 'K°' (không) thay vì tick — trống, khớp Q22a"},
+        "gia_ban": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "su_dung_dat": {"value": "cung_quyet_dinh", "noi_dung": null},
+        "khac": {"value": null, "noi_dung": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Mong muốn có người/công ty thu mua tại địa phương, không phải chở đi bán lẻ ngoài chợ đường xa. Bán tại chỗ phù hợp để bán lẻ hơn, giao tiếp thuận lợi",
+      "confidence": "trung_binh",
+      "note": "Best-effort, chữ viết tay"
+    }
+  },
+  "page_notes": {
+    "1": "Ký hiệu viết tay ở góc trên bên trái trang (dạng 'w' hoặc gạch ngang), có thể là mã nội bộ điều tra viên, không thuộc nội dung khảo sát",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}

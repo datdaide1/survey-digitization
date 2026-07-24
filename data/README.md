@@ -7,10 +7,16 @@ data/
   ground_truth/<record_id>.json                   # bản ghi tay đối chiếu (kèm PII) — kiểm soát truy cập như output/full/
 output/                                           # sinh ra bởi pipeline, không sửa tay
   assembly/<record_id>.json # kết quả ingest: danh sách trang + cờ toàn vẹn (Task 2)
+  extract_mc/<record_id>.json # mã lựa chọn Task 3b + cờ QC — dữ liệu hạn chế truy cập
   full/<record_id>.json     # bản đầy đủ kèm PII — kiểm soát truy cập, giao khách hàng
   stats/<record_id>.json    # bản thống kê — KHÔNG chứa PII
   combined.csv              # file gộp toàn bộ phiếu (lớp thống kê)
 ```
+
+`output/extract_mc/` không chủ đích phiên âm trường chữ viết tay, nhưng vẫn phải
+được kiểm soát truy cập như dữ liệu nguồn: theo hợp đồng Task 3b, nếu model trả
+option code sai sau lần retry, giá trị thô được giữ lại để review và về nguyên tắc
+có thể chứa chuỗi ngoài dự kiến. Comparator vì vậy che expected/actual mặc định.
 
 **Cập nhật 22/07/2026 — bỏ hẳn quy ước folder dự phòng.** Trước đây có 2 quy ước song song: file phẳng `<record_id>.<ext>` (mặc định) và folder `<record_id>/` chứa nhiều file rời (dự phòng, dùng cho phiếu mẫu `LCA-LP-001` — 7 ảnh scan riêng lẻ chưa gộp). Thực tế: **không còn phiếu nào cần quy ước dự phòng** — phiếu mẫu `LCA-LP-001` giờ dùng thẳng bản PDF 7 trang mà khách đã tự scan lại khi bàn giao batch chính thức (xem sự cố + xác minh bên dưới). `scripts/ingest.py`/`scripts/lib/assembly.py` đã đơn giản hoá theo — chỉ còn nhận **đúng 1 file/phiếu**, không còn nhánh gom nhiều file rời trong folder. Đường dẫn gốc cũng đổi từ `data/raw/<tỉnh>/...` sang `data/raw/khao-sat/<tỉnh>/...` (thêm 1 lớp thư mục `khao-sat/` bọc ngoài, khớp với cách dữ liệu đã được tổ chức lại) — `--raw-root` mặc định của `ingest.py` đã cập nhật theo.
 

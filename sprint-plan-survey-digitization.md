@@ -2,7 +2,7 @@
 
 **Thời gian:** 14/07 — ~~25/07~~ **26/07/2026** (dời +1 ngày, có làm cuối tuần) | **Team:** 1 dev
 **Cập nhật:** 15/07 — Task 1–2 xong; tách trục **Build** (chạy ngay với 1 phiếu mẫu) khỏi **Pilot & Calibration** (gate vào 10–15 phiếu); bỏ hạng mục lỗi thời.
-**Cập nhật 22/07 (còn 3 ngày tới hạn cũ):** Blocker Task 7 đã gỡ — khách đã bàn giao **84 phiếu scan thật** (`data/raw/scan-16-7-2026/`, 6 vùng: 4/6/9(10)/16/23/25 phiếu mỗi vùng, 1 file PDF/phiếu), vượt xa ngưỡng 10–15 cần cho pilot. Tuy nhiên **Task 3b–6 (toàn bộ trục Build, P0) vẫn chưa bắt đầu** — không có code trích xuất nào trong `scripts/` ngoài `ingest.py` + `validate_schema.py` (Task 1–2). So với mốc kế hoạch (Task 4+5 lẽ ra xong 22/07), sprint đang trễ ~5 ngày công việc P0.
+**Cập nhật 22/07:** Blocker Task 7 đã gỡ — khách đã bàn giao **84 phiếu scan thật** (`data/raw/scan-16-7-2026/`, 6 vùng: 4/6/9(10)/16/23/25 phiếu mỗi vùng, 1 file PDF/phiếu), vượt xa ngưỡng 10–15 cần cho pilot. **Task 3b đã có code và 103 mock/unit checks pass; nghiệm thu live 31/31 còn chờ `ANTHROPIC_API_KEY`. Task 4–6 chưa bắt đầu.**
 **Replan 22/07 — quyết định:** dời hạn sprint sang **26/07 (Chủ nhật)**, có làm cả T7–CN. 5 ngày lịch còn lại (22–26/07) = đúng bằng 5 ngày công việc P0 còn lại (3b–6) → **không có buffer**. Task 7 (Pilot, 1.5 ngày) và Task 8 (stretch) **dời sang Sprint 2**, bắt đầu ngay 27/07 — data thật (84 phiếu) đã sẵn sàng nên không mất thời gian chờ.
 
 **Sprint Goal:** Cuối sprint, chạy được pipeline end-to-end: đưa vào folder scan của một phiếu → ra đúng 1 file JSON theo schema chuẩn, đầy đủ 108 trường (câu bỏ trống = null), có confidence cho tự luận, có flags cho mọi bất thường, và PII tách riêng — **khớp ground truth của phiếu mẫu `LCA-LP-001`**. Đo accuracy trên diện rộng thuộc pha Pilot, chỉ chạy khi có 10–15 phiếu thật.
@@ -14,7 +14,7 @@
 - Schema + format: [schema/questionnaire_v1.json](schema/questionnaire_v1.json) · [schema/SCHEMA-FORMAT.md](schema/SCHEMA-FORMAT.md)
 - Cấu trúc data + quy ước mã phiếu: [data/README.md](data/README.md) (tên file trang: bất kỳ, không cần `page-N`)
 - Phiếu mẫu: `data/raw/khao-sat/lao-cai/lung-phinh-16phieu/LCA-LP-001.pdf` (PDF 7 trang khách tự scan lại khi bàn giao batch chính thức; đường dẫn cập nhật 22/07, đã xác minh khớp ground truth — xem `data/README.md`)
-- Report task đã xong: [docs/task-01-report.md](docs/task-01-report.md) · [docs/task-02-report.md](docs/task-02-report.md)
+- Report task: [docs/task-01-report.md](docs/task-01-report.md) · [docs/task-02-report.md](docs/task-02-report.md) · [docs/task-03b-report.md](docs/task-03b-report.md)
 - Implement plan Task 3b (viết trước khi code): [docs/implement-plan-03b-mc-extraction.md](docs/implement-plan-03b-mc-extraction.md)
 
 ## Nguyên tắc chia task (chốt 15/07)
@@ -35,7 +35,7 @@ Mỗi task build có DoD "khớp ground truth phiếu mẫu" — đó là verify
 | P0 | **1. Schema chuẩn từ mẫu phiếu gốc** | 1 ngày | ✅ **Xong 14/07** | 46 mục / 108 trường, validator + 14 test — [report](docs/task-01-report.md) |
 | P0 | **2. Ingest & assembly** — gom file theo folder phiếu, PDF→ảnh, kiểm toàn vẹn (đủ/thiếu/thừa/hỏng trang); KHÔNG đoán thứ tự theo nội dung | 1 ngày | ✅ **Xong 15/07** | 33 test pass; chạy thật trên phiếu mẫu tên xáo trộn — [report](docs/task-02-report.md). Số trang thật do Task 3 chốt theo nội dung |
 | P0 | **3a. Ground truth phiếu mẫu** — nhập tay `LCA-LP-001` thành JSON chuẩn 108 trường | 0.5 ngày | ✅ **Xong 15/07** | 45 mục ghi tay, phát hiện thêm 5 case gắn cờ mới (Q10 multi-mark, Q14×3, Q32) — [report](docs/task-03a-report.md) |
-| P0 | **3b. Trích xuất trắc nghiệm đơn/đa lựa chọn** — VLM theo trang + slice schema; stamp số trang thật theo nội dung, so `tentative_page` → cờ `page_order_mismatch` | 2 ngày | ⬜ | Khớp ground truth phần trắc nghiệm của phiếu mẫu; câu single đánh ≥2 → ghi hết + cờ `multi_mark_on_single_select` (phiếu mẫu có sẵn case Q30); self-consistency 2 lần chạy, lệch → cờ |
+| P0 | **3b. Trích xuất trắc nghiệm đơn/đa lựa chọn** — VLM theo trang + slice schema; stamp số trang thật theo nội dung, so `tentative_page` → cờ `page_order_mismatch` | 2 ngày | 🟡 **Code + mock test xong; chờ live 31/31 do thiếu API key** — [report](docs/task-03b-report.md) | Khớp ground truth phần trắc nghiệm của phiếu mẫu; câu single đánh ≥2 → ghi hết + cờ `multi_mark_on_single_select` (phiếu mẫu có sẵn case Q30); self-consistency 2 lần chạy, lệch → cờ |
 | P0 | **4. Trích xuất 2 bảng ma trận Q14, Q32** | 1 ngày | ⬜ | Khớp ground truth phần ma trận; đọc nhãn dòng từ ảnh đối chiếu schema (chống lệch dòng); ô mập mờ → trống + `ambiguous_mark` + vùng ảnh |
 | P0 | **5. Phiên âm tự luận viết tay** | 0.5 ngày | ⬜ | Đủ mọi câu tự luận (trống = null) + confidence + `needs_review`; đối chiếu ground truth ở mức "đọc được đúng ý" (chữ tay khó, không kỳ vọng khớp 100% ký tự) |
 | P0 | **6. Flags + PII 2 lớp + export** — cờ mâu thuẫn theo `depends_on`/`exclusive`; bản đầy đủ (kèm PII) + bản thống kê (che PII, kể cả PII lạc trong tự luận); file gộp | 1.5 ngày | ⬜ | 3 case cờ có thật trong phiếu mẫu đều bắt đúng (Q30, Q5, Q1-SĐT); bản thống kê không còn PII ở bất kỳ đâu; đủ 108 trường kể cả null; file gộp mở được bằng bảng tính |

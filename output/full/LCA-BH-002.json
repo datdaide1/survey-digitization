@@ -1,0 +1,201 @@
+{
+  "record_id": "LCA-BH-002",
+  "schema_version": "v1",
+  "authored_by": "manual extraction (Claude, doc implement-plan-manual-full-record-extraction.md), 2026-07-23",
+  "source_images": "output/assembly/_render/LCA-BH-002/LCA-BH-002__p1.png .. p7.png",
+  "answers": {
+    "META_DATE": {"value": "2026-05-27"},
+    "META_LOCATION": {
+      "value": "Thôn Nậm Môn, xã Bắc Hà, Lào Cai",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, tên thôn/xã có thể không chính xác tuyệt đối (cùng địa điểm với LCA-BH-001)"
+    },
+    "CONSENT_1": {"value": "yes"},
+    "CONSENT_2": {"value": null, "note": "Ô trống — chưa xác nhận, không phải 'không đồng ý'"},
+
+    "Q1": {
+      "value": "Lù Thị Thởi (ĐT: 0353 580 094)",
+      "pii": true,
+      "confidence": "trung_binh"
+    },
+    "Q2": {"value": "1995"},
+    "Q3": {"value": "nu"},
+    "Q4": {"value": "khac", "other_text": "Nùng"},
+    "Q5": {
+      "components": {
+        "Q5_khong_di_hoc": {"value": false},
+        "Q5_khong_tieng_pho_thong": {"value": false},
+        "Q5_lop_cao_nhat": {"value": "9/12"},
+        "Q5_trung_cap_dh": {"value": true}
+      }
+    },
+    "Q6": {
+      "value": "da_ket_hon",
+      "subfield": {
+        "Q6_tuoi_ket_hon": {"value": 18, "confidence": "trung_binh", "note": "Có nét thừa phía sau chữ số, đọc là 18"}
+      }
+    },
+    "Q7": {"value": ["trong_trot", "chan_nuoi", "cay_duoc_lieu"]},
+    "Q8": {"value": "25_50"},
+    "Q9": {
+      "value": "Năm 2017 (Quế -2017; Sa nhân 2024)",
+      "confidence": "trung_binh",
+      "derived_subfield": {
+        "Q9_derived_start_year_or_years_exp": {
+          "value": 2017,
+          "unit": "start_year",
+          "confidence": "cao",
+          "note": "Ghi rõ 'Năm 2017' ở đầu câu trả lời; phần trong ngoặc nói thêm về cây quế (2017) và cây sa nhân (2024) trồng sau."
+        }
+      }
+    },
+    "Q10": {"value": "nong_dan"},
+    "Q11": {
+      "value": ["khong_hoi_vien"],
+      "note": "Ghi chú thêm cạnh lựa chọn: '(có biết đến Tổ phụ nữ)'"
+    },
+    "Q12": {"value": "ca_hai"},
+    "Q13": {"value": "ca_hai"},
+    "Q14": {
+      "rows": {
+        "lam_dat": {"value": "ca_hai"},
+        "trong": {"value": "ca_hai"},
+        "cham_soc_cay": {"value": "ca_hai"},
+        "thuoc_bvtv": {"value": "ca_hai"},
+        "thu_hoach": {"value": "ca_hai"},
+        "so_che": {"value": "ca_hai"},
+        "lien_he_tieu_thu": {"value": "ca_hai"},
+        "khac_san_xuat": {"value": null},
+        "noi_tro": {"value": "ca_hai"},
+        "giat_giu": {"value": "ca_hai"},
+        "dua_don_con": {"value": "ca_hai"},
+        "dam_cuoi_gio": {"value": "ca_hai"},
+        "cham_soc_con": {"value": "ca_hai"},
+        "gia_suc_nho": {"value": "ca_hai"},
+        "gia_suc_lon": {"value": "ca_hai"},
+        "quan_ly_chi_tieu": {"value": "ca_hai"},
+        "day_do_con": {"value": "ca_hai"},
+        "bao_duong_xe": {
+          "value": ["chong"],
+          "flags": ["multi_mark_on_single_select"],
+          "needs_review": true,
+          "note": "Cột 'Chồng' có dấu X rõ ràng, cột 'Cả hai như nhau' có 1 ký hiệu chồng chéo khó đọc (dạng gạch xóa hoặc X thứ 2) — không rõ là chọn thêm hay gạch huỷ, tạm ghi nhận cả 2 và gắn cờ. REVIEW: cột 'Cả hai như nhau' là X bị gạch, tô gạch bỏ -> chỉ chọn 1 X đầu tiên ở cột 'Chồng'"
+        }
+      }
+    },
+    "Q15": {
+      "value": "Tập huấn - do thôn/xã; có tủ sách giấy tờ hàng xóm; bố mẹ, người thân tự giữ dạy",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc, transcription best-effort"
+    },
+    "Q16a": {
+      "value": "co",
+      "subfield": {
+        "Q16a_chi_tiet": {"value": "Ăn giỗ, họp thôn", "confidence": "trung_binh"}
+      }
+    },
+    "Q16b": {
+      "value": "Thay đổi từ già đến trẻ, chuyển khiến chị có thể tham gia; có phụ trách thay đổi nhận thức, tự tham gia đủ là xã hội/xóm làng có đợi nữ cao về bụi cây, phụ nữ như nam giới",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort, không chắc chắn nhiều đoạn"
+    },
+    "Q17": {
+      "rows": {
+        "dien_thoai": {"value": ["chong", "vo"]},
+        "may_tinh": {"value": []},
+        "may_tinh_bang": {"value": []}
+      },
+      "khong_ai_co": false
+    },
+    "Q18": {"value": ["goi_nhan_tin", "doc_tin_tuc", "giai_tri", "tim_kiem_thong_tin", "giao_dich_ban_hang", "mang_xa_hoi"]},
+    "Q19": {
+      "value": ["quang_ba"],
+      "flags": ["exclusive_conflict", "conflicting_answer"],
+      "needs_review": true,
+      "note": "Cả 'Quảng bá sản phẩm' và 'Không' (option exclusive) đều được tick — mâu thuẫn. REVIEW: ô 'không' dã bị tô xóa -> chỉ chọn 'quảng bá sản phẩm'"
+    },
+    "Q20": {
+      "value": "ca_hai",
+      "note": "Ghi chú thêm: 'Vợ nhiều hơn'"
+    },
+    "Q21a": {"value": "1_3_lan"},
+    "Q21b": {
+      "value": ["khac"],
+      "other_text": "Cách chăm sóc cây sa nhân",
+      "confidence": "trung_binh"
+    },
+    "Q21c": {"value": null},
+    "Q22a": {
+      "value": ["khac"],
+      "other_text": "Chương trình KOICA",
+      "confidence": "trung_binh"
+    },
+    "Q22b": {"value": null},
+    "Q23": {"value": "khong", "subfield": {"Q23_chi_tiet": {"value": null}}},
+    "Q24": {"value": "co"},
+    "Q25": {"value": "khong"},
+    "Q26": {
+      "value": "khong",
+      "flags": ["multi_mark_on_single_select"],
+      "needs_review": true,
+      "note": "Cả 'Có' và 'Không' đều có tick — chọn 'khong' vì ghi chú thêm bên cạnh ủng hộ ý này: '(Chị thẳng thắn, trao đổi, không cấm)'."
+    },
+    "Q27a": {
+      "value": "khac",
+      "other_text": "Chưa có sổ đỏ, chưa làm được sổ đỏ",
+      "confidence": "trung_binh"
+    },
+    "Q27b": {
+      "value": "Chưa làm được sổ, nếu làm được thì để tên chị, bố mẹ cho chồng",
+      "confidence": "trung_binh"
+    },
+    "Q28": {
+      "value": ["thieu_nguon_luc"],
+      "note": "Ghi chú thêm: 'thiếu vốn'"
+    },
+    "Q29a": {"value": "co"},
+    "Q29b": {"value": ["nang_cao_kien_thuc"]},
+    "Q29c": {"value": null},
+    "Q30": {
+      "value": ["san_xuat", "thu_hai"],
+      "flags": ["multi_mark_on_single_select"],
+      "note": "Cả 'Sản xuất' và 'Thu hái' đều được tick trên câu chỉ cho chọn 1 khâu."
+    },
+    "Q31": {
+      "value": "Không",
+      "confidence": "trung_binh",
+      "note": "Ghi dạng viết tắt 'Ko'"
+    },
+    "Q32": {
+      "rows": {
+        "chon_cay_trong": {"value": "cung_quyet_dinh"},
+        "mua_vat_tu": {"value": "cung_quyet_dinh"},
+        "chon_ban": {"value": "cung_quyet_dinh"},
+        "vay_von": {"value": "cung_quyet_dinh"},
+        "gia_ban": {"value": "cung_quyet_dinh"},
+        "su_dung_thu_nhap": {"value": "cung_quyet_dinh"},
+        "su_dung_dat": {"value": "cung_quyet_dinh"},
+        "khac": {"value": null}
+      }
+    },
+    "Q33": {"value": ["khong"]},
+    "Q34": {
+      "value": "Mong muốn có vốn để chăn nuôi, tự trồng cây (quế, sa nhân) -> có thu nhập nhiều hơn để xây nhà, cho con đi học. Tham gia hội phụ nữ và các đoàn thể để mở rộng giao tiếp, tham gia các hoạt động, mở rộng phát triển kinh tế. Hiện chưa biết để làm hội viên.",
+      "confidence": "thap",
+      "needs_review": true,
+      "note": "Chữ viết tay khó đọc trọn vẹn, transcription best-effort"
+    }
+  },
+  "page_notes": {
+    "1": "Góc trên bên trái trang có ký hiệu viết tay 'Vu' (có thể là mã nội bộ của điều tra viên, không thuộc nội dung khảo sát)",
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": null
+  }
+}
