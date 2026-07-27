@@ -10,6 +10,7 @@ from .config import ProjectConfig
 from .flatten import flatten_record
 from .manifest import by_record_id, load_manifest
 from .privacy import to_analysis_record
+from .statistics import StatisticalPolicy, analyze_dataset
 
 
 def run_analysis(config: ProjectConfig, schema: dict[str, Any]):
@@ -31,4 +32,18 @@ def run_analysis(config: ProjectConfig, schema: dict[str, Any]):
     frame = pd.DataFrame(rows)
     config.paths.combined.parent.mkdir(parents=True, exist_ok=True)
     frame.to_csv(config.paths.combined, index=False, encoding="utf-8-sig")
+    settings = config.analysis
+    variable_types = dict(settings.get("variable_types") or {})
+    if variable_types:
+        policy_values = dict(settings.get("policy") or {})
+        result = analyze_dataset(
+            frame,
+            variable_types=variable_types,
+            scales=dict(settings.get("scales") or {}),
+            comparisons=list(settings.get("comparisons") or []),
+            policy=StatisticalPolicy(**policy_values),
+        )
+        (config.paths.stats / "analysis.json").write_text(
+            json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
     return frame

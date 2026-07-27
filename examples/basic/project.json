@@ -14,7 +14,25 @@
     "reports": "work/reports"
   },
   "extraction": {"provider": "anthropic", "double_read": true},
-  "analysis": {"include_manifest_columns": true},
+  "analysis": {
+    "include_manifest_columns": true,
+    "variable_types": {
+      "satisfaction": "categorical",
+      "channels__web": "binary",
+      "channels__phone": "binary",
+      "channels__office": "binary"
+    },
+    "policy": {
+      "alpha": 0.05,
+      "min_pair_n": 20,
+      "min_group_n": 5,
+      "suppress_below_n": 0,
+      "percent_denominator": "valid",
+      "multiple_testing": "benjamini-hochberg"
+    },
+    "scales": {},
+    "comparisons": []
+  },
   "reporting": {"formats": ["xlsx", "docx"]},
   "review": {"enabled": true}
 }

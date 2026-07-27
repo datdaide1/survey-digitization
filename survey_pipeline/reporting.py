@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import json
 from typing import Any
 
 from .config import ProjectConfig
@@ -44,6 +45,34 @@ def build_reports(config: ProjectConfig):
         denominator = int(counts.sum()) or 1
         for value, count in counts.items():
             freq.append([column, value, int(count), float(count) / denominator])
+
+    analysis_path = config.paths.stats / "analysis.json"
+    advanced = json.loads(analysis_path.read_text(encoding="utf-8")) if analysis_path.is_file() else None
+    if advanced:
+        descriptive = wb.create_sheet("Descriptives")
+        descriptive.append(["variable", "n", "mean", "std", "min", "q1", "median", "q3", "max"])
+        for variable, values in advanced["descriptives"].items():
+            descriptive.append([variable, *(values.get(key) for key in ("n", "mean", "std", "min", "q1", "median", "q3", "max"))])
+
+        associations = wb.create_sheet("Associations")
+        associations.append(["variable_a", "variable_b", "method", "effect", "p_value", "adjusted_p_value", "n", "min_group_n", "caution"])
+        for item in advanced["associations"]:
+            associations.append([item.get(key) for key in ("variable_a", "variable_b", "method", "effect", "p_value", "adjusted_p_value", "n", "min_group_n", "caution")])
+
+        reliability = wb.create_sheet("Reliability")
+        reliability.append(["scale", "alpha", "n", "items", "reason"])
+        for scale, values in advanced["reliability"].items():
+            reliability.append([scale, values.get("alpha"), values.get("n"), values.get("items"), values.get("reason")])
+
+        group_tests = wb.create_sheet("Group Tests")
+        group_tests.append(["outcome", "group", "method", "statistic", "p_value", "caution", "group_details"])
+        for item in advanced["group_comparisons"]:
+            group_tests.append([item.get("outcome"), item.get("group"), item.get("method"), item.get("statistic"), item.get("p_value"), item.get("caution"), json.dumps(item.get("groups"), ensure_ascii=False)])
+
+        methods = wb.create_sheet("Methodology")
+        methods.append(["setting", "value"])
+        for key, value in advanced["policy"].items():
+            methods.append([key, str(value)])
     wb.save(xlsx_path)
 
     document = Document()
@@ -61,5 +90,17 @@ def build_reports(config: ProjectConfig):
             cells[0].text = str(value)
             cells[1].text = str(int(count))
             cells[2].text = f"{float(count) / denominator:.1%}"
+    if advanced:
+        document.add_heading("Statistical analysis", level=1)
+        document.add_paragraph(
+            "Configured analyses use variable-appropriate effect measures, report sample sizes, "
+            "flag small groups, and adjust simultaneous association tests when configured. "
+            "Associations are observational and must not be interpreted as causal effects."
+        )
+        document.add_paragraph(
+            f"Association pairs: {len(advanced['associations'])}; "
+            f"reliability scales: {len(advanced['reliability'])}; "
+            f"group comparisons: {len(advanced['group_comparisons'])}."
+        )
     document.save(docx_path)
     return xlsx_path, docx_path
