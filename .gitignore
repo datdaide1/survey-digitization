@@ -15,15 +15,31 @@ venv/
 # Editors and operating systems
 .vscode/
 .idea/
+.claude/
 .DS_Store
 Thumbs.db
+
+# Private survey inputs and generated artifacts. The public repository contains
+# pipeline code only; keep all real respondent data outside Git.
+data/
+output/
+reports/
+
+# Client-specific notes and manual review ledgers
+docs/client-feedback-*
+docs/*manual*extraction*
+docs/review-summary-report.md
+
+# Local source questionnaires and client deliverables
+*.pdf
+*.docx
+*.xlsx
+*.xls
+*.csv.bak
 
 # Generated and temporary artifacts
 tmp/
 
-# Local one-step undo backups written by scripts/review_ui on every save
-output/full/*.bak
-
 # Large source archives (GitHub limits individual files to 100 MB)
 *.rar
-data/raw/_archive/
+*.zip
