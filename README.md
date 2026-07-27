@@ -158,8 +158,3 @@ extraction, reporting, statistical formulas, and disclosure flags.
 - `tests/` — synthetic regression tests.
 
 Architecture rationale is in [ADR-0001](docs/adr/0001-project-profiles.md).
-
-## License
-
-No open-source license has been declared. Until one is added, copyright law
-reserves reuse and redistribution rights to the repository owner.
