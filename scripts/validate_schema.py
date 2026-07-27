@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validator cho schema bảng hỏi số hóa phiếu khảo sát.
 
-Chạy:  python scripts/validate_schema.py schema/questionnaire_v1.json
+Run: python scripts/validate_schema.py path/to/schema.json
 
 Kiểm tra:
   - Mã câu hỏi (id) không trùng.
@@ -61,7 +61,7 @@ def count_export_fields(q, total_pages):
     Quy ước (xem SCHEMA-FORMAT.md §Đếm trường):
       - single/multi/text/free_text: 1 trường trả lời
           + 1 mỗi subfield (trên câu hoặc trên option)
-          + 1 mỗi derived_subfield (1 def hoặc mảng nhiều def, vd Q9)
+          + 1 mỗi derived_subfield (một definition hoặc một mảng definitions)
           + 1 mỗi option other_text (dòng "ghi rõ" riêng)
       - composite: tổng các components
       - matrix: 1 trường/dòng dữ liệu
@@ -78,7 +78,7 @@ def count_export_fields(q, total_pages):
         if "subfield" in q:  # subfield trực tiếp trên câu (vd Q23); có thể là mảng nhiều def
             sf = q["subfield"]
             n += len(sf) if isinstance(sf, list) else 1
-        if "derived_subfield" in q:  # 1 def (cũ) hoặc mảng nhiều def (vd Q9: start_year + years_exp)
+        if "derived_subfield" in q:  # một definition hoặc mảng nhiều definitions
             ds = q["derived_subfield"]
             n += len(ds) if isinstance(ds, list) else 1
         for opt in q.get("options", []):
@@ -193,7 +193,10 @@ def validate(schema, total_pages):
 
 
 def main():
-    path = sys.argv[1] if len(sys.argv) > 1 else "schema/questionnaire_v1.json"
+    if len(sys.argv) < 2:
+        print("Usage: validate_schema.py path/to/schema.json", file=sys.stderr)
+        sys.exit(2)
+    path = sys.argv[1]
     with open(path, encoding="utf-8") as f:
         schema = json.load(f)
 

@@ -9,9 +9,12 @@ import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
-from lib.full_extraction import AnthropicHTTPClient, extract_record  # noqa: E402
-from lib.mc_extraction import load_json  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[4]))
+from survey_pipeline.full_extraction import AnthropicClient, extract_record  # noqa: E402
+
+
+def load_json(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
 def _write(path: Path, value: dict) -> None:
@@ -31,7 +34,7 @@ def run(manifest: str, assembly_dir: str, schema: str, out_dir: str, model: str,
         if unknown:
             raise ValueError(f"record_id không có trong manifest: {unknown}")
         ids = record_ids
-    client = client or AnthropicHTTPClient()
+    client = client or AnthropicClient()
     failures = 0
     for record_id in ids:
         try:

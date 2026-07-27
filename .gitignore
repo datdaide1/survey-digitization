@@ -21,7 +21,8 @@ Thumbs.db
 
 # Private survey inputs and generated artifacts. The public repository contains
 # pipeline code only; keep all real respondent data outside Git.
-data/
+**/data/
+**/work/
 output/
 reports/
 
