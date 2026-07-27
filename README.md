@@ -1,8 +1,15 @@
 # Survey Digitization Pipeline
 
-Turn scanned questionnaires into validated, reviewable records with
-schema-guided VLM extraction, then produce reusable statistical outputs—without
-committing respondent data or client results.
+> A schema-driven VLM pipeline that turns scanned questionnaires into validated,
+> reviewable, privacy-safe datasets and reusable statistical reports.
+
+[![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Digitization VLM](https://img.shields.io/badge/Digitization-VLM-7C3AED?style=flat-square)](#vlm-digitization-and-quality-control)
+[![Extraction Schema-driven](https://img.shields.io/badge/Extraction-Schema--driven-2563EB?style=flat-square)](#project-profile)
+[![Validation Double-read](https://img.shields.io/badge/Validation-Double--read-15803D?style=flat-square)](#vlm-digitization-and-quality-control)
+[![Analytics Statistical](https://img.shields.io/badge/Analytics-Statistical-EA580C?style=flat-square)](#reusable-statistical-layer)
+[![Privacy PII-aware](https://img.shields.io/badge/Privacy-PII--aware-0F766E?style=flat-square)](#privacy-and-publication-boundary)
+[![License AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-1D4ED8?style=flat-square&logo=gnu&logoColor=white)](LICENSE)
 
 The pipeline is schema-driven: question IDs, page layouts, privacy declarations,
 variable types, and analysis policies live in a project profile rather than in
