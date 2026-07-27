@@ -127,11 +127,11 @@
       ],
       "note": "Case cờ mâu thuẫn thực tế: LCA-LP-001/page-1.jpg ghi 'Hết lớp 9' đồng thời tick 'Trung cấp/CĐ/ĐH'. Tầng gắn cờ so sánh Q5_lop_cao_nhat với Q5_trung_cap_dh.",
       "stats_bucketing": {
-        "added": "2026-07-22, phản hồi khách — docs/client-feedback-2026-07-22-extraction-rules.md §2.2",
-        "derived_field": "education_level_bracket",
-        "formula": "Đọc số lớp từ Q5_lop_cao_nhat (vd 'Hết lớp 9' -> 9): cấp 1 = lớp 1-5, cấp 2 = lớp 6-9, cấp 3 = lớp 10-12. Nếu Q5_khong_di_hoc=true -> bucket 'khong_di_hoc'. Nếu Q5_trung_cap_dh=true (kể cả khi mâu thuẫn với Q5_lop_cao_nhat, xem flag conflicting_answer) -> bucket 'trung_cap_tro_len'.",
+        "added": "2026-07-22, phản hồi khách — docs/client-feedback-2026-07-22-extraction-rules.md §2.2. CẬP NHẬT 2026-07-25, phản hồi khách — docs/client-feedback-2026-07-25-q5-grade-split.md: tách làm 2 phần thống kê độc lập, không gộp chung 1 bucket nữa.",
+        "derived_field": "education_grade_bracket (chỉ bucket phần điền Q5_lop_cao_nhat) + 3 cột boolean riêng Q5_khong_di_hoc/Q5_khong_tieng_pho_thong/Q5_trung_cap_dh (thống kê % trực tiếp, không qua bucket)",
+        "formula": "Phần TICK (3 cái): thống kê % Có/Không trực tiếp cho từng cột Q5_khong_di_hoc, Q5_khong_tieng_pho_thong, Q5_trung_cap_dh — độc lập với phần điền, không ưu tiên/gộp gì cả. Phần ĐIỀN (Q5_lop_cao_nhat): đọc số lớp ĐÃ HỌC XONG (vd 'Hết lớp 9' -> 9, '9/12' -> 9 — số đầu là lớp, số sau '/' là tổng số lớp hệ 10 hoặc 12, không phải lớp thứ 2), bucket theo ngưỡng HOÀN THÀNH: lớp >=12 -> 'thpt', lớp 9-11 SAI — chỉ lớp >=12 mới 'thpt', lớp 9-11 (đã xong lớp 9, chưa xong lớp 12) -> 'thcs', lớp <9 (chưa xong lớp 9, kể cả lớp 6/7/8) -> 'tieu_hoc'. Ví dụ khách chốt: lớp 7 vẫn tính tiểu học; 9/12 hoặc lớp 9 tính thcs; 12/12 hoặc lớp 12 mới tính thpt.",
         "owner": "Task 6 — Task 3b/5 không tự bucket, chỉ trích xuất giá trị thô từng component như cũ",
-        "note": "Case mâu thuẫn (LCA-LP-001) vẫn giữ flag conflicting_answer; bucket ưu tiên theo trình độ cao nhất ghi nhận được (trung_cap_tro_len) nhưng phải giữ cờ để người review biết có mâu thuẫn"
+        "note": "Case mâu thuẫn (LCA-LP-001, ghi 'Hết lớp 9' đồng thời tick 'Trung cấp/CĐ/ĐH') vẫn giữ flag conflicting_answer ở record gốc — nhưng từ 25/07, bucket phần điền (education_grade_bracket) và tick Q5_trung_cap_dh được thống kê ĐỘC LẬP, không cần 'giải quyết' mâu thuẫn ở tầng bucket nữa (khác cách làm cũ trước 25/07, từng ưu tiên trung_cap_tro_len thắng)."
       }
     },
     {
@@ -187,19 +187,27 @@
       "section": "A",
       "text": "Chị bắt đầu trồng cây dược liệu từ khi nào và vì sao?",
       "type": "free_text",
-      "note": "22/07, phản hồi khách (client-feedback-2026-07-22-extraction-rules.md §2.3): KHÁC các câu free_text khác — không chỉ phiên âm nguyên văn mà Task 5 còn phải cố rút ra năm bắt đầu trồng (hoặc số năm kinh nghiệm nếu ghi trực tiếp kiểu '10 năm nay') thành trường phụ, để Task 6 tính bucket kinh nghiệm. Đọc không rõ (vd 'từ lâu rồi') -> để null + needs_review, không suy đoán.",
-      "derived_subfield": {
-        "id": "Q9_derived_start_year_or_years_exp",
-        "text": "Năm bắt đầu trồng (hoặc số năm kinh nghiệm nếu câu trả lời ghi trực tiếp số năm) — rút ra từ nội dung Q9, không phải câu hỏi in trên phiếu",
-        "type": "text",
-        "owner_task": "Task 5 (đọc nội dung Q9 để rút số, không phải câu hỏi riêng cần hỏi VLM thêm 1 lần)"
-      },
+      "note": "22/07, phản hồi khách (client-feedback-2026-07-22-extraction-rules.md §2.3): KHÁC các câu free_text khác — không chỉ phiên âm nguyên văn mà Task 5 còn phải cố rút ra năm bắt đầu trồng (hoặc số năm kinh nghiệm nếu ghi trực tiếp kiểu '10 năm nay') thành trường phụ, để Task 6 tính bucket kinh nghiệm. Đọc không rõ (vd 'từ lâu rồi') -> để null + needs_review, không suy đoán. CẬP NHẬT 24/07: chuẩn hoá thành LUÔN CẢ 2 trường derived (không phải chọn 1 trong 2 nữa) — xem derived_subfield bên dưới và docs/client-feedback-2026-07-22-extraction-rules.md §2.3.",
+      "derived_subfield": [
+        {
+          "id": "Q9_derived_start_year",
+          "text": "Năm bắt đầu trồng cây dược liệu — rút ra từ nội dung Q9, không phải câu hỏi in trên phiếu",
+          "type": "text",
+          "owner_task": "Task 5 (đọc nội dung Q9 để rút số, không phải câu hỏi riêng cần hỏi VLM thêm 1 lần); nếu Q9 chỉ ghi số năm kinh nghiệm chứ không ghi năm bắt đầu, suy ra bằng 2026 − Q9_derived_years_exp (trừ khi years_exp = 0 thì để null, không suy đoán)"
+        },
+        {
+          "id": "Q9_derived_years_exp",
+          "text": "Số năm kinh nghiệm trồng dược liệu, tính đến năm 2026 — rút ra trực tiếp từ Q9 nếu ghi thẳng số năm, hoặc suy ra bằng 2026 − Q9_derived_start_year nếu Q9 chỉ ghi năm bắt đầu",
+          "type": "text",
+          "owner_task": "Task 5/6 — 2 trường luôn đi cùng nhau, quy đổi 2 chiều theo năm 2026 (xem stats_bucketing.note)"
+        }
+      ],
       "stats_bucketing": {
-        "added": "2026-07-22, phản hồi khách",
+        "added": "2026-07-22, phản hồi khách; chuẩn hoá 2 trường 24/07",
         "derived_field": "experience_years_bracket",
-        "formula": "so_nam_kinh_nghiem = <năm bắt đầu ghi trong Q9_derived_start_year_or_years_exp là năm> ? (2026 - năm đó) : (giá trị đã là số năm thì dùng thẳng); bucket: '<1' nếu <1 năm, '>=1' nếu >=1 năm",
+        "formula": "bucket: '<1' nếu Q9_derived_years_exp <1 năm, '>=1' nếu >=1 năm",
         "owner": "Task 6",
-        "note": "Nếu Q9_derived_start_year_or_years_exp null -> bucket cũng null, không suy đoán"
+        "note": "Quy đổi 2 chiều (tính theo năm 2026): chỉ có Q9_derived_start_year -> years_exp = 2026 - start_year; chỉ có Q9_derived_years_exp (khác 0) -> start_year = 2026 - years_exp; years_exp = 0 -> start_year để null (không suy đoán, vd trường hợp số năm ghi trong Q9 thực ra là của người khác chứ không phải người được khảo sát). Cả 2 trường null -> bucket cũng null."
       }
     },
     {
@@ -208,7 +216,7 @@
       "section": "A",
       "text": "Nghề nghiệp chính của chị (chọn 1 nghề dành nhiều thời gian nhất)",
       "type": "single_select",
-      "note": "Mã in trên phiếu nhảy số: 1,2,3,4,6,7 — KHÔNG có 5. Giữ nguyên print_no theo phiếu. Case multi_mark_on_single_select thực tế: LCA-LP-001 tick cả 'Nông dân' và 'Buôn bán, kinh doanh nhỏ' (phát hiện ở Task 3a, ngoài Q30 đã biết trước). 22/07 phản hồi khách: option 'Khác (ghi rõ)' dùng bucket 'khac' chung cho thống kê, không phân biệt nội dung ghi thêm (client-feedback-2026-07-22-extraction-rules.md §2.4).",
+      "note": "Mã in trên phiếu nhảy số: 1,2,3,4,6,7 — KHÔNG có 5. Giữ nguyên print_no theo phiếu. Case multi_mark_on_single_select thực tế: LCA-LP-001 tick cả 'Nông dân' và 'Buôn bán, kinh doanh nhỏ' (phát hiện ở Task 3a, ngoài Q30 đã biết trước). 22/07 phản hồi khách: option 'Khác (ghi rõ)' dùng bucket 'khac' chung cho thống kê, không phân biệt nội dung ghi thêm (client-feedback-2026-07-22-extraction-rules.md §2.4). 25/07 phản hồi khách — RULE ƯU TIÊN khi 1 phiếu tick ≥2 ô (Q10 vẫn là câu chỉ chọn 1, không xử lý như multi-select): nguyên tắc \"thu nhập nào cố định/ổn định hơn thì là nghề chính\", cụ thể theo thứ tự ưu tiên giảm dần can_bo > cong_nhan > buon_ban > lao_dong_tu_do > khac > nong_dan (nong_dan luôn ưu tiên thấp nhất). Áp dụng: chọn code có thứ tự ưu tiên cao nhất trong số các code đã tick, các code còn lại bị loại khỏi `value` nhưng KHÔNG xoá bằng chứng — flag `multi_mark_on_single_select` và mô tả gốc trong `note` của từng phiếu vẫn giữ nguyên làm dấu vết audit, chỉ nối thêm 1 câu ghi rõ đã áp dụng rule này và chọn ra code nào. Xem docs/client-feedback-2026-07-25-q10-priority-rule.md.",
       "options": [
         {"code": "can_bo", "print_no": 1, "label": "Cán bộ, công chức, viên chức"},
         {"code": "nong_dan", "print_no": 2, "label": "Nông dân"},

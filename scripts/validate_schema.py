@@ -61,6 +61,7 @@ def count_export_fields(q, total_pages):
     Quy ước (xem SCHEMA-FORMAT.md §Đếm trường):
       - single/multi/text/free_text: 1 trường trả lời
           + 1 mỗi subfield (trên câu hoặc trên option)
+          + 1 mỗi derived_subfield (1 def hoặc mảng nhiều def, vd Q9)
           + 1 mỗi option other_text (dòng "ghi rõ" riêng)
       - composite: tổng các components
       - matrix: 1 trường/dòng dữ liệu
@@ -74,8 +75,12 @@ def count_export_fields(q, total_pages):
         return total_pages
     if t in ("text", "free_text", "single_select", "multi_select"):
         n = 1
-        if "subfield" in q:  # subfield trực tiếp trên câu (vd Q23)
-            n += 1
+        if "subfield" in q:  # subfield trực tiếp trên câu (vd Q23); có thể là mảng nhiều def
+            sf = q["subfield"]
+            n += len(sf) if isinstance(sf, list) else 1
+        if "derived_subfield" in q:  # 1 def (cũ) hoặc mảng nhiều def (vd Q9: start_year + years_exp)
+            ds = q["derived_subfield"]
+            n += len(ds) if isinstance(ds, list) else 1
         for opt in q.get("options", []):
             if "subfield" in opt:  # subfield trên option (vd Q6, Q16a)
                 n += 1
