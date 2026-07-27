@@ -6,7 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "survey-digitization-pipeline"
 version = "0.2.0"
 description = "Schema-driven scanned survey extraction, review, analytics and reporting"
+authors = [{name = "Dat Hoang Tran"}]
+readme = "README.md"
 requires-python = ">=3.12"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
 dependencies = [
   "pymupdf>=1.24",
   "pillow>=10",
@@ -18,6 +22,10 @@ dependencies = [
 
 [project.scripts]
 survey-pipeline = "survey_pipeline.cli:main"
+
+[project.urls]
+Repository = "https://github.com/datdaide1/survey-digitization"
+Issues = "https://github.com/datdaide1/survey-digitization/issues"
 
 [tool.setuptools.packages.find]
 include = ["survey_pipeline*"]

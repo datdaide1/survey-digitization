@@ -158,3 +158,16 @@ extraction, reporting, statistical formulas, and disclosure flags.
 - `tests/` — synthetic regression tests.
 
 Architecture rationale is in [ADR-0001](docs/adr/0001-project-profiles.md).
+
+## License
+
+Copyright © 2026 Dat Hoang Tran.
+
+This project is licensed under the [GNU Affero General Public License v3.0 only](LICENSE)
+(`AGPL-3.0-only`). If you modify the software and make it available to users
+over a network, the AGPL requires offering those users the corresponding source
+code under the same license.
+
+The PDF rendering path uses PyMuPDF under its AGPL licensing option. Any
+non-AGPL distribution requires separate permission for this project and an
+appropriate commercial license for PyMuPDF/MuPDF.
