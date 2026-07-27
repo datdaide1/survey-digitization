@@ -1,4 +1,4 @@
-// Engine sinh form sửa/review từ schema/questionnaire_v1.json, và validate cấu
+// Engine sinh form sửa/review từ schema được project.json khai báo, và validate cấu
 // trúc record theo đúng logic scripts/validate_record.py (port 1-1 sang JS) để
 // không lệch với validator gốc của pipeline.
 
@@ -65,7 +65,8 @@ function defaultEntryFor(question) {
     case "device_grid": {
       const rows = {};
       for (const r of question.rows || []) rows[r.code] = { value: [] };
-      entry = { rows, khong_ai_co: false };
+      entry = { rows };
+      if (question.extra_option && question.extra_option.code) entry[question.extra_option.code] = false;
       break;
     }
     case "multi_select":
@@ -80,7 +81,7 @@ function defaultEntryFor(question) {
   // để trống tới khi option đó thật sự được chọn — xử lý lazy trong
   // renderSubfieldBox khi người dùng tick). Có thể là 1 def hoặc mảng nhiều
   // def (cùng dạng derived_subfield) — hiện chưa câu nào dùng mảng nhưng
-  // engine hỗ trợ sẵn để không lặp lại bug đã gặp với Q9.derived_subfield.
+  // engine hỗ trợ cả một definition và mảng definitions.
   if (question.subfield) {
     entry.subfield = {};
     for (const subDef of toArray(question.subfield)) entry.subfield[subDef.id] = { value: null };
@@ -679,7 +680,7 @@ function renderMatrixEditor(question, entry, ctx) {
       h(
         "div",
         { class: "muted small", style: "margin-bottom:6px" },
-        `Cột "${question.row_content_column.label}" không trích xuất (khách xác nhận 22/07) — không hiện ở đây, dữ liệu cũ trong JSON (nếu có) vẫn được giữ nguyên khi lưu.`
+        `Cột "${question.row_content_column.label}" được schema đánh dấu skip_extraction — dữ liệu cũ trong JSON (nếu có) vẫn được giữ nguyên khi lưu.`
       )
     );
   }
@@ -689,7 +690,8 @@ function renderMatrixEditor(question, entry, ctx) {
 
 function renderDeviceGridEditor(question, entry, ctx) {
   if (!entry.rows) entry.rows = {};
-  if (typeof entry.khong_ai_co !== "boolean") entry.khong_ai_co = false;
+  const extraCode = question.extra_option && question.extra_option.code;
+  if (extraCode && typeof entry[extraCode] !== "boolean") entry[extraCode] = false;
   const nCols = (question.columns || []).length;
   const headRow = h("tr", {}, [h("th", { style: "text-align:left;min-width:160px" }, "Thiết bị")]);
   for (const col of question.columns) headRow.append(h("th", {}, col.label));
@@ -733,9 +735,9 @@ function renderDeviceGridEditor(question, entry, ctx) {
   if (question.extra_option) {
     const extra = h("label", { class: "chip-toggle", style: "margin-top:8px;display:inline-flex" });
     const cb = h("input", { type: "checkbox" });
-    cb.checked = !!entry.khong_ai_co;
+    cb.checked = !!entry[extraCode];
     cb.addEventListener("change", () => {
-      entry.khong_ai_co = cb.checked;
+      entry[extraCode] = cb.checked;
       ctx.onDirty();
     });
     extra.append(cb, document.createTextNode(" " + question.extra_option.label));
@@ -801,7 +803,7 @@ export function renderQuestionCard(question, record, { onDirty }) {
     for (const subDef of toArray(question.subfield)) card.append(renderSubfieldBox(subDef, entry, ctx.onDirty, card));
   }
   if (question.derived_subfield) {
-    // derived_subfield co the la 1 object don (cu) hoac mang nhieu def (vd Q9: start_year + years_exp)
+    // derived_subfield có thể là một object hoặc mảng nhiều definitions.
     const dsDefs = toArray(question.derived_subfield);
     for (const dsDef of dsDefs) card.append(renderDerivedSubfieldBox(dsDef, entry, ctx.onDirty, card));
   }

@@ -1,5 +1,5 @@
 // Wrapper mỏng quanh File System Access API — mọi đọc/ghi đều tương đối so
-// với thư mục gốc (root) mà người dùng chọn (thư mục STARTUP).
+// với thư mục project mà người dùng chọn.
 
 export function isSupported() {
   return typeof window.showDirectoryPicker === "function";
@@ -18,7 +18,14 @@ export async function verifyPermission(handle, mode = "readwrite") {
 }
 
 function splitPath(relPath) {
-  return relPath.split("/").filter(Boolean);
+  if (typeof relPath !== "string" || !relPath || /^[A-Za-z]:/.test(relPath) || relPath.startsWith("/")) {
+    throw new Error(`Đường dẫn project không hợp lệ: ${relPath}`);
+  }
+  const parts = relPath.replaceAll("\\", "/").split("/").filter(Boolean);
+  if (parts.some((part) => part === "." || part === "..")) {
+    throw new Error(`Đường dẫn project vượt ra ngoài thư mục đã chọn: ${relPath}`);
+  }
+  return parts;
 }
 
 async function walkToDir(root, parts, { create = false } = {}) {

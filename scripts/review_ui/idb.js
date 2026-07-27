@@ -1,5 +1,5 @@
 // Lưu FileSystemDirectoryHandle vào IndexedDB để lần mở sau không phải chọn
-// lại thư mục mỗi lần. Chỉ lưu 1 handle duy nhất (thư mục gốc STARTUP).
+// lại thư mục mỗi lần. Chỉ lưu 1 project-directory handle duy nhất.
 
 const DB_NAME = "review-ui";
 const STORE = "handles";

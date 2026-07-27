@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Review phiếu khảo sát — STARTUP</title>
+<title>Survey Review</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,10 +13,10 @@
     <div id="gate" class="gate">
       <div class="gate-card">
         <h1>Review trích xuất phiếu khảo sát</h1>
-        <p class="muted">Mở trực tiếp ảnh phiếu scan cạnh JSON đã trích xuất, sửa tại chỗ, lưu thẳng vào <code>output/full/&lt;record_id&gt;.json</code> — không cần mở file JSON/PDF gốc để so tay.</p>
-        <button id="btn-pick-root" class="btn btn-primary btn-lg">Chọn thư mục dự án (STARTUP)</button>
+        <p class="muted">Mở ảnh nguồn cạnh JSON đã trích xuất, sửa tại chỗ và lưu vào thư mục được khai báo trong <code>project.json</code>.</p>
+        <button id="btn-pick-root" class="btn btn-primary btn-lg">Chọn thư mục project</button>
         <p id="gate-error" class="gate-error" hidden></p>
-        <p class="muted small">Yêu cầu Chrome hoặc Edge bản mới (File System Access API). Chọn đúng thư mục gốc <code>STARTUP</code> — nơi có sẵn <code>schema/</code>, <code>docs/</code>, <code>output/</code>.</p>
+        <p class="muted small">Yêu cầu Chrome hoặc Edge bản mới. Chọn thư mục chứa <code>project.json</code>.</p>
       </div>
     </div>
 

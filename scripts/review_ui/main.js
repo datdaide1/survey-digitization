@@ -30,6 +30,7 @@ function h(tag, props = {}, children = []) {
 
 const state = {
   root: null,
+  project: null,
   schema: null,
   questionsByPage: null,
   progressRows: [],
@@ -86,7 +87,7 @@ async function boot() {
   // mục trở thành nút chết vĩnh viễn — không bấm được nữa dù còn hiện trên
   // màn hình.
   function wirePickNewFolder() {
-    pickBtn.textContent = "Chọn thư mục dự án (STARTUP)";
+    pickBtn.textContent = "Chọn thư mục project.json";
     pickBtn.onclick = async () => {
       try {
         const handle = await fsAccess.pickRoot();
@@ -127,10 +128,11 @@ async function boot() {
 async function bootWithRoot(handle) {
   state.root = handle;
   try {
-    state.schema = await fsAccess.readJSON(state.root, "schema/questionnaire_v1.json");
+    state.project = await fsAccess.readJSON(state.root, "project.json");
+    state.schema = await fsAccess.readJSON(state.root, projectPath("schema", "schema.json"));
   } catch (err) {
     showGateError(
-      "Không đọc được schema/questionnaire_v1.json — hãy chắc chắn đã chọn đúng thư mục gốc STARTUP (nơi có sẵn schema/, docs/, output/). Lỗi: " +
+      "Không đọc được project.json hoặc schema — hãy chọn đúng thư mục project. Lỗi: " +
         (err.message || err)
     );
     return false;
@@ -138,11 +140,11 @@ async function bootWithRoot(handle) {
   state.questionsByPage = schemaEngine.groupQuestionsByPage(state.schema);
 
   try {
-    const csvText = await fsAccess.readText(state.root, "docs/manual-extraction-progress.csv");
+    const csvText = await fsAccess.readText(state.root, projectPath("manifest", "data/manifest.csv"));
     state.progressRows = parseCSV(csvText);
   } catch (err) {
     state.progressRows = [];
-    toast("Không đọc được docs/manual-extraction-progress.csv — sidebar sẽ trống nhưng UI vẫn dùng được.", "error");
+    toast("Không đọc được manifest — sidebar sẽ trống nhưng UI vẫn dùng được.", "error");
   }
 
   document.getElementById("gate").hidden = true;
@@ -169,12 +171,17 @@ async function bootWithRoot(handle) {
   return true;
 }
 
+function projectPath(key, fallback) {
+  const value = state.project && state.project.paths && state.project.paths[key];
+  return value || fallback;
+}
+
 // ---------------------------------------------------------------------------
 // Sidebar
 // ---------------------------------------------------------------------------
 
 async function scanRecordMeta(recordId) {
-  const relPath = `output/full/${recordId}.json`;
+  const relPath = `${projectPath("full", "work/full")}/${recordId}.json`;
   const exists = await fsAccess.fileExists(state.root, relPath);
   if (!exists) return { hasFile: false };
   try {
@@ -253,7 +260,7 @@ async function selectRecord(recordId) {
   state.imageCache.forEach((url) => {});
   document.getElementById("current-record").textContent = recordId;
 
-  const relPath = `output/full/${recordId}.json`;
+  const relPath = `${projectPath("full", "work/full")}/${recordId}.json`;
   const exists = await fsAccess.fileExists(state.root, relPath);
   let record = null;
   if (exists) {
@@ -284,7 +291,7 @@ async function selectRecord(recordId) {
   updateSaveStatus("saved");
 
   try {
-    state.assembly = await fsAccess.readJSON(state.root, `output/assembly/${recordId}.json`);
+    state.assembly = await fsAccess.readJSON(state.root, `${projectPath("assembly", "work/assembly")}/${recordId}.json`);
   } catch (err) {
     state.assembly = null;
   }
@@ -328,7 +335,7 @@ async function saveNow() {
   }
   if (!state.dirty || !state.currentRecord || !state.currentRecordId) return;
   try {
-    await fsAccess.writeJSON(state.root, `output/full/${state.currentRecordId}.json`, state.currentRecord);
+    await fsAccess.writeJSON(state.root, `${projectPath("full", "work/full")}/${state.currentRecordId}.json`, state.currentRecord);
     state.dirty = false;
     state.isNewRecord = false;
     const now = new Date();
@@ -456,7 +463,7 @@ async function mountPageImage(canvasEl, pageNumber, zoomWrapEl) {
     if (p) relPath = p.image_path;
   }
   if (!relPath) {
-    relPath = `output/assembly/_render/${state.currentRecordId}/${state.currentRecordId}__p${pageNumber}.png`;
+    relPath = `${projectPath("assembly", "work/assembly")}/_render/${state.currentRecordId}/${state.currentRecordId}__p${pageNumber}.png`;
   }
 
   let url;
@@ -620,7 +627,7 @@ function renderRecordView() {
   if (!record) {
     const box = h("div", { class: "empty-state" });
     const inner = h("div", { style: "text-align:center" });
-    inner.append(h("p", {}, `Phiếu ${state.currentRecordId} chưa có output/full/${state.currentRecordId}.json.`));
+    inner.append(h("p", {}, `Phiếu ${state.currentRecordId} chưa có bản ghi extraction.`));
     const btn = h(
       "button",
       {
