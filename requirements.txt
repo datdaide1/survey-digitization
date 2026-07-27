@@ -1,0 +1,14 @@
+# Dependencies cho pipeline thống kê & báo cáo (docs/implement-plan-statistics-and-client-report.md)
+# Cài vào đúng conda env survey-digitizer:
+#   & "E:\anaconda3\envs\survey-digitizer\python.exe" -m pip install -r requirements.txt
+#
+# Dependency có sẵn trước đó trong env (không quản lý ở đây): pymupdf, pillow — dùng cho render/OCR (scripts/lib/assembly.py).
+
+pandas==3.0.5
+numpy==2.5.1
+scipy==1.18.0
+scikit-learn==1.9.0
+factor_analyzer==0.5.1
+openpyxl==3.1.5
+python-docx==1.2.0
+matplotlib==3.11.1

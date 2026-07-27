@@ -122,15 +122,18 @@ expect_clean(
 
 
 def main():
-    # Test tích hợp: schema thật phải hợp lệ và ra đúng 108 trường.
+    # Test tích hợp: schema thật phải hợp lệ và ra đúng 110 trường.
+    # (22/07: 108 trường gốc; 24/07: +2 vì Q9.derived_subfield đổi thành mảng
+    # 2 def (Q9_derived_start_year + Q9_derived_years_exp) thay vì 1 def duy nhất
+    # trước đó không được count_export_fields đếm tới — xem SCHEMA-FORMAT.md.)
     with open(REAL_SCHEMA, encoding="utf-8") as f:
         real = json.load(f)
     tp = real.get("total_pages", 1)
     real_errors = vs.validate(real, tp)
     _results.append(("schema thật hợp lệ", not real_errors, real_errors or None))
     total = sum(vs.count_export_fields(qq, tp) for qq in real["questions"])
-    _results.append(("schema thật = 108 trường", total == 108,
-                     None if total == 108 else f"đếm được {total}"))
+    _results.append(("schema thật = 110 trường", total == 110,
+                     None if total == 110 else f"đếm được {total}"))
 
     failed = [r for r in _results if not r[1]]
     for name, ok, detail in _results:

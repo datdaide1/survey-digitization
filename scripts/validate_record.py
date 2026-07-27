@@ -103,12 +103,25 @@ def check_record(schema: dict, record: dict) -> list[str]:
             if "value" not in entry:
                 errors.append(f"[{qid}] thieu key 'value'")
 
-        # subfield o cap cau hoi (Q23 kieu nay) hoac o cap option (Q6 kieu nay)
-        if "subfield" in q and isinstance(q["subfield"], dict):
-            sub_id = q["subfield"]["id"]
+        # subfield o cap cau hoi (Q23 kieu nay) hoac o cap option (Q6 kieu nay).
+        # Co the la 1 def hoac mang nhieu def (cung dang derived_subfield) --
+        # hien chua cau nao dung mang nhung engine ho tro san.
+        if "subfield" in q:
+            sub_defs = q["subfield"] if isinstance(q["subfield"], list) else [q["subfield"]]
             sub_out = entry.get("subfield")
-            if not isinstance(sub_out, dict) or sub_id not in sub_out:
-                errors.append(f"[{qid}] thieu subfield '{sub_id}'")
+            for sub_def in sub_defs:
+                sub_id = sub_def["id"]
+                if not isinstance(sub_out, dict) or sub_id not in sub_out:
+                    errors.append(f"[{qid}] thieu subfield '{sub_id}'")
+
+        # derived_subfield: giong subfield nhung co the la 1 def hoac mang nhieu def (vd Q9 co 2)
+        if "derived_subfield" in q:
+            ds_defs = q["derived_subfield"] if isinstance(q["derived_subfield"], list) else [q["derived_subfield"]]
+            ds_out = entry.get("derived_subfield")
+            for ds_def in ds_defs:
+                ds_id = ds_def["id"]
+                if not isinstance(ds_out, dict) or ds_id not in ds_out:
+                    errors.append(f"[{qid}] thieu derived_subfield '{ds_id}'")
 
         if qtype == "single_select":
             for opt in q.get("options", []):

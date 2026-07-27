@@ -78,9 +78,12 @@ function defaultEntryFor(question) {
   // value là gì — khớp validate_record.py (không điều kiện theo option nào
   // cả, khác với subfield gắn trên 1 option cụ thể như Q6/Q16a, cái đó vẫn
   // để trống tới khi option đó thật sự được chọn — xử lý lazy trong
-  // renderSubfieldBox khi người dùng tick).
-  if (question.subfield && typeof question.subfield === "object") {
-    entry.subfield = { [question.subfield.id]: { value: null } };
+  // renderSubfieldBox khi người dùng tick). Có thể là 1 def hoặc mảng nhiều
+  // def (cùng dạng derived_subfield) — hiện chưa câu nào dùng mảng nhưng
+  // engine hỗ trợ sẵn để không lặp lại bug đã gặp với Q9.derived_subfield.
+  if (question.subfield) {
+    entry.subfield = {};
+    for (const subDef of toArray(question.subfield)) entry.subfield[subDef.id] = { value: null };
   }
   return entry;
 }
@@ -238,11 +241,23 @@ export function validateRecord(schema, record) {
       if (!("value" in entry)) errors.push(`[${qid}] thiếu key 'value'`);
     }
 
-    if (q.subfield && typeof q.subfield === "object") {
-      const subId = q.subfield.id;
+    if (q.subfield) {
+      const subDefs = Array.isArray(q.subfield) ? q.subfield : [q.subfield];
       const subOut = entry.subfield;
-      if (!subOut || typeof subOut !== "object" || !(subId in subOut)) {
-        errors.push(`[${qid}] thiếu subfield '${subId}'`);
+      for (const subDef of subDefs) {
+        if (!subOut || typeof subOut !== "object" || !(subDef.id in subOut)) {
+          errors.push(`[${qid}] thiếu subfield '${subDef.id}'`);
+        }
+      }
+    }
+
+    if (q.derived_subfield) {
+      const dsDefs = Array.isArray(q.derived_subfield) ? q.derived_subfield : [q.derived_subfield];
+      const dsOut = entry.derived_subfield;
+      for (const dsDef of dsDefs) {
+        if (!dsOut || typeof dsOut !== "object" || !(dsDef.id in dsOut)) {
+          errors.push(`[${qid}] thiếu derived_subfield '${dsDef.id}'`);
+        }
       }
     }
 
@@ -488,9 +503,15 @@ function applySingleSelectCodes(entry, codes) {
   }
 }
 
-function getCodesFromValue(value) {
+// Chuẩn hoá 1 giá trị thành mảng: null/undefined -> [], đã là mảng -> bản sao,
+// còn lại -> bọc trong mảng 1 phần tử. Dùng chung cho mọi chỗ cần xử lý "1 hoặc nhiều".
+function toArray(value) {
   if (value == null) return [];
   return Array.isArray(value) ? value.slice() : [value];
+}
+
+function getCodesFromValue(value) {
+  return toArray(value);
 }
 
 function renderSingleSelectEditor(question, entry, ctx) {
@@ -581,7 +602,20 @@ function renderCompositeEditor(question, entry, ctx) {
       });
       row.append(input);
     }
+    const metaBtn = h(
+      "button",
+      { type: "button", class: "btn btn-sm btn-ghost", title: "confidence/flags/note cho trường này", style: "margin-left:6px" },
+      compEntry.needs_review ? "⚑" : "…"
+    );
+    row.append(metaBtn);
     wrap.append(row);
+
+    const metaBox = renderMetaBlock(compEntry, { cardEl: ctx.cardEl, onDirty: ctx.onDirty });
+    metaBox.style.display = "none";
+    wrap.append(metaBox);
+    metaBtn.addEventListener("click", () => {
+      metaBox.style.display = metaBox.style.display === "none" ? "" : "none";
+    });
   }
   return wrap;
 }
@@ -763,8 +797,14 @@ export function renderQuestionCard(question, record, { onDirty }) {
   }
   card.append(editor);
 
-  if (question.subfield) card.append(renderSubfieldBox(question.subfield, entry, ctx.onDirty, card));
-  if (question.derived_subfield) card.append(renderDerivedSubfieldBox(question.derived_subfield, entry, ctx.onDirty, card));
+  if (question.subfield) {
+    for (const subDef of toArray(question.subfield)) card.append(renderSubfieldBox(subDef, entry, ctx.onDirty, card));
+  }
+  if (question.derived_subfield) {
+    // derived_subfield co the la 1 object don (cu) hoac mang nhieu def (vd Q9: start_year + years_exp)
+    const dsDefs = toArray(question.derived_subfield);
+    for (const dsDef of dsDefs) card.append(renderDerivedSubfieldBox(dsDef, entry, ctx.onDirty, card));
+  }
 
   card.append(renderMetaBlock(entry, { cardEl: card, onDirty: ctx.onDirty }));
   updateCardHighlight(card, entry);

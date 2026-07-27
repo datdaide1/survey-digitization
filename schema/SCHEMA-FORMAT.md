@@ -55,7 +55,8 @@ Kiểm thử chính validator (nhánh pass + các nhánh bắt lỗi):
 | `pii: true` | câu | Trường định danh. **Vẫn trích xuất bình thường** vào bản đầy đủ; chỉ bị loại/che ở phép chiếu lớp thống kê (Q1). Bước tách PII cũng quét SĐT lẫn trong text. Xem [extraction-method.md §5](../docs/extraction-method.md). |
 | `other_text: true` | option / row | Lựa chọn "Khác (ghi rõ)" kèm dòng điền tự do → **sinh thêm 1 trường text riêng** (xem §Đếm trường). |
 | `exclusive: true` | option | Nếu chọn cùng option khác → cờ mâu thuẫn (vd "Không là hội viên", "Chưa", "Không gặp khó khăn"). |
-| `subfield` | câu hoặc option | Trường phụ đi kèm → **sinh thêm 1 trường** (Q6 tuổi kết hôn, Q23 "cụ thể là gì"). |
+| `subfield` | câu hoặc option | Trường phụ đi kèm → **sinh thêm 1 trường** (Q6 tuổi kết hôn, Q23 "cụ thể là gì"). Ở cấp **câu** có thể là mảng nhiều def (như `derived_subfield`) nếu sau này cần — chưa câu nào dùng dạng mảng. Ở cấp **option** vẫn chỉ hỗ trợ 1 def/option. |
+| `derived_subfield` | câu | Trường suy ra từ nội dung câu, không in trên phiếu → **sinh thêm 1 trường mỗi def**; có thể là 1 object hoặc **mảng nhiều def** (Q9: `Q9_derived_start_year` + `Q9_derived_years_exp`, xem [client-feedback-2026-07-22-extraction-rules.md](../docs/client-feedback-2026-07-22-extraction-rules.md) §2.3). |
 | `depends_on` | câu | Câu điều kiện `{question, <toán tử>}`. Dùng cho tầng gắn cờ, **không chặn trích xuất**. Xem §Toán tử depends_on. |
 | `print_no` | option | Số in trên phiếu khi khác thứ tự tự nhiên (Q10 nhảy 1,2,3,4,6,7). |
 | `group_header` | row của matrix | Dòng tiêu đề nhóm, **không phải dòng dữ liệu** (Q14 "Việc nhà"). Validator không đếm. |
@@ -80,7 +81,7 @@ Lưu ý: câu đích multi_select thì giá trị trả về là **mảng** — 
 
 Con số validator in ra (`Tổng trường xuất`) = số trường tối thiểu mỗi bản ghi phải có (kể cả `null`). Quy tắc:
 
-- `single/multi/text/free_text`: **1** trường trả lời, cộng thêm **1** cho mỗi `subfield` và mỗi option `other_text`.
+- `single/multi/text/free_text`: **1** trường trả lời, cộng thêm **1 cho mỗi def trong `subfield`** cấp câu (1 nếu là object, hoặc bằng số phần tử nếu là mảng), **1** cho mỗi option có `subfield` riêng, **1 cho mỗi def trong `derived_subfield`** (1 nếu là object, hoặc bằng số phần tử nếu là mảng — vd Q9 = 2), và mỗi option `other_text`.
 - `composite`: tổng các `components`.
 - `matrix`: **1** trường/dòng dữ liệu; cộng **1/dòng** nếu có `row_content_column`; cộng **1** cho mỗi dòng `other_text`.
 - `device_grid`: **1** trường/dòng, cộng **1** nếu có `extra_option`.
@@ -89,6 +90,8 @@ Con số validator in ra (`Tổng trường xuất`) = số trường tối thi�
 v1 = **108** trường (con số gốc, trước phản hồi khách 22/07). Sai lệch số này ở bước export nghĩa là có trường bị bỏ sót hoặc đếm dư.
 
 > **Cập nhật 22/07 — con số 108 cần tính lại, CHƯA làm trong lượt sửa docs này.** Khách xác nhận bỏ qua `row_content_column` ("Nội dung") của Q32 (xem [client-feedback-2026-07-22-extraction-rules.md](../docs/client-feedback-2026-07-22-extraction-rules.md) §2.8) — làm giảm số trường xuất ra của Q32 so với cách đếm gốc ở trên. Việc sửa `scripts/validate_schema.py` (bỏ đếm `row_content_column` khi field đó được đánh dấu bỏ qua) và chạy lại validator để lấy con số chính thức mới **chưa thực hiện** — thuộc phạm vi sửa code, ngoài phạm vi "cập nhật docs/schema annotation" của lượt này. Nhớ làm trước khi bắt đầu Task 4 (ma trận Q32).
+>
+> **Cập nhật 24/07 — `count_export_fields`/validator đã sửa để đếm `derived_subfield`, con số thực tế giờ là 110.** Q9 đổi `derived_subfield` từ 1 def thành mảng 2 def (`Q9_derived_start_year` + `Q9_derived_years_exp`, §2.3) mà trước đó `count_export_fields` không hề đếm tới (bug riêng, không liên quan việc bỏ `row_content_column` ở trên) — đã sửa `scripts/validate_schema.py` để cộng đúng số def trong `derived_subfield`, chạy validator ra 108 + 2 = **110**. Việc tính lại cho `row_content_column` ở caveat 22/07 phía trên vẫn CHƯA làm — con số cuối cùng còn có thể đổi tiếp sau khi làm việc đó.
 
 ## Quy ước giá trị đầu ra (`conventions`)
 

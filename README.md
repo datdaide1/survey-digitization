@@ -115,6 +115,10 @@ reports/                      Bảng, biểu đồ và báo cáo sinh từ dữ 
 
 ## Trạng thái hiện tại
 
+> **Lưu ý về repository public:** repository chỉ phân phối code pipeline, schema,
+> test và tài liệu kỹ thuật. Toàn bộ `data/`, `output/`, `reports/`, phiếu PDF và
+> báo cáo DOCX/XLSX là dữ liệu cục bộ, bị loại bởi `.gitignore` và không được commit.
+
 Toàn bộ 85 phiếu thật của khách đã được **trích xuất thủ công xong** (không chạy pipeline API tự động). Việc đang làm hiện tại là **review thủ công để verify lại** 85 bản ghi trước khi tổng hợp thống kê theo yêu cầu khách hàng. Chi tiết ở [docs/task-manual-extraction-report.md](docs/task-manual-extraction-report.md).
 
 | Năng lực | Trạng thái |
@@ -123,22 +127,43 @@ Toàn bộ 85 phiếu thật của khách đã được **trích xuất thủ c�
 | Manifest, ingest, render và kiểm tra toàn vẹn | ✅ Hoàn thành |
 | Ground truth cho phiếu mẫu | ✅ Hoàn thành |
 | **Trích xuất thủ công toàn bộ 85 phiếu** (`output/full/*.json`) | ✅ **Hoàn thành 24/07/2026** — [báo cáo](docs/task-manual-extraction-report.md) |
-| **Review thủ công để verify nội dung 85 bản ghi** | 🔵 **Đang làm** — ưu tiên 57 phiếu có `needs_review: true` |
-| Tổng hợp thống kê theo yêu cầu khách (bucket, `output/stats/`, `combined.csv`) | ⏳ Kế tiếp, sau khi review xong |
+| **Review thủ công để verify nội dung 85 bản ghi** | 🔵 **Đang làm** — 27/85 đã qua Review UI, 58 phiếu còn `needs_review` (xem [báo cáo](docs/review-summary-report.md)) |
+| Tổng hợp thống kê + báo cáo gửi khách (DOCX + XLSX) | 📝 **Đã brainstorm & chốt kế hoạch với khách** — xem [docs/implement-plan-statistics-and-client-report.md](docs/implement-plan-statistics-and-client-report.md); **chưa build**, đợi review xong 85/85 |
 | Pilot accuracy trên dữ liệu thật | ⏳ Không còn cần thiết cho lô 85 phiếu hiện tại (đã làm tay + review) |
 
-### Roadmap nghiên cứu — pipeline code tự động (không phải việc đang chạy)
+### Pipeline tự động end-to-end
+
+Pipeline hiện có thể chạy toàn bộ bằng code: ingest/render, trích xuất schema-driven
+đủ mọi loại trường bằng VLM (text/PII, lựa chọn, composite, matrix, free text và
+ghi chú trang), validate, tách PII, tạo lớp thống kê và sinh DOCX/XLSX. Mỗi trang
+được đọc hai lượt độc lập; giá trị không khớp được gắn `needs_review` thay vì tự chốt.
+
+```powershell
+$env:ANTHROPIC_API_KEY = "..."
+& "E:\anaconda3\envs\survey-digitizer\python.exe" scripts/run_pipeline.py
+```
+
+Để chỉ build lại thống kê/báo cáo từ `output/full` đã có:
+
+```powershell
+& "E:\anaconda3\envs\survey-digitizer\python.exe" scripts/run_pipeline.py --skip-ingest --skip-extraction
+```
+
+Không đưa API key vào file. Live extraction gửi ảnh khảo sát tới Anthropic theo cấu
+hình của người vận hành; cần có căn cứ xử lý dữ liệu và sự chấp thuận phù hợp trước
+khi dùng với phiếu thật.
+
+### Lịch sử nghiên cứu
 
 Các hạng mục dưới đây là **phần research cho dự án lâu dài**, chỉ đáng làm tiếp nếu sau này có số lượng phiếu lớn hơn nhiều (hàng trăm/nghìn phiếu) khiến làm tay không còn khả thi. Hiện tại **không ai đang chờ các mục này**:
 
 | Năng lực (research) | Trạng thái |
 |---|---|
-| Trích xuất câu đơn/đa lựa chọn bằng VLM (`scripts/extract_mc.py`) | 🧭 Code + mock test xong; chưa nghiệm thu live |
-| Trích xuất ma trận bằng code | 🧭 Chưa làm |
-| Tự luận và trường số dẫn xuất bằng code | 🧭 Chưa làm |
-| Cờ logic, tách PII và export bằng code | 🧭 Chưa làm |
-| Statistical engine chạy tự động | 🧭 Đã khai báo quy tắc, chưa hoàn thiện code |
-| Dashboard và báo cáo phân tích tự động | 🧭 Đích sản phẩm dài hạn |
+| Trích xuất toàn bộ 46 mục bằng VLM (`scripts/extract_full.py`) | ✅ Code + mock test |
+| Trích xuất matrix, tự luận, PII, dẫn xuất và ghi chú trang | ✅ Schema-driven |
+| Cờ review qua hai lượt đọc độc lập | ✅ Tự động |
+| Tách PII và statistical engine | ✅ Tự động |
+| Báo cáo DOCX/XLSX | ✅ Tự động |
 
 Trạng thái sprint chi tiết (đã lập trước khi có quyết định chuyển hướng làm tay) vẫn được lưu ở [sprint-plan-survey-digitization.md](sprint-plan-survey-digitization.md) — coi tài liệu đó như nhật ký/tham khảo cho hướng research, không phải kế hoạch đang thực thi.
 
@@ -222,6 +247,8 @@ Mở `http://localhost:8765` bằng Chrome/Edge, chọn thư mục gốc `E:\STA
 - [Task 3a report](docs/task-03a-report.md) — ground truth và bài học từ dữ liệu thực địa.
 - [Task 3b report](docs/task-03b-report.md) — trích xuất lựa chọn, self-consistency và trạng thái nghiệm thu live (research, chưa nghiệm thu live).
 - [Manual extraction report](docs/task-manual-extraction-report.md) — kết quả trích xuất thủ công toàn bộ 85 phiếu thật, thống kê cờ, case cần khách xác nhận, và trạng thái review hiện tại.
+- [Review summary report](docs/review-summary-report.md) — tổng hợp kết quả review qua Review UI (phiếu nào đã review, còn lại bao nhiêu, mẫu quyết định của reviewer).
+- [Implement plan — Thống kê & báo cáo gửi khách](docs/implement-plan-statistics-and-client-report.md) — kế hoạch đã brainstorm với khách cho bước tổng hợp thống kê (trải phẳng + cross-tab + ma trận liên quan) và định dạng file gửi khách (DOCX + XLSX), **chưa build**, chờ review xong 85/85 phiếu.
 
 ## Định nghĩa thành công
 

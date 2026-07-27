@@ -1,1 +1,2 @@
-output/assembly/_render/**/*.png filter=lfs diff=lfs merge=lfs -text
+# Real survey renders are private and ignored. No Git LFS rules are required
+# for the public code-only repository.
