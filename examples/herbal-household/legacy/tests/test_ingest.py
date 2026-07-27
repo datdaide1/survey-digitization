@@ -10,7 +10,7 @@ loại khỏi assembly.py/ingest.py — mọi phiếu thật, kể cả phiếu 
 đều là đúng 1 file PDF/ảnh). Xem docs/task-02-report.md §7b.
 
 Chạy:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" tests/test_ingest.py
+  python tests/test_ingest.py
 """
 
 import json

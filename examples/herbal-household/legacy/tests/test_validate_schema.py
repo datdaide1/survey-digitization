@@ -3,7 +3,7 @@
 
 Không phụ thuộc pytest (env survey-digitizer bare). Chạy trực tiếp:
 
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" tests/test_validate_schema.py
+  python tests/test_validate_schema.py
 
 Thoát mã 0 nếu mọi test pass, 1 nếu có test fail.
 """

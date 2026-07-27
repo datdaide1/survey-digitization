@@ -16,7 +16,7 @@ bộ, factor/cluster analysis — xem lý do ở docs/implement-plan-statistics-
 cluster_analysis.py, advanced_sheet.py) vẫn còn nguyên trong repo, không bị xoá.
 
 Chạy:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/build_pillar_report.py
+  python scripts/build_pillar_report.py
 """
 
 from __future__ import annotations

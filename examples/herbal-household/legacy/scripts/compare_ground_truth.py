@@ -2,9 +2,9 @@
 """Compare extracted survey answers with their human-authored ground truth.
 
 Examples:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/compare_ground_truth.py LCA-LP-001 --fields task3b
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/compare_ground_truth.py LCA-LP-001 --fields Q3,Q4,Q17
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/compare_ground_truth.py LCA-LP-001 --fields all
+  python scripts/compare_ground_truth.py LCA-LP-001 --fields task3b
+  python scripts/compare_ground_truth.py LCA-LP-001 --fields Q3,Q4,Q17
+  python scripts/compare_ground_truth.py LCA-LP-001 --fields all
 
 Values are redacted from differences by default because ``--fields all`` can
 include PII.  Use ``--show-values`` only in an access-controlled terminal.

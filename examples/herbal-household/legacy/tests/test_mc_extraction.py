@@ -2,7 +2,7 @@
 """Unit tests for Task 3b (mock only; no API key or network required).
 
 Run:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" tests/test_mc_extraction.py
+  python tests/test_mc_extraction.py
 """
 
 from __future__ import annotations

@@ -12,8 +12,8 @@ KHÔNG dùng VLM, KHÔNG suy đoán thứ tự trang thật theo nội dung — 
 Xem docs/implement-plan-02-ingest-assembly.md.
 
 Chạy:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/ingest.py
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/ingest.py --manifest data/manifest.csv --raw-root data/raw/khao-sat --out-dir output/assembly
+  python scripts/ingest.py
+  python scripts/ingest.py --manifest data/manifest.csv --raw-root data/raw/khao-sat --out-dir output/assembly
 """
 
 import argparse

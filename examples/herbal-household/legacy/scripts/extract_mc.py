@@ -2,8 +2,8 @@
 """Task 3b — extract single/multi-select marks with Claude Vision.
 
 Examples:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/extract_mc.py --record-id LCA-LP-001
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/extract_mc.py --all --manifest data/manifest.csv
+  python scripts/extract_mc.py --record-id LCA-LP-001
+  python scripts/extract_mc.py --all --manifest data/manifest.csv
 
 Each page is sent twice in independent Messages API calls.  Tests inject a mock
 client; live execution requires ``ANTHROPIC_API_KEY``.

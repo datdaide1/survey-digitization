@@ -15,8 +15,8 @@ không cần so sánh giữa các vùng nữa (xem memory/[[project-survey-no-re
 chỉ không gọi ở đây nữa — dễ bật lại nếu sau này cần.
 
 Chạy:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/build_stats_layer.py
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/build_client_report.py
+  python scripts/build_stats_layer.py
+  python scripts/build_client_report.py
 """
 
 from __future__ import annotations

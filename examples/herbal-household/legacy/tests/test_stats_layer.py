@@ -6,7 +6,7 @@ dạng needs_review, multi-mark list value, Q32 có/không noi_dung, Q9 edge cas
 years_exp=0/range string — xem docs/implement-plan-statistics-and-client-report.md.
 
 Run:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" tests/test_stats_layer.py
+  python tests/test_stats_layer.py
 """
 
 from __future__ import annotations

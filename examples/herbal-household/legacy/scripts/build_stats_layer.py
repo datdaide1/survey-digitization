@@ -13,8 +13,8 @@ thống nhất: khách muốn xem bản trực quan trước, review dữ liệu
 script này để cập nhật — pipeline reproducible, không cần làm lại từ đầu).
 
 Chạy:
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/build_stats_layer.py
-  & "E:\\anaconda3\\envs\\survey-digitizer\\python.exe" scripts/build_stats_layer.py `
+  python scripts/build_stats_layer.py
+  python scripts/build_stats_layer.py `
     --manifest data/manifest.csv --full-dir output/full `
     --stats-out-dir output/stats --combined-out output/combined.csv
 """
