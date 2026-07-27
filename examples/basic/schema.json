@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Basic Satisfaction Survey",
+  "total_pages": 1,
+  "questions": [
+    {"id": "respondent_name", "page": 1, "text": "Name", "type": "text", "pii": true},
+    {"id": "satisfaction", "page": 1, "text": "Overall satisfaction", "type": "single_select", "options": [
+      {"code": "low", "label": "Low"}, {"code": "medium", "label": "Medium"}, {"code": "high", "label": "High"}
+    ]},
+    {"id": "channels", "page": 1, "text": "Channels used", "type": "multi_select", "options": [
+      {"code": "web", "label": "Web"}, {"code": "phone", "label": "Phone"}, {"code": "office", "label": "Office"}
+    ]},
+    {"id": "comment", "page": 1, "text": "Additional comments", "type": "free_text"},
+    {"id": "PAGE_NOTES", "page": null, "section": "meta", "text": "Notes outside question areas", "type": "free_text", "per_page": true}
+  ]
+}

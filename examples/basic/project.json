@@ -1,0 +1,20 @@
+{
+  "project_id": "basic-satisfaction-survey",
+  "title": "Basic Satisfaction Survey",
+  "locale": "en",
+  "paths": {
+    "schema": "schema.json",
+    "manifest": "manifest.csv",
+    "source": "data/source",
+    "assembly": "work/assembly",
+    "full": "work/full",
+    "review": "work/review",
+    "stats": "work/stats",
+    "combined": "work/combined.csv",
+    "reports": "work/reports"
+  },
+  "extraction": {"provider": "anthropic", "double_read": true},
+  "analysis": {"include_manifest_columns": true},
+  "reporting": {"formats": ["xlsx", "docx"]},
+  "review": {"enabled": true}
+}

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Compatibility CLI for :mod:`survey_pipeline.record_validation`."""
+"""Thin executable wrapper for :mod:`survey_pipeline.cli`."""
 
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from survey_pipeline.record_validation import main
+from survey_pipeline.cli import main
 
 
 if __name__ == "__main__":

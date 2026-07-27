@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "survey-digitization-pipeline"
+version = "0.2.0"
+description = "Schema-driven scanned survey extraction, review, analytics and reporting"
+requires-python = ">=3.12"
+dependencies = [
+  "pymupdf>=1.24",
+  "pillow>=10",
+  "pandas>=2.2",
+  "openpyxl>=3.1",
+  "python-docx>=1.1"
+]
+
+[project.scripts]
+survey-pipeline = "survey_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["survey_pipeline*"]
