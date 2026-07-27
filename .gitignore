@@ -16,6 +16,12 @@ venv/
 .vscode/
 .idea/
 .claude/
+.agents/
+.codex/
+AGENTS.md
+**/AGENTS.md
+*plan*.md
+**/*plan*.md
 .DS_Store
 Thumbs.db
 
