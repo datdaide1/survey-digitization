@@ -75,16 +75,16 @@ def count_export_fields(q, total_pages):
         return total_pages
     if t in ("text", "free_text", "single_select", "multi_select"):
         n = 1
-        if "subfield" in q:  # subfield trực tiếp trên câu (vd Q23); có thể là mảng nhiều def
+        if "subfield" in q:  # question-level subfield; one or multiple definitions
             sf = q["subfield"]
             n += len(sf) if isinstance(sf, list) else 1
         if "derived_subfield" in q:  # một definition hoặc mảng nhiều definitions
             ds = q["derived_subfield"]
             n += len(ds) if isinstance(ds, list) else 1
         for opt in q.get("options", []):
-            if "subfield" in opt:  # subfield trên option (vd Q6, Q16a)
+            if "subfield" in opt:  # option-level conditional subfield
                 n += 1
-            if opt.get("other_text"):  # dòng "Khác (ghi rõ)" (vd Q4, Q10)
+            if opt.get("other_text"):  # free text attached to an option
                 n += 1
         return n
     if t == "composite":
@@ -92,7 +92,7 @@ def count_export_fields(q, total_pages):
     if t == "matrix":
         rows = data_rows(q)
         n = len(rows)
-        if q.get("row_content_column"):  # cột "Nội dung" — 1 text/dòng (Q32)
+        if q.get("row_content_column"):  # optional text content per matrix row
             n += len(rows)
         n += sum(1 for r in rows if r.get("other_text"))  # dòng "Khác"
         return n
@@ -110,7 +110,7 @@ def validate(schema, total_pages):
     dup = [k for k, v in Counter(ids).items() if v > 1]
     if dup:
         err(errors, "GLOBAL", f"Mã câu hỏi trùng: {dup}")
-    # by_id gồm cả component của composite (depends_on có thể trỏ tới, vd Q5_trung_cap_dh)
+    # Composite components can also be dependency targets.
     by_id = {}
     for q in questions:
         by_id[q["id"]] = q

@@ -75,13 +75,9 @@ function defaultEntryFor(question) {
     default:
       entry = { value: null };
   }
-  // subfield ở CẤP CÂU HỎI (vd Q23) là bắt buộc luôn có mặt bất kể giá trị
-  // value là gì — khớp validate_record.py (không điều kiện theo option nào
-  // cả, khác với subfield gắn trên 1 option cụ thể như Q6/Q16a, cái đó vẫn
-  // để trống tới khi option đó thật sự được chọn — xử lý lazy trong
-  // renderSubfieldBox khi người dùng tick). Có thể là 1 def hoặc mảng nhiều
-  // def (cùng dạng derived_subfield) — hiện chưa câu nào dùng mảng nhưng
-  // engine hỗ trợ cả một definition và mảng definitions.
+  // A question-level subfield is always represented regardless of the value.
+  // Option-level subfields remain empty until their option is selected.
+  // Both a single definition and an array of definitions are supported.
   if (question.subfield) {
     entry.subfield = {};
     for (const subDef of toArray(question.subfield)) entry.subfield[subDef.id] = { value: null };
@@ -110,7 +106,7 @@ export function createEmptyRecord(schema, recordId) {
     if (q.per_page) continue;
     record.answers[q.id] = defaultEntryFor(q);
   }
-  const totalPages = schema.total_pages || 7;
+  const totalPages = Number(schema.total_pages);
   for (let p = 1; p <= totalPages; p++) record.page_notes[String(p)] = null;
   return record;
 }
@@ -190,7 +186,7 @@ export function validateRecord(schema, record) {
         errors.push(`[${qid}] thiếu trường top-level 'page_notes'`);
         continue;
       }
-      const totalPages = schema.total_pages || 7;
+      const totalPages = Number(schema.total_pages);
       for (let p = 1; p <= totalPages; p++) {
         if (!(String(p) in pageNotes)) errors.push(`[${qid}] thiếu page_notes['${p}']`);
       }

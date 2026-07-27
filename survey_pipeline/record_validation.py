@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Kiem tra completeness cua 1 file JSON ket qua trich xuat thu cong so voi schema.
 
-Muc dich: bat loi "bo sot cau hoi/dong ma tran" khi lam thu cong tren quy mo lon
-(85 phieu), KHONG thay the cho viec doi chieu noi dung dung/sai (do la viec cua
-con nguoi/Claude khi doc anh). Day la luoi an toan cau truc, chay bang code
+Muc dich: bat loi "bo sot cau hoi/dong ma tran" khi lam thu cong tren quy mo lon,
+KHONG thay the cho viec doi chieu noi dung dung/sai (do la viec cua
+con nguoi khi doc anh). Day la luoi an toan cau truc, chay bang code
 thuong, khong goi API.
 
 Cach dung:
@@ -52,7 +52,10 @@ def check_record(schema: dict, record: dict) -> list[str]:
             if not isinstance(page_notes, dict):
                 errors.append(f"[{qid}] thieu truong top-level 'page_notes' (per_page=true)")
                 continue
-            total_pages = schema.get("total_pages", 7)
+            total_pages = schema.get("total_pages")
+            if not isinstance(total_pages, int) or total_pages < 1:
+                errors.append("schema.total_pages phai la so nguyen duong")
+                continue
             for p in range(1, total_pages + 1):
                 if str(p) not in page_notes:
                     errors.append(f"[{qid}] thieu page_notes['{p}']")
@@ -89,7 +92,7 @@ def check_record(schema: dict, record: dict) -> list[str]:
                 for rc in expected_rows:
                     if rc not in rows_out:
                         errors.append(f"[{qid}] thieu dong '{rc}' trong rows")
-                # Q32: neu row_content_column bi skip_extraction thi KHONG bat buoc co 'noi_dung'
+                # A schema can declare a display-only row content column.
                 rcc = q.get("row_content_column")
                 if rcc and not rcc.get("skip_extraction"):
                     for rc in expected_rows:
@@ -102,9 +105,7 @@ def check_record(schema: dict, record: dict) -> list[str]:
             if "value" not in entry:
                 errors.append(f"[{qid}] thieu key 'value'")
 
-        # subfield o cap cau hoi (Q23 kieu nay) hoac o cap option (Q6 kieu nay).
-        # Co the la 1 def hoac mang nhieu def (cung dang derived_subfield) --
-        # hien chua cau nao dung mang nhung engine ho tro san.
+        # Question-level subfields may be one definition or an array.
         if "subfield" in q:
             sub_defs = q["subfield"] if isinstance(q["subfield"], list) else [q["subfield"]]
             sub_out = entry.get("subfield")

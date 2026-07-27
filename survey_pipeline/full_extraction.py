@@ -264,11 +264,13 @@ def _resolve_image(image_path: Any, base_dir: str | Path, allowed_roots: Sequenc
     return path
 
 
-def extract_record(*, assembly: Mapping[str, Any], questionnaire: Mapping[str, Any], client: Any, model: str, image_base_dir: str | Path = ".", allowed_image_roots: Sequence[str | Path] | None = None, max_tokens: int = 8192) -> dict[str, Any]:
+def extract_record(*, assembly: Mapping[str, Any], questionnaire: Mapping[str, Any], client: Any, model: str, image_base_dir: str | Path = ".", allowed_image_roots: Sequence[str | Path] | None = None, max_tokens: int = 8192, double_read: bool = True) -> dict[str, Any]:
     record_id = str(assembly.get("record_id") or "")
     if not record_id or any(char in record_id for char in "/\\"):
         raise ProviderError(f"Invalid record_id: {record_id!r}")
-    total_pages = int(questionnaire.get("total_pages", 7))
+    total_pages = questionnaire.get("total_pages")
+    if not isinstance(total_pages, int) or total_pages < 1:
+        raise MCExtractionError("questionnaire.total_pages must be a positive integer")
     pages = _assembly_pages(assembly, total_pages)
     answers: dict[str, Any] = {}
     page_notes: dict[str, Any] = {}
@@ -277,9 +279,17 @@ def extract_record(*, assembly: Mapping[str, Any], questionnaire: Mapping[str, A
         image = _resolve_image(pages[page].get("image_path"), image_base_dir, allowed_image_roots)
         source_images.append(str(pages[page].get("image_path")))
         first = extract_page(client, image, questionnaire, page, model, max_tokens)
-        second = extract_page(client, image, questionnaire, page, model, max_tokens)
         qids = [q["id"] for q in page_questions(questionnaire, page)]
-        merged, matches, note = merge_runs(first, second, qids)
+        if double_read:
+            second = extract_page(client, image, questionnaire, page, model, max_tokens)
+            merged, matches, note = merge_runs(first, second, qids)
+        else:
+            merged = {qid: copy.deepcopy(first[qid]) for qid in qids}
+            for value in merged.values():
+                if "needs_review" in value.get("flags", []):
+                    value["needs_review"] = True
+            matches = bool(first.get("page_matches"))
+            note = first.get("page_note")
         answers.update(merged)
         page_notes[str(page)] = {"value": note, "flags": ([] if matches else ["needs_review"])}
     expected = [q["id"] for q in questionnaire.get("questions", []) if not q.get("per_page")]

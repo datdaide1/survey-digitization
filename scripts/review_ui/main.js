@@ -236,7 +236,10 @@ function renderSidebarList() {
     item.append(h("span", { class: "rid" }, row.record_id));
     if (meta.broken) item.append(h("span", { class: "count" }, "lỗi JSON"));
     else if (meta.hasFile && meta.needsReview > 0) item.append(h("span", { class: "count" }, String(meta.needsReview)));
-    item.title = [row.commune, row.status, meta.broken ? meta.error : row.note].filter(Boolean).join(" — ");
+    const manifestContext = Object.entries(row)
+      .filter(([key, value]) => !["record_id", "source_path"].includes(key) && value)
+      .map(([key, value]) => `${key}: ${value}`);
+    item.title = [...manifestContext, meta.broken ? meta.error : ""].filter(Boolean).join(" — ");
     item.addEventListener("click", () => selectRecord(row.record_id));
     list.append(item);
   }
@@ -496,7 +499,7 @@ function buildImagePane(record) {
   const toolbar = h("div", { class: "image-toolbar" });
 
   const tabs = h("div", { class: "page-tabs" });
-  const totalPages = state.schema.total_pages || 7;
+  const totalPages = Number(state.schema.total_pages);
   const flaggedPages = new Set(schemaEngine.walkNeedsReview(state.schema, record).map((x) => x.page));
   for (let p = 1; p <= totalPages; p++) {
     const tab = h("button", { type: "button", class: "page-tab" + (p === state.currentPage ? " active" : "") }, `Tr.${p}`);
@@ -659,7 +662,7 @@ function renderRecordView() {
 
 function changePage(delta) {
   if (!state.currentRecord) return;
-  const total = state.schema.total_pages || 7;
+  const total = Number(state.schema.total_pages);
   let p = state.currentPage + delta;
   if (p < 1) p = total;
   if (p > total) p = 1;

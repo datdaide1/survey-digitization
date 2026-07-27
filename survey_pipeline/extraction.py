@@ -33,6 +33,7 @@ def run_extraction(config: ProjectConfig, schema: dict[str, Any], client=None) -
             image_base_dir=config.paths.root,
             allowed_image_roots=[config.paths.assembly, config.paths.source],
             max_tokens=max_tokens,
+            double_read=bool(config.extraction.get("double_read", True)),
         )
         (config.paths.full / f"{record_id}.json").write_text(
             json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
